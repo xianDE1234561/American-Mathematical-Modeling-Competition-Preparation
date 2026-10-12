@@ -1,0 +1,1239 @@
+=== PDF PAGE 1 ===
+    Problem Chosen                2024           Team Control Number
+                      MCM/ICM
+     E             Summary Sheet       2410889
+
+            Find a Home for Your Property
+
+                          Summary
+
+  As the frequency of extreme weather events increases globally, the threat to prop-
+erty safety is growing, leading to higher insurance claim risks and consequently rapid
+increases in insurance rates. This results in potential losses for insurance companies
+and unaffordable insurance premiums for property owners. This paper develops an
+insurance model to assess whether insurance companies should conduct business in
+these areas. Additionally, a protection model is established to identify properties of
+cultural and community signiﬁcance and to provide recommendations for protective
+measures.
+
+   For Task 1, we developed an underwriting decision model based on whether the
+insurance company is proﬁtable as the decision criterion. Using Monte Carlo simula-
+tions, we generated 100 insurance scenarios to calculate the probability of proﬁtability
+for the insurance company, which informed the underwriting decisions. Demonstrat-
+ing this model in Guangdong Province, China, and Florida, USA, the probability of
+proﬁtable underwriting in Guangdong is 63%, while it is 26% in Florida. Therefore, the
+insurance company undertakes underwriting in Guangdong but not in Florida. Addi-
+tionally, when the base rate is high, the insurance company opts for risk-taking. Prop-
+erty owners can inﬂuence the insurance company’s decision by using a risk checklist
+to reduce the probability of property damage.
+
+   For Task 2, we improved the underwriting decision model to quantify the level
+of real estate protection in different locations within speciﬁc areas. Furthermore, we
+quantiﬁed convenience based on the distance from the location to living service areas.
+Then, we established a goal programming model that maximizes both the level of
+protection and convenience, solving for the optimal construction site using particle
+swarm optimization. We recommend not constructing in locations with a target value
+lower than 0.5 and choosing high disaster-resistant building materials for locations
+with lower levels of protection.
+
+   For Task 3, we proposed a protection value assessment model that considers cul-
+tural, historical, economic, and community values. Using EWM-TOPSIS, we calcu-微信公众号：数学模型lated protection value scores and divided them into four levels: no protection (0-0.1),
+ﬁrst-level protection (0.1-0.3), second-level protection (0.3-0.5), and third-level pro-
+tection (0.5-1.0). The level into which a building falls determines whether it is pro-
+tected, with speciﬁc protective measures proposed for each protection level. For Task
+4, we selected the Forbidden City in Beijing as the case study. Using the underwriting
+decision model and protection value assessment model, we found that the Forbidden
+City has signiﬁcant cultural, historical, economic, and community values with high
+sustainable development value. Its protection value is 0.618, qualifying it as a third-
+level protection building.
+
+    Finally, we conducted a sensitivity analysis on the underwriting decision model
+and protection value assessment model. With the investment interest rate varying 微信号：MATHmodels
+between [0.002,0.007], the insurance company’s decisions remain unchanged. A 20%
+variation in the protection value indicators results in a total value score change of no
+more than 5%, demonstrating the reliability of the models proposed in this paper.
+
+   Keywords: Underwriting decision model; Monte Carlo simulations; Risk checklist;
+                                                                                                                                                                                                    2   关注数学模型
+Goal programming; EWM-TOPSIS; protection value model
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 2 ===
+Team # 2410889                                                       Page 2 of 23
+
+                      Contents
+
+1  Introduction                                                            3
+    1.1  Problem Background  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+    1.2  Restatement of the problem and our work  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+
+2  Assumption and Justiﬁcations                                            4
+
+3  Notations                                                               5
+
+4  Underwriting Decision Model                                            5
+    4.1  Policy Risk Assessment .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+    4.2  Income reallocation  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   7
+          4.2.1   Pricing of premiums   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   7
+          4.2.2   Reallocation of premium income  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   8
+    4.3  Perform underwriting decisions .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+          4.3.1  Cost Calculation    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+          4.3.2  Judgment Criteria for Decision-making   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  10
+    4.4  Demonstration of Model Results   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  10
+
+5  Underwriting Decision-Goal Programming Model                         12
+    5.1  Adaptation of UDM .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+    5.2  Model of Property Decisions .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+    5.3  Model Effect Demonstration  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+
+6  Protection Value Assessment Model                                      14
+    6.1  Discussion of Indicators   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  14
+    6.2  Scoring based on the EWM-TOPSIS .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  16
+    6.3  Protection Measures Under Each Level .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  17
+
+7  Case Study: the Forbidden City                                          19
+    7.1  Underwriting Decision Model  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  19
+    7.2  Protection Value Assessment Model   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  208 微信公众号：数学模型Sensitivity Analysis                                                    21
+
+9  Strengths and Weaknesses                                               22
+    9.1  Strengths  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  22
+    9.2  Weaknesses    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  22
+
+References                                                                23 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 3 ===
+Team # 2410889                                                       Page 3 of 23
+
+
+1  Introduction
+
+
+1.1  Problem Background
+
+  As the global population and economy grow, the frequency of human activities is
+also increasing. The result of this increased human activity is an increasing concen-
+tration of greenhouse gases in the atmosphere and an intensiﬁcation of the problem of
+global warming. Petteri Taras, Secretary General of the World Meteorological Orga-
+nization, said in an interview in 2021, "Humans are no strangers to extreme weather,
+but climate change has undoubtedly increased the frequency and severity of extreme
+weather."
+
+   Extreme weather events are also taking an increasing toll on people. According
+to the World Meteorological Organization, economic losses from extreme weather in-
+creased 7-fold from the 1970s to the 2010s. And that’s a huge blow to the insurance
+industry because it means insurers also face higher claims. The Boston Consulting
+Group predicts that climate change will increase insurance premiums by 30 to 60 per-
+cent by 2040, which could reﬂect a worse proﬁtability for insurers. So how insurers
+should adjust in an environment where extreme events continue is a question worth
+considering.微信公众号：数学模型
+
+Figure 1: Abnormal temperatures(Image courtesy of The Copernicus Climate Change Service
+(C3S))
+
+
+1.2  Restatement of the problem and our work
+
+    (1) Problem Restatement: Develop an insurance model to identify whether in-
+surance companies are underwriting in places where extreme weather is increasing.
+And apply the model to two regions on different continents that experience extreme
+weather events. 微信号：MATHmodels  Our work: We construct a model of the proﬁtability of insurance companies, using
+whether or not they are proﬁtable as the basis for decisions about whether to under-
+write a policy. The probability of payout for each policy is quantiﬁed, and 1000 times
+Monte Carlo sampling is performed, which in turn yields the proﬁtability of an insur-
+ance company in terms of a region. Guangdong Province in China and Florida in the
+                                                                                                                                                                                                    2   关注数学模型
+U.S. are chosen to demonstrate the model.
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 4 ===
+Team # 2410889                                                       Page 4 of 23
+
+
+    (2) Problem Restatement: In a given region, the insurance model evaluates where
+to build real estate, how to build it, and whether to build it at all.
+
+  Our work: Considering the degree of protection and convenience of real estate,
+the farther away from the place where extreme weather occurs the higher the degree
+of protection will be, and the closer to the living service area the higher the degree
+of convenience will be. Therefore, we combine the insurance model to build a goal
+programming model to solve to get the optimal construction location.
+
+    (3) Problem Restatement: Develop a conservation model that identiﬁes the build-
+ings that should be protected and the corresponding conservation measures.
+
+  Our work: We consider the impact of 4 dimensions:  Cultures, Histories, Eco-
+nomics, and Communities. We also establish a conservation value assessment model
+through the EWM-TOPSIS method. Finally, the score is divided into 4 intervals: no
+protection, primary protection, secondary protection, and tertiary protection, and cor-
+responding protection measures are taken according to the protection level.
+
+    (4) Problem Restatement: Select a landmark that has experienced an extreme weather
+event and evaluate the value of the landmark using an insurance model and a protec-
+tion model.
+
+  Our work: Select the Forbidden City located in Beijing, China to assess the value
+of the landmark and use the insurance model to get the probability that the Forbidden
+City can enjoy the insurance service, and use the conservation model to get the value
+of the Forbidden City in terms of its history, economy, and so on.
+
+   For a clearer understanding of our processa more intuitive understanding of our
+approach can be seen in the ﬂowchart below.微信公众号：数学模型
+
+
+
+
+
+                               Figure 2: Flowchart of ideas2 微信号：MATHmodelsAssumption and Justiﬁcations
+
+
+  • Assumption:The demand for one year’s worth of policies in an area is known
+    and does not change due to changes in policy rates.
+     Justiﬁcation:Reducing the complexity of the model scenario makes the scenario
+                                                                                                                                                                                                    2   关注数学模型      easier to simulate.
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 5 ===
+Team # 2410889                                                       Page 5 of 23
+
+
+  • Assumption:The probability of a policy payout occurring is positively related to
+     the risk of the policy.
+     Justiﬁcation:The risk of a policy is often measured by the probability of a claim
+      occurring; the higher the probability of a claim, the higher the risk.
+  • hypothesis:Buildings within an area have the same external risk, and internal
+      risk is related to their own building risk.
+      Justiﬁcation:External risk comes mainly from the effects of extreme weather,
+     which can have a large impact and can cover an entire region.
+  • Assumption:Insurance companies can spread the risk by reinsurance.
+     Justiﬁcation:There are a large number of insurance companies in the world, and
+     one insurance company can buy insurance from another.
+
+
+3  Notations
+
+
+   In the following table we list some of the symbols and deﬁnitions we use.
+
+
+     Symbols                      Deﬁnition
+
+      O     A policy
+      OS     A collection of policies
+       OSi     A collection of low-risk policies
+      OSh     A collection of high-risk policies
+      CO         Policy premiums
+      AO         Policy amount
+       PO         Policy beneﬁt amount
+       FO        Rate of the policy
+      RO        Risk of the policy
+          βj         Extent of damage to property in area j
+         ratej      Annual expected investment yield in area j
+            dIi,j        Distance of location i from the jth extreme weather occurrence微信公众号：数学模型
+          dLi,k        Distance of location i from the kth life service area
+
+                   Other symbols will be described as they are used
+
+
+
+4  Underwriting Decision Model
+
+
+   For the underwriting decision modeling, our premise is that insurance companies
+are "economic beings". That is, insurance companies are most concerned with proﬁt,
+and when the proﬁt is positive, insurance companies are willing to underwrite policies 微信号：MATHmodels
+in a region. In order to calculate the proﬁt, we ﬁrst consider how to evaluate the risk
+of a policy in a region, which is set as RO in this model. Then we develop a premium
+pricing strategy based on RO. To obtain greater income as well as to reduce risk, we
+consider that the insurance company will redistribute the total premium income (set as
+RI in this model) into reserve funds, investment assets, and reinsurance funds.2 Thus关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 6 ===
+Team # 2410889                                                       Page 6 of 23
+
+
+the insurance company’s true income over the policy term is RI′. Finally, the proﬁt is
+calculated by subtracting costs from the true income RI′.
+
+
+4.1  Policy Risk Assessment
+
+   To assess the risk of an order, we consider the external risk REO and the internal risk
+RIO of the order. External risk refers to the risk of damage to the property caused by
+an extreme weather event; internal risk refers to the insured property’s risk proﬁle,
+e.g., if the insured property has a high level of resilience, then the risk of damage
+occurring in the face of equivalent extreme weather is lower. We believe that it is more
+comprehensive and reasonable to assess the risk of a policy through both internal and
+external risks.
+    (1) Quantify external risk REO
+
+   Most extreme weather events cause economic damage to the area, and insurance
+companies then pay out to their customers. A higher number of extreme weather
+events in a region means that insurers are exposed to a higher risk of paying out.
+We therefore use the frequency of extreme weather events in a region in a year as a
+measure of external risk, which is
+                        Pn
+                                                  i=1 ewni                        REO =                                                 (1)
+                                n × 365
+
+   Where, ewni means the number of times the ith type of extreme weather occurs in a
+year, and n means the number of extreme weather types occurring in a region during
+the insurance period.
+    (2) Quantify internal risk RIO
+
+  We use the risk checklist checklist methodology in risk management to quantify
+internal risks [1]. The risk checklist includes multiple risk dimensions that help users to
+more fully understand the nature and extent of risks and to predict the probability of
+a compromised risk occurring and the impact it may result in.
+
+  One of the property risk management evaluation forms we have produced is shown
+below微信公众号：数学模型
+                             Table 1: Internal risk checksheet 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 7 ===
+Team # 2410889                                                       Page 7 of 23
+
+
+   After scoring and normalizing each detail according to the evaluation criteria, we
+then average the total of all the evaluation metrics scores as the internal risk score for
+the policy. That is
+                      Pm
+                                                   i=1 TOi                             RIO =                                                (2)
+                       m
+
+   Where TOi means the score of the ith indicator in the risk checklist and m means the
+number of indicators.
+
+    (3) Quantify policy risk
+
+   Considering that internal risks can be intervened through human intervention, for
+example, in Japan most of the building materials are wooden structures, which are
+well suited to minimize the damage caused by earthquakes.  External risks, on the
+other hand, are usually difﬁcult to intervene, or to intervene effectively. This is be-
+cause the weather system is very complex, and consists of a variety of factors such as
+atmospheric circulation, water cycle, etc., which work together and affect each other.
+It is still difﬁcult to make accurate predictions and interventions with our current re-
+sources and technology.
+
+   In summary, we believe that external risks will have a greater impact on a policy
+than internal risks, so we assign a weight of 0.6 to external risks and 0.4 to internal
+risks:
+
+                       RO = 0.6REO + 0.4RIO                                  (3)
+
+
+4.2  Income reallocation
+
+4.2.1  Pricing of premiums
+
+   The most direct source of income for insurance companies is premium income. Let
+us set O to be a policy, CO to be the premium of a policy, AO to be the amount of a policy,
+and FO to be the rate of a policy then the insurance company’s premium income from
+a policy is微信公众号：数学模型                         CO = AO × FO                                      (4)
+
+   where the policy amount AO is determined by the value of the insured property. We
+assume that policyholders buy full insurance policies, i.e., the policy amount is equal
+to the insured value. We assume that there are 1000 policies in a region and the policy
+amount AO is randomly generated under the N(µ, σ) distribution. The µ denotes the
+average property value in the area and σ is set to 0.2 times µ.
+
+   The policy rate FO consists of a base rate, which is related to the operating condition
+of the insurance company, and a risk rate, which is related to the risk of the policy. We
+set the base rate to be 0.3% and the coefﬁcient of the risk rate to be 0.1%, then the
+formula for calculating the insurance rate for a region is 微信号：MATHmodels
+                          FO = α + λ × RO                                    (5)
+
+   Where α is the base rate and λ is the risk rate coefﬁcient, in this paper, the base rate
+is set at 0.3% and the coefﬁcient of the risk rate is 0.1%.
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 8 ===
+Team # 2410889                                                       Page 8 of 23
+
+
+4.2.2  Reallocation of premium income
+
+   After collecting premiums, based on the need for risk diversiﬁcation, insurance
+companies will also re-insure, i.e., by signing insurance contracts with other insurance
+companies, they will spread part of their risks to the other party. In addition, insur-
+ance companies usually use part of the premiums to invest in other ﬁnancial products
+in order to obtain more income [2]. All these behaviors will affect the income of the in-
+surance company, so we need to consider these behaviors to get the ﬁnal income of the
+insurance company.
+
+    (1) Reserve Assets RIa
+
+  An insurance company needs to have a certain amount of money as a reserve for
+policy payments as well as to maintain the company’s normal operations. We set the
+insurance company to keep half of its premium income for one year as a reserve, which
+can be thought of as cash on hand, i.e., the amount does not change. Given that the
+insurance company’s total premium income for one year is RI, the money value of the
+reserve fund after one year will be
+               X
+                         RI′a = RIa = 0.5RI =    CO                             (6)
+                                            O∈OS
+   Where RIa means the funds used for the imprest and OS means the collection of all
+policies.
+
+    (2) Reinsurance Assets RIb
+
+  We categorize policies into high-risk and low-risk policies, and set a risk threshold
+such that policies larger than the risk threshold are high-risk policies, otherwise they
+are low-risk policies. The insurance company is set to reinsure only high-risk policies
+to achieve risk diversiﬁcation. Set OSh to denote the set of high-risk policies, set OSl to
+denote the set of low-risk policies, and RIb to denote the funds used for reinsurance,
+then there are
+             X
+                               RIb =     CO                                     (7)
+                                       O∈OSh
+
+   For policies that are reinsured, they may be in force within the next year, i.e., claimswill微信公众号：数学模型need to be made. But it is also possible that it will not be in force. We need to
+distinguish between such cases. Let each policy in the pool of high-risk policies have a
+premium funding value of EO after one year, and we have
+              (
+                      COh −C′Oh,   Policy O not in force
+              EO =                                       ′                                             (8)
+                      COh −C′Oh + P Oh,   Policy O in force
+   Where Oh ∈OSh, C′Oh denotes the premium for reinsurance, and P Oh′  denotes the
+amount of payout received for reinsurance (the quantitative formula for PO is given in
+4.3.1).
+
+   Since reinsurance transfers part of the risk to other ﬁrms rather than transferring
+the whole risk. Therefore we set C′Oh = 0.8COh. If the rate of reinsurance is lower than 微信号：MATHmodelsthe rate of original insurance, then the amount of payout received should be less, we
+set P Oh′ = 0.4POh.
+
+   In summary, we can get the capital value of reinsurance after one year as
+             X
+                                RI′b =     EO                                                                                                                                                                                                    2  (9)关注数学模型
+                                       O∈OSh
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 9 ===
+Team # 2410889                                                       Page 9 of 23
+
+
+
+    (3) Investment Assets RIc
+
+   Suppose that the insurance company allocates only three parts of its premium in-
+come in a year, i.e., reserve funds, reinsurance funds and investment funds. Setting the
+value of the funds used for investment as RIc, we have
+
+                            RIc = RI −RIa −RIb                              (10)
+
+   Insurance companies typically purchase a variety of ﬁnancial products when mak-
+ing investments. To simplify the model, we assume that the insurance company owns
+equal proportions of each ﬁnancial product and purchases the ﬁnancial products in
+the corresponding underwriting regions. From this we can obtain the expected annual
+rate of return on investment in a region j, which is set to ratej. The value of the funds
+used for investment by the insurance company after one year is then
+                             RI′c = RIc × (1 + ratej)                             (11)
+
+  Summing up, we can get the real income R of the insurance company after one year
+as
+                   R = RI′a + RI′b + RI′c                               (12)
+
+
+4.3  Perform underwriting decisions
+
+4.3.1  Cost Calculation
+
+   The main cost of an insurance company is the cost of claims, so we use the cost of
+claims as the cost of the insurance company. Setting the amount of the claim as PO, the
+cost C of the insurance company is
+            X
+                     C =    PO × ZO                                (13)
+
+                                  O∈OS
+
+   Where O means one policy and OS means the set of policies within one year. ZO ∈{0, 微信公众号：数学模型1} is a judgment coefﬁcient, ZO = 1 when the policy is in force, which means that a
+payout occurs, otherwise ZO = 0.
+
+   Since the payout amount PO is determined by the extent of damage to the property,
+we need to consider how to measure the extent of damage to the property.  In the
+model, we use the loss per unit area caused by extreme weather to measure the degree
+of damage to the property. Given that βj ∈[0, 1] denotes the degree of damage to the
+property in area j, there are
+                                       TLj
+                               βj = Lj/Lmax =                                       (14)
+                                              Sj × Lmax
+
+   Where, TLj means the total loss of area j in a year, Sj means the land area of area j, 微信号：MATHmodelsand Lmax is the maximum value in Lj.
+
+   Then the quantization formula for the payout amount can be further obtained as
+
+                           PO = AO × βj                                   (15)
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 10 ===
+Team # 2410889                                                      Page 10 of 23
+
+
+4.3.2  Judgment Criteria for Decision-making
+
+    If a risk has proﬁt potential, the insurance company will choose to take the risk
+to make a proﬁt. Based on all of the above discussion, we can obtain a quantitative
+formula for the proﬁt P that an insurance company makes if it chooses to underwrite
+in an area where extreme weather events occur
+
+                        P = R −C
+               X
+       Which,R = RI′a + RI′b + RI′c = 0.5RIa +    EO + RIc × (1 + ratej)
+                                             O∈OSh                              (16)
+        X    X
+              C =    PO×ZO =    (AO × βj) × ZO
+
+                        O∈OS          O∈OS
+
+  When the proﬁt P is positive, the insurance company is able to underwrite in the
+respective area.
+
+
+4.4  Demonstration of Model Results
+
+  We chose Florida in the United States and Guangdong Province in China to demon-
+strate our model. According to a news release from the National Oceanic and Atmo-
+spheric Administration (NOAA) [3], in 2023 the United States suffered 28 disasters with
+single losses of more than one billion dollars, of which eight affected Florida. Guang-
+dong Province, a coastal city, was affected by six typhoons in 2022, with 25 days of
+heavy rainfall during the storm period and direct economic losses of over half a billion
+dollars. These two regions are therefore well suited to demonstrate our model.
+
+   Since the probability of a policy payout is positively correlated with the policy risk,
+through continuous debugging, we decided to divide the policy risk by 10 to get the
+probability of the policy incurring a payout. We take a random number at [0,1] and
+consider the policy not in force when the random number is greater than the prob-
+ability of payout, otherwise it is in force. The effectiveness of n policies in a region
+constitutes an insurance scenario for that region
+
+                       U = [u1, u2, ..., un]                                (17)微信公众号：数学模型
+   Considering the randomness of the results obtained by generating the scenario only
+once, we performed Monte Carlo sampling 100 times to make the coverage decision by
+observing the frequency of P > 0 [4].
+
+   Fig3 shows the simulation results. It can be clearly observed that the frequency of
+proﬁts P < 0 in Florida is much larger than the frequency of P > 0, and therefore we
+do not recommend insurance companies to underwrite in this region. The frequency
+of proﬁt P > 0 is much higher in Guangdong Province, so we believe that insurers can
+underwrite here. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 11 ===
+Team # 2410889                                                      Page 11 of 23
+
+
+
+
+
+                (a) Results for Florida                              (b) Results for Guangdong
+
+          Figure 3: Results of multiple simulations of the UDM model in the region
+
+
+   Analyzing the reason for this result, we believe it is related to the number of ex-
+treme weather events in the two regions. The number of extreme weather events in a
+year is 57 in Florida and 35 in Guangdong Province, and the higher the number of ex-
+treme weather events, the higher the policy external risk REO, the higher the policy risk
+and the probability of payout. Although premiums also increase, they increase more
+slowly and cannot keep up with the increase in claims costs because insurers cannot
+set premiums too high or they will face the problem of customer churn. So premiums
+don’t increase as fast as claims costs, causing the insurance company to lose money.
+
+   Both insurance companies and property owners are concerned about insurance
+rates, so we examined how insurance companies operate under different base rates.微信公众号：数学模型
+
+
+
+
+
+               Figure 4: Operations of insurance companies at different rates
+
+  As can be seen in Fig4, insurance companies begin to make a proﬁt when the policy
+base rate is approximately 0.0034. So when the base rate is higher in areas with more
+extreme weather events, the insurance company may choose to take a chance on un-
+derwriting the policy. Since the change in base rate is what ultimately affects the policy 微信号：MATHmodelsrate FO, it can be assumed that FO plays a decisive role in the insurer’s decision. So for
+homeowners, they can reduce their risk rate by reducing their property’s own risk and
+thus affecting FO, which ultimately affects the insurance company’s decision.
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 12 ===
+Team # 2410889                                                      Page 12 of 23
+
+
+5  Underwriting Decision-Goal Programming Model
+
+
+   To reduce exposure to extreme weather events, communities and property devel-
+opers need to consider where to build properties or what materials to use to build
+properties to make them more resilient. It is also important to consider ease of living
+and not just build in remote areas to reduce risk. In order to help real estate develop-
+ers make sound decisions within a speciﬁc region, we made some adjustments to the
+underwriting decision model to make it generalizable.
+
+
+5.1  Adaptation of UDM
+
+   In the risk assessment portion of our underwriting decision model, the policy ex-
+ternal risk REO only considers extreme weather conditions in one region. To apply the
+model to real estate construction decisions, it is necessary to consider how the dis-
+tance of a location from the site of an extreme weather event affects the external risk,
+rather than assuming that every location within an entire region is equally affected by
+extreme weather.
+
+   Setting the distance of a house from the disaster site as dI, for each house we can
+get a new external risk RE′O
+                              RE′O = REO × f(dI)                                (18)
+
+   Where f(dI) is a function of dI and the probability of an area being insured.
+
+   The function f(d) is obtained by taking 30 points in [0,3] and performing 1000 Monte
+Carlo samples, taking the frequency of p > 0 as the probability that the corresponding
+location can purchase insurance, and then performing a regression method by least
+squares. Setting f(dI) = a + b ∗ln(dI), the regression yields f(dI) = 0.5454 + 0.0874 ∗
+ln(dI), and the residual sum of squares SSE 0.008, which can be regarded as a better
+ﬁt. The function image is shown in Fig5.微信公众号：数学模型
+
+
+
+
+
+                          Figure 5: Graph of the function f(dI) 微信号：MATHmodels
+
+5.2  Model of Property Decisions
+
+   In order to better evaluate how to choose a construction site in a certain area, we
+
+                                                                                                                                                                                                    2assume that the shape of the area is a rectangle with length m and width n.The lower-关注数学模型
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 13 ===
+Team # 2410889                                                      Page 13 of 23
+
+
+left corner of the rectangle is taken as the origin of the Cartesian coordinate system.
+
+    (1) Measurement of Living Convenience
+
+   The convenience of living can be measured by the distance of the property from the
+living service area. We set the distance between the house and the living service area
+as dL. In general, the radius of the living service area is 2km, and the area beyond 2km
+can be considered as unable to enjoy the convenience brought by this living service
+area. Within 2km, the enjoyment of convenience has a linear monotonically decreasing
+trend with increasing distance. Therefore, we can get a functional expression for dL
+                 
+                  −dL + 1,  0 ≤dL ≤2
+                         g(dL) =      2                                            (19)
+                 
+                                          0,  dL > 2
+
+    (2) Building Models based on Goal Planning
+
+   Real estate developers need to consider both the degree of housing security as well
+as the degree of amenity when making decisions, which serve as the evaluation dimen-
+sions of housing satisfaction. Here we set the degree of housing security as IS, which
+can be measured by the function f(dI). This is because the higher the probability that
+an insurance company is willing to underwrite an area, it can indicate to a certain ex-
+tent that the place has a higher degree of security. Set the ease of living as RS, which
+can be measured by the function g(dL). That is
+
+                        IS = f(dI),  RS = g(dL)                            (20)
+
+   Given (x, y) as the location coordinates of the property under consideration for con-
+struction, (xi, yi) as the location coordinates of the disaster site i, and (xj, yj) as the
+location coordinates of the living service area j. Then we can get
+               p
+                                  dIi =   (x −xi)2 + (y −yi)2
+               q                                                                                       (21)
+                              dLj =   (x −xj)2 + (y −yj)2
+
+   There may be more than one disaster site and life service area in an area, and we
+need to calculate the distance between the construction site and the nearest disaster
+site and life service area. Let dImin = mindIi and dLmin = mindLj.微信公众号：数学模型   For property developers, the higher the housing security and the higher the ease of
+living in a place, the more suitable it is to build properties in that place. We consider
+these two indicators to be equally important, which means that the weights are equal.
+
+   With the above, we can get a target planning model
+            Max  0.5 ∗IS+0.5 ∗RS = 0.5f(dImin) + 0.5g(dLmin)
+                 
+                  0 ≤x ≤m                                                                                   0 ≤y ≤n                                       (22)
+                                           s.t.
+                                   x̸ = xi,j                                  
+                                                                  y̸ = yI,j 微信号：MATHmodels
+
+5.3  Model Effect Demonstration
+
+  We derive the optimal construction location within a region by particle swarm al-
+gorithm. We show the partial solution by rasterization [5], which is displayed as follows.关注数学模型2
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 14 ===
+Team # 2410889                                                      Page 14 of 23
+
+
+
+
+
+                         Figure 6: Partial Results of the UD-GPM
+
+   In the picture, the closer the color is to green indicates a higher level of satisfaction
+and the closer the color is to red indicates a lower level of satisfaction. The highest
+review scores are located at coordinates (1.2,0.4) in the image, so consider building
+your property here.
+
+   The optimal building location is further away from extreme weather events.  In
+order to save on construction costs, there is no need to build with expensive, highly
+disaster-resistant building materials.  If the construction site is closer to the extreme
+weather event site, it is necessary to use highly disaster-resistant construction for safety
+reasons. When the satisfaction level is less than 0.5, it is not recommended to build in
+this location because it is less secure and less convenient to live in.
+
+
+6  Protection Value Assessment Model
+
+
+   Under the assumption of rational economic agents, some buildings with cultural or
+community signiﬁcance may be considered unworthy of resource allocation for preser-vation微信公众号：数学模型due to their inability to generate apparent economic beneﬁts. However, in real
+life, we should not solely consider economic interests but also take into account vari-
+ous factors such as social and cultural aspects, seeking a balance of various interests.
+Therefore, we have constructed a conservation value assessment model that includes
+four indicators: Culture, History, Economics, and Community. We employ the EWM-
+TOPSIS method to determine the conservation value of buildings, categorizing it into
+four levels and proposing different preservation measures for each level.
+
+
+6.1  Discussion of Indicators
+
+   The worthiness of preserving a building should involve considering multiple val- 微信号：MATHmodels
+ues and ﬁnding a point of balance among these interests. Hence, we have set four in-
+dicators: Culture, History, Economics, and Community, each with two sub-indicators
+as follows
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 15 ===
+Team # 2410889                                                      Page 15 of 23
+
+
+
+
+
+                            Figure 7: Indicator Display Chart
+
+
+    (1) Culture
+
+   Culture is one of the key factors in assessing the importance and value of a building.
+The sub-indicators are Cultural Activities Numbers (CAN) and Inclusiveness (INC).
+
+  A higher quantity of cultural activities indicates that the building holds greater cul-
+tural signiﬁcance and contributes to the development of local culture. Inclusivity is
+measured by the number of tourists from different countries. The more diverse the
+tourists a building attracts, the broader its cultural inﬂuence is considered, facilitat-
+ing shared experiences and interactions among people from different cultural back-
+grounds.
+
+    (2) History
+
+  Some buildings may be closely related to signiﬁcant historical events, famous ﬁg-
+ures, or speciﬁc time periods, and their historical signiﬁcance should be taken into
+account. In this regard, we select the sub-indicators of the Era of Construction ((EOC))微信公众号：数学模型and the Major Historical Events (MHE).
+
+   The age of a building reﬂects its historical and traditional value, with older build-
+ings typically possessing deeper historical backgrounds and cultural heritage. A build-
+ing that is closely associated with more signiﬁcant historical events holds greater his-
+torical signiﬁcance for the region.
+
+    (3) Economics
+
+   The economic value of a building can directly impact its societal status and role,
+subsequently inﬂuencing its overall value. Here, we use two sub-indicators for mea-
+surement: Tourism Revenue (TR) and Popularity (POP).
+
+    If a building positively affects the local tourism industry and attracts a large num- 微信号：MATHmodels
+ber of visitors, it is considered to have higher economic value. Moreover, a widely
+recognized building may attract more tourists and investments, thus generating more
+economic beneﬁts. Popularity is quantiﬁed using Google search index. A building
+with a higher search index is considered to have greater popularity.
+                                               关注数学模型    (4) Communities                                                                                                                                                 2
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 16 ===
+Team # 2410889                                                      Page 16 of 23
+
+
+   The community signiﬁcance of a building lies in fostering emotional connections
+among people, holding signiﬁcant social value. In this context, we employ two sub-
+indicators for measurement: Per Capita Length of Stay (PCL) and Flow of People
+(FOP).
+
+  A longer average dwell time at a building promotes interpersonal communication
+and a sense of belonging. Higher foot trafﬁc means that people have more opportuni-
+ties to interact, enriching emotional connections.
+
+
+6.2  Scoring based on the EWM-TOPSIS
+
+   The Entropy Weight Method (EWM) is an objective approach for determining the
+weights of multiple indicators.  It utilizes the concept of information entropy to cal-
+culate the weight of each indicator. TOPSIS (Technique for Order of Preference by
+Similarity to Ideal Solution) is a multi-criteria decision analysis method used to deter-
+mine the best choice by comparing the similarity of each alternative to the ideal and
+worst solutions. In this context, we use the EWM method to assign weights to each in-
+dicator and then apply the TOPSIS method to assess the conservation value of different
+locations.
+
+
+  (1) Normalize the original score matrix.
+
+     Since all our indicators are of the maximization type, there is no need for normal-
+      ization. However, the indicators may have different scales and ranges, so we use
+     the Min-Max method to map the score Xij of location i under indicator j to the
+     range [0, 1]:
+                                            Xij −Xj,max
+                                 st_Xij =                                           (23)
+                                          Xj,max −Xj,min
+
+  (2) Determine the weights using the EWM method.
+
+     Let pij represent the probability of occurrence of Xij. Then, we can calculate the
+     information entropy H(Xj) and the weight Wj for indicator Xj as follows:
+                                        st_Xij
+                                         pij = Pn微信公众号：数学模型                                              i=1 st_Xij
+              Xn
+                         H(Xj) = −1       pij ln(pij)                        (24)                                               ln n
+                                                   j=1
+                                   H(Xj)
+                       Wj = 1 − Pn
+                                                j=1 1 −Hj
+
+  (3) Obtain the weighted score matrix Z:
+
+                    Z = (zij)m × n = (st_XijWj)m×n                     (25)
+
+
+  (4) Determine the conservation value of locations using TOPSIS. 微信号：MATHmodels
+    Deﬁne the best solution as D+i and the worst solution as D−i  , with the conserva-
+      tion value score for the ith location as Si. Alternatives that are closer to the best
+      solution are considered optimal:
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 17 ===
+Team # 2410889                                                      Page 17 of 23
+
+
+            Z+j = max(Z+1 , Z+2 , . . . ,Z+m),  Z−j = min(Z−1 , Z−2 , . . . , Z−m)
+                 v
+                 u m                 u X
+                      D+i = t   (Z+j −zij)2
+                                              j=1
+                 v
+                 u m                                       (26)                 u X
+                      D−i = t   (Z−j −zij)2
+                                              j=1
+                            D+i
+                                      Si =
+                          D+i + D−i
+
+
+   The weights for each indicator are shown in the following chart 8.
+
+
+
+
+
+                           Figure 8: Indicator weighting charts
+
+  We collected data for various landmarks and conducted conservation value assess-
+ments. Based on the scores, we categorized them into four protection levels: No pro-
+tection, Primary protection, Secondary protection, and Tertiary protection, as shown in
+the ﬁgure 9.微信公众号：数学模型
+
+
+
+
+
+                        Figure 9: Classiﬁcation of Protection Levels
+
+
+6.3  Protection Measures Under Each Level 微信号：MATHmodels
+   For buildings that fall into the "No Protection" level, we consider them to have
+no conservation value and do not recommend any protection measures. However,
+for buildings that fall into the protection levels, the intensity of protection measures
+should increase with the higher protection level, and the cost will also increase accord-
+ingly. Therefore, buildings with lower protection levels should not adopt advanced关注数学模型2
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 18 ===
+Team # 2410889                                                      Page 18 of 23
+
+
+protection measures, while those with higher protection levels can consider higher-
+cost advanced protection measures.
+
+   The protection measures are as follows:
+
+
+
+
+
+                     Figure 10: Protection measures under each level
+
+   For buildings falling into the "Primary Protection " category, we recommend the
+following protection measures:
+
+  • Regular Maintenance and Repairs: Close the building to the public for one day
+     every month and invite professional architects, engineers, and conservation ex-
+      perts to conduct a comprehensive inspection and assessment of the building to
+      identify potential issues and areas in need of repair. Any damage found should
+     be promptly addressed.
+  • Conduct Conservation Awareness Lectures: Organize conservation awareness
+      lectures to increase people’s awareness of the landmark’s preservation. During
+     these lectures, emphasize the importance of sustainability and encourage people
+      to recognize themselves as both beneﬁciaries and protectors of the landmark,
+     motivating their active involvement in its preservation.
+  • Manage Visitor Flow: Implement a reservation system for visits, restricting the
+    number of visitors during each time slot to reduce overcrowding within the land-
+    mark and prevent potential damage due to congestion.微信公众号：数学模型
+   For buildings falling into the "Secondary Protection " category, we recommend
+the following protection measures:
+
+  • Restrict Surrounding Development: Deﬁne the permissible development range
+    and construction intensity limits in the vicinity of the landmark. Each company’s
+     construction intensity should not exceed the speciﬁed limit to reduce noise and
+      vibrations caused by nearby development and prevent damage to the building’s
+      structure.
+  • Establish Controlled Zones: Divide the area into two zones: the Core Zone and
+     the Buffer Zone. The Core Zone, which contains the most important, sensitive,
+    and fragile parts of the site, should be off-limits to general tourists and only ac-
+      cessible to professional archaeologists or heritage conservation personnel. The 微信号：MATHmodels
+     Buffer Zone, located farther from the Core Zone, is relatively open but still sub-
+       ject to certain regulations, such as prohibiting the indiscriminate placement of
+      objects or littering.
+
+   For buildings falling into the "Tertiary Protection " category, we recommend the
+                                                                                                                                                                                                    2   关注数学模型following protection measures:
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 19 ===
+Team # 2410889                                                      Page 19 of 23
+
+
+  • Legal and Regulatory Protection: Designate the building as a national or local
+      cultural heritage site and establish corresponding protection policies and mea-
+      sures. Additionally, stipulate that all construction activities in the surrounding
+     area require government approval and guidance.
+  • Digital Twin Protection: Use digital technology to create a virtual 3D model of
+     the building, input its data into a Building Information Model (BIM), and con-
+     duct simulations and testing in a virtual environment. This approach provides a
+      better understanding of the building’s structure, materials, and history, facilitat-
+     ing more precise planning for maintenance and restoration work.
+  • Relocation: For landmarks located in high-risk areas, consider relocating them to
+     a safer location to reduce the risk of damage.
+
+
+7  Case Study: the Forbidden City
+
+
+  We choose the Forbidden City in Bejing, China, for our study because it is one of
+the most important and inﬂuential historical landmarks in China and has experienced
+a large number of extreme weather events. There was also a rainstorm event in Beijing
+in July 2023 with an initial reported loss of 166 million RMB. Assessing the value of the
+Forbidden City using the Proﬁt Underwriting Model and the Protection Value Scoring
+Model is important for the sustainable development of the Forbidden City and can
+provide managers with relevant conservation measures.
+
+
+7.1  Underwriting Decision Model
+
+   Collect the relevant data of the Forbidden City, substitute the data into the un-
+derwriting decision model, and perform 100 Monte Carlo sampling simulations. The
+results obtained are shown in Fig11.微信公众号：数学模型 微信号：MATHmodels
+
+
+         Figure 11: Underwriting Decision Modeling Results for the Forbidden City
+
+   From the picture, it can be known that there are more points with proﬁtP > 0 and
+the frequency is 61%.  It can be assumed that the insurance company has a greater
+willingness to underwrite in Beijing, and the probability that the Forbidden City2  can关注数学模型
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 20 ===
+Team # 2410889                                                      Page 20 of 23
+
+
+enjoy the insurance service is higher. The security of the Forbidden City is higher and
+has a higher value of sustainable development.
+
+
+7.2  Protection Value Assessment Model
+
+   Inputting the data of cultural, historical, economic and community dimensions of
+the Forbidden City into the protection value assessment model, we get its protection
+value of 0.618, which belongs to the third level of protected buildings. Compare the
+Forbidden City with Mogao Grottoes and Canton Tower for some data, as shown in
+the table2
+                       Table 2: Historic Landmarks Partial Raw Data
+
+                       Cultural Activities                                             Inclusiveness  Era of Construction  Tourism Revenue  Popularity  Flow of People  Score
+                     Number
+  the Forbidden City           78               112              604             2,300,000,000       3817         3,0000       0.618
+   the Mogao caves            16               12              1658              5,000,000         1696          2,000       0.364
+   Canton Tower             23               52               15              800,000,000        2297         15,000       0.215
+
+  We can ﬁnd that the Forbidden City is far more inclusive, well-known and crowded
+than Mogao Grottoes and Canton Tower. Although the Mogao Caves have the longest
+history of continuation, they are geographically remote and have a lower economic
+value. The Forbidden City, on the other hand, is located in China’s capital city and has
+a high economic value due to its high visibility and the number of tourists from all over
+the world. In addition, the Forbidden City has a large number of cultural activities,
+such as an AR cloud tour of the Forbidden City, play theater in the Forbidden City,
+etc., to do the cultural heritage and high cultural value. Therefore, synthesizing the
+value of all aspects, the conservation value of Beijing is extremely high.
+
+   Taking into account the current conservation status of the Forbidden City, we pro-
+vide managers with the following conservation recommendations according to its con-
+servation level.
+
+  (1) Conduct conservation publicity lectures
+
+      Tell the story of the history of the Forbidden City, such as the major historical
+     events that happened in each location during the various dynasties in history,
+    and then increase people’s motivation to protect the landmarks of the Forbidden微信公众号：数学模型City.
+
+  (2) Control the ﬂow of people
+
+     Implementing a reservation system for visits, limiting the number of people at
+     each period to reduce crowding, and closing the museum on Sundays for main-
+     tenance.
+
+  (3) Setting up control zones
+
+     Designate the most vulnerable part of the Forbidden City as the core zone, strictly
+      static the entry of tourists, and allow tourists to visit only in the buffer zone.
+
+  (4) Digital twin conservation 微信号：MATHmodels
+     Create a digital twin for the Forbidden City, where simulations and tests will be
+     conducted to predict possible future dangers to take precautions.
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 21 ===
+Team # 2410889                                                      Page 21 of 23
+
+
+8  Sensitivity Analysis
+
+
+
+
+
+                      (a) Florida                                           (b) Guangdong
+
+               Figure 12: Impact of rate adjustments on results in two regions
+
+  We conducted a sensitivity analysis on the insurance model to verify its stability
+and to ascertain whether the model would be susceptible to various factors. We ad-
+justed the interest rates on insurance company investments within a range of 2% to 7%
+to observe whether different interest rate conditions would affect the insurance com-
+pany’s decision to conduct business in a given area. We conducted experiments in
+Guangdong and Florida, the results indicated that changes in interest rates have mini-
+mal impact on the decisions of insurance companies. Therefore, we believe our model
+is stable and capable of addressing real-world problems.微信公众号：数学模型
+
+
+
+
+
+                    Figure 13: Impact of rate adjustments on the model
+
+   Additionally, we conducted a sensitivity analysis on the conservation model, utiliz-
+ing data from the Forbidden City. By altering the values of various primary indicators,
+we observed changes in the scoring system, with the historical indicator showing the
+largest variation at 5% and the cultural indicator the smallest at 1%. The results in- 微信号：MATHmodelsdicate that changing a single indicator does not signiﬁcantly affect the overall score.
+Our model effectively measures the comprehensive value of a building from multiple
+dimensions.
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 22 ===
+Team # 2410889                                                      Page 22 of 23
+
+
+9  Strengths and Weaknesses
+
+
+9.1  Strengths
+
+  • Our underwriting decision model takes into account the real needs of insurance
+     companies, making decisions driven by proﬁt to ensure the long-term health of
+     the insurance company. It also allocates the premiums received by the insurance
+    company reasonably, considering the reinsurance decisions for risk diversiﬁca-
+      tion.
+  • By using a large number of samples in the Monte Carlo simulation, it realisti-
+      cally replicates the actual insurance scenarios, resulting in high credibility of the
+     outcomes.
+  • Our underwriting decision model separately considers and calculates internal
+    and external risks, allowing for a more comprehensive assessment of a policy’s
+       risk.
+  • We provide targeted protection measures for buildings of different protection
+      levels, ensuring that the intensity of protection is matched with the cost and value
+      of the buildings.
+
+
+9.2  Weaknesses
+
+  • The assessment of external risks relies too heavily on data from extreme weather
+      events, lacking assessment of external risks from other dimensions.
+  • We use the entropy weighting method to determine the weights of indicators,
+     but most of the data collected is from China, without gathering data from other
+      international landmarks.  Therefore, when assessing the value of buildings in
+     other countries, our model needs more data to ensure a more accurate evaluation.
+  • Our protection value assessment model does not consider indicators compre-
+     hensively enough and could further distinguish between different dimensions to
+    more accurately measure a building’s comprehensive value in cultural, historical,
+     economic, and social aspects.微信公众号：数学模型 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 23 ===
+Team # 2410889                                                      Page 23 of 23
+
+
+References
+
+
+ [1] Mora, S., Keipi, K. Disaster risk management in development projects: models
+    and checklists[J].˘aBull Eng Geol Environ˘a65, 155165 (2006)
+
+ [2] Shuang Wu, Xilian Deng. Corporate Diversiﬁcation, Ownership, and Solvency
+     in Chinas Property-Liability Insurance Companies[J]. ˘aMathematical Problems in
+     Engineering. vol. 2021, Article ID 1562771, 9 pages, 2021.
+
+ [3]  https://www.climate.gov/
+
+ [4] Rui Wang. Study on optimal operation of distribution network considering ex-
+    treme weather and mobile energy storage ﬂexibility[D].North China Electric
+    Power University (Beijing),2023
+
+ [5] Yuan, C., Ye, Y., Tang, C.˘aet al.˘aAccuracy comparison of gridded historical culti-
+    vated land data in Jiangsu and Anhui provinces[J].˘aChin. Geogr. Sci.˘a27, 273285
+     (2017)
+
+ [6]  https://data.stats.gov.cn/index.htm
+
+ [7]  https://www.gddat.cn/newGlobalWeb/#/home
+
+ [8]  https://www.ncdc.noaa.gov/stormevents/微信公众号：数学模型 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 24 ===
+Dear Community Members:
+   We are Insurance of Catastrophes Modelers, with our primary research focus on the sustainability
+of the property insurance industry. Today, we are reaching out to share the insights derived from
+applying our insurance and preservation models to the Forbidden City in Beijing. As one of the most
+significant  historical landmarks  in  Beijing and  across  China,  this endeavor  is  pivotal  for
+understanding the Forbidden City's value, its risk exposures, and the steps necessary to ensure its
+future sustainability.
+   Our insurance decision model, which involved Monte Carlo simulations using collected data,
+indicated a high probability of willingness to provide insurance, with a profit point frequency of 61%.
+This high likelihood of insurance coverage in this area is due to a combination of factors, such as the
+relatively low frequency of extreme weather events and the lower height of buildings. This not only
+bolsters our confidence in the sustainable protection of the Forbidden City but also reveals certain
+risks from the perspective of insurance companies.
+    Furthermore, our preservation value assessment model has classified the Forbidden City as a
+Level Three protected structure, with a protection value of 0.618. This is the highest protection value
+achieved by our evaluation model so far, attributed to the Forbidden City's central location in the
+capital, the influx of global visitors, and its significant economic contributions.
+    In light of these findings, we recommend the following plan for the protection and enhancement
+of the Forbidden City:
+    1.Educational Initiatives: Launch educational programs and lectures to share the rich history of
+    the Forbidden City, highlighting significant historical events across dynasties to foster a sense of
+    responsibility and enthusiasm for its preservation.
+     2. Restricted Access Areas: Designate the most vulnerable areas of the Forbidden City as core
+    zones, strictly limiting visitor access and allowing public visitation only in buffer zones.
+     3. Digital Twin Technology: Develop a digital twin of the Forbidden City for simulation and
+     testing, to predict and prevent potential future risks.
+    Additionally, we have outlined short-term and long-term risk mitigation measures to address the
+potential increase in extreme weather events in the future:
+    Short-term (1-3 years): Conduct periodic safety inspections and assess the structural integrity
+    of buildings.
+   Medium to long-term (3-10 years): Given that Beijing is prone to sandstorms, which can
+     directly damage ancient buildings, we propose the establishment of the Forbidden City Forest 微信公众号：数学模型    Park in the northwest of Beijing, where sandstorms originate.
+   Long-term (over 10 years): Continuously engage in scientific research and development,
+    collaborating with research institutions to explore better measures for the preservation of cultural
+     relics, minimizing the damage to artifacts from inevitable natural disasters.
+    Regarding cost recommendations, we suggest that the Forbidden City allocate at least 60% of its
+annual net profit to implement the above plans. Strong financial support will ensure the high-quality
+execution of these initiatives. This plan aims not only to protect the Forbidden City but also to enhance
+its value as a cultural heritage for future generations to cherish.
+   We look forward to further discussions with you and the community to ensure that the Forbidden
+City remains a treasured landmark for centuries to come. 微信号：MATHmodelsSincerely
+                                                             Team #2410889
+
+
+
+                                                                                                                                                                                                           2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                           MATHmodels   获取更多资讯

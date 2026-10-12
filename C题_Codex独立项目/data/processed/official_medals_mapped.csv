@@ -1,0 +1,1436 @@
+Rank,medal_name,Gold,Silver,Bronze,Total,Year,NOC,mapping_method
+1,United States,11,7,2,20,1896,USA,exact normalized supplied Team match
+2,Greece,10,18,19,47,1896,GRE,exact normalized supplied Team match
+3,Germany,6,5,2,13,1896,GER,documented naming alias
+4,France,5,4,2,11,1896,FRA,exact normalized supplied Team match
+5,Great Britain,2,3,2,7,1896,GBR,exact normalized supplied Team match
+6,Hungary,2,1,3,6,1896,HUN,exact normalized supplied Team match
+7,Austria,2,1,2,5,1896,AUT,exact normalized supplied Team match
+8,Australia,2,0,0,2,1896,AUS,exact normalized supplied Team match
+9,Denmark,1,2,3,6,1896,DEN,exact normalized supplied Team match
+10,Switzerland,1,2,0,3,1896,SUI,exact normalized supplied Team match
+11,Mixed team,1,0,1,2,1896,MIX,documented naming alias
+1,France,27,39,37,103,1900,FRA,exact normalized supplied Team match
+2,United States,19,14,15,48,1900,USA,exact normalized supplied Team match
+3,Great Britain,15,7,9,31,1900,GBR,exact normalized supplied Team match
+4,Mixed team,8,5,6,19,1900,MIX,documented naming alias
+5,Belgium,6,7,4,17,1900,BEL,exact normalized supplied Team match
+6,Switzerland,6,2,1,9,1900,SUI,exact normalized supplied Team match
+7,Germany,4,3,2,9,1900,GER,documented naming alias
+8,Italy,3,2,0,5,1900,ITA,exact normalized supplied Team match
+9,Australia,2,0,3,5,1900,AUS,exact normalized supplied Team match
+10,Denmark,1,3,2,6,1900,DEN,exact normalized supplied Team match
+11,Hungary,1,2,2,5,1900,HUN,exact normalized supplied Team match
+12,Cuba,1,1,0,2,1900,CUB,exact normalized supplied Team match
+13,Canada,1,0,1,2,1900,CAN,exact normalized supplied Team match
+14,Spain,1,0,0,1,1900,ESP,exact normalized supplied Team match
+14,Luxembourg,1,0,0,1,1900,LUX,exact normalized supplied Team match
+16,Austria,0,3,3,6,1900,AUT,exact normalized supplied Team match
+17,Norway,0,2,3,5,1900,NOR,exact normalized supplied Team match
+17,Netherlands,0,2,3,5,1900,NED,exact normalized supplied Team match
+19,India,0,2,0,2,1900,IND,exact normalized supplied Team match
+20,Bohemia,0,1,1,2,1900,BOH,exact normalized supplied Team match
+21,Sweden,0,0,1,1,1900,SWE,exact normalized supplied Team match
+1,United States,76,78,77,231,1904,USA,exact normalized supplied Team match
+2,Germany,4,5,6,15,1904,GER,documented naming alias
+3,Canada,4,1,1,6,1904,CAN,exact normalized supplied Team match
+4,Cuba,3,0,0,3,1904,CUB,exact normalized supplied Team match
+5,Hungary,2,1,1,4,1904,HUN,exact normalized supplied Team match
+5,Mixed team,2,1,1,4,1904,MIX,documented naming alias
+7,Norway,2,0,0,2,1904,NOR,exact normalized supplied Team match
+8,Austria,1,1,1,3,1904,AUT,exact normalized supplied Team match
+9,Great Britain,1,1,0,2,1904,GBR,exact normalized supplied Team match
+10,Switzerland,1,0,2,3,1904,SUI,exact normalized supplied Team match
+11,Greece,1,0,1,2,1904,GRE,exact normalized supplied Team match
+12,Australia,0,3,1,4,1904,AUS,exact normalized supplied Team match
+13,France,0,1,0,1,1904,FRA,exact normalized supplied Team match
+1,Great Britain,56,51,39,146,1908,GBR,exact normalized supplied Team match
+2,United States,23,12,12,47,1908,USA,exact normalized supplied Team match
+3,Sweden,8,6,11,25,1908,SWE,exact normalized supplied Team match
+4,France,5,5,9,19,1908,FRA,exact normalized supplied Team match
+5,Germany,3,5,5,13,1908,GER,documented naming alias
+6,Hungary,3,4,2,9,1908,HUN,exact normalized supplied Team match
+7,Canada,3,3,10,16,1908,CAN,exact normalized supplied Team match
+8,Norway,2,3,3,8,1908,NOR,exact normalized supplied Team match
+9,Italy,2,2,0,4,1908,ITA,exact normalized supplied Team match
+10,Belgium,1,5,2,8,1908,BEL,exact normalized supplied Team match
+11,Australasia,1,2,2,5,1908,ANZ,exact normalized supplied Team match
+12,Russian Empire,1,2,0,3,1908,RUS,documented naming alias
+13,Finland,1,1,3,5,1908,FIN,exact normalized supplied Team match
+14,South Africa,1,1,0,2,1908,RSA,exact normalized supplied Team match
+15,Greece,0,3,1,4,1908,GRE,exact normalized supplied Team match
+16,Denmark,0,2,3,5,1908,DEN,exact normalized supplied Team match
+17,Bohemia,0,0,2,2,1908,BOH,exact normalized supplied Team match
+17,Netherlands,0,0,2,2,1908,NED,exact normalized supplied Team match
+19,Austria,0,0,1,1,1908,AUT,exact normalized supplied Team match
+1,United States,26,19,19,64,1912,USA,exact normalized supplied Team match
+2,Sweden,23,25,17,65,1912,SWE,exact normalized supplied Team match
+3,Great Britain,10,15,16,41,1912,GBR,exact normalized supplied Team match
+4,Finland,9,8,9,26,1912,FIN,exact normalized supplied Team match
+5,France,7,4,3,14,1912,FRA,exact normalized supplied Team match
+6,Germany,5,13,7,25,1912,GER,documented naming alias
+7,South Africa,4,2,0,6,1912,RSA,exact normalized supplied Team match
+8,Norway,3,2,5,10,1912,NOR,exact normalized supplied Team match
+9,Canada,3,2,3,8,1912,CAN,exact normalized supplied Team match
+9,Hungary,3,2,3,8,1912,HUN,exact normalized supplied Team match
+11,Italy,3,1,2,6,1912,ITA,exact normalized supplied Team match
+12,Australasia,2,2,3,7,1912,ANZ,exact normalized supplied Team match
+13,Belgium,2,1,3,6,1912,BEL,exact normalized supplied Team match
+14,Denmark,1,6,5,12,1912,DEN,exact normalized supplied Team match
+15,Greece,1,0,1,2,1912,GRE,exact normalized supplied Team match
+16,Russian Empire,0,2,3,5,1912,RUS,documented naming alias
+17,Austria,0,2,2,4,1912,AUT,exact normalized supplied Team match
+18,Netherlands,0,0,3,3,1912,NED,exact normalized supplied Team match
+1,United States,41,27,27,95,1920,USA,exact normalized supplied Team match
+2,Sweden,19,20,25,64,1920,SWE,exact normalized supplied Team match
+3,Finland,15,10,9,34,1920,FIN,exact normalized supplied Team match
+4,Great Britain,14,15,13,42,1920,GBR,exact normalized supplied Team match
+5,Belgium,14,11,11,36,1920,BEL,exact normalized supplied Team match
+6,Norway,13,9,9,31,1920,NOR,exact normalized supplied Team match
+7,Italy,13,5,5,23,1920,ITA,exact normalized supplied Team match
+8,France,9,19,13,41,1920,FRA,exact normalized supplied Team match
+9,Netherlands,4,2,5,11,1920,NED,exact normalized supplied Team match
+10,Denmark,3,9,1,13,1920,DEN,exact normalized supplied Team match
+11,South Africa,3,4,3,10,1920,RSA,exact normalized supplied Team match
+12,Canada,3,3,3,9,1920,CAN,exact normalized supplied Team match
+13,Switzerland,2,2,7,11,1920,SUI,exact normalized supplied Team match
+14,Estonia,1,2,0,3,1920,EST,exact normalized supplied Team match
+15,Brazil,1,1,1,3,1920,BRA,exact normalized supplied Team match
+16,Australia,0,2,1,3,1920,AUS,exact normalized supplied Team match
+17,Japan,0,2,0,2,1920,JPN,exact normalized supplied Team match
+17,Spain,0,2,0,2,1920,ESP,exact normalized supplied Team match
+19,Greece,0,1,0,1,1920,GRE,exact normalized supplied Team match
+19,Luxembourg,0,1,0,1,1920,LUX,exact normalized supplied Team match
+21,Czechoslovakia,0,0,2,2,1920,TCH,exact normalized supplied Team match
+22,New Zealand,0,0,1,1,1920,NZL,exact normalized supplied Team match
+1,United States,45,27,27,99,1924,USA,exact normalized supplied Team match
+2,Finland,14,13,10,37,1924,FIN,exact normalized supplied Team match
+3,France,13,15,10,38,1924,FRA,exact normalized supplied Team match
+4,Great Britain,9,13,12,34,1924,GBR,exact normalized supplied Team match
+5,Italy,8,3,5,16,1924,ITA,exact normalized supplied Team match
+6,Switzerland,7,8,10,25,1924,SUI,exact normalized supplied Team match
+7,Norway,5,2,3,10,1924,NOR,exact normalized supplied Team match
+8,Sweden,4,13,12,29,1924,SWE,exact normalized supplied Team match
+9,Netherlands,4,1,5,10,1924,NED,exact normalized supplied Team match
+10,Belgium,3,7,3,13,1924,BEL,exact normalized supplied Team match
+11,Australia,3,1,2,6,1924,AUS,exact normalized supplied Team match
+12,Denmark,2,5,2,9,1924,DEN,exact normalized supplied Team match
+13,Hungary,2,3,4,9,1924,HUN,exact normalized supplied Team match
+14,Yugoslavia,2,0,0,2,1924,YUG,documented naming alias
+15,Czechoslovakia,1,4,5,10,1924,TCH,exact normalized supplied Team match
+16,Argentina,1,3,2,6,1924,ARG,exact normalized supplied Team match
+17,Estonia,1,1,4,6,1924,EST,exact normalized supplied Team match
+18,South Africa,1,1,1,3,1924,RSA,exact normalized supplied Team match
+19,Uruguay,1,0,0,1,1924,URU,exact normalized supplied Team match
+20,Austria,0,3,1,4,1924,AUT,exact normalized supplied Team match
+20,Canada,0,3,1,4,1924,CAN,exact normalized supplied Team match
+22,Poland,0,1,1,2,1924,POL,exact normalized supplied Team match
+23,Haiti,0,0,1,1,1924,HAI,exact normalized supplied Team match
+23,Japan,0,0,1,1,1924,JPN,exact normalized supplied Team match
+23,New Zealand,0,0,1,1,1924,NZL,exact normalized supplied Team match
+23,Portugal,0,0,1,1,1924,POR,exact normalized supplied Team match
+23,Romania,0,0,1,1,1924,ROU,exact normalized supplied Team match
+1,United States,22,18,16,56,1928,USA,exact normalized supplied Team match
+2,Germany,10,7,14,31,1928,GER,documented naming alias
+3,Finland,8,8,9,25,1928,FIN,exact normalized supplied Team match
+4,Sweden,7,6,12,25,1928,SWE,exact normalized supplied Team match
+5,Italy,7,5,7,19,1928,ITA,exact normalized supplied Team match
+6,Switzerland,7,4,4,15,1928,SUI,exact normalized supplied Team match
+7,France,6,10,5,21,1928,FRA,exact normalized supplied Team match
+8,Netherlands,6,9,4,19,1928,NED,exact normalized supplied Team match
+9,Hungary,4,5,0,9,1928,HUN,exact normalized supplied Team match
+10,Canada,4,4,7,15,1928,CAN,exact normalized supplied Team match
+11,Great Britain,3,10,7,20,1928,GBR,exact normalized supplied Team match
+12,Argentina,3,3,1,7,1928,ARG,exact normalized supplied Team match
+13,Denmark,3,1,2,6,1928,DEN,exact normalized supplied Team match
+14,Czechoslovakia,2,5,2,9,1928,TCH,exact normalized supplied Team match
+15,Japan,2,2,1,5,1928,JPN,exact normalized supplied Team match
+16,Estonia,2,1,2,5,1928,EST,exact normalized supplied Team match
+17,Egypt,2,1,1,4,1928,EGY,exact normalized supplied Team match
+18,Austria,2,0,1,3,1928,AUT,exact normalized supplied Team match
+19,Australia,1,2,1,4,1928,AUS,exact normalized supplied Team match
+19,Norway,1,2,1,4,1928,NOR,exact normalized supplied Team match
+21,Poland,1,1,3,5,1928,POL,exact normalized supplied Team match
+21,Yugoslavia,1,1,3,5,1928,YUG,documented naming alias
+23,South Africa,1,0,2,3,1928,RSA,exact normalized supplied Team match
+24,India,1,0,0,1,1928,IND,exact normalized supplied Team match
+24,Ireland,1,0,0,1,1928,IRL,documented naming alias
+24,New Zealand,1,0,0,1,1928,NZL,exact normalized supplied Team match
+24,Spain,1,0,0,1,1928,ESP,exact normalized supplied Team match
+24,Uruguay,1,0,0,1,1928,URU,exact normalized supplied Team match
+29,Belgium,0,1,2,3,1928,BEL,exact normalized supplied Team match
+30,Chile,0,1,0,1,1928,CHI,exact normalized supplied Team match
+30,Haiti,0,1,0,1,1928,HAI,exact normalized supplied Team match
+32,Philippines,0,0,1,1,1928,PHI,exact normalized supplied Team match
+32,Portugal,0,0,1,1,1928,POR,exact normalized supplied Team match
+1,United States,44,36,30,110,1932,USA,exact normalized supplied Team match
+2,Italy,12,12,12,36,1932,ITA,exact normalized supplied Team match
+3,France,11,5,4,20,1932,FRA,exact normalized supplied Team match
+4,Sweden,10,5,9,24,1932,SWE,exact normalized supplied Team match
+5,Japan,7,7,4,18,1932,JPN,exact normalized supplied Team match
+6,Hungary,6,5,5,16,1932,HUN,exact normalized supplied Team match
+7,Germany,5,12,7,24,1932,GER,documented naming alias
+8,Finland,5,8,12,25,1932,FIN,exact normalized supplied Team match
+9,Great Britain,5,7,5,17,1932,GBR,exact normalized supplied Team match
+10,Poland,3,2,4,9,1932,POL,exact normalized supplied Team match
+11,Australia,3,1,1,5,1932,AUS,exact normalized supplied Team match
+12,Argentina,3,1,0,4,1932,ARG,exact normalized supplied Team match
+13,Canada,2,5,9,16,1932,CAN,exact normalized supplied Team match
+14,Netherlands,2,5,1,8,1932,NED,exact normalized supplied Team match
+15,South Africa,2,0,3,5,1932,RSA,exact normalized supplied Team match
+16,Ireland,2,0,0,2,1932,IRL,documented naming alias
+17,Czechoslovakia,1,3,2,6,1932,TCH,exact normalized supplied Team match
+18,Austria,1,1,3,5,1932,AUT,exact normalized supplied Team match
+19,India,1,0,0,1,1932,IND,exact normalized supplied Team match
+20,Denmark,0,5,3,8,1932,DEN,exact normalized supplied Team match
+21,Mexico,0,2,0,2,1932,MEX,exact normalized supplied Team match
+22,Latvia,0,1,0,1,1932,LAT,exact normalized supplied Team match
+22,New Zealand,0,1,0,1,1932,NZL,exact normalized supplied Team match
+22,Switzerland,0,1,0,1,1932,SUI,exact normalized supplied Team match
+25,Philippines,0,0,3,3,1932,PHI,exact normalized supplied Team match
+26,Belgium,0,0,1,1,1932,BEL,exact normalized supplied Team match
+26,Spain,0,0,1,1,1932,ESP,exact normalized supplied Team match
+26,Uruguay,0,0,1,1,1932,URU,exact normalized supplied Team match
+1,Germany,38,31,32,101,1936,GER,documented naming alias
+2,United States,24,21,12,57,1936,USA,exact normalized supplied Team match
+3,Hungary,10,1,5,16,1936,HUN,exact normalized supplied Team match
+4,Italy,9,13,5,27,1936,ITA,exact normalized supplied Team match
+5,Finland,8,6,6,20,1936,FIN,exact normalized supplied Team match
+6,France,7,6,6,19,1936,FRA,exact normalized supplied Team match
+7,Sweden,6,5,10,21,1936,SWE,exact normalized supplied Team match
+8,Japan,6,4,10,20,1936,JPN,exact normalized supplied Team match
+9,Netherlands,6,4,7,17,1936,NED,exact normalized supplied Team match
+10,Austria,5,7,5,17,1936,AUT,exact normalized supplied Team match
+11,Switzerland,4,9,5,18,1936,SUI,exact normalized supplied Team match
+12,Great Britain,4,7,3,14,1936,GBR,exact normalized supplied Team match
+13,Czechoslovakia,3,5,1,9,1936,TCH,exact normalized supplied Team match
+14,Argentina,2,2,3,7,1936,ARG,exact normalized supplied Team match
+14,Estonia,2,2,3,7,1936,EST,exact normalized supplied Team match
+16,Egypt,2,1,2,5,1936,EGY,exact normalized supplied Team match
+17,Canada,1,3,5,9,1936,CAN,exact normalized supplied Team match
+18,Norway,1,3,2,6,1936,NOR,exact normalized supplied Team match
+19,Turkey,1,0,1,2,1936,TUR,exact normalized supplied Team match
+20,India,1,0,0,1,1936,IND,exact normalized supplied Team match
+20,New Zealand,1,0,0,1,1936,NZL,exact normalized supplied Team match
+22,Poland,0,4,5,9,1936,POL,exact normalized supplied Team match
+23,Denmark,0,2,3,5,1936,DEN,exact normalized supplied Team match
+24,Latvia,0,1,1,2,1936,LAT,exact normalized supplied Team match
+25,Romania,0,1,0,1,1936,ROU,exact normalized supplied Team match
+25,South Africa,0,1,0,1,1936,RSA,exact normalized supplied Team match
+25,Yugoslavia,0,1,0,1,1936,YUG,documented naming alias
+28,Belgium,0,0,3,3,1936,BEL,exact normalized supplied Team match
+28,Mexico,0,0,3,3,1936,MEX,exact normalized supplied Team match
+30,Australia,0,0,1,1,1936,AUS,exact normalized supplied Team match
+30,Philippines,0,0,1,1,1936,PHI,exact normalized supplied Team match
+30,Portugal,0,0,1,1,1936,POR,exact normalized supplied Team match
+1,United States,38,27,19,84,1948,USA,exact normalized supplied Team match
+2,Sweden,16,11,17,44,1948,SWE,exact normalized supplied Team match
+3,France,10,6,13,29,1948,FRA,exact normalized supplied Team match
+4,Hungary,10,5,12,27,1948,HUN,exact normalized supplied Team match
+5,Italy,8,11,8,27,1948,ITA,exact normalized supplied Team match
+6,Finland,8,7,5,20,1948,FIN,exact normalized supplied Team match
+7,Turkey,6,4,2,12,1948,TUR,exact normalized supplied Team match
+8,Czechoslovakia,6,2,3,11,1948,TCH,exact normalized supplied Team match
+9,Switzerland,5,10,5,20,1948,SUI,exact normalized supplied Team match
+10,Denmark,5,7,8,20,1948,DEN,exact normalized supplied Team match
+11,Netherlands,5,2,9,16,1948,NED,exact normalized supplied Team match
+12,Great Britain,3,14,6,23,1948,GBR,exact normalized supplied Team match
+13,Argentina,3,3,1,7,1948,ARG,exact normalized supplied Team match
+14,Australia,2,6,5,13,1948,AUS,exact normalized supplied Team match
+15,Belgium,2,2,3,7,1948,BEL,exact normalized supplied Team match
+16,Egypt,2,2,1,5,1948,EGY,exact normalized supplied Team match
+17,Mexico,2,1,2,5,1948,MEX,exact normalized supplied Team match
+18,South Africa,2,1,1,4,1948,RSA,exact normalized supplied Team match
+19,Norway,1,3,3,7,1948,NOR,exact normalized supplied Team match
+20,Jamaica,1,2,0,3,1948,JAM,exact normalized supplied Team match
+21,Austria,1,0,3,4,1948,AUT,exact normalized supplied Team match
+22,India,1,0,0,1,1948,IND,exact normalized supplied Team match
+22,Peru,1,0,0,1,1948,PER,exact normalized supplied Team match
+24,Yugoslavia,0,2,0,2,1948,YUG,documented naming alias
+25,Canada,0,1,2,3,1948,CAN,exact normalized supplied Team match
+26,Portugal,0,1,1,2,1948,POR,exact normalized supplied Team match
+26,Uruguay,0,1,1,2,1948,URU,exact normalized supplied Team match
+28,Ceylon,0,1,0,1,1948,SRI,documented naming alias
+28,Cuba,0,1,0,1,1948,CUB,exact normalized supplied Team match
+28,Spain,0,1,0,1,1948,ESP,exact normalized supplied Team match
+28,Trinidad and Tobago,0,1,0,1,1948,TTO,exact normalized supplied Team match
+32,Panama,0,0,2,2,1948,PAN,exact normalized supplied Team match
+32,South Korea,0,0,2,2,1948,KOR,exact normalized supplied Team match
+34,Brazil,0,0,1,1,1948,BRA,exact normalized supplied Team match
+34,Iran,0,0,1,1,1948,IRI,exact normalized supplied Team match
+34,Poland,0,0,1,1,1948,POL,exact normalized supplied Team match
+34,Puerto Rico,0,0,1,1,1948,PUR,exact normalized supplied Team match
+1,United States,40,19,17,76,1952,USA,exact normalized supplied Team match
+2,Soviet Union,22,30,19,71,1952,URS,exact normalized supplied Team match
+3,Hungary,16,10,16,42,1952,HUN,exact normalized supplied Team match
+4,Sweden,12,13,10,35,1952,SWE,exact normalized supplied Team match
+5,Italy,8,9,4,21,1952,ITA,exact normalized supplied Team match
+6,Czechoslovakia,7,3,3,13,1952,TCH,exact normalized supplied Team match
+7,France,6,6,6,18,1952,FRA,exact normalized supplied Team match
+8,Finland,6,3,13,22,1952,FIN,exact normalized supplied Team match
+9,Australia,6,2,3,11,1952,AUS,exact normalized supplied Team match
+10,Norway,3,2,0,5,1952,NOR,exact normalized supplied Team match
+11,Switzerland,2,6,6,14,1952,SUI,exact normalized supplied Team match
+12,South Africa,2,4,4,10,1952,RSA,exact normalized supplied Team match
+13,Jamaica,2,3,0,5,1952,JAM,exact normalized supplied Team match
+14,Belgium,2,2,0,4,1952,BEL,exact normalized supplied Team match
+15,Denmark,2,1,3,6,1952,DEN,exact normalized supplied Team match
+16,Turkey,2,0,1,3,1952,TUR,exact normalized supplied Team match
+17,Japan,1,6,2,9,1952,JPN,exact normalized supplied Team match
+18,Great Britain,1,2,8,11,1952,GBR,exact normalized supplied Team match
+19,Argentina,1,2,2,5,1952,ARG,exact normalized supplied Team match
+20,Poland,1,2,1,4,1952,POL,exact normalized supplied Team match
+21,Canada,1,2,0,3,1952,CAN,exact normalized supplied Team match
+21,Yugoslavia,1,2,0,3,1952,YUG,documented naming alias
+23,Romania,1,1,2,4,1952,ROU,exact normalized supplied Team match
+24,Brazil,1,0,2,3,1952,BRA,exact normalized supplied Team match
+24,New Zealand,1,0,2,3,1952,NZL,exact normalized supplied Team match
+26,India,1,0,1,2,1952,IND,exact normalized supplied Team match
+27,Luxembourg,1,0,0,1,1952,LUX,exact normalized supplied Team match
+28,Germany,0,7,17,24,1952,GER,documented naming alias
+29,Netherlands,0,5,0,5,1952,NED,exact normalized supplied Team match
+30,Iran,0,3,4,7,1952,IRI,exact normalized supplied Team match
+31,Chile,0,2,0,2,1952,CHI,exact normalized supplied Team match
+32,Austria,0,1,1,2,1952,AUT,exact normalized supplied Team match
+32,Lebanon,0,1,1,2,1952,LIB,documented naming alias
+34,Ireland,0,1,0,1,1952,IRL,documented naming alias
+34,Mexico,0,1,0,1,1952,MEX,exact normalized supplied Team match
+34,Spain,0,1,0,1,1952,ESP,exact normalized supplied Team match
+37,South Korea,0,0,2,2,1952,KOR,exact normalized supplied Team match
+37,Trinidad and Tobago,0,0,2,2,1952,TTO,exact normalized supplied Team match
+37,Uruguay,0,0,2,2,1952,URU,exact normalized supplied Team match
+40,Bulgaria,0,0,1,1,1952,BUL,exact normalized supplied Team match
+40,Egypt,0,0,1,1,1952,EGY,exact normalized supplied Team match
+40,Portugal,0,0,1,1,1952,POR,exact normalized supplied Team match
+40,Venezuela,0,0,1,1,1952,VEN,exact normalized supplied Team match
+1,Soviet Union,37,29,32,98,1956,URS,exact normalized supplied Team match
+2,United States,32,25,17,74,1956,USA,exact normalized supplied Team match
+3,Australia,13,8,14,35,1956,AUS,exact normalized supplied Team match
+4,Hungary,9,10,7,26,1956,HUN,exact normalized supplied Team match
+5,Italy,8,8,9,25,1956,ITA,exact normalized supplied Team match
+6,Sweden,8,5,6,19,1956,SWE,exact normalized supplied Team match
+7,United Team of Germany,6,13,7,26,1956,GER,documented naming alias
+8,Great Britain,6,7,11,24,1956,GBR,exact normalized supplied Team match
+9,Romania,5,3,5,13,1956,ROU,exact normalized supplied Team match
+10,Japan,4,10,5,19,1956,JPN,exact normalized supplied Team match
+11,France,4,4,6,14,1956,FRA,exact normalized supplied Team match
+12,Turkey,3,2,2,7,1956,TUR,exact normalized supplied Team match
+13,Finland,3,1,11,15,1956,FIN,exact normalized supplied Team match
+14,Iran,2,2,1,5,1956,IRI,exact normalized supplied Team match
+15,Canada,2,1,3,6,1956,CAN,exact normalized supplied Team match
+16,New Zealand,2,0,0,2,1956,NZL,exact normalized supplied Team match
+17,Poland,1,4,4,9,1956,POL,exact normalized supplied Team match
+18,Czechoslovakia,1,4,1,6,1956,TCH,exact normalized supplied Team match
+19,Bulgaria,1,3,1,5,1956,BUL,exact normalized supplied Team match
+20,Denmark,1,2,1,4,1956,DEN,exact normalized supplied Team match
+21,Ireland,1,1,3,5,1956,IRL,documented naming alias
+22,Norway,1,0,2,3,1956,NOR,exact normalized supplied Team match
+23,Mexico,1,0,1,2,1956,MEX,exact normalized supplied Team match
+24,Brazil,1,0,0,1,1956,BRA,exact normalized supplied Team match
+24,India,1,0,0,1,1956,IND,exact normalized supplied Team match
+26,Yugoslavia,0,3,0,3,1956,YUG,documented naming alias
+27,Chile,0,2,2,4,1956,CHI,exact normalized supplied Team match
+28,Belgium,0,2,0,2,1956,BEL,exact normalized supplied Team match
+29,Argentina,0,1,1,2,1956,ARG,exact normalized supplied Team match
+29,South Korea,0,1,1,2,1956,KOR,exact normalized supplied Team match
+31,Iceland,0,1,0,1,1956,ISL,exact normalized supplied Team match
+31,Pakistan,0,1,0,1,1956,PAK,exact normalized supplied Team match
+33,South Africa,0,0,4,4,1956,RSA,exact normalized supplied Team match
+34,Austria,0,0,2,2,1956,AUT,exact normalized supplied Team match
+35,Bahamas,0,0,1,1,1956,BAH,exact normalized supplied Team match
+35,Greece,0,0,1,1,1956,GRE,exact normalized supplied Team match
+35,Switzerland,0,0,1,1,1956,SUI,exact normalized supplied Team match
+35,Uruguay,0,0,1,1,1956,URU,exact normalized supplied Team match
+1,Soviet Union,43,29,31,103,1960,URS,exact normalized supplied Team match
+2,United States,34,21,16,71,1960,USA,exact normalized supplied Team match
+3,Italy,13,10,13,36,1960,ITA,exact normalized supplied Team match
+4,United Team of Germany,12,19,11,42,1960,GER,documented naming alias
+5,Australia,8,8,6,22,1960,AUS,exact normalized supplied Team match
+6,Turkey,7,2,0,9,1960,TUR,exact normalized supplied Team match
+7,Hungary,6,8,7,21,1960,HUN,exact normalized supplied Team match
+8,Japan,4,7,7,18,1960,JPN,exact normalized supplied Team match
+9,Poland,4,6,11,21,1960,POL,exact normalized supplied Team match
+10,Czechoslovakia,3,2,3,8,1960,TCH,exact normalized supplied Team match
+11,Romania,3,1,6,10,1960,ROU,exact normalized supplied Team match
+12,Great Britain,2,6,12,20,1960,GBR,exact normalized supplied Team match
+13,Denmark,2,3,1,6,1960,DEN,exact normalized supplied Team match
+14,New Zealand,2,0,1,3,1960,NZL,exact normalized supplied Team match
+15,Bulgaria,1,3,3,7,1960,BUL,exact normalized supplied Team match
+16,Sweden,1,2,3,6,1960,SWE,exact normalized supplied Team match
+17,Finland,1,1,3,5,1960,FIN,exact normalized supplied Team match
+18,Austria,1,1,0,2,1960,AUT,exact normalized supplied Team match
+18,Yugoslavia,1,1,0,2,1960,YUG,documented naming alias
+20,Pakistan,1,0,1,2,1960,PAK,exact normalized supplied Team match
+21,Ethiopia,1,0,0,1,1960,ETH,exact normalized supplied Team match
+21,Greece,1,0,0,1,1960,GRE,exact normalized supplied Team match
+21,Norway,1,0,0,1,1960,NOR,exact normalized supplied Team match
+24,Switzerland,0,3,3,6,1960,SUI,exact normalized supplied Team match
+25,France,0,2,3,5,1960,FRA,exact normalized supplied Team match
+26,Belgium,0,2,2,4,1960,BEL,exact normalized supplied Team match
+27,Iran,0,1,3,4,1960,IRI,exact normalized supplied Team match
+28,Netherlands,0,1,2,3,1960,NED,exact normalized supplied Team match
+28,South Africa,0,1,2,3,1960,RSA,exact normalized supplied Team match
+30,Argentina,0,1,1,2,1960,ARG,exact normalized supplied Team match
+30,Egypt,0,1,1,2,1960,EGY,exact normalized supplied Team match
+32,Canada,0,1,0,1,1960,CAN,exact normalized supplied Team match
+32,Formosa,0,1,0,1,1960,TPE,documented naming alias
+32,Ghana,0,1,0,1,1960,GHA,exact normalized supplied Team match
+32,India,0,1,0,1,1960,IND,exact normalized supplied Team match
+32,Morocco,0,1,0,1,1960,MAR,exact normalized supplied Team match
+32,Portugal,0,1,0,1,1960,POR,exact normalized supplied Team match
+32,Singapore,0,1,0,1,1960,SGP,exact normalized supplied Team match
+39,Brazil,0,0,2,2,1960,BRA,exact normalized supplied Team match
+39,British West Indies,0,0,2,2,1960,WIF,documented naming alias
+41,Iraq,0,0,1,1,1960,IRQ,exact normalized supplied Team match
+41,Mexico,0,0,1,1,1960,MEX,exact normalized supplied Team match
+41,Spain,0,0,1,1,1960,ESP,exact normalized supplied Team match
+41,Venezuela,0,0,1,1,1960,VEN,exact normalized supplied Team match
+1,United States,36,26,28,90,1964,USA,exact normalized supplied Team match
+2,Soviet Union,30,31,35,96,1964,URS,exact normalized supplied Team match
+3,Japan,16,5,8,29,1964,JPN,exact normalized supplied Team match
+4,United Team of Germany,10,22,18,50,1964,GER,documented naming alias
+5,Italy,10,10,7,27,1964,ITA,exact normalized supplied Team match
+6,Hungary,10,7,5,22,1964,HUN,exact normalized supplied Team match
+7,Poland,7,6,10,23,1964,POL,exact normalized supplied Team match
+8,Australia,6,2,10,18,1964,AUS,exact normalized supplied Team match
+9,Czechoslovakia,5,6,3,14,1964,TCH,exact normalized supplied Team match
+10,Great Britain,4,12,2,18,1964,GBR,exact normalized supplied Team match
+11,Bulgaria,3,5,2,10,1964,BUL,exact normalized supplied Team match
+12,Finland,3,0,2,5,1964,FIN,exact normalized supplied Team match
+12,New Zealand,3,0,2,5,1964,NZL,exact normalized supplied Team match
+14,Romania,2,4,6,12,1964,ROU,exact normalized supplied Team match
+15,Netherlands,2,4,4,10,1964,NED,exact normalized supplied Team match
+16,Turkey,2,3,1,6,1964,TUR,exact normalized supplied Team match
+17,Sweden,2,2,4,8,1964,SWE,exact normalized supplied Team match
+18,Denmark,2,1,3,6,1964,DEN,exact normalized supplied Team match
+19,Yugoslavia,2,1,2,5,1964,YUG,documented naming alias
+20,Belgium,2,0,1,3,1964,BEL,exact normalized supplied Team match
+21,France,1,8,6,15,1964,FRA,exact normalized supplied Team match
+22,Canada,1,2,1,4,1964,CAN,exact normalized supplied Team match
+22,Switzerland,1,2,1,4,1964,SUI,exact normalized supplied Team match
+24,Bahamas,1,0,0,1,1964,BAH,exact normalized supplied Team match
+24,Ethiopia,1,0,0,1,1964,ETH,exact normalized supplied Team match
+24,India,1,0,0,1,1964,IND,exact normalized supplied Team match
+27,South Korea,0,2,1,3,1964,KOR,exact normalized supplied Team match
+28,Trinidad and Tobago,0,1,2,3,1964,TTO,exact normalized supplied Team match
+29,Tunisia,0,1,1,2,1964,TUN,exact normalized supplied Team match
+30,Argentina,0,1,0,1,1964,ARG,exact normalized supplied Team match
+30,Cuba,0,1,0,1,1964,CUB,exact normalized supplied Team match
+30,Pakistan,0,1,0,1,1964,PAK,exact normalized supplied Team match
+30,Philippines,0,1,0,1,1964,PHI,exact normalized supplied Team match
+34,Iran,0,0,2,2,1964,IRI,exact normalized supplied Team match
+35,Brazil,0,0,1,1,1964,BRA,exact normalized supplied Team match
+35,Ghana,0,0,1,1,1964,GHA,exact normalized supplied Team match
+35,Ireland,0,0,1,1,1964,IRL,documented naming alias
+35,Kenya,0,0,1,1,1964,KEN,exact normalized supplied Team match
+35,Mexico,0,0,1,1,1964,MEX,exact normalized supplied Team match
+35,Nigeria,0,0,1,1,1964,NGR,exact normalized supplied Team match
+35,Uruguay,0,0,1,1,1964,URU,exact normalized supplied Team match
+1,United States,45,28,34,107,1968,USA,exact normalized supplied Team match
+2,Soviet Union,29,32,30,91,1968,URS,exact normalized supplied Team match
+3,Japan,11,7,7,25,1968,JPN,exact normalized supplied Team match
+4,Hungary,10,10,12,32,1968,HUN,exact normalized supplied Team match
+5,East Germany,9,9,7,25,1968,GDR,exact normalized supplied Team match
+6,France,7,3,5,15,1968,FRA,exact normalized supplied Team match
+7,Czechoslovakia,7,2,4,13,1968,TCH,exact normalized supplied Team match
+8,West Germany,5,11,10,26,1968,FRG,exact normalized supplied Team match
+9,Australia,5,7,5,17,1968,AUS,exact normalized supplied Team match
+10,Great Britain,5,5,3,13,1968,GBR,exact normalized supplied Team match
+11,Poland,5,2,11,18,1968,POL,exact normalized supplied Team match
+12,Romania,4,6,5,15,1968,ROU,exact normalized supplied Team match
+13,Italy,3,4,9,16,1968,ITA,exact normalized supplied Team match
+14,Kenya,3,4,2,9,1968,KEN,exact normalized supplied Team match
+15,Mexico,3,3,3,9,1968,MEX,exact normalized supplied Team match
+16,Yugoslavia,3,3,2,8,1968,YUG,documented naming alias
+17,Netherlands,3,3,1,7,1968,NED,exact normalized supplied Team match
+18,Bulgaria,2,4,3,9,1968,BUL,exact normalized supplied Team match
+19,Iran,2,1,2,5,1968,IRI,exact normalized supplied Team match
+20,Sweden,2,1,1,4,1968,SWE,exact normalized supplied Team match
+21,Turkey,2,0,0,2,1968,TUR,exact normalized supplied Team match
+22,Denmark,1,4,3,8,1968,DEN,exact normalized supplied Team match
+23,Canada,1,3,1,5,1968,CAN,exact normalized supplied Team match
+24,Finland,1,2,1,4,1968,FIN,exact normalized supplied Team match
+25,Ethiopia,1,1,0,2,1968,ETH,exact normalized supplied Team match
+25,Norway,1,1,0,2,1968,NOR,exact normalized supplied Team match
+27,New Zealand,1,0,2,3,1968,NZL,exact normalized supplied Team match
+28,Tunisia,1,0,1,2,1968,TUN,exact normalized supplied Team match
+29,Pakistan,1,0,0,1,1968,PAK,exact normalized supplied Team match
+29,Venezuela,1,0,0,1,1968,VEN,exact normalized supplied Team match
+31,Cuba,0,4,0,4,1968,CUB,exact normalized supplied Team match
+32,Austria,0,2,2,4,1968,AUT,exact normalized supplied Team match
+33,Switzerland,0,1,4,5,1968,SUI,exact normalized supplied Team match
+34,Mongolia,0,1,3,4,1968,MGL,exact normalized supplied Team match
+35,Brazil,0,1,2,3,1968,BRA,exact normalized supplied Team match
+36,Belgium,0,1,1,2,1968,BEL,exact normalized supplied Team match
+36,South Korea,0,1,1,2,1968,KOR,exact normalized supplied Team match
+36,Uganda,0,1,1,2,1968,UGA,exact normalized supplied Team match
+39,Cameroon,0,1,0,1,1968,CMR,exact normalized supplied Team match
+39,Jamaica,0,1,0,1,1968,JAM,exact normalized supplied Team match
+41,Argentina,0,0,2,2,1968,ARG,exact normalized supplied Team match
+42,Greece,0,0,1,1,1968,GRE,exact normalized supplied Team match
+42,India,0,0,1,1,1968,IND,exact normalized supplied Team match
+42,Taiwan,0,0,1,1,1968,TPE,documented naming alias
+1,Soviet Union,50,27,22,99,1972,URS,exact normalized supplied Team match
+2,United States,33,31,30,94,1972,USA,exact normalized supplied Team match
+3,East Germany,20,23,23,66,1972,GDR,exact normalized supplied Team match
+4,West Germany,13,11,16,40,1972,FRG,exact normalized supplied Team match
+5,Japan,13,8,8,29,1972,JPN,exact normalized supplied Team match
+6,Australia,8,7,2,17,1972,AUS,exact normalized supplied Team match
+7,Poland,7,5,9,21,1972,POL,exact normalized supplied Team match
+8,Hungary,6,13,16,35,1972,HUN,exact normalized supplied Team match
+9,Bulgaria,6,10,5,21,1972,BUL,exact normalized supplied Team match
+10,Italy,5,3,10,18,1972,ITA,exact normalized supplied Team match
+11,Sweden,4,6,6,16,1972,SWE,exact normalized supplied Team match
+12,Great Britain,4,5,9,18,1972,GBR,exact normalized supplied Team match
+13,Romania,3,6,7,16,1972,ROU,exact normalized supplied Team match
+14,Cuba,3,1,4,8,1972,CUB,exact normalized supplied Team match
+14,Finland,3,1,4,8,1972,FIN,exact normalized supplied Team match
+16,Netherlands,3,1,1,5,1972,NED,exact normalized supplied Team match
+17,France,2,4,7,13,1972,FRA,exact normalized supplied Team match
+18,Czechoslovakia,2,4,2,8,1972,TCH,exact normalized supplied Team match
+19,Kenya,2,3,4,9,1972,KEN,exact normalized supplied Team match
+20,Yugoslavia,2,1,2,5,1972,YUG,documented naming alias
+21,Norway,2,1,1,4,1972,NOR,exact normalized supplied Team match
+22,North Korea,1,1,3,5,1972,PRK,exact normalized supplied Team match
+23,New Zealand,1,1,1,3,1972,NZL,exact normalized supplied Team match
+24,Uganda,1,1,0,2,1972,UGA,exact normalized supplied Team match
+25,Denmark,1,0,0,1,1972,DEN,exact normalized supplied Team match
+26,Switzerland,0,3,0,3,1972,SUI,exact normalized supplied Team match
+27,Canada,0,2,3,5,1972,CAN,exact normalized supplied Team match
+28,Iran,0,2,1,3,1972,IRI,exact normalized supplied Team match
+29,Belgium,0,2,0,2,1972,BEL,exact normalized supplied Team match
+29,Greece,0,2,0,2,1972,GRE,exact normalized supplied Team match
+31,Austria,0,1,2,3,1972,AUT,exact normalized supplied Team match
+31,Colombia,0,1,2,3,1972,COL,exact normalized supplied Team match
+33,Argentina,0,1,0,1,1972,ARG,exact normalized supplied Team match
+33,Lebanon,0,1,0,1,1972,LIB,documented naming alias
+33,Mexico,0,1,0,1,1972,MEX,exact normalized supplied Team match
+33,Mongolia,0,1,0,1,1972,MGL,exact normalized supplied Team match
+33,Pakistan,0,1,0,1,1972,PAK,exact normalized supplied Team match
+33,South Korea,0,1,0,1,1972,KOR,exact normalized supplied Team match
+33,Tunisia,0,1,0,1,1972,TUN,exact normalized supplied Team match
+33,Turkey,0,1,0,1,1972,TUR,exact normalized supplied Team match
+41,Brazil,0,0,2,2,1972,BRA,exact normalized supplied Team match
+41,Ethiopia,0,0,2,2,1972,ETH,exact normalized supplied Team match
+43,Ghana,0,0,1,1,1972,GHA,exact normalized supplied Team match
+43,India,0,0,1,1,1972,IND,exact normalized supplied Team match
+43,Jamaica,0,0,1,1,1972,JAM,exact normalized supplied Team match
+43,Niger,0,0,1,1,1972,NIG,exact normalized supplied Team match
+43,Nigeria,0,0,1,1,1972,NGR,exact normalized supplied Team match
+43,Spain,0,0,1,1,1972,ESP,exact normalized supplied Team match
+1,Soviet Union,49,41,35,125,1976,URS,exact normalized supplied Team match
+2,East Germany,40,25,25,90,1976,GDR,exact normalized supplied Team match
+3,United States,34,35,25,94,1976,USA,exact normalized supplied Team match
+4,West Germany,10,12,17,39,1976,FRG,exact normalized supplied Team match
+5,Japan,9,6,10,25,1976,JPN,exact normalized supplied Team match
+6,Poland,7,6,13,26,1976,POL,exact normalized supplied Team match
+7,Bulgaria,6,9,7,22,1976,BUL,exact normalized supplied Team match
+8,Cuba,6,4,3,13,1976,CUB,exact normalized supplied Team match
+9,Romania,4,9,14,27,1976,ROU,exact normalized supplied Team match
+10,Hungary,4,5,13,22,1976,HUN,exact normalized supplied Team match
+11,Finland,4,2,0,6,1976,FIN,exact normalized supplied Team match
+12,Sweden,4,1,0,5,1976,SWE,exact normalized supplied Team match
+13,Great Britain,3,5,5,13,1976,GBR,exact normalized supplied Team match
+14,Italy,2,7,4,13,1976,ITA,exact normalized supplied Team match
+15,France,2,3,4,9,1976,FRA,exact normalized supplied Team match
+16,Yugoslavia,2,3,3,8,1976,YUG,documented naming alias
+17,Czechoslovakia,2,2,4,8,1976,TCH,exact normalized supplied Team match
+18,New Zealand,2,1,1,4,1976,NZL,exact normalized supplied Team match
+19,South Korea,1,1,4,6,1976,KOR,exact normalized supplied Team match
+20,Switzerland,1,1,2,4,1976,SUI,exact normalized supplied Team match
+21,Jamaica,1,1,0,2,1976,JAM,exact normalized supplied Team match
+21,North Korea,1,1,0,2,1976,PRK,exact normalized supplied Team match
+21,Norway,1,1,0,2,1976,NOR,exact normalized supplied Team match
+24,Denmark,1,0,2,3,1976,DEN,exact normalized supplied Team match
+25,Mexico,1,0,1,2,1976,MEX,exact normalized supplied Team match
+26,Trinidad and Tobago,1,0,0,1,1976,TTO,exact normalized supplied Team match
+27,Canada,0,5,6,11,1976,CAN,exact normalized supplied Team match
+28,Belgium,0,3,3,6,1976,BEL,exact normalized supplied Team match
+29,Netherlands,0,2,3,5,1976,NED,exact normalized supplied Team match
+30,Portugal,0,2,0,2,1976,POR,exact normalized supplied Team match
+30,Spain,0,2,0,2,1976,ESP,exact normalized supplied Team match
+32,Australia,0,1,4,5,1976,AUS,exact normalized supplied Team match
+33,Iran,0,1,1,2,1976,IRI,exact normalized supplied Team match
+34,Mongolia,0,1,0,1,1976,MGL,exact normalized supplied Team match
+34,Venezuela,0,1,0,1,1976,VEN,exact normalized supplied Team match
+36,Brazil,0,0,2,2,1976,BRA,exact normalized supplied Team match
+37,Austria,0,0,1,1,1976,AUT,exact normalized supplied Team match
+37,Bermuda,0,0,1,1,1976,BER,exact normalized supplied Team match
+37,Pakistan,0,0,1,1,1976,PAK,exact normalized supplied Team match
+37,Puerto Rico,0,0,1,1,1976,PUR,exact normalized supplied Team match
+37,Thailand,0,0,1,1,1976,THA,exact normalized supplied Team match
+1,Soviet Union,80,69,46,195,1980,URS,exact normalized supplied Team match
+2,East Germany,47,37,42,126,1980,GDR,exact normalized supplied Team match
+3,Bulgaria,8,16,17,41,1980,BUL,exact normalized supplied Team match
+4,Cuba,8,7,5,20,1980,CUB,exact normalized supplied Team match
+5,Italy,8,3,4,15,1980,ITA,exact normalized supplied Team match
+6,Hungary,7,10,15,32,1980,HUN,exact normalized supplied Team match
+7,Romania,6,6,13,25,1980,ROU,exact normalized supplied Team match
+8,France,6,5,3,14,1980,FRA,exact normalized supplied Team match
+9,Great Britain,5,7,9,21,1980,GBR,exact normalized supplied Team match
+10,Poland,3,14,15,32,1980,POL,exact normalized supplied Team match
+11,Sweden,3,3,6,12,1980,SWE,exact normalized supplied Team match
+12,Finland,3,1,4,8,1980,FIN,exact normalized supplied Team match
+13,Czechoslovakia,2,3,9,14,1980,TCH,exact normalized supplied Team match
+14,Yugoslavia,2,3,4,9,1980,YUG,documented naming alias
+15,Australia,2,2,5,9,1980,AUS,exact normalized supplied Team match
+16,Denmark,2,1,2,5,1980,DEN,exact normalized supplied Team match
+17,Brazil,2,0,2,4,1980,BRA,exact normalized supplied Team match
+17,Ethiopia,2,0,2,4,1980,ETH,exact normalized supplied Team match
+19,Switzerland,2,0,0,2,1980,SUI,exact normalized supplied Team match
+20,Spain,1,3,2,6,1980,ESP,exact normalized supplied Team match
+21,Austria,1,2,1,4,1980,AUT,exact normalized supplied Team match
+22,Greece,1,0,2,3,1980,GRE,exact normalized supplied Team match
+23,Belgium,1,0,0,1,1980,BEL,exact normalized supplied Team match
+23,India,1,0,0,1,1980,IND,exact normalized supplied Team match
+23,Zimbabwe,1,0,0,1,1980,ZIM,exact normalized supplied Team match
+26,North Korea,0,3,2,5,1980,PRK,exact normalized supplied Team match
+27,Mongolia,0,2,2,4,1980,MGL,exact normalized supplied Team match
+28,Tanzania,0,2,0,2,1980,TAN,exact normalized supplied Team match
+29,Mexico,0,1,3,4,1980,MEX,exact normalized supplied Team match
+30,Netherlands,0,1,2,3,1980,NED,exact normalized supplied Team match
+31,Ireland,0,1,1,2,1980,IRL,documented naming alias
+32,Uganda,0,1,0,1,1980,UGA,exact normalized supplied Team match
+32,Venezuela,0,1,0,1,1980,VEN,exact normalized supplied Team match
+34,Jamaica,0,0,3,3,1980,JAM,exact normalized supplied Team match
+35,Guyana,0,0,1,1,1980,GUY,exact normalized supplied Team match
+35,Lebanon,0,0,1,1,1980,LIB,documented naming alias
+1,United States,83,61,30,174,1984,USA,exact normalized supplied Team match
+2,Romania,20,16,17,53,1984,ROU,exact normalized supplied Team match
+3,West Germany,17,19,23,59,1984,FRG,exact normalized supplied Team match
+4,China,15,8,9,32,1984,CHN,exact normalized supplied Team match
+5,Italy,14,6,12,32,1984,ITA,exact normalized supplied Team match
+6,Canada,10,18,16,44,1984,CAN,exact normalized supplied Team match
+7,Japan,10,8,14,32,1984,JPN,exact normalized supplied Team match
+8,New Zealand,8,1,2,11,1984,NZL,exact normalized supplied Team match
+9,Yugoslavia,7,4,7,18,1984,YUG,documented naming alias
+10,South Korea,6,6,7,19,1984,KOR,exact normalized supplied Team match
+11,Great Britain,5,11,21,37,1984,GBR,exact normalized supplied Team match
+12,France,5,7,16,28,1984,FRA,exact normalized supplied Team match
+13,Netherlands,5,2,6,13,1984,NED,exact normalized supplied Team match
+14,Australia,4,8,12,24,1984,AUS,exact normalized supplied Team match
+15,Finland,4,2,6,12,1984,FIN,exact normalized supplied Team match
+16,Sweden,2,11,6,19,1984,SWE,exact normalized supplied Team match
+17,Mexico,2,3,1,6,1984,MEX,exact normalized supplied Team match
+18,Morocco,2,0,0,2,1984,MAR,exact normalized supplied Team match
+19,Brazil,1,5,2,8,1984,BRA,exact normalized supplied Team match
+20,Spain,1,2,2,5,1984,ESP,exact normalized supplied Team match
+21,Belgium,1,1,2,4,1984,BEL,exact normalized supplied Team match
+22,Austria,1,1,1,3,1984,AUT,exact normalized supplied Team match
+23,Kenya,1,0,2,3,1984,KEN,exact normalized supplied Team match
+23,Portugal,1,0,2,3,1984,POR,exact normalized supplied Team match
+25,Pakistan,1,0,0,1,1984,PAK,exact normalized supplied Team match
+26,Switzerland,0,4,4,8,1984,SUI,exact normalized supplied Team match
+27,Denmark,0,3,3,6,1984,DEN,exact normalized supplied Team match
+28,Jamaica,0,1,2,3,1984,JAM,exact normalized supplied Team match
+28,Norway,0,1,2,3,1984,NOR,exact normalized supplied Team match
+30,Greece,0,1,1,2,1984,GRE,exact normalized supplied Team match
+30,Nigeria,0,1,1,2,1984,NGR,exact normalized supplied Team match
+30,Puerto Rico,0,1,1,2,1984,PUR,exact normalized supplied Team match
+33,Colombia,0,1,0,1,1984,COL,exact normalized supplied Team match
+33,Egypt,0,1,0,1,1984,EGY,exact normalized supplied Team match
+33,Ireland,0,1,0,1,1984,IRL,documented naming alias
+33,Ivory Coast,0,1,0,1,1984,CIV,documented naming alias
+33,Peru,0,1,0,1,1984,PER,exact normalized supplied Team match
+33,Syria,0,1,0,1,1984,SYR,exact normalized supplied Team match
+33,Thailand,0,1,0,1,1984,THA,exact normalized supplied Team match
+40,Turkey,0,0,3,3,1984,TUR,exact normalized supplied Team match
+40,Venezuela,0,0,3,3,1984,VEN,exact normalized supplied Team match
+42,Algeria,0,0,2,2,1984,ALG,exact normalized supplied Team match
+43,Cameroon,0,0,1,1,1984,CMR,exact normalized supplied Team match
+43,Chinese Taipei,0,0,1,1,1984,TPE,exact normalized supplied Team match
+43,Dominican Republic,0,0,1,1,1984,DOM,exact normalized supplied Team match
+43,Iceland,0,0,1,1,1984,ISL,exact normalized supplied Team match
+43,Zambia,0,0,1,1,1984,ZAM,exact normalized supplied Team match
+1,Soviet Union,55,31,46,132,1988,URS,exact normalized supplied Team match
+2,East Germany,37,35,30,102,1988,GDR,exact normalized supplied Team match
+3,United States,36,31,27,94,1988,USA,exact normalized supplied Team match
+4,South Korea,12,10,11,33,1988,KOR,exact normalized supplied Team match
+5,West Germany,11,14,15,40,1988,FRG,exact normalized supplied Team match
+6,Hungary,11,6,6,23,1988,HUN,exact normalized supplied Team match
+7,Bulgaria,10,12,13,35,1988,BUL,exact normalized supplied Team match
+8,Romania,7,11,6,24,1988,ROU,exact normalized supplied Team match
+9,France,6,4,6,16,1988,FRA,exact normalized supplied Team match
+10,Italy,6,4,4,14,1988,ITA,exact normalized supplied Team match
+11,China,5,11,12,28,1988,CHN,exact normalized supplied Team match
+12,Great Britain,5,10,9,24,1988,GBR,exact normalized supplied Team match
+13,Kenya,5,2,2,9,1988,KEN,exact normalized supplied Team match
+14,Japan,4,3,7,14,1988,JPN,exact normalized supplied Team match
+15,Australia,3,6,5,14,1988,AUS,exact normalized supplied Team match
+16,Yugoslavia,3,4,5,12,1988,YUG,documented naming alias
+17,Czechoslovakia,3,3,2,8,1988,TCH,exact normalized supplied Team match
+18,New Zealand,3,2,8,13,1988,NZL,exact normalized supplied Team match
+19,Canada,3,2,5,10,1988,CAN,exact normalized supplied Team match
+20,Poland,2,5,9,16,1988,POL,exact normalized supplied Team match
+21,Norway,2,3,0,5,1988,NOR,exact normalized supplied Team match
+22,Netherlands,2,2,5,9,1988,NED,exact normalized supplied Team match
+23,Denmark,2,1,1,4,1988,DEN,exact normalized supplied Team match
+24,Brazil,1,2,3,6,1988,BRA,exact normalized supplied Team match
+25,Finland,1,1,2,4,1988,FIN,exact normalized supplied Team match
+25,Spain,1,1,2,4,1988,ESP,exact normalized supplied Team match
+27,Turkey,1,1,0,2,1988,TUR,exact normalized supplied Team match
+28,Morocco,1,0,2,3,1988,MAR,exact normalized supplied Team match
+29,Austria,1,0,0,1,1988,AUT,exact normalized supplied Team match
+29,Portugal,1,0,0,1,1988,POR,exact normalized supplied Team match
+29,Suriname,1,0,0,1,1988,SUR,exact normalized supplied Team match
+32,Sweden,0,4,7,11,1988,SWE,exact normalized supplied Team match
+33,Switzerland,0,2,2,4,1988,SUI,exact normalized supplied Team match
+34,Jamaica,0,2,0,2,1988,JAM,exact normalized supplied Team match
+35,Argentina,0,1,1,2,1988,ARG,exact normalized supplied Team match
+36,Chile,0,1,0,1,1988,CHI,exact normalized supplied Team match
+36,Costa Rica,0,1,0,1,1988,CRC,exact normalized supplied Team match
+36,Indonesia,0,1,0,1,1988,INA,exact normalized supplied Team match
+36,Iran,0,1,0,1,1988,IRI,exact normalized supplied Team match
+36,Netherlands Antilles,0,1,0,1,1988,AHO,exact normalized supplied Team match
+36,Peru,0,1,0,1,1988,PER,exact normalized supplied Team match
+36,Senegal,0,1,0,1,1988,SEN,exact normalized supplied Team match
+36,Virgin Islands,0,1,0,1,1988,ISV,documented naming alias
+44,Belgium,0,0,2,2,1988,BEL,exact normalized supplied Team match
+44,Mexico,0,0,2,2,1988,MEX,exact normalized supplied Team match
+46,Colombia,0,0,1,1,1988,COL,exact normalized supplied Team match
+46,Djibouti,0,0,1,1,1988,DJI,exact normalized supplied Team match
+46,Greece,0,0,1,1,1988,GRE,exact normalized supplied Team match
+46,Mongolia,0,0,1,1,1988,MGL,exact normalized supplied Team match
+46,Pakistan,0,0,1,1,1988,PAK,exact normalized supplied Team match
+46,Philippines,0,0,1,1,1988,PHI,exact normalized supplied Team match
+46,Thailand,0,0,1,1,1988,THA,exact normalized supplied Team match
+1,Unified Team,45,38,29,112,1992,EUN,exact normalized supplied Team match
+2,United States,37,34,37,108,1992,USA,exact normalized supplied Team match
+3,Germany,33,21,28,82,1992,GER,documented naming alias
+4,China,16,22,16,54,1992,CHN,exact normalized supplied Team match
+5,Cuba,14,6,11,31,1992,CUB,exact normalized supplied Team match
+6,Spain,13,7,2,22,1992,ESP,exact normalized supplied Team match
+7,South Korea,12,5,12,29,1992,KOR,exact normalized supplied Team match
+8,Hungary,11,12,7,30,1992,HUN,exact normalized supplied Team match
+9,France,8,5,16,29,1992,FRA,exact normalized supplied Team match
+10,Australia,7,9,11,27,1992,AUS,exact normalized supplied Team match
+11,Canada,7,4,7,18,1992,CAN,exact normalized supplied Team match
+12,Italy,6,5,8,19,1992,ITA,exact normalized supplied Team match
+13,Great Britain,5,3,12,20,1992,GBR,exact normalized supplied Team match
+14,Romania,4,6,8,18,1992,ROU,exact normalized supplied Team match
+15,Czechoslovakia,4,2,1,7,1992,TCH,exact normalized supplied Team match
+16,North Korea,4,0,5,9,1992,PRK,exact normalized supplied Team match
+17,Japan,3,8,11,22,1992,JPN,exact normalized supplied Team match
+18,Bulgaria,3,7,6,16,1992,BUL,exact normalized supplied Team match
+19,Poland,3,6,10,19,1992,POL,exact normalized supplied Team match
+20,Netherlands,2,6,7,15,1992,NED,exact normalized supplied Team match
+21,Kenya,2,4,2,8,1992,KEN,exact normalized supplied Team match
+22,Norway,2,4,1,7,1992,NOR,exact normalized supplied Team match
+23,Turkey,2,2,2,6,1992,TUR,exact normalized supplied Team match
+24,Indonesia,2,2,1,5,1992,INA,exact normalized supplied Team match
+25,Brazil,2,1,0,3,1992,BRA,exact normalized supplied Team match
+26,Greece,2,0,0,2,1992,GRE,exact normalized supplied Team match
+27,Sweden,1,7,4,12,1992,SWE,exact normalized supplied Team match
+28,New Zealand,1,4,5,10,1992,NZL,exact normalized supplied Team match
+29,Finland,1,2,2,5,1992,FIN,exact normalized supplied Team match
+30,Denmark,1,1,4,6,1992,DEN,exact normalized supplied Team match
+31,Morocco,1,1,1,3,1992,MAR,exact normalized supplied Team match
+32,Ireland,1,1,0,2,1992,IRL,documented naming alias
+33,Ethiopia,1,0,2,3,1992,ETH,exact normalized supplied Team match
+34,Algeria,1,0,1,2,1992,ALG,exact normalized supplied Team match
+34,Estonia,1,0,1,2,1992,EST,exact normalized supplied Team match
+34,Lithuania,1,0,1,2,1992,LTU,exact normalized supplied Team match
+37,Switzerland,1,0,0,1,1992,SUI,exact normalized supplied Team match
+38,Jamaica,0,3,1,4,1992,JAM,exact normalized supplied Team match
+38,Nigeria,0,3,1,4,1992,NGR,exact normalized supplied Team match
+40,Latvia,0,2,1,3,1992,LAT,exact normalized supplied Team match
+41,Austria,0,2,0,2,1992,AUT,exact normalized supplied Team match
+41,Namibia,0,2,0,2,1992,NAM,exact normalized supplied Team match
+41,South Africa,0,2,0,2,1992,RSA,exact normalized supplied Team match
+44,Belgium,0,1,2,3,1992,BEL,exact normalized supplied Team match
+44,Croatia,0,1,2,3,1992,CRO,exact normalized supplied Team match
+44,Independent Olympic Participants,0,1,2,3,1992,IOA,documented naming alias
+44,Iran,0,1,2,3,1992,IRI,exact normalized supplied Team match
+48,Israel,0,1,1,2,1992,ISR,exact normalized supplied Team match
+49,Chinese Taipei,0,1,0,1,1992,TPE,exact normalized supplied Team match
+49,Mexico,0,1,0,1,1992,MEX,exact normalized supplied Team match
+49,Peru,0,1,0,1,1992,PER,exact normalized supplied Team match
+52,Mongolia,0,0,2,2,1992,MGL,exact normalized supplied Team match
+52,Slovenia,0,0,2,2,1992,SLO,exact normalized supplied Team match
+54,Argentina,0,0,1,1,1992,ARG,exact normalized supplied Team match
+54,Bahamas,0,0,1,1,1992,BAH,exact normalized supplied Team match
+54,Colombia,0,0,1,1,1992,COL,exact normalized supplied Team match
+54,Ghana,0,0,1,1,1992,GHA,exact normalized supplied Team match
+54,Malaysia,0,0,1,1,1992,MAS,exact normalized supplied Team match
+54,Pakistan,0,0,1,1,1992,PAK,exact normalized supplied Team match
+54,Philippines,0,0,1,1,1992,PHI,exact normalized supplied Team match
+54,Puerto Rico,0,0,1,1,1992,PUR,exact normalized supplied Team match
+54,Qatar,0,0,1,1,1992,QAT,exact normalized supplied Team match
+54,Suriname,0,0,1,1,1992,SUR,exact normalized supplied Team match
+54,Thailand,0,0,1,1,1992,THA,exact normalized supplied Team match
+1,United States,44,32,25,101,1996,USA,exact normalized supplied Team match
+2,Russia,26,21,16,63,1996,RUS,documented naming alias
+3,Germany,20,18,27,65,1996,GER,documented naming alias
+4,China,16,22,12,50,1996,CHN,exact normalized supplied Team match
+5,France,15,7,15,37,1996,FRA,exact normalized supplied Team match
+6,Italy,13,10,12,35,1996,ITA,exact normalized supplied Team match
+7,Australia,9,9,23,41,1996,AUS,exact normalized supplied Team match
+8,Cuba,9,8,8,25,1996,CUB,exact normalized supplied Team match
+9,Ukraine,9,2,12,23,1996,UKR,exact normalized supplied Team match
+10,South Korea,7,15,5,27,1996,KOR,exact normalized supplied Team match
+11,Poland,7,5,5,17,1996,POL,exact normalized supplied Team match
+12,Hungary,7,4,10,21,1996,HUN,exact normalized supplied Team match
+13,Spain,5,6,6,17,1996,ESP,exact normalized supplied Team match
+14,Romania,4,7,9,20,1996,ROU,exact normalized supplied Team match
+15,Netherlands,4,5,10,19,1996,NED,exact normalized supplied Team match
+16,Greece,4,4,0,8,1996,GRE,exact normalized supplied Team match
+17,Czech Republic,4,3,4,11,1996,CZE,exact normalized supplied Team match
+18,Switzerland,4,3,0,7,1996,SUI,exact normalized supplied Team match
+19,Denmark,4,1,1,6,1996,DEN,exact normalized supplied Team match
+19,Turkey,4,1,1,6,1996,TUR,exact normalized supplied Team match
+21,Canada,3,11,8,22,1996,CAN,exact normalized supplied Team match
+22,Bulgaria,3,7,5,15,1996,BUL,exact normalized supplied Team match
+23,Japan,3,6,5,14,1996,JPN,exact normalized supplied Team match
+24,Kazakhstan,3,4,4,11,1996,KAZ,exact normalized supplied Team match
+25,Brazil,3,3,9,15,1996,BRA,exact normalized supplied Team match
+26,New Zealand,3,2,1,6,1996,NZL,exact normalized supplied Team match
+27,South Africa,3,1,1,5,1996,RSA,exact normalized supplied Team match
+28,Ireland,3,0,1,4,1996,IRL,documented naming alias
+29,Sweden,2,4,2,8,1996,SWE,exact normalized supplied Team match
+30,Norway,2,2,3,7,1996,NOR,exact normalized supplied Team match
+31,Belgium,2,2,2,6,1996,BEL,exact normalized supplied Team match
+32,Nigeria,2,1,3,6,1996,NGR,exact normalized supplied Team match
+33,North Korea,2,1,2,5,1996,PRK,exact normalized supplied Team match
+34,Algeria,2,0,1,3,1996,ALG,exact normalized supplied Team match
+34,Ethiopia,2,0,1,3,1996,ETH,exact normalized supplied Team match
+36,Great Britain,1,8,6,15,1996,GBR,exact normalized supplied Team match
+37,Belarus,1,6,8,15,1996,BLR,exact normalized supplied Team match
+38,Kenya,1,4,3,8,1996,KEN,exact normalized supplied Team match
+39,Jamaica,1,3,2,6,1996,JAM,exact normalized supplied Team match
+40,Finland,1,2,1,4,1996,FIN,exact normalized supplied Team match
+41,FR Yugoslavia,1,1,2,4,1996,SCG,documented naming alias
+41,Indonesia,1,1,2,4,1996,INA,exact normalized supplied Team match
+43,Iran,1,1,1,3,1996,IRI,exact normalized supplied Team match
+43,Slovakia,1,1,1,3,1996,SVK,exact normalized supplied Team match
+45,Armenia,1,1,0,2,1996,ARM,exact normalized supplied Team match
+45,Croatia,1,1,0,2,1996,CRO,exact normalized supplied Team match
+47,Portugal,1,0,1,2,1996,POR,exact normalized supplied Team match
+47,Thailand,1,0,1,2,1996,THA,exact normalized supplied Team match
+49,Burundi,1,0,0,1,1996,BDI,exact normalized supplied Team match
+49,Costa Rica,1,0,0,1,1996,CRC,exact normalized supplied Team match
+49,Ecuador,1,0,0,1,1996,ECU,exact normalized supplied Team match
+49,Hong Kong,1,0,0,1,1996,HKG,exact normalized supplied Team match
+49,Syria,1,0,0,1,1996,SYR,exact normalized supplied Team match
+54,Argentina,0,2,1,3,1996,ARG,exact normalized supplied Team match
+55,Namibia,0,2,0,2,1996,NAM,exact normalized supplied Team match
+55,Slovenia,0,2,0,2,1996,SLO,exact normalized supplied Team match
+57,Austria,0,1,2,3,1996,AUT,exact normalized supplied Team match
+58,Malaysia,0,1,1,2,1996,MAS,exact normalized supplied Team match
+58,Moldova,0,1,1,2,1996,MDA,exact normalized supplied Team match
+58,Uzbekistan,0,1,1,2,1996,UZB,exact normalized supplied Team match
+61,Azerbaijan,0,1,0,1,1996,AZE,exact normalized supplied Team match
+61,Bahamas,0,1,0,1,1996,BAH,exact normalized supplied Team match
+61,Chinese Taipei,0,1,0,1,1996,TPE,exact normalized supplied Team match
+61,Latvia,0,1,0,1,1996,LAT,exact normalized supplied Team match
+61,Philippines,0,1,0,1,1996,PHI,exact normalized supplied Team match
+61,Tonga,0,1,0,1,1996,TGA,exact normalized supplied Team match
+61,Zambia,0,1,0,1,1996,ZAM,exact normalized supplied Team match
+68,Georgia,0,0,2,2,1996,GEO,exact normalized supplied Team match
+68,Morocco,0,0,2,2,1996,MAR,exact normalized supplied Team match
+68,Trinidad and Tobago,0,0,2,2,1996,TTO,exact normalized supplied Team match
+71,India,0,0,1,1,1996,IND,exact normalized supplied Team match
+71,Israel,0,0,1,1,1996,ISR,exact normalized supplied Team match
+71,Lithuania,0,0,1,1,1996,LTU,exact normalized supplied Team match
+71,Mexico,0,0,1,1,1996,MEX,exact normalized supplied Team match
+71,Mongolia,0,0,1,1,1996,MGL,exact normalized supplied Team match
+71,Mozambique,0,0,1,1,1996,MOZ,exact normalized supplied Team match
+71,Puerto Rico,0,0,1,1,1996,PUR,exact normalized supplied Team match
+71,Tunisia,0,0,1,1,1996,TUN,exact normalized supplied Team match
+71,Uganda,0,0,1,1,1996,UGA,exact normalized supplied Team match
+1,United States,37,24,32,93,2000,USA,exact normalized supplied Team match
+2,Russia,32,28,29,89,2000,RUS,documented naming alias
+3,China,28,16,14,58,2000,CHN,exact normalized supplied Team match
+4,Australia,16,25,17,58,2000,AUS,exact normalized supplied Team match
+5,Germany,13,17,26,56,2000,GER,documented naming alias
+6,France,13,14,11,38,2000,FRA,exact normalized supplied Team match
+7,Italy,13,8,13,34,2000,ITA,exact normalized supplied Team match
+8,Netherlands,12,9,4,25,2000,NED,exact normalized supplied Team match
+9,Cuba,11,11,7,29,2000,CUB,exact normalized supplied Team match
+10,Great Britain,11,10,7,28,2000,GBR,exact normalized supplied Team match
+11,Romania,11,6,9,26,2000,ROU,exact normalized supplied Team match
+12,South Korea,8,10,10,28,2000,KOR,exact normalized supplied Team match
+13,Hungary,8,6,3,17,2000,HUN,exact normalized supplied Team match
+14,Poland,6,5,3,14,2000,POL,exact normalized supplied Team match
+15,Japan,5,8,5,18,2000,JPN,exact normalized supplied Team match
+16,Bulgaria,5,6,2,13,2000,BUL,exact normalized supplied Team match
+17,Greece,4,6,3,13,2000,GRE,exact normalized supplied Team match
+18,Sweden,4,5,3,12,2000,SWE,exact normalized supplied Team match
+19,Norway,4,3,3,10,2000,NOR,exact normalized supplied Team match
+20,Ethiopia,4,1,3,8,2000,ETH,exact normalized supplied Team match
+21,Ukraine,3,10,10,23,2000,UKR,exact normalized supplied Team match
+22,Kazakhstan,3,4,0,7,2000,KAZ,exact normalized supplied Team match
+23,Belarus,3,3,11,17,2000,BLR,exact normalized supplied Team match
+24,Canada,3,3,8,14,2000,CAN,exact normalized supplied Team match
+25,Spain,3,3,5,11,2000,ESP,exact normalized supplied Team match
+26,Turkey,3,0,2,5,2000,TUR,exact normalized supplied Team match
+27,Iran,3,0,1,4,2000,IRI,exact normalized supplied Team match
+28,Czech Republic,2,3,3,8,2000,CZE,exact normalized supplied Team match
+29,Kenya,2,3,2,7,2000,KEN,exact normalized supplied Team match
+30,Denmark,2,3,1,6,2000,DEN,exact normalized supplied Team match
+31,Finland,2,1,1,4,2000,FIN,exact normalized supplied Team match
+32,Austria,2,1,0,3,2000,AUT,exact normalized supplied Team match
+33,Lithuania,2,0,3,5,2000,LTU,exact normalized supplied Team match
+34,Azerbaijan,2,0,1,3,2000,AZE,exact normalized supplied Team match
+34,Bahamas,2,0,1,3,2000,BAH,exact normalized supplied Team match
+36,Slovenia,2,0,0,2,2000,SLO,exact normalized supplied Team match
+37,Switzerland,1,6,2,9,2000,SUI,exact normalized supplied Team match
+38,Indonesia,1,3,2,6,2000,INA,exact normalized supplied Team match
+39,Slovakia,1,3,1,5,2000,SVK,exact normalized supplied Team match
+40,Mexico,1,2,3,6,2000,MEX,exact normalized supplied Team match
+41,Nigeria,1,2,0,3,2000,NGR,exact normalized supplied Team match
+42,Algeria,1,1,3,5,2000,ALG,exact normalized supplied Team match
+43,Uzbekistan,1,1,2,4,2000,UZB,exact normalized supplied Team match
+44,FR Yugoslavia,1,1,1,3,2000,SCG,documented naming alias
+44,Latvia,1,1,1,3,2000,LAT,exact normalized supplied Team match
+46,New Zealand,1,0,3,4,2000,NZL,exact normalized supplied Team match
+47,Estonia,1,0,2,3,2000,EST,exact normalized supplied Team match
+47,Thailand,1,0,2,3,2000,THA,exact normalized supplied Team match
+49,Croatia,1,0,1,2,2000,CRO,exact normalized supplied Team match
+50,Cameroon,1,0,0,1,2000,CMR,exact normalized supplied Team match
+50,Colombia,1,0,0,1,2000,COL,exact normalized supplied Team match
+50,Mozambique,1,0,0,1,2000,MOZ,exact normalized supplied Team match
+53,Brazil,0,6,6,12,2000,BRA,exact normalized supplied Team match
+54,Jamaica,0,6,3,9,2000,JAM,exact normalized supplied Team match
+55,Belgium,0,2,3,5,2000,BEL,exact normalized supplied Team match
+55,South Africa,0,2,3,5,2000,RSA,exact normalized supplied Team match
+57,Argentina,0,2,2,4,2000,ARG,exact normalized supplied Team match
+58,Chinese Taipei,0,1,4,5,2000,TPE,exact normalized supplied Team match
+58,Morocco,0,1,4,5,2000,MAR,exact normalized supplied Team match
+60,North Korea,0,1,3,4,2000,PRK,exact normalized supplied Team match
+61,Moldova,0,1,1,2,2000,MDA,exact normalized supplied Team match
+61,Saudi Arabia,0,1,1,2,2000,KSA,exact normalized supplied Team match
+61,Trinidad and Tobago,0,1,1,2,2000,TTO,exact normalized supplied Team match
+64,Ireland,0,1,0,1,2000,IRL,documented naming alias
+64,Sri Lanka,0,1,0,1,2000,SRI,exact normalized supplied Team match
+64,Uruguay,0,1,0,1,2000,URU,exact normalized supplied Team match
+64,Vietnam,0,1,0,1,2000,VIE,exact normalized supplied Team match
+68,Georgia,0,0,6,6,2000,GEO,exact normalized supplied Team match
+69,Costa Rica,0,0,2,2,2000,CRC,exact normalized supplied Team match
+69,Portugal,0,0,2,2,2000,POR,exact normalized supplied Team match
+71,Armenia,0,0,1,1,2000,ARM,exact normalized supplied Team match
+71,Barbados,0,0,1,1,2000,BAR,exact normalized supplied Team match
+71,Chile,0,0,1,1,2000,CHI,exact normalized supplied Team match
+71,Iceland,0,0,1,1,2000,ISL,exact normalized supplied Team match
+71,India,0,0,1,1,2000,IND,exact normalized supplied Team match
+71,Israel,0,0,1,1,2000,ISR,exact normalized supplied Team match
+71,Kuwait,0,0,1,1,2000,KUW,exact normalized supplied Team match
+71,Kyrgyzstan,0,0,1,1,2000,KGZ,exact normalized supplied Team match
+71,Macedonia,0,0,1,1,2000,MKD,exact normalized supplied Team match
+71,Qatar,0,0,1,1,2000,QAT,exact normalized supplied Team match
+1,United States,36,39,26,101,2004,USA,exact normalized supplied Team match
+2,China,32,17,14,63,2004,CHN,exact normalized supplied Team match
+3,Russia,28,26,36,90,2004,RUS,documented naming alias
+4,Australia,17,16,17,50,2004,AUS,exact normalized supplied Team match
+5,Japan,16,9,12,37,2004,JPN,exact normalized supplied Team match
+6,Germany,13,16,20,49,2004,GER,documented naming alias
+7,France,11,9,13,33,2004,FRA,exact normalized supplied Team match
+8,Italy,10,11,11,32,2004,ITA,exact normalized supplied Team match
+9,South Korea,9,12,9,30,2004,KOR,exact normalized supplied Team match
+10,Great Britain,9,9,12,30,2004,GBR,exact normalized supplied Team match
+11,Cuba,9,7,11,27,2004,CUB,exact normalized supplied Team match
+12,Hungary,8,6,3,17,2004,HUN,exact normalized supplied Team match
+13,Ukraine,8,5,9,22,2004,UKR,exact normalized supplied Team match
+14,Romania,8,5,6,19,2004,ROU,exact normalized supplied Team match
+15,Greece,6,6,4,16,2004,GRE,exact normalized supplied Team match
+16,Brazil,5,2,3,10,2004,BRA,exact normalized supplied Team match
+17,Norway,5,0,1,6,2004,NOR,exact normalized supplied Team match
+18,Netherlands,4,9,9,22,2004,NED,exact normalized supplied Team match
+19,Sweden,4,2,1,7,2004,SWE,exact normalized supplied Team match
+20,Spain,3,11,6,20,2004,ESP,exact normalized supplied Team match
+21,Canada,3,6,3,12,2004,CAN,exact normalized supplied Team match
+22,Turkey,3,3,4,10,2004,TUR,exact normalized supplied Team match
+23,Poland,3,2,5,10,2004,POL,exact normalized supplied Team match
+24,New Zealand,3,2,0,5,2004,NZL,exact normalized supplied Team match
+25,Thailand,3,1,4,8,2004,THA,exact normalized supplied Team match
+26,Belarus,2,5,6,13,2004,BLR,exact normalized supplied Team match
+27,Austria,2,4,1,7,2004,AUT,exact normalized supplied Team match
+28,Ethiopia,2,3,2,7,2004,ETH,exact normalized supplied Team match
+29,Iran,2,2,2,6,2004,IRI,exact normalized supplied Team match
+29,Slovakia,2,2,2,6,2004,SVK,exact normalized supplied Team match
+31,Chinese Taipei,2,2,1,5,2004,TPE,exact normalized supplied Team match
+32,Georgia,2,2,0,4,2004,GEO,exact normalized supplied Team match
+33,Bulgaria,2,1,9,12,2004,BUL,exact normalized supplied Team match
+34,Denmark,2,1,5,8,2004,DEN,exact normalized supplied Team match
+35,Jamaica,2,1,2,5,2004,JAM,exact normalized supplied Team match
+35,Uzbekistan,2,1,2,5,2004,UZB,exact normalized supplied Team match
+37,Morocco,2,1,0,3,2004,MAR,exact normalized supplied Team match
+38,Argentina,2,0,4,6,2004,ARG,exact normalized supplied Team match
+39,Chile,2,0,1,3,2004,CHI,exact normalized supplied Team match
+40,Kazakhstan,1,4,3,8,2004,KAZ,exact normalized supplied Team match
+41,Kenya,1,4,2,7,2004,KEN,exact normalized supplied Team match
+42,Czech Republic,1,3,5,9,2004,CZE,exact normalized supplied Team match
+43,South Africa,1,3,2,6,2004,RSA,exact normalized supplied Team match
+44,Croatia,1,2,2,5,2004,CRO,exact normalized supplied Team match
+45,Lithuania,1,2,0,3,2004,LTU,exact normalized supplied Team match
+46,Egypt,1,1,3,5,2004,EGY,exact normalized supplied Team match
+46,Switzerland,1,1,3,5,2004,SUI,exact normalized supplied Team match
+48,Indonesia,1,1,2,4,2004,INA,exact normalized supplied Team match
+49,Zimbabwe,1,1,1,3,2004,ZIM,exact normalized supplied Team match
+50,Azerbaijan,1,0,4,5,2004,AZE,exact normalized supplied Team match
+51,Belgium,1,0,2,3,2004,BEL,exact normalized supplied Team match
+52,Bahamas,1,0,1,2,2004,BAH,exact normalized supplied Team match
+52,Israel,1,0,1,2,2004,ISR,exact normalized supplied Team match
+54,Cameroon,1,0,0,1,2004,CMR,exact normalized supplied Team match
+54,Dominican Republic,1,0,0,1,2004,DOM,exact normalized supplied Team match
+54,United Arab Emirates,1,0,0,1,2004,UAE,exact normalized supplied Team match
+57,North Korea,0,4,1,5,2004,PRK,exact normalized supplied Team match
+58,Latvia,0,4,0,4,2004,LAT,exact normalized supplied Team match
+59,Mexico,0,3,1,4,2004,MEX,exact normalized supplied Team match
+60,Portugal,0,2,1,3,2004,POR,exact normalized supplied Team match
+61,Finland,0,2,0,2,2004,FIN,exact normalized supplied Team match
+61,Serbia and Montenegro,0,2,0,2,2004,SCG,exact normalized supplied Team match
+63,Slovenia,0,1,3,4,2004,SLO,exact normalized supplied Team match
+64,Estonia,0,1,2,3,2004,EST,exact normalized supplied Team match
+65,Hong Kong,0,1,0,1,2004,HKG,exact normalized supplied Team match
+65,India,0,1,0,1,2004,IND,exact normalized supplied Team match
+65,Paraguay,0,1,0,1,2004,PAR,exact normalized supplied Team match
+68,Colombia,0,0,2,2,2004,COL,exact normalized supplied Team match
+68,Nigeria,0,0,2,2,2004,NGR,exact normalized supplied Team match
+68,Venezuela,0,0,2,2,2004,VEN,exact normalized supplied Team match
+71,Eritrea,0,0,1,1,2004,ERI,exact normalized supplied Team match
+71,Mongolia,0,0,1,1,2004,MGL,exact normalized supplied Team match
+71,Syria,0,0,1,1,2004,SYR,exact normalized supplied Team match
+71,Trinidad and Tobago,0,0,1,1,2004,TTO,exact normalized supplied Team match
+1,China,48,22,30,100,2008,CHN,exact normalized supplied Team match
+2,United States,36,39,37,112,2008,USA,exact normalized supplied Team match
+3,Russia,24,13,23,60,2008,RUS,documented naming alias
+4,Great Britain,19,13,19,51,2008,GBR,exact normalized supplied Team match
+5,Germany,16,11,14,41,2008,GER,documented naming alias
+6,Australia,14,15,17,46,2008,AUS,exact normalized supplied Team match
+7,South Korea,13,11,8,32,2008,KOR,exact normalized supplied Team match
+8,Japan,9,8,8,25,2008,JPN,exact normalized supplied Team match
+9,Italy,8,9,10,27,2008,ITA,exact normalized supplied Team match
+10,France,7,16,20,43,2008,FRA,exact normalized supplied Team match
+11,Netherlands,7,5,4,16,2008,NED,exact normalized supplied Team match
+12,Ukraine,7,4,11,22,2008,UKR,exact normalized supplied Team match
+13,Kenya,6,4,6,16,2008,KEN,exact normalized supplied Team match
+14,Spain,5,11,3,19,2008,ESP,exact normalized supplied Team match
+15,Jamaica,5,4,2,11,2008,JAM,exact normalized supplied Team match
+16,Poland,4,5,2,11,2008,POL,exact normalized supplied Team match
+17,Ethiopia,4,2,1,7,2008,ETH,exact normalized supplied Team match
+18,Romania,4,1,4,9,2008,ROU,exact normalized supplied Team match
+19,Cuba,3,10,17,30,2008,CUB,exact normalized supplied Team match
+20,Canada,3,9,8,20,2008,CAN,exact normalized supplied Team match
+21,Hungary,3,5,2,10,2008,HUN,exact normalized supplied Team match
+22,Norway,3,5,1,9,2008,NOR,exact normalized supplied Team match
+23,Brazil,3,4,10,17,2008,BRA,exact normalized supplied Team match
+24,Belarus,3,4,7,14,2008,BLR,exact normalized supplied Team match
+25,Czech Republic,3,3,1,7,2008,CZE,exact normalized supplied Team match
+26,Slovakia,3,3,0,6,2008,SVK,exact normalized supplied Team match
+27,New Zealand,3,2,4,9,2008,NZL,exact normalized supplied Team match
+28,Georgia,3,2,2,7,2008,GEO,exact normalized supplied Team match
+29,Kazakhstan,2,3,4,9,2008,KAZ,exact normalized supplied Team match
+30,Denmark,2,2,3,7,2008,DEN,exact normalized supplied Team match
+31,North Korea,2,2,2,6,2008,PRK,exact normalized supplied Team match
+31,Thailand,2,2,2,6,2008,THA,exact normalized supplied Team match
+33,Mongolia,2,2,0,4,2008,MGL,exact normalized supplied Team match
+34,Switzerland,2,1,4,7,2008,SUI,exact normalized supplied Team match
+35,Argentina,2,0,4,6,2008,ARG,exact normalized supplied Team match
+36,Mexico,2,0,2,4,2008,MEX,exact normalized supplied Team match
+37,Belgium,2,0,0,2,2008,BEL,exact normalized supplied Team match
+38,Zimbabwe,1,3,0,4,2008,ZIM,exact normalized supplied Team match
+39,Slovenia,1,2,2,5,2008,SLO,exact normalized supplied Team match
+40,Azerbaijan,1,1,4,6,2008,AZE,exact normalized supplied Team match
+40,Indonesia,1,1,4,6,2008,INA,exact normalized supplied Team match
+42,Bulgaria,1,1,3,5,2008,BUL,exact normalized supplied Team match
+42,Turkey,1,1,3,5,2008,TUR,exact normalized supplied Team match
+44,Chinese Taipei,1,1,2,4,2008,TPE,exact normalized supplied Team match
+44,Finland,1,1,2,4,2008,FIN,exact normalized supplied Team match
+46,Latvia,1,1,1,3,2008,LAT,exact normalized supplied Team match
+47,Dominican Republic,1,1,0,2,2008,DOM,exact normalized supplied Team match
+47,Estonia,1,1,0,2,2008,EST,exact normalized supplied Team match
+47,Portugal,1,1,0,2,2008,POR,exact normalized supplied Team match
+47,Trinidad and Tobago,1,1,0,2,2008,TTO,exact normalized supplied Team match
+51,India,1,0,2,3,2008,IND,exact normalized supplied Team match
+52,Iran,1,0,1,2,2008,IRI,exact normalized supplied Team match
+53,Cameroon,1,0,0,1,2008,CMR,exact normalized supplied Team match
+53,Panama,1,0,0,1,2008,PAN,exact normalized supplied Team match
+53,Tunisia,1,0,0,1,2008,TUN,exact normalized supplied Team match
+56,Sweden,0,4,1,5,2008,SWE,exact normalized supplied Team match
+57,Lithuania,0,3,2,5,2008,LTU,exact normalized supplied Team match
+57,Nigeria,0,3,2,5,2008,NGR,exact normalized supplied Team match
+59,Croatia,0,2,3,5,2008,CRO,exact normalized supplied Team match
+60,Colombia,0,2,1,3,2008,COL,exact normalized supplied Team match
+60,Greece,0,2,1,3,2008,GRE,exact normalized supplied Team match
+62,Armenia,0,1,4,5,2008,ARM,exact normalized supplied Team match
+63,Uzbekistan,0,1,3,4,2008,UZB,exact normalized supplied Team match
+64,Austria,0,1,2,3,2008,AUT,exact normalized supplied Team match
+64,Ireland,0,1,2,3,2008,IRL,documented naming alias
+64,Kyrgyzstan,0,1,2,3,2008,KGZ,exact normalized supplied Team match
+64,Serbia,0,1,2,3,2008,SRB,exact normalized supplied Team match
+68,Algeria,0,1,1,2,2008,ALG,exact normalized supplied Team match
+68,Bahamas,0,1,1,2,2008,BAH,exact normalized supplied Team match
+68,Morocco,0,1,1,2,2008,MAR,exact normalized supplied Team match
+68,Tajikistan,0,1,1,2,2008,TJK,exact normalized supplied Team match
+72,Chile,0,1,0,1,2008,CHI,exact normalized supplied Team match
+72,Ecuador,0,1,0,1,2008,ECU,exact normalized supplied Team match
+72,Iceland,0,1,0,1,2008,ISL,exact normalized supplied Team match
+72,Malaysia,0,1,0,1,2008,MAS,exact normalized supplied Team match
+72,Samoa,0,1,0,1,2008,SAM,exact normalized supplied Team match
+72,Singapore,0,1,0,1,2008,SGP,exact normalized supplied Team match
+72,South Africa,0,1,0,1,2008,RSA,exact normalized supplied Team match
+72,Sudan,0,1,0,1,2008,SUD,exact normalized supplied Team match
+72,Vietnam,0,1,0,1,2008,VIE,exact normalized supplied Team match
+81,Egypt,0,0,2,2,2008,EGY,exact normalized supplied Team match
+82,Afghanistan,0,0,1,1,2008,AFG,exact normalized supplied Team match
+82,Israel,0,0,1,1,2008,ISR,exact normalized supplied Team match
+82,Mauritius,0,0,1,1,2008,MRI,exact normalized supplied Team match
+82,Moldova,0,0,1,1,2008,MDA,exact normalized supplied Team match
+82,Togo,0,0,1,1,2008,TOG,exact normalized supplied Team match
+82,Venezuela,0,0,1,1,2008,VEN,exact normalized supplied Team match
+1,United States,48,26,30,104,2012,USA,exact normalized supplied Team match
+2,China,39,31,22,92,2012,CHN,exact normalized supplied Team match
+3,Great Britain,29,18,18,65,2012,GBR,exact normalized supplied Team match
+4,Russia,18,21,26,65,2012,RUS,documented naming alias
+5,South Korea,13,9,9,31,2012,KOR,exact normalized supplied Team match
+6,Germany,11,20,13,44,2012,GER,documented naming alias
+7,France,11,11,13,35,2012,FRA,exact normalized supplied Team match
+8,Australia,8,15,12,35,2012,AUS,exact normalized supplied Team match
+9,Italy,8,9,11,28,2012,ITA,exact normalized supplied Team match
+10,Hungary,8,4,6,18,2012,HUN,exact normalized supplied Team match
+11,Japan,7,14,17,38,2012,JPN,exact normalized supplied Team match
+12,Iran,7,5,1,13,2012,IRI,exact normalized supplied Team match
+13,Netherlands,6,6,8,20,2012,NED,exact normalized supplied Team match
+14,New Zealand,6,2,5,13,2012,NZL,exact normalized supplied Team match
+15,Ukraine,5,4,10,19,2012,UKR,exact normalized supplied Team match
+16,Cuba,5,3,7,15,2012,CUB,exact normalized supplied Team match
+17,Spain,4,10,6,20,2012,ESP,exact normalized supplied Team match
+18,Jamaica,4,5,4,13,2012,JAM,exact normalized supplied Team match
+19,Czech Republic,4,4,3,11,2012,CZE,exact normalized supplied Team match
+20,South Africa,4,1,1,6,2012,RSA,exact normalized supplied Team match
+21,North Korea,4,0,2,6,2012,PRK,exact normalized supplied Team match
+22,Brazil,3,5,9,17,2012,BRA,exact normalized supplied Team match
+23,Kazakhstan,3,2,6,11,2012,KAZ,exact normalized supplied Team match
+23,Poland,3,2,6,11,2012,POL,exact normalized supplied Team match
+25,Ethiopia,3,2,3,8,2012,ETH,exact normalized supplied Team match
+26,Croatia,3,1,2,6,2012,CRO,exact normalized supplied Team match
+27,Canada,2,6,10,18,2012,CAN,exact normalized supplied Team match
+28,Belarus,2,5,3,10,2012,BLR,exact normalized supplied Team match
+29,Kenya,2,4,7,13,2012,KEN,exact normalized supplied Team match
+30,Denmark,2,4,3,9,2012,DEN,exact normalized supplied Team match
+31,Romania,2,4,1,7,2012,ROU,exact normalized supplied Team match
+32,Azerbaijan,2,2,5,9,2012,AZE,exact normalized supplied Team match
+33,Switzerland,2,2,0,4,2012,SUI,exact normalized supplied Team match
+34,Norway,2,1,1,4,2012,NOR,exact normalized supplied Team match
+35,Lithuania,2,0,3,5,2012,LTU,exact normalized supplied Team match
+36,Tunisia,2,0,1,3,2012,TUN,exact normalized supplied Team match
+37,Sweden,1,4,3,8,2012,SWE,exact normalized supplied Team match
+38,Colombia,1,3,5,9,2012,COL,exact normalized supplied Team match
+39,Mexico,1,3,4,8,2012,MEX,exact normalized supplied Team match
+40,Georgia,1,2,3,6,2012,GEO,exact normalized supplied Team match
+41,Ireland,1,1,4,6,2012,IRL,documented naming alias
+42,Argentina,1,1,2,4,2012,ARG,exact normalized supplied Team match
+42,Serbia,1,1,2,4,2012,SRB,exact normalized supplied Team match
+42,Slovenia,1,1,2,4,2012,SLO,exact normalized supplied Team match
+42,Trinidad and Tobago,1,1,2,4,2012,TTO,exact normalized supplied Team match
+46,Turkey,1,1,1,3,2012,TUR,exact normalized supplied Team match
+47,Dominican Republic,1,1,0,2,2012,DOM,exact normalized supplied Team match
+48,Chinese Taipei,1,0,1,2,2012,TPE,exact normalized supplied Team match
+48,Latvia,1,0,1,2,2012,LAT,exact normalized supplied Team match
+50,Algeria,1,0,0,1,2012,ALG,exact normalized supplied Team match
+50,Bahamas,1,0,0,1,2012,BAH,exact normalized supplied Team match
+50,Bahrain,1,0,0,1,2012,BRN,exact normalized supplied Team match
+50,Grenada,1,0,0,1,2012,GRN,exact normalized supplied Team match
+50,Uganda,1,0,0,1,2012,UGA,exact normalized supplied Team match
+50,Venezuela,1,0,0,1,2012,VEN,exact normalized supplied Team match
+56,Egypt,0,3,1,4,2012,EGY,exact normalized supplied Team match
+57,India,0,2,4,6,2012,IND,exact normalized supplied Team match
+58,Mongolia,0,2,3,5,2012,MGL,exact normalized supplied Team match
+59,Thailand,0,2,2,4,2012,THA,exact normalized supplied Team match
+60,Bulgaria,0,2,1,3,2012,BUL,exact normalized supplied Team match
+60,Finland,0,2,1,3,2012,FIN,exact normalized supplied Team match
+60,Indonesia,0,2,1,3,2012,INA,exact normalized supplied Team match
+63,Slovakia,0,1,3,4,2012,SVK,exact normalized supplied Team match
+64,Belgium,0,1,2,3,2012,BEL,exact normalized supplied Team match
+65,Armenia,0,1,1,2,2012,ARM,exact normalized supplied Team match
+65,Estonia,0,1,1,2,2012,EST,exact normalized supplied Team match
+65,Malaysia,0,1,1,2,2012,MAS,exact normalized supplied Team match
+65,Puerto Rico,0,1,1,2,2012,PUR,exact normalized supplied Team match
+65,Qatar,0,1,1,2,2012,QAT,exact normalized supplied Team match
+70,Botswana,0,1,0,1,2012,BOT,exact normalized supplied Team match
+70,Cyprus,0,1,0,1,2012,CYP,exact normalized supplied Team match
+70,Gabon,0,1,0,1,2012,GAB,exact normalized supplied Team match
+70,Guatemala,0,1,0,1,2012,GUA,exact normalized supplied Team match
+70,Montenegro,0,1,0,1,2012,MNE,exact normalized supplied Team match
+70,Portugal,0,1,0,1,2012,POR,exact normalized supplied Team match
+76,Uzbekistan,0,0,3,3,2012,UZB,exact normalized supplied Team match
+77,Greece,0,0,2,2,2012,GRE,exact normalized supplied Team match
+77,Singapore,0,0,2,2,2012,SGP,exact normalized supplied Team match
+79,Afghanistan,0,0,1,1,2012,AFG,exact normalized supplied Team match
+79,Cameroon,0,0,1,1,2012,CMR,exact normalized supplied Team match
+79,Hong Kong,0,0,1,1,2012,HKG,exact normalized supplied Team match
+79,Kuwait,0,0,1,1,2012,KUW,exact normalized supplied Team match
+79,Morocco,0,0,1,1,2012,MAR,exact normalized supplied Team match
+79,Saudi Arabia,0,0,1,1,2012,KSA,exact normalized supplied Team match
+79,Tajikistan,0,0,1,1,2012,TJK,exact normalized supplied Team match
+79,Vietnam,0,0,1,1,2012,VIE,exact normalized supplied Team match
+1,United States,46,37,38,121,2016,USA,exact normalized supplied Team match
+2,Great Britain,27,23,17,67,2016,GBR,exact normalized supplied Team match
+3,China,26,18,26,70,2016,CHN,exact normalized supplied Team match
+4,Russia,19,17,20,56,2016,RUS,documented naming alias
+5,Germany,17,10,15,42,2016,GER,documented naming alias
+6,Japan,12,8,21,41,2016,JPN,exact normalized supplied Team match
+7,France,10,18,14,42,2016,FRA,exact normalized supplied Team match
+8,South Korea,9,3,9,21,2016,KOR,exact normalized supplied Team match
+9,Italy,8,12,8,28,2016,ITA,exact normalized supplied Team match
+10,Australia,8,11,10,29,2016,AUS,exact normalized supplied Team match
+11,Netherlands,8,7,4,19,2016,NED,exact normalized supplied Team match
+12,Hungary,8,3,4,15,2016,HUN,exact normalized supplied Team match
+13,Brazil,7,6,6,19,2016,BRA,exact normalized supplied Team match
+14,Spain,7,4,6,17,2016,ESP,exact normalized supplied Team match
+15,Kenya,6,6,1,13,2016,KEN,exact normalized supplied Team match
+16,Jamaica,6,3,2,11,2016,JAM,exact normalized supplied Team match
+17,Croatia,5,3,2,10,2016,CRO,exact normalized supplied Team match
+18,Cuba,5,2,4,11,2016,CUB,exact normalized supplied Team match
+19,New Zealand,4,9,5,18,2016,NZL,exact normalized supplied Team match
+20,Canada,4,3,15,22,2016,CAN,exact normalized supplied Team match
+21,Uzbekistan,4,2,7,13,2016,UZB,exact normalized supplied Team match
+22,Colombia,3,2,3,8,2016,COL,exact normalized supplied Team match
+23,Switzerland,3,2,2,7,2016,SUI,exact normalized supplied Team match
+24,Iran,3,1,4,8,2016,IRI,exact normalized supplied Team match
+25,Greece,3,1,2,6,2016,GRE,exact normalized supplied Team match
+26,Argentina,3,1,0,4,2016,ARG,exact normalized supplied Team match
+27,Denmark,2,6,7,15,2016,DEN,exact normalized supplied Team match
+28,Sweden,2,6,3,11,2016,SWE,exact normalized supplied Team match
+29,South Africa,2,6,2,10,2016,RSA,exact normalized supplied Team match
+30,Kazakhstan,2,5,10,17,2016,KAZ,exact normalized supplied Team match
+31,Ukraine,2,5,4,11,2016,UKR,exact normalized supplied Team match
+32,Serbia,2,4,2,8,2016,SRB,exact normalized supplied Team match
+33,Poland,2,3,6,11,2016,POL,exact normalized supplied Team match
+34,North Korea,2,3,2,7,2016,PRK,exact normalized supplied Team match
+35,Belgium,2,2,2,6,2016,BEL,exact normalized supplied Team match
+35,Thailand,2,2,2,6,2016,THA,exact normalized supplied Team match
+37,Slovakia,2,2,0,4,2016,SVK,exact normalized supplied Team match
+38,Georgia,2,1,4,7,2016,GEO,exact normalized supplied Team match
+39,Azerbaijan,1,7,10,18,2016,AZE,exact normalized supplied Team match
+40,Belarus,1,4,4,9,2016,BLR,exact normalized supplied Team match
+41,Turkey,1,3,4,8,2016,TUR,exact normalized supplied Team match
+42,Armenia,1,3,0,4,2016,ARM,exact normalized supplied Team match
+43,Czech Republic,1,2,7,10,2016,CZE,exact normalized supplied Team match
+44,Ethiopia,1,2,5,8,2016,ETH,exact normalized supplied Team match
+45,Slovenia,1,2,1,4,2016,SLO,exact normalized supplied Team match
+46,Indonesia,1,2,0,3,2016,INA,exact normalized supplied Team match
+47,Romania,1,1,2,4,2016,ROU,exact normalized supplied Team match
+48,Bahrain,1,1,0,2,2016,BRN,exact normalized supplied Team match
+48,Vietnam,1,1,0,2,2016,VIE,exact normalized supplied Team match
+50,Chinese Taipei,1,0,2,3,2016,TPE,exact normalized supplied Team match
+51,Bahamas,1,0,1,2,2016,BAH,exact normalized supplied Team match
+51,Independent Olympic Athletes,1,0,1,2,2016,IOA,documented naming alias
+51,Ivory Coast,1,0,1,2,2016,CIV,documented naming alias
+54,Fiji,1,0,0,1,2016,FIJ,exact normalized supplied Team match
+54,Jordan,1,0,0,1,2016,JOR,exact normalized supplied Team match
+54,Kosovo,1,0,0,1,2016,KOS,exact normalized supplied Team match
+54,Puerto Rico,1,0,0,1,2016,PUR,exact normalized supplied Team match
+54,Singapore,1,0,0,1,2016,SGP,exact normalized supplied Team match
+54,Tajikistan,1,0,0,1,2016,TJK,exact normalized supplied Team match
+60,Malaysia,0,4,1,5,2016,MAS,exact normalized supplied Team match
+61,Mexico,0,3,2,5,2016,MEX,exact normalized supplied Team match
+62,Venezuela,0,2,1,3,2016,VEN,exact normalized supplied Team match
+63,Algeria,0,2,0,2,2016,ALG,exact normalized supplied Team match
+63,Ireland,0,2,0,2,2016,IRL,documented naming alias
+65,Lithuania,0,1,3,4,2016,LTU,exact normalized supplied Team match
+66,Bulgaria,0,1,2,3,2016,BUL,exact normalized supplied Team match
+67,India,0,1,1,2,2016,IND,exact normalized supplied Team match
+67,Mongolia,0,1,1,2,2016,MGL,exact normalized supplied Team match
+69,Burundi,0,1,0,1,2016,BDI,exact normalized supplied Team match
+69,Grenada,0,1,0,1,2016,GRN,exact normalized supplied Team match
+69,Niger,0,1,0,1,2016,NIG,exact normalized supplied Team match
+69,Philippines,0,1,0,1,2016,PHI,exact normalized supplied Team match
+69,Qatar,0,1,0,1,2016,QAT,exact normalized supplied Team match
+74,Norway,0,0,4,4,2016,NOR,exact normalized supplied Team match
+75,Egypt,0,0,3,3,2016,EGY,exact normalized supplied Team match
+75,Tunisia,0,0,3,3,2016,TUN,exact normalized supplied Team match
+77,Israel,0,0,2,2,2016,ISR,exact normalized supplied Team match
+78,Austria,0,0,1,1,2016,AUT,exact normalized supplied Team match
+78,Dominican Republic,0,0,1,1,2016,DOM,exact normalized supplied Team match
+78,Estonia,0,0,1,1,2016,EST,exact normalized supplied Team match
+78,Finland,0,0,1,1,2016,FIN,exact normalized supplied Team match
+78,Morocco,0,0,1,1,2016,MAR,exact normalized supplied Team match
+78,Nigeria,0,0,1,1,2016,NGR,exact normalized supplied Team match
+78,Portugal,0,0,1,1,2016,POR,exact normalized supplied Team match
+78,Trinidad and Tobago,0,0,1,1,2016,TTO,exact normalized supplied Team match
+78,United Arab Emirates,0,0,1,1,2016,UAE,exact normalized supplied Team match
+1,United States,39,41,33,113,2020,USA,exact normalized supplied Team match
+2,China,38,32,19,89,2020,CHN,exact normalized supplied Team match
+3,Japan,27,14,17,58,2020,JPN,exact normalized supplied Team match
+4,Great Britain,22,20,22,64,2020,GBR,exact normalized supplied Team match
+5,ROC,20,28,23,71,2020,ROC,documented naming alias
+6,Australia,17,7,22,46,2020,AUS,exact normalized supplied Team match
+7,Netherlands,10,12,14,36,2020,NED,exact normalized supplied Team match
+8,France,10,12,11,33,2020,FRA,exact normalized supplied Team match
+9,Germany,10,11,16,37,2020,GER,documented naming alias
+10,Italy,10,10,20,40,2020,ITA,exact normalized supplied Team match
+11,Canada,7,7,10,24,2020,CAN,exact normalized supplied Team match
+12,Brazil,7,6,8,21,2020,BRA,exact normalized supplied Team match
+13,New Zealand,7,6,7,20,2020,NZL,exact normalized supplied Team match
+14,Cuba,7,3,5,15,2020,CUB,exact normalized supplied Team match
+15,Hungary,6,7,7,20,2020,HUN,exact normalized supplied Team match
+16,South Korea,6,4,10,20,2020,KOR,exact normalized supplied Team match
+17,Poland,4,5,5,14,2020,POL,exact normalized supplied Team match
+18,Czech Republic,4,4,3,11,2020,CZE,exact normalized supplied Team match
+19,Kenya,4,4,2,10,2020,KEN,exact normalized supplied Team match
+20,Norway,4,2,2,8,2020,NOR,exact normalized supplied Team match
+21,Jamaica,4,1,4,9,2020,JAM,exact normalized supplied Team match
+22,Spain,3,8,6,17,2020,ESP,exact normalized supplied Team match
+23,Sweden,3,6,0,9,2020,SWE,exact normalized supplied Team match
+24,Switzerland,3,4,6,13,2020,SUI,exact normalized supplied Team match
+25,Denmark,3,4,4,11,2020,DEN,exact normalized supplied Team match
+26,Croatia,3,3,2,8,2020,CRO,exact normalized supplied Team match
+27,Iran,3,2,2,7,2020,IRI,exact normalized supplied Team match
+28,Serbia,3,1,5,9,2020,SRB,exact normalized supplied Team match
+29,Belgium,3,1,3,7,2020,BEL,exact normalized supplied Team match
+30,Bulgaria,3,1,2,6,2020,BUL,exact normalized supplied Team match
+31,Slovenia,3,1,1,5,2020,SLO,exact normalized supplied Team match
+32,Uzbekistan,3,0,2,5,2020,UZB,exact normalized supplied Team match
+33,Georgia,2,5,1,8,2020,GEO,exact normalized supplied Team match
+34,Chinese Taipei,2,4,6,12,2020,TPE,exact normalized supplied Team match
+35,Turkey,2,2,9,13,2020,TUR,exact normalized supplied Team match
+36,Greece,2,1,1,4,2020,GRE,exact normalized supplied Team match
+36,Uganda,2,1,1,4,2020,UGA,exact normalized supplied Team match
+38,Ecuador,2,1,0,3,2020,ECU,exact normalized supplied Team match
+39,Ireland,2,0,2,4,2020,IRL,documented naming alias
+39,Israel,2,0,2,4,2020,ISR,exact normalized supplied Team match
+41,Qatar,2,0,1,3,2020,QAT,exact normalized supplied Team match
+42,Bahamas,2,0,0,2,2020,BAH,exact normalized supplied Team match
+42,Kosovo,2,0,0,2,2020,KOS,exact normalized supplied Team match
+44,Ukraine,1,6,12,19,2020,UKR,exact normalized supplied Team match
+45,Belarus,1,3,3,7,2020,BLR,exact normalized supplied Team match
+46,Romania,1,3,0,4,2020,ROU,exact normalized supplied Team match
+46,Venezuela,1,3,0,4,2020,VEN,exact normalized supplied Team match
+48,India,1,2,4,7,2020,IND,exact normalized supplied Team match
+49,Hong Kong,1,2,3,6,2020,HKG,exact normalized supplied Team match
+50,Philippines,1,2,1,4,2020,PHI,exact normalized supplied Team match
+50,Slovakia,1,2,1,4,2020,SVK,exact normalized supplied Team match
+52,South Africa,1,2,0,3,2020,RSA,exact normalized supplied Team match
+53,Austria,1,1,5,7,2020,AUT,exact normalized supplied Team match
+54,Egypt,1,1,4,6,2020,EGY,exact normalized supplied Team match
+55,Indonesia,1,1,3,5,2020,INA,exact normalized supplied Team match
+56,Ethiopia,1,1,2,4,2020,ETH,exact normalized supplied Team match
+56,Portugal,1,1,2,4,2020,POR,exact normalized supplied Team match
+58,Tunisia,1,1,0,2,2020,TUN,exact normalized supplied Team match
+59,Estonia,1,0,1,2,2020,EST,exact normalized supplied Team match
+59,Fiji,1,0,1,2,2020,FIJ,exact normalized supplied Team match
+59,Latvia,1,0,1,2,2020,LAT,exact normalized supplied Team match
+59,Thailand,1,0,1,2,2020,THA,exact normalized supplied Team match
+63,Bermuda,1,0,0,1,2020,BER,exact normalized supplied Team match
+63,Morocco,1,0,0,1,2020,MAR,exact normalized supplied Team match
+63,Puerto Rico,1,0,0,1,2020,PUR,exact normalized supplied Team match
+66,Colombia,0,4,1,5,2020,COL,exact normalized supplied Team match
+67,Azerbaijan,0,3,4,7,2020,AZE,exact normalized supplied Team match
+68,Dominican Republic,0,3,2,5,2020,DOM,exact normalized supplied Team match
+69,Armenia,0,2,2,4,2020,ARM,exact normalized supplied Team match
+70,Kyrgyzstan,0,2,1,3,2020,KGZ,exact normalized supplied Team match
+71,Mongolia,0,1,3,4,2020,MGL,exact normalized supplied Team match
+72,Argentina,0,1,2,3,2020,ARG,exact normalized supplied Team match
+72,San Marino,0,1,2,3,2020,SMR,exact normalized supplied Team match
+74,Jordan,0,1,1,2,2020,JOR,exact normalized supplied Team match
+74,Malaysia,0,1,1,2,2020,MAS,exact normalized supplied Team match
+74,Nigeria,0,1,1,2,2020,NGR,exact normalized supplied Team match
+77,Bahrain,0,1,0,1,2020,BRN,exact normalized supplied Team match
+77,Lithuania,0,1,0,1,2020,LTU,exact normalized supplied Team match
+77,Namibia,0,1,0,1,2020,NAM,exact normalized supplied Team match
+77,North Macedonia,0,1,0,1,2020,MKD,documented naming alias
+77,Saudi Arabia,0,1,0,1,2020,KSA,exact normalized supplied Team match
+77,Turkmenistan,0,1,0,1,2020,TKM,exact normalized supplied Team match
+83,Kazakhstan,0,0,8,8,2020,KAZ,exact normalized supplied Team match
+84,Mexico,0,0,4,4,2020,MEX,exact normalized supplied Team match
+85,Finland,0,0,2,2,2020,FIN,exact normalized supplied Team match
+86,Botswana,0,0,1,1,2020,BOT,exact normalized supplied Team match
+86,Burkina Faso,0,0,1,1,2020,BUR,exact normalized supplied Team match
+86,Ghana,0,0,1,1,2020,GHA,exact normalized supplied Team match
+86,Grenada,0,0,1,1,2020,GRN,exact normalized supplied Team match
+86,Ivory Coast,0,0,1,1,2020,CIV,documented naming alias
+86,Kuwait,0,0,1,1,2020,KUW,exact normalized supplied Team match
+86,Moldova,0,0,1,1,2020,MDA,exact normalized supplied Team match
+86,Syria,0,0,1,1,2020,SYR,exact normalized supplied Team match
+1,United States,40,44,42,126,2024,USA,exact normalized supplied Team match
+2,China,40,27,24,91,2024,CHN,exact normalized supplied Team match
+3,Japan,20,12,13,45,2024,JPN,exact normalized supplied Team match
+4,Australia,18,19,16,53,2024,AUS,exact normalized supplied Team match
+5,France,16,26,22,64,2024,FRA,exact normalized supplied Team match
+6,Netherlands,15,7,12,34,2024,NED,exact normalized supplied Team match
+7,Great Britain,14,22,29,65,2024,GBR,exact normalized supplied Team match
+8,South Korea,13,9,10,32,2024,KOR,exact normalized supplied Team match
+9,Italy,12,13,15,40,2024,ITA,exact normalized supplied Team match
+10,Germany,12,13,8,33,2024,GER,documented naming alias
+11,New Zealand,10,7,3,20,2024,NZL,exact normalized supplied Team match
+12,Canada,9,7,11,27,2024,CAN,exact normalized supplied Team match
+13,Uzbekistan,8,2,3,13,2024,UZB,exact normalized supplied Team match
+14,Hungary,6,7,6,19,2024,HUN,exact normalized supplied Team match
+15,Spain,5,4,9,18,2024,ESP,exact normalized supplied Team match
+16,Sweden,4,4,3,11,2024,SWE,exact normalized supplied Team match
+17,Kenya,4,2,5,11,2024,KEN,exact normalized supplied Team match
+18,Norway,4,1,3,8,2024,NOR,exact normalized supplied Team match
+19,Ireland,4,0,3,7,2024,IRL,documented naming alias
+20,Brazil,3,7,10,20,2024,BRA,exact normalized supplied Team match
+21,Iran,3,6,3,12,2024,IRI,exact normalized supplied Team match
+22,Ukraine,3,5,4,12,2024,UKR,exact normalized supplied Team match
+23,Romania,3,4,2,9,2024,ROU,exact normalized supplied Team match
+24,Georgia,3,3,1,7,2024,GEO,exact normalized supplied Team match
+25,Belgium,3,1,6,10,2024,BEL,exact normalized supplied Team match
+26,Bulgaria,3,1,3,7,2024,BUL,exact normalized supplied Team match
+27,Serbia,3,1,1,5,2024,SRB,exact normalized supplied Team match
+28,Czech Republic,3,0,2,5,2024,CZE,exact normalized supplied Team match
+29,Denmark,2,2,5,9,2024,DEN,exact normalized supplied Team match
+30,Azerbaijan,2,2,3,7,2024,AZE,exact normalized supplied Team match
+30,Croatia,2,2,3,7,2024,CRO,exact normalized supplied Team match
+32,Cuba,2,1,6,9,2024,CUB,exact normalized supplied Team match
+33,Bahrain,2,1,1,4,2024,BRN,exact normalized supplied Team match
+34,Slovenia,2,1,0,3,2024,SLO,exact normalized supplied Team match
+35,Chinese Taipei,2,0,5,7,2024,TPE,exact normalized supplied Team match
+36,Austria,2,0,3,5,2024,AUT,exact normalized supplied Team match
+37,Hong Kong,2,0,2,4,2024,HKG,exact normalized supplied Team match
+37,Philippines,2,0,2,4,2024,PHI,exact normalized supplied Team match
+39,Algeria,2,0,1,3,2024,ALG,exact normalized supplied Team match
+39,Indonesia,2,0,1,3,2024,INA,exact normalized supplied Team match
+41,Israel,1,5,1,7,2024,ISR,exact normalized supplied Team match
+42,Poland,1,4,5,10,2024,POL,exact normalized supplied Team match
+43,Kazakhstan,1,3,3,7,2024,KAZ,exact normalized supplied Team match
+44,Jamaica,1,3,2,6,2024,JAM,exact normalized supplied Team match
+44,South Africa,1,3,2,6,2024,RSA,exact normalized supplied Team match
+44,Thailand,1,3,2,6,2024,THA,exact normalized supplied Team match
+47,Ethiopia,1,3,0,4,2024,ETH,exact normalized supplied Team match
+48,Switzerland,1,2,5,8,2024,SUI,exact normalized supplied Team match
+49,Ecuador,1,2,2,5,2024,ECU,exact normalized supplied Team match
+50,Portugal,1,2,1,4,2024,POR,exact normalized supplied Team match
+51,Greece,1,1,6,8,2024,GRE,exact normalized supplied Team match
+52,Argentina,1,1,1,3,2024,ARG,exact normalized supplied Team match
+52,Egypt,1,1,1,3,2024,EGY,exact normalized supplied Team match
+52,Tunisia,1,1,1,3,2024,TUN,exact normalized supplied Team match
+55,Botswana,1,1,0,2,2024,BOT,exact normalized supplied Team match
+55,Chile,1,1,0,2,2024,CHI,exact normalized supplied Team match
+55,Saint Lucia,1,1,0,2,2024,LCA,exact normalized supplied Team match
+55,Uganda,1,1,0,2,2024,UGA,exact normalized supplied Team match
+59,Dominican Republic,1,0,2,3,2024,DOM,exact normalized supplied Team match
+60,Guatemala,1,0,1,2,2024,GUA,exact normalized supplied Team match
+60,Morocco,1,0,1,2,2024,MAR,exact normalized supplied Team match
+62,Dominica,1,0,0,1,2024,DMA,exact normalized supplied Team match
+62,Pakistan,1,0,0,1,2024,PAK,exact normalized supplied Team match
+64,Turkey,0,3,5,8,2024,TUR,exact normalized supplied Team match
+65,Mexico,0,3,2,5,2024,MEX,exact normalized supplied Team match
+66,Armenia,0,3,1,4,2024,ARM,exact normalized supplied Team match
+66,Colombia,0,3,1,4,2024,COL,exact normalized supplied Team match
+68,Kyrgyzstan,0,2,4,6,2024,KGZ,exact normalized supplied Team match
+68,North Korea,0,2,4,6,2024,PRK,exact normalized supplied Team match
+70,Lithuania,0,2,2,4,2024,LTU,exact normalized supplied Team match
+71,India,0,1,5,6,2024,IND,exact normalized supplied Team match
+72,Moldova,0,1,3,4,2024,MDA,exact normalized supplied Team match
+73,Kosovo,0,1,1,2,2024,KOS,exact normalized supplied Team match
+74,Cyprus,0,1,0,1,2024,CYP,exact normalized supplied Team match
+74,Fiji,0,1,0,1,2024,FIJ,exact normalized supplied Team match
+74,Jordan,0,1,0,1,2024,JOR,exact normalized supplied Team match
+74,Mongolia,0,1,0,1,2024,MGL,exact normalized supplied Team match
+74,Panama,0,1,0,1,2024,PAN,exact normalized supplied Team match
+79,Tajikistan,0,0,3,3,2024,TJK,exact normalized supplied Team match
+80,Albania,0,0,2,2,2024,ALB,exact normalized supplied Team match
+80,Grenada,0,0,2,2,2024,GRN,exact normalized supplied Team match
+80,Malaysia,0,0,2,2,2024,MAS,exact normalized supplied Team match
+80,Puerto Rico,0,0,2,2,2024,PUR,exact normalized supplied Team match
+84,Cabo Verde,0,0,1,1,2024,CPV,documented naming alias
+84,Ivory Coast,0,0,1,1,2024,CIV,documented naming alias
+84,Peru,0,0,1,1,2024,PER,exact normalized supplied Team match
+84,Qatar,0,0,1,1,2024,QAT,exact normalized supplied Team match
+84,Refugee Olympic Team,0,0,1,1,2024,EOR,documented naming alias
+84,Singapore,0,0,1,1,2024,SGP,exact normalized supplied Team match
+84,Slovakia,0,0,1,1,2024,SVK,exact normalized supplied Team match
+84,Zambia,0,0,1,1,2024,ZAM,exact normalized supplied Team match

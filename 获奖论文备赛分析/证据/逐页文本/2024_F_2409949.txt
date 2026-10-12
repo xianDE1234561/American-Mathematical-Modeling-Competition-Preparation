@@ -1,0 +1,1208 @@
+=== PDF PAGE 1 ===
+    Problem Chosen                2024          Team Control Number
+      F             MCM/ICM         2409949                        Summary Sheet
+
+
+ Roaring Silence: Can We Break the Chains of
+             Illegal Wildlife Trade?
+
+                      Summary
+
+
+Our work outlines a comprehensive strategy  for combating  illegal  wildlife trade (IWT),
+specifically targeting the illegal trade of tigers in Southeast Asia. It is structured into several
+key tasks:
+
+
+Developing a Counter-IWT Project: We analyze trends from previous projects based on 764
+former projects data and create a targeted project named “Safeguarding Tigers of Southeast
+Aisa”, focusing on the supply chain of illegal tiger trading. The project design employs methods
+like Results-Based Management (RBM) and Logic Framework Approach (LFA), all outcomes
+and  activities  follow  “Specific,  Measurable,  Appropriate,  Realistic, and Time-bound”
+principle (SMART), with a detailed Gantt Chart for the 5-year plan.
+
+
+Choosing and Convincing the Most Suitable Client: We discuss and select an appropriate
+international organization as our client, with the World Wildlife Fund (WWF) emerging as the
+top choice. The selection process involves a comprehensive client assessment model with a three-
+level indicators system, using Entropy Weighted Method (EWM) to calculate weights of each
+indicator. To persuade the WWF to undertake the project, we firstly organize global IWT capital
+flows to stress the significance of Southeast Aisa, then we prove the importance of the illegal
+trade of tigers in the whole IWT system in this area by Grey Relational Analysis (GRA) based
+on the data of wildlife trafficking in Southeast Asia.
+
+
+Establishing Cross-Organization Cooperation: We propose a model for cooperation between
+WWF and Interpol, leveraging their respective strengths to enhance the effectiveness of the
+project. We further elaborate on the benefits of this cooperation, using an Optimal Expected微信公众号：数学模型
+Utility Model under uncertainty and analyzing the model mathematically.
+
+
+Evaluating the Impact of the Project: We introduce a Ridge Regression Model to assess the
+project's impact on illegal tiger trade, measuring the correlation between the number of illegal
+tigers’ trade and four objective verifiable indicators (OVIs) of project outcomes respectively.
+We employ this regression model to predict the futural impact by comparing IWT numbers of
+tigers with and without our project. We also perform a sensitivity analysis to identify the most
+impactful variable.
+
+
+Additionally, we discuss strengths and weaknesses of the approaches and models, provide a
+One-Page Memorandum to the WWF, and include references and appendices with detailed dataand calculations微信号：MATHmodelssupporting the project.
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 2 ===
+Team #2409949                                                                            Page 2 of  22
+
+
+
+                         Contents
+
+1 Introduction ............................................................................................................................................... 3
+     1.1 Background ..................................................................................................................................... 3
+     1.2 Restatement of the Problem .......................................................................................................... 3
+     1.3 Our Work ......................................................................................................................................... 4
+2 Model Preparation.................................................................................................................................... 5
+     2.1 Assumptions and Justification ...................................................................................................... 5
+     2.2 Glossary ........................................................................................................................................... 5
+     2.3 Data Pre-processing ....................................................................................................................... 6
+          2.3.1 Data Collection..................................................................................................................... 6
+          2.3.2 Data Filling and Processing ............................................................................................... 6
+3 Task1: Develop A Counter-IWT Project .............................................................................................. 7
+     3.1 Discover the Trend of Former Projects ........................................................................................ 7
+     3.2 Design the Project ........................................................................................................................... 7
+4 Task2: Choose and Convince the Most Suitable Client .................................................................... 9
+     4.1 Who Can Do the Project ................................................................................................................ 9
+     4.2 Discussion of Superior and Inferior Indicators ........................................................................ 10
+     4.3 Analyze the Weights for Inferior Indicators by EWM ............................................................. 11
+     4.4 Choose and Convince the Targeting Client .............................................................................. 12
+          4.4.1 Calculate Client Evaluation Score ................................................................................... 12
+          4.4.2 Convince the Client ........................................................................................................... 12
+5 Task3: Establish a Cross-Organizations Cooperation Model ........................................................ 14
+     5.1 Extra Requirements to Execute the Project ............................................................................... 14
+     5.2 A Complex System Connecting IWT with All Criminal Activities ....................................... 14
+     5.3 How Cross-Organizations Cooperation Benefits Our Project ................................................ 15
+6 Task4: Evaluate the Impact of the Project .......................................................................................... 16
+     6.1 Construct a Ridge Regression Model to Measure Correlation ............................................... 16
+     6.2 Predict the Effects of Project by the Regression Model ........................................................... 18
+     6.3 Sensitivity Analysis ...................................................................................................................... 19微信公众号：数学模型
+7 Strength and Weakness ......................................................................................................................... 20
+Memorandum   ............................................................................................................................................ 21
+References ................................................................................................................................................... 22
+Appendix..................................................................................................................................................... 22 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 3 ===
+Team #2409949                                                                            Page 3 of  22
+
+
+
+1 Introduction
+
+
+
+1.1 Background
+
+
+Illegal wildlife trade (IWT), based on OECD (2019) definition, refers to the commerce in wildlife,
+or their parts, or by-products, which contravenes international legal agreements or the domestic
+laws of the countries involved. It covers the full spectrum of unlawful activities in the wildlife
+crime chain. This includes various illegal actions. Additionally,  it involves related criminal
+activities necessary for these transactions, such as money laundering, corruption, and the sale of
+these illegal goods.
+
+
+IWT endangers multiple aspects of human society and environment, hence the efforts to counter
+IWT should never stop. However, current projects may be not effective enough to solve the
+problem entirely, more novel ideas are being collected continually. To break through existing
+limitations, we must try to develop more targeted and cooperative projects to deal with the
+problem by stages in a long term.
+
+
+
+
+
+                               Figure 1: Combating IWT for a better World微信公众号：数学模型
+
+1.2 Restatement of the Problem
+
+
+Considering the background information and restricted conditions identified in the problem
+statement, we need to tackle the following five tasks:
+
+
+    Task1: Develop a 5-year Counter-IWT project which is effective and executable.
+    Task2: With the goal of the project, choose and convince the most suitable client according to
+its power, resources and interests.
+    Task3: Analyze and give ways to satisfy extra requirements to carry out the project.    Task4:微信号：MATHmodelsEvaluate the impact of the project by stages and consider expectation and sensitivity
+analysis.
+    Task5: Communicate project and expectation with the client in a memorandum.
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 4 ===
+Team #2409949                                                                            Page 4 of  22
+
+
+
+1.3 Our Work
+
+
+For clarity, we draw a structure map (Figure 2) to represent our work clearly.
+
+
+
+
+
+                                         Figure 2: Work Structure
+
+To solve Task 1, we design our specific project based on analysis of total trend. We collect 764
+former projects information and identify Southeast Asia as the most trending area based on
+funding data. Then we design a targeted project named “STSEA” for Counter-IWT of tigers in
+Southeast Aisa by intervening at supply part in the industrial value chain. We use a combination
+of RBM and LFA methods to design a project by analyzing the problem tree and the objective tree.
+Following SMART principle, all our outcomes are corresponded with measure indictors shown in
+a Logframe Matrix. The whole 5-year arrangement is clearly demonstrated in a Gantt Chart.
+
+
+As to Task 2, we narrow our choices to seven international organizations based on the requirements
+of our project. To choose the most suitable client for our project, we build a client assessment
+model with three-level indicators. We use Entrop Weighted Method to confirm the weight of each
+indicator and calculate the score of client pools. We choose World Wildlife Fund (WWF) with the
+highest score as our most suitable client. To convince WWF to undertake our project, we firstly
+emphasize the significance of Southeast Asia by analyzing the global IWT capital flow, then we微信公众号：数学模型
+use Grey Correlation Degree Analysis based on SEA IWT data to show the necessity of
+undertaking tigers-targeted project in combating IWT.
+
+
+For Task 3, we consider extra requirements of our project which are not satisfied by WWF. We
+notice that wildlife crime crackdown requires armed forces, so we consider the possibility of
+cooperating with Interpol. As for a complex crime system, wildlife crime is tightly connected with
+global criminal activities, giving the inspiration to Interpol to the cooperation. To explain the
+benefit of cooperation, we built an optimal expected utility model under uncertainty. It sees legal
+and illegal trade of tigers as two accessible investment choices, and concludes that brought by the
+cooperation, the raising of detection rate contributes to the decrease of illegal wildlife trade. 微信号：MATHmodels
+
+Then come to the Task 4, using indicators we used in project framework, we build a ridge
+regression model to measure the correlation between our project activities and project goals. We
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 5 ===
+Team #2409949                                                                            Page 5 of  22
+
+
+
+predict SEA IWT number of tigers in the 5-year of the project, which demonstrate the quantitative
+effects of our project. For sensitivity analysis, we calculate sensitivity of each explanatory variable
+to dependent variable to find out the most sensitive variable. We discuss abnormal situations
+exemplifying wars.
+
+
+As for Task 5, we organize our research and results, communicating with our targeting client in a
+one-page memorandum with the expectation and effects of our project.
+
+
+2 Model Preparation
+
+
+
+2.1 Assumptions and Justification
+
+
+To simplify the problem, we make the following assumptions. Other assumptions will be
+introduced once they are used in specific models.
+
+
+Assumption 1: Futural Counter-IWT projects will be consistent with current total trend.
+     Justification 1: Multiple Counter-IWT projects have been executed in different areas with
+different strengths. The whole progress is a long-term effort with consistent direction. Therefore, it
+is feasible to judge the most trending area of futural projects according to previous project funding
+and description data.
+
+
+Assumption 2：An effective Counter-IWT project should be specifical and trans-regional.
+     Justification 2: IWT is a complex systematic problem, identifying and intervening at key link
+in the industrial value chain is more executable and practical. Wildlife habitats as well as IWT
+behaviors are always cross-border. Hence, a specific and trans-regional project can be more
+effective than general and domestic project.
+
+
+Assumption 3: Individuals make decisions by logically and consistently pursuing their own self-interest,微信公众号：数学模型aiming to maximize utility or profit.
+     Justification 3: Human rationality implies that given all relevant information and options, a
+person will evaluate and act upon them in a way that maximizes their personal benefit or
+satisfaction.
+
+
+2.2 Glossary
+
+
+
+                                                Table1: Glossary
+
+          Glossary                       Meaning
+
+          SEA                           Southeast Asia 微信号：MATHmodels
+        GOV                        Government
+         IWT                              Illegal Wildlife Trade
+            IO                         International Organization
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 6 ===
+Team #2409949                                                                            Page 6 of  22
+
+
+
+        SMART     Specific, Measurable, Appropriate, Realistic, and Time-bound
+          LFA                     Logic framework approach
+        RBM                      Results-based management
+          OVI                      Objective verifiable indicator
+         LNR                        Local natural reserve
+            Interpol          The international criminal police organization
+            ITT                               Illegal trade of tigers
+
+       Note: Other none frequent-used symbols will be introduced once they are used.
+
+
+2.3 Data Pre-processing
+
+
+
+2.3.1 Data Collection
+
+
+We select former projects data to discover the trend for project design, and we build a selected IOs
+basic information dataset to assess the most suitable client for our project. Additionally, we also
+some wildlife trade and trafficking data for our further research.
+
+
+To ensure the comprehensiveness and authority of our data, we choose the following websites as
+our data sources.
+
+                                               Table2: Data Source
+
+                   Data Source                      Website
+
+               IWT Database           https://illegalwildlifetradeprojects.org
+
+          UN Contrade Database           https://comtradeplus.un.org
+
+           UNODC Statistics              https://www.unodc.org
+
+                     IOs Data                Official websites of each selected IO
+
+
+
+
+
+2.3.2 Data Filling and Processing微信公众号：数学模型
+
+
+Data availability is crucial, as unreliable or false data hinders accurate assessments of global equity.
+Therefore, ensuring data continuity and authenticity is essential. Nonetheless, data gaps often
+occur due to incomplete disclosure from countries. for data completion, we use many methods
+including regression, averaging, etc.
+
+
+These methods help in maintaining the integrity of the data, which is vital for accurate and reliable
+analysis. Other data processing methods will be introduced once they are used in specific models. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 7 ===
+Team #2409949                                                                            Page 7 of  22
+
+
+
+3 Task1: Develop A Counter-IWT Project
+
+
+
+3.1 Discover the Trend of Former Projects
+
+
+Since IWT is a serious problem, multiple projects have been carried out in different countries with
+different strengths. By collecting 764 former projects data, we draw a Funding Map (Figure 3)
+based on the normalized funding data (range from 0 to 100) by countries to demonstrate the flow
+direction of most project fundings. It is visualized to find that SEA countries draw large amounts
+of fundings, which identifies SEA as a trending area. Our project will target in this area to be
+consistent with total trend.
+
+
+
+
+
+                                Figure 3: Project Funding Map by countries1
+
+
+3.2 Design the Project微信公众号：数学模型
+To design an executable, we firstly draw an IWT industrial value chain according to comprehensive
+relevant information to simple show each part of IWT activities. Since IWT is a complex and
+systematic problem, it is more practical to intervene one part in a project specially. Based on
+practical condition in SEA, we find out that SEA plays a more significant rule as Suppliers &
+Mediaries. Combining with previous research and project, we are about to create a special project
+targeted to SEA IWT supply part of Tigers. We call our project as: Safeguarding Tigers in
+Southeast Asia (STSEA). 微信号：MATHmodels
+
+
+1 Countries in white color in the image means either they have no project funding or their projects are not
+selected as our sample.
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 8 ===
+Team #2409949                                                                            Page 8 of  22
+
+
+
+
+
+                                Figure 4: Regular IWT industrial value chain
+
+
+Using Results-Based Management (RBM) and Logic Framework Approach (LFA), which are
+popular methods for many IO projects, we start with analyzing and drawing the problem tree and
+the objective tree. We identify the main problem as the rampant illegal trade of tigers, with
+Biodiversity decline in SEA as a long-term effect as well as four main reasons:
+    -Inadequate construction of ecological conservation areas,
+     -Insufficient efforts to combat wildlife crimes,
+    -Lack of legal and sustainable development and utilization of wildlife resources,
+    -Lack of public awareness and protection of wildlife.
+then we design the objective tree combing our goals with intervening activities. All objectives are
+determined following SMART principle. Our specific goal, “The decrease of illegal trade of tigers”,
+has four branching targets, each target respectively responds the reason of problem above:
+      - Strengthening the construction of ecological conservation areas,
+      - Intensifying efforts to combat wildlife crimes,
+      - Developing wildlife resources legally to increase residents' income,
+      - Enhancing public awareness and protection of wildlife.微信公众号：数学模型
+
+
+
+
+
+                       Figure 5: The problem tree(left) & objective tree(right) of STSEA 微信号：MATHmodels
+
+
+All our outcomes have specific measures to reach, which are also demonstrate at the bottom of the
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 9 ===
+Team #2409949                                                                            Page 9 of  22
+
+
+
+objective tree. Then we build OVIs to measure the results and outcomes. Here we draw a Logframe
+Matrix to demonstrate OVIs of goals and expected results.
+
+
+
+
+
+                                    Figure 6: Logframe matrix of STSEA
+
+
+Eventually, we develop a Gantt Chart to organize the whole 5-year time schedule. We clearly show
+our plan of each activity in the chart which is considerably executable.微信公众号：数学模型
+
+
+                            Figure 7: Gantt Chart of the 5-year schedule of STSEA
+
+
+
+4 Task2: Choose and Convince the Most Suitable Client
+
+
+
+4.1 Who Can Do the Project
+
+
+We believe an effective Counter-IWI project should be specific and trans-regional. We firstly 微信号：MATHmodels
+consider the type of our clients: Governments (GOVs), International Organizations (IOs), and
+Entrepreneurs. GOVs are undoubtedly more capable in general and domestic projects because its
+national system. However, as for specific and trans-regional projects raised by one GOV, it may
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 10 ===
+Team #2409949                                                                            Page 10 of  22
+
+
+
+face  the  lack  of  special  expertise and  barriers  of  international  cooperation.  Specialized
+entrepreneurs and IOs tend to have more experts and energy to focus on one specific project, but
+IOs have natural advantages when it comes to trans-regional project. Therefore, we eventually
+narrow our clients pool to the following 7 most relevant Specialized IOs:
+
+                                               Table3: Clients Pool
+
+                   Abbr.                          Full Name
+
+              IFAW           International Fund for Animal Welfare
+
+              IUCN       International Union for Conservation of Nature
+
+              TRAFFIC           Wildlife Trade Monitoring Network
+
+             UNEP         United Nations Environment Programme
+
+             WCS                Wildlife Conservation Society
+
+             WILDAID                   WildAid
+
+           WWF                World Wildlife Fund
+
+
+
+4.2 Discussion of Superior and Inferior Indicators
+
+
+Since we have confirmed the clients pool, we need to measure the degree of capability and fitness
+of different IOs to evaluate the most suitable and realistic client.
+
+
+   To create a IOs capability&fitness assessment system, we need to select representative
+indicators. Combined with previous researches, we have concluded that the analysis can be carried
+out by measuring the three major factors of Organizational Influence, Communication Influence,
+and Special Influence. The three-levels indicators are clearly shown in Table3.
+
+                                         Table4: Three-levels Indicators
+
+  Primary Indicators   Secondary Indicators    Tertiary Indicators
+
+                                         TA: Total assets
+
+                      FC: Financial condition    TR: Total revenues
+
+                                             TE: Total expenses
+    Organizational
+                                      DR: Number of directors微信公众号：数学模型     Influence (OI)    HR: Human resource
+                                         GS: Number of global staffs
+
+                                         GP: Relationship of global partnerships
+                   CA: Coordinate ability
+                                    DO: Duration of organization
+
+                                     LW: Languages of official website
+                     WI: Web impact
+                                     SW: Search Volume of official website
+   Communication
+                                                   FF: Number of Fans in Facebook
+     Influence (CI)
+                    SMI: Social media impact   FI: Number of Fans in Instagram
+
+                                               FX: Number of Fans in X/Twitter
+
+                                          PA: Counter-IWT projects amounts
+                        FS: Field specialization
+        Special                              FA: Counter-IWT fundings amounts 微信号：MATHmodels
+     Influence (SI)                             PP: Proportion of projects in SEA to total projects
+                      RF: Regional Familiarity
+                                                PF: Proportion of fundings in SEA to total fundings
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 11 ===
+Team #2409949                                                                            Page 11 of  22
+
+
+
+4.3 Analyze the Weights for Inferior Indicators by EWM
+
+
+After making indicator system and collecting data, we establish a model based on Entrop Weighted
+Method (EWM) to calculate weights of different indicators. The principle is using the degree of
+variation between different data to judge information it reflects, then weight will be assigned to it.
+   We start with data normalization. Indicators constructed above are all benefit attributes (the
+bigger, the better), hence we get positive-definite matrix X. We do vector normalization by:
+
+
+                                                                                                            (1)
+
+
+
+
+    where             is the sum of squares of all elements in the    column, and n is the number
+
+of rows in the column j. Then we get a normalized matrix Y.
+    Then, we calculate the proportion 𝑝𝑖𝑗 of the 𝑗𝑡ℎ indicator in the 𝑖𝑡ℎ sample.
+
+                                                                                                             (2)
+
+
+    where 𝑦𝑖𝑗 refers to the normalized value of the 𝑗𝑡ℎ indicator in the 𝑖𝑡ℎ sample, and 1≤𝑖≤𝑚.
+Next, we get the Entropy Value of the 𝑗𝑡ℎ indicator by:
+
+                                                                                                             (3)
+
+
+    Therefore, we can get 𝑊𝑗 as the Weight of the 𝑗𝑡ℎ indicator:
+
+
+                                                                                                           (4)
+
+
+    where m is the number of indicators in special levels. Based on calculated processing, we
+get:微信公众号：数学模型
+
+                                                                                                            (5)
+
+
+
+    where the value of each secondary indicators can be calculated similarly. And we use
+TOPSIS model to normalize all scores (ranging from 0 to 1). Therefore, we get the equation to
+measure the capability & fitness score (0-100) of the     selected IO.
+
+                                                                                                           (6) 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 12 ===
+Team #2409949                                                                            Page 12 of  22
+
+
+
+4.4 Choose and Convince the Targeting Client
+
+
+
+4.4.1 Calculate Client Evaluation Score
+
+
+Following the calculating process above, we gain weights matrices of indicators in different levels.
+The weighted results are clearly demonstrated in Figure 8:
+
+
+
+
+
+                              Figure 8: Indicator weights for client assessment
+
+    Based on the weights, we calculate scores of all clients in our pools and the result is:
+
+    IFAW 15.81, IUCN 26.53, TRAFFIC 55.05, UNEP 64.35, WCS 57.47, WILDAID 11.12, WWF 78.70.
+
+All scores ranging from 0-100 manifest the degree of capability & fitness for an IO to carry out our
+project. OI and CI reveal the ability of an organization considering its power, scale, resources, etc.
+While SI reveals the interest and experience of carrying out a Counter-IWT project in SEA.
+
+
+4.4.2 Convince the Client
+
+
+An idealized client for our project should have relatively strong power, experience, and interest in
+SEA Counter-IWT. Our evaluation scores manifest that WWF with the highest score may execute
+the project better. Hence, we choose WWF as our client.微信公众号：数学模型
+
+Since our project focuses on Counter-IWT of tigers in SEA, we try to convince WWF to undertake
+this project from two aspects: the seriousness of SEA IWT, and the seriousness of tigers IWT in SEA.
+     Firstly, data shows the seriousness of SEA IWT. Based on UN Comtrade Data, we draw a map
+to clearly demonstrate big IWT flow centering SEA in the World. It is evident that SEA plays and
+irreplaceable role in global IWT activities. As a core supplying place of various illegal wildlife
+products, SEA attracts plenty of illegal trade flow. From the map, we can see Indonesia, Malaysia,
+Thailand, Cambodia, Vietnam are intensively connected with flow lines, combining a crucial area
+of global IWT activities. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 13 ===
+Team #2409949                                                                            Page 13 of  22
+
+
+
+
+
+                                 Figure 9: Global IWT Flow Centering SEA
+
+
+    Secondly, we collect SEA wildlife trafficking data in UNODC Statistics and establish a Grey
+Relational Analysis (GRA) to discover the most crucial species/products in SEA wildlife
+trafficking. Generally, the trafficking data is always uncertain and incomplete, hence GRA can be
+one of best methods to discover the relational degree between species.
+
+
+We start with constructing an annual sequence of total SEA trafficking by countries as the reference
+sequence Y, and a matrix of annual SEA trafficking data by animals/products as the comparison
+sequence X. The dimensionless processing of sequences is as following:
+
+
+                                                                                                            (1)
+
+
+
+    where 𝑥𝑘𝑖 refers to the value of the 𝑖𝑡ℎanimal/product in the 𝑘𝑡ℎ year, and m is the number
+of columns in matrix X, which stands for the type of animal/product. After dimensionless
+processing, we calculate correlation coefficients of indicators in comparison sequence:微信公众号：数学模型
+
+                                                                                                            (2)
+
+
+
+    where     refers to the correlation coefficient of the     indicator, and     is the resolution
+
+coefficient. Hence, we get the correlation degree of the     indicator:
+
+                                                                                                             (3)
+
+    The sequence of correlation degrees is shown in figure, and the comprehensive correlation
+degrees of each specie/product are: 微信号：MATHmodels
+     Tigers 0.83, Live reptiles 0.80, European eels 0.76, Elephant 0.74, Rhino horns 0.71, Pangolins 0.68
+
+    Tigers indeed plays the most important role in SEA total IWT activities.
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 14 ===
+Team #2409949                                                                            Page 14 of  22
+
+
+
+
+
+                                 Figure 10: Sequence of Correlation Degrees
+
+
+    Therefore, since the mission of WWF is “to conserve nature and reduce the most pressing
+threats to the diversity of life on Earth”, combating IWT in most serious area by protecting the most
+important animals in the industrial chain is advisable. Currently, WWF’s efforts in SEA are limited.
+It is highly suggested that SEA is serious areas and tigers are most serious species worthy more
+attention, which is also our project targeted to.
+
+
+
+
+5 Task3: Establish a Cross-Organizations Cooperation Model
+
+
+
+5.1 Extra Requirements to Execute the ProjectOur微信公众号：数学模型project still has some extra requirements that WWF may not satisfy, one of which is to
+combating wildlife crimes by intensifying crime crackdown. WWF focuses on conservation and
+environmental issues through a variety of non-military methods without its own military forces. It
+is also impractical to advise WWF to build its own forces for wildlife crime fighting. Many illegal
+IWT criminals are armed fully, the work of crime crackdown must have a tight connection with
+other institutions with military forces. Additionally, IWT crimes are always cross-boarders, making
+it more difficult for governments to manage. To meet the extra requirement featuring armed forces,
+here we give an idea to inspire the connection with Interpol by analyzing the complex global
+criminal system as well as building an optimal expected utility model.5.2 A微信号：MATHmodelsComplex System Connecting IWT with All Criminal Activities
+
+
+Considering a complex system of crime, we can find a tight relationship between IWT and who
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 15 ===
+Team #2409949                                                                            Page 15 of  22
+
+
+
+global criminal activities, from which we can get the inspiration of Interpol to join into the
+cooperation.
+    Wildlife crime has a long derivative criminal chain. Based on the industrial value chain above
+and other researches, we find poaching, trafficking and smuggling are tightly connected with the
+whole criminal system. Poaching criminals always have access to illegal arms linked with illegal
+arms dealer and other production chain. As for trafficking and smuggling, they are tightly
+connected with global illegal transportation system, especially in SEA as a sensitive area, which
+may also contain the transportation of other illegal products like drugs.
+
+
+    Therefore, SEA wildlife crime is tightly connected with global criminal system. It is beneficial
+for Interpol’s further crackdown of other types of crimes by taking part in combating SEA wildlife.
+The inspiration of Interpol for cooperation is built accordingly.
+
+
+5.3 How Cross-Organizations Cooperation Benefits Our Project
+
+
+To explain the benefits of cooperation between WWF and INTERPOL, we use the optimal expected
+utility function considering the choices available to all individuals as a gamble with certain
+outcomes (legal income) and associated probabilities (IWT income). The expected utility function
+allows us to represent the preferences of different individuals under uncertainty.
+
+
+Here we see an individua’s all energy and capability to take part in activities as the investment
+capital to invest different activities, which is similar to the “endowment” concept. And for
+simplification, we only consider two activities here: legal activities and illegal trade of tigers (ITT),
+we consider take part in the two activities as similarly investment behaviors, i.e. use all capital in
+a ratio to invest both activities respectively.
+
+
+Here, we follow the Rational Individual Assumption, individuals will try the best to maximize the
+utility under constraints. We also assume all individuals are equal with the same investment capital
+Z, and use X in legal activities and Y in ITT. The utility function of legal activities is             , and of
+ITT activities is             . Once deciding to take part in ITT activities, individual will face risk to be微信公众号：数学模型detected and punished like arrestment. We assume detection rate is     , and being detected means
+no payoff from the ITT activities as well as cost for the penalty, we define cost function of penalty
+is               . Here we make following explanation:
+    1)Both       and         are increasing and concave functions because of the nature of
+
+utility functions, their first-order derivatives are positive while the second-order ones are negative.
+     2)          is also an increasing and concave function because once y increases, which means
+taking more ITT activities, the penalty will increase, and we assume the marginal penalty cost is
+decreasing.
+
+
+    Therefore, we get the following situation: an individual can both take part in two activities,with the微信号：MATHmodelsexpected utility function:
+
+                                                                                                             (1)
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 16 ===
+Team #2409949                                                                            Page 16 of  22
+
+
+
+    Here we get the Lagrange function calculate FOCs as following:
+
+
+
+                                                                                                            (2)
+
+
+
+
+    Based on results above, we see x as a function of y and hence we can calculate the relation
+between y and      :
+
+
+                                                                                                             (3)
+
+
+
+
+
+    According the explanation of functions above, we can know the numerator is negative and the
+
+denominator is positive, which means                 . Similarly, and accordingly, we calculate the
+
+
+relation between the investment ratio    and     :
+
+
+
+                                                                                                            (4)
+
+
+    where        and therefore,             is positive.
+
+
+
+    Then, the benefits of cross-organization cooperation can be inferred by the raise of     . With
+cooperation, the detection rate will increase: firstly, WWF is equipped with more specific experts
+and wildlife crime experience since it concentrates on this field, while Interpol has more armed
+forces to crackdown criminals. The cooperation can help raise the detection rate by combining
+forces of Interpol and expertise of WWF. By raising the rate     , combining with former calculating
+results, we get:
+   As a rational individual, if    raises, the capital using in ITT (  ) will decrease, while the微信公众号：数学模型
+investment ratio (      ) will increase. It means the cooperation can better reduce individual’s
+inspiration of taking part in ITT activities, bringing a more effective result of our project in terms
+of wildlife crime crackdown.
+
+
+
+
+6 Task4: Evaluate the Impact of the Project
+
+
+
+6.1 Construct a Ridge Regression Model to Measure Correlation 微信号：MATHmodels
+
+Using the OVIs built in project design (Figure 6), we try to measure the correlation between the
+specific goal and the outcome results. Here our notation is as following:
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 17 ===
+Team #2409949                                                                            Page 17 of  22
+
+
+
+                                            Table5: Variable notation
+
+      Dependent Variable:       the number of tigers in IWT
+
+     Explanatory Variable:
+
+                                  online search volume for animal protection related terms.
+
+                                     local residents' employment rate.
+
+                                       total area size of terrestrial protected areas.
+
+                                  the detection rate of illegal wildlife trade cases.
+
+
+   We consider multiple linear regression model initially; the basic form of this model is:
+
+                                                                                                            (1)
+
+
+
+    then calculate Variance Inflation Factor (VIF) to judge potential multicollinearity concerns:
+
+
+
+                                                                                                            (2)
+
+
+
+
+    Therefore, we get results in Table6:
+
+                                    Table6: Multiple linear regression results
+
+     Dependent Variable:     , Sample size: n=7 (by year)
+
+      Variable      B.         S.E.     Beta          t     P＞|t|   VIF    R²    Adj. R²      F
+
+     Constant   395.276    112.543              3.512     0.072*
+
+                    -0.002      0.002     -0.338    -1.447     0.285   15.069
+                                                                                            F=68.411
+                    -5.433      1.504     -0.787    -3.612    0.069*    13.08   0.993    0.978
+                                                                                               P=0.014**
+                     -1.14       1.053      -0.26     -1.083     0.392   15.908
+
+                    -0.215       0.05       -0.55     -4.336    0.049**    4.43
+
+                            Note：***p < 0.01, **p < 0.05, and *p < 0.10。
+
+
+   We notice high VIF values (above 10), indicating potential multicollinearity concerns. We turnto Ridge微信公众号：数学模型Regression Model to solve this problem; the basic equation of this model is:
+
+                                                                                                             (3)
+
+
+
+    where     is a parameter and          is a regularization term. Calculate         by:
+
+
+                                                                                                             (4)
+
+
+
+    where      is the weight of each explanatory variable. So firstly, we draw Ridge Trace to
+confirm the value of parameter   through VIF method. Based on Figure11, the value of parameter 微信号：MATHmodels
+   is chose as 0.022.
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 18 ===
+Team #2409949                                                                            Page 18 of  22
+
+
+
+
+
+                                          Figure 11: Ridge Trace
+
+    Then we can eventually get the results of Ridge Regression Model in Table7:
+
+                                       Table7: Results of Ridge Regression
+
+     Dependent Variable:     , Sample size: n=7 (by year), Parameter   =0.022.
+
+       Variable       Coef.       Std.Error      t-Statistic     P＞|t|      R²          F
+
+                         -0.003         0.001          -3.496         0.073*
+
+                         -4.417         0.887          -4.982         0.038**
+                                                                                          F=54.485
+                         -0.183         0.035          -5.248         0.034**         0.991
+                                                                                             P=0.018**
+                         -0.488         0.612          -0.797         0.509
+
+       Constant      319.466        65.293         4.893         0.039**
+
+                             Note：***p < 0.01, **p < 0.05, and *p < 0.10.
+
+    The regression equation we get is:
+                                                                                                             (5)
+
+          this equation quantitively demonstrate how our project will affect illegal tiger trade.
+
+
+6.2 Predict the Effects of Project by the Regression Model微信公众号：数学模型
+   We firstly use collected data as testing set to predict the value of    in previous years, the
+fitting result are shown in Figure12. This indicates our model is relatively feasible. 微信号：MATHmodels
+
+
+                                Figure 12: Testing results of regression model
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 19 ===
+Team #2409949                                                                            Page 19 of  22
+
+
+
+   As we expected in our project design, over the 5-year project, the search volume, the
+employment rate, the size of terrestrial protected areas, and the crime detection rate will raise by
+15%, 0.5%, 5%, 25% respectively. Using the expectation and the regression model to predict, we
+demonstrate the effect of the project in Figure13.
+
+
+
+
+
+                                  Figure 13: Predicted effect of the project
+
+
+    The effect of reserving tigers is feasible based on results above, and we believe the effects can
+be more generalized. Here is our generalization effects framework:微信公众号：数学模型
+
+
+
+
+
+                                Figure 14: Generalization effects framework
+
+
+6.3 Sensitivity Analysis
+
+
+We use the following formula to calculate the sensitivity degree of each explanatory variable tothe dependent微信号：MATHmodelsvariable:
+
+
+                                                                                                            (6)
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 20 ===
+Team #2409949                                                                            Page 20 of  22
+
+
+
+    where      refers to the prediction equation in    year. The results are demonstrated in
+
+following chart (Figure15), which means the most sensitive variable to the number of illegal trade
+of tigers is the size of the terrestrial protected areas, this inspires more strength to expand the areas
+for SEA tigers’ protection:
+
+
+
+
+
+                          Figure 15: Average prediction sensitivity
+
+
+    Here we discuss an abnormal situation: regional war in SEA. Firstly, Active conflict can halt
+conservation activities, as the safety of personnel is compromised. Research, monitoring, and active
+fieldwork are often stopped. Moreover, enforcement of wildlife protection laws can be weakened
+during conflicts, as attention and resources are diverted. This can lead to an increase in poaching.
+It is concluded that similar devastating effects can also reverse years of progress and lead to long-
+term ecological damage. Conservationists and organizations must frequently work in post-conflict
+scenarios to rebuild these efforts and address the environmental impacts of the conflict.
+
+
+
+7 Strength and Weakness
+
+
+Strength：微信公众号：数学模型    Consistence. Our models are consistent with relatively high accuracy, the link of models is
+     logical and reasonable. We build a complete model system for IWT project, ranging from
+     project design to effect evaluation.
+    Concreteness. Our project and models are concrete to be understood. We design a specific
+     project targeted to counter illegal trade of wild tigers in SEA. Our models have either concrete
+    examples and data or the complete logic chain and suitable mathematic formulas.
+    Persuasiveness. Our models present a relatively good performance of predicting and fitting.
+
+
+Weakness：
+    Natural shortcomings of mathematic models we use will have effect on the application of
+     practical situations. 微信号：MATHmodels
+   Due to the lack of related environmental knowledge, the variables of models are not fully
+    equipped for further analysis.
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 21 ===
+Team #2409949                                                                            Page 21 of  22
+
+
+
+
+
+Memorandum
+
+
+
+
+
+Dear Manager of World Wildlife Fund:
+
+    Hello! We are writing to express our keen interest to make contribution to counter against
+illegal wildlife trade. Our team has developed a specific project targeted the illegal trade of tigers
+in Southeast Asia. We believe WWF is our best client.
+   Our project is a five-year project aimed to reduce illegal trade of tigers in Southeast Aisa. It
+contains constructing ecological protection areas, strengthening crackdown on wildlife crimes,
+developing wildlife resources reasonably, and raising people's awareness of animal protection in
+Southeast Asia. We have a clear time schedule of whole five years.
+   Our specific goal is to Reduce illegal trade of tigers in Southeast Asia. We all know, the mission
+of WWF is “to conserve nature and reduce the most pressing threats to the diversity of life on
+Earth”, which is consistent with our project. WWF is undoubtedly a significant non-governmental
+organization in terms of wildlife protection. We notice that the effort made to Southeast Asia tigers
+is limitless in recently years. However, by the analysis of capital flow and the data-driven species
+choosing, we prove the necessity to pay more attention to Southeast Asia and tigers for combatingglobal微信公众号：数学模型illegal wildlife trade.
+   We consider the shortcomings of WWF when it comes to actual crime crackdown. So, we give
+a way out by cooperating with Interpol. By analyzing the complex global crime system and an
+optimal utility function, we believe the cooperation between WWF and Interpol can bring the
+raising of detection rate, resulting in the decrease of wildlife crime.
+    Furthermore, the expectation of our project is also bright. We measure the effect of each
+concrete activities in our project and get a hopeful prediction. WWF is the best client with the most
+suitable capabilities and interest for our project. We will be more than grateful if you can take our
+project into consideration.
+    Best wishes! 微信号：MATHmodels
+    Yours Sincerely
+   Team #2409949
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯
+
+=== PDF PAGE 22 ===
+Team #2409949                                                                            Page 22 of  22
+
+
+
+References
+
+
+
+[1] OECD (2019), The Illegal Wildlife Trade in Southeast Asia: Institutional Capacities in Indonesia,
+Singapore,   Thailand  and   Viet  Nam,    Illicit   Trade,  OECD   Publishing,   Paris, https://
+doi.org/10.1787/14fe3297-en.
+[2] Wildlife Conservancy Society. (2021). Impact of Illegal Trafficking on Wildlife. Retrieved from
+https://wildlifetrade.wcs.org/Wildlife-Trade/What-is-its-impact-on-wildlife.aspx.
+[3] Wildlife Conservancy Society. (2021). Wildlife Trafficking Impact on our Society. Retrieved from
+https://wildlifetrade.wcs.org/Wildlife-Trade/What-is-its-impact-on-the-society.aspx.
+[4] European  Union.  (2022).  Logical Framework Approach  – LFA.  Retrieved from  https://
+wikis.ec.europa.eu/display/ExactExternalWiki/Logical+Framework+Approach+-+LFA.
+[5]  UN-Habitat.   (2017).  Results-Based  Management  Handbook.  Retrieved  from   https://
+unhabitat.org/results-based-management-handbook.
+
+
+
+
+
+Appendix
+
+
+
+                    Table: Weights of indicators and scores in client assessment
+
+                   Weight_1        Weight_2   Weight_3        Score
+
+                                            TA: 45.8%
+
+                                     FC: 31.5%    TR: 29.1%
+                                                             IFAW:15.82
+                                                 TE: 25.1%
+
+                      OI: 29%                  DR: 45.8%                                                             IUCN:26.53                               HR: 36%
+                                            GS: 54.2%
+
+                                            GP: 41.7%    TRAFFIC:14.09
+                                CA: 32.5%微信公众号：数学模型DO: 58.3%
+
+                                        LW: 57%      UNEP:64.35
+                                  WI: 38.7%
+                                        SW: 43%
+                       CI: 51.4%                       FF: 22%        WCS:57.47
+
+                                 SMI: 61.3%   FI: 42%
+                                                       WILDAID:11.12                                                   FX: 36%
+
+                                             PA: 71.5%
+                                        FS: 68.7%             WWF: 78.71
+                                               FA: 28.5%
+                         SI: 19.6%
+                                                  PP: 41.2%
+                                     RF: 31.3%
+                                                    PF: 58.8% 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                    2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                 MATHmodels   获取更多资讯

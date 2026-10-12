@@ -1,0 +1,70 @@
+{
+  "raw_rows": {
+    "athletes": 252565,
+    "medals": 1435,
+    "hosts": 35,
+    "programs": 74
+  },
+  "exact_duplicate_athlete_rows_removed": 1466,
+  "mapped_medal_names": 164,
+  "panel_rows": 3226,
+  "unresolved_aggregate_rows": 32,
+  "recent_unresolved": [
+    {
+      "NOC": "AIN",
+      "Year": 2024,
+      "medal_entries": 6.0
+    },
+    {
+      "NOC": "MDA",
+      "Year": 2012,
+      "medal_entries": 2.0
+    }
+  ],
+  "official_totals_without_participation": 4,
+  "recent_sport_reconciliation_exact": 599,
+  "recent_sport_reconciliation_rows": 673,
+  "program_last_year": 2024,
+  "sport_missing_opportunity_categories_recent": [
+    "Mixed disciplines"
+  ],
+  "inputs": [
+    {
+      "file": "source/2025_MCM_Problem_C.pdf",
+      "sha256": "e3d1dcd7c06ba457b288ae8426707adb209fedf6f0823dcda2ba16f994708bf7",
+      "verified": true
+    },
+    {
+      "file": "data/raw/data_dictionary.csv",
+      "sha256": "0373a24a1a080151a00c307aee28f4d2b4bf0520b285cac45d3cf0deedac8497",
+      "verified": true
+    },
+    {
+      "file": "data/raw/summerOly_athletes.csv",
+      "sha256": "71ef8f0708489bee65549644d878050c3898582df767a698918a99396c671e43",
+      "verified": true
+    },
+    {
+      "file": "data/raw/summerOly_hosts.csv",
+      "sha256": "72a964ce4ae9004852c37e0e434b21d62fdcabf2569cd90d9742df4f1e68dc46",
+      "verified": true
+    },
+    {
+      "file": "data/raw/summerOly_medal_counts.csv",
+      "sha256": "84ac7c96c36f3fb50e440768091c59a35acbbccf65edc9aebbd2e7531cb76999",
+      "verified": true
+    },
+    {
+      "file": "data/raw/summerOly_programs.csv",
+      "sha256": "510b55ddc444d473ebb261da1a92b5ef5b2c145efbeadba0d92cc48f5d08a687",
+      "verified": true
+    }
+  ],
+  "notes": [
+    "Historical predecessor medals are not redistributed.",
+    "Lebanon LBN is normalized to LIB based on the same supplied Team label.",
+    "Sport medal_units is a deduplicated proxy; country targets use official medal table.",
+    "Reported absent aggregates with athlete medals are excluded, never assigned zero.",
+    "Athlete counts are approximate name counts: no unique athlete ID is supplied."
+  ]
+}

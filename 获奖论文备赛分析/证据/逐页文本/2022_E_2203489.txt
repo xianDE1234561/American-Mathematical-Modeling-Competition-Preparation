@@ -1,0 +1,739 @@
+=== PDF PAGE 1 ===
+      Problem Chosen                 2021            Team Control Number
+      E              MCM/ICM         2203489                           Summary Sheet
+
+     To cut or not to cut? Optional forest management plan
+                       Summary
+      Firstly, we divide objects that can sequester carbon into two categories: living forests and
+forest products. In the calculation of living forests, we established a Tree Biomass Logistic
+Growth Model for the number biomass to obtain a biomass-time function, and combined with
+the scale of the real forest, rasterized the forest. We used the basic dichotomy model to cal-
+culate the vegetation coverage，and linear programming model to calculate the Carbon Dioxide
+Containment          that can be sequestered by forests and their products over a while. The
+        is shown in Equation                  (𝑪𝑪𝑪𝑪𝑪𝑪𝒕𝒕)     Secondly, we established a decision model in the forest management plan, selecting eco-𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡                       (12).logical benefits and economic benefits as decision variables, and the forest ecosystem service
+function evaluation system as the objective function, and introduce the priority factor    as a
+constraint through the Analytic Hierarchy Process        and get inspiration from the Gini                                                                                                                             𝑝𝑝coefficient, it is concluded that the Comprehensive Optimization Index        interval value is                                                                (𝐴𝐴𝐴𝐴𝐴𝐴),between                  the forest system with     value closer to the right end point is op-                                                                                             (𝑪𝑪𝑪𝑪𝑪𝑪)timal at the comprehensive level, and the characteristics of specific forests and their locations       −5.77 ~ 94.26,                                  𝐶𝐶𝐶𝐶𝐶𝐶are combined with the priority sequence model. We propose a forest management plan optimi-
+zation algorithm based on a specific forest set.
+    Then, we established an economic benefit decision model, combined two expressions to
+determine the Intensity Of Intermedia Cutting        and divided the intensity of intermedia
+cutting into grades. The optimal harvesting cycle will improve the exist low benefit problem in                                                                  (𝑰𝑰𝑰𝑰𝑰𝑰𝑰𝑰),the single-phase model. Referring to the intergenerational equity principle in resource eco-
+nomics, the model is optimized to an infinite-time model, which can achieve the purpose of
+maximizing forest land income and maintaining forest function at the same time.
+    According to the value of    we applied the model to Saihanba and Canadian Douglas
+fir forests respectively, and used the MATLAB fitting toolbox to apply the forest management                                              𝐶𝐶𝐶𝐶𝐶𝐶,plan. We calculated that the Douglas fir forest should take     years as the harvesting cycle
+and             which will absorb                        in       years. Furthermore, with                                            13the help of the boundary Kuznets curve, we quantify the relationship between forest users      𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼= 35%,                70,780,800 𝑚𝑚𝑚𝑚 𝐶𝐶𝐶𝐶2   100satisfaction and forest area under the assumption of an extended harvesting period, demonstrat-
+ing the necessity for change. The optimal Planted area will be showed in Equation校苑数模公众号
+     Finally, we conducted a sensitivity analysis of the model, analyzed the impact of parame-                                                                                  (25).ter changes on tree growth and laid emphasis on the growth rate of numbers. The strength and
+weaknesses of the overall model were also being shown, edited a non-technical newspaper
+article to explain the rationality of felling to the masses as well.
+
+Keywords: Linear programming, Priority factors, Intermediate cutting, Forest management
+
+=== PDF PAGE 2 ===
+Team # 2203489                                                      Page 2 of 25
+
+                          Contents
+1 Introduction ...................................................................................................... 3
+  1.1 Problem Background ....................................................................................................... 3
+  1.2 Our Work .......................................................................................................................... 3
+2 Assumptions and Explanations ....................................................................... 4
+3 Notations ........................................................................................................... 4
+4 Model I: Carbon Sequestration Model .......................................................... 5
+  4.1 Tree carbon sequestration model ..................................................................................... 5
+      4.1.1 Tree Growth Model based on Logistic growth model ............................................ 5
+      4.1.2 Forest carbon sequestration model ......................................................................... 6
+  4.2 Linear programming model of carbon sequestration in forest products .......................... 7
+  4.3 Establishment of the carbon sequestration model .......................................................... 10
+  4.4 Calculations & Further Discussions ............................................................................... 10
+5 Model II: Economic Benefit-Based Forest Management Model ............... 10
+  5.1 Selection of forest management plan based on priority sequence model ...................... 10
+  5.2 Economic benefit model ................................................................................................ 13
+      5.2.1 Intermediate cuttings                        ..................................................................... 13
+      5.2.2 Thinning cycle ...................................................................................................... 14                                         intensity𝑰𝑰𝑰𝑰𝑰𝑰𝑰𝑰
+6 Case Study: Saihanba and Canada .............................................................. 16
+  6.1 Results of Forest Management Plan Based on Priority Sequence Model ...................... 16
+  6.2 Results of Economic Benefit First Model ...................................................................... 17
+  6.3 Results of Canadian forests based on the Carbon Sequestration Model ........................ 19
+  6.4 Optimal transition strategy based on forest planting area and tree felling objects ........ 20
+      6.4.1 Tree felling object optimization strategy .............................................................. 21
+      6.4.2 Optimizing strategy for forest development activities ......................................... 21
+7 Sensitivity Analysis ......................................................................................... 22校苑数模公众号8 Evaluation of Strengths and Weaknesses .................................................... 23
+  8.1 Strengths ........................................................................................................................ 23
+  8.2 Weaknesses and Further Discussion .............................................................................. 24
+References .......................................................................................................... 24
+Newspaper: Rational Harvesting of Forests ................................................... 25
+
+=== PDF PAGE 3 ===
+Team # 2203489                                                      Page 3 of 25
+
+1 Introduction
+1.1 Problem Background
+    IPCC noted that in the next       years, the average global surface temperature will in-
+crease by about       degrees. Carbon emissions caused by fuel burning played an important                         100role in the greenhouse effect. The traditional management of forests was carried out by com-               0.74munity succession and restoration measures.
+     Instead of them, we think forest ecosystem management should be based on the structural
+adjustment of the system and the establishment of an adaptive mechanism to maintain the forest
+ecosystem function and ensure its sustainable development.
+    Technology and method of forest ecosystem management are not only an urgent practical
+topic in contemporary forestry production, but also an important theoretical and practical prob-
+lem. Carbon sequestration is born with the urgent need of reducing carbon emission. This
+method considers both the carbon dioxide absorption of trees live and dead trees. Nowadays,
+the forest has potential benefits in more fields than what we thought. Comprehensive evalua-
+tions are required in relating issues.
+1.2 Our Work
+      First, we need to determine the amount of carbon sequestered that can be absorbed in the
+process of development and set up a carbon sequestration model. Secondly, how to balance the
+benefits brought by ecologic and economic is a problem that cannot be ignored, then set a
+decision-making model for forest management plans, and finding balance point.
+     Afterwards, the established model will be applied to the case, if after the calculation, the
+management plan now is quite different from the current one. We have to theoretically prove
+the rationality of the improved policy proposed by the model. Lastly, it is important to develop
+newspaper articles and publish them in the local community so that both the public can be
+aware of current program changes and support our program.校苑数模公众号
+
+
+
+
+
+                         Figure 1: Flow chart of our Model
+
+=== PDF PAGE 4 ===
+Team # 2203489                                                      Page 4 of 25
+
+2 Assumptions and Explanations
+
+    Considering that practical problems always contain many complex factors, first of all, we
+need to make reasonable assumptions to simplify the model, and each hypothesis is closely
+followed by its corresponding explanation:
+  Assumption 1: The influence of accidental factors during the growth of trees is not
+    considered.
+    Explanation: Although the forest ecosystem combines the characteristics of occupying a
+    large space in space and time, with the life span of trees is long, natural disasters such as
+     fires, hurricanes, still can easily cause an irreversible impact on the forest, and the envi-
+    ronmental capacity and biodiversity are sharply affected. As the result, no reasonable ob-
+    servation can be done. That means the influence of accidental factors such as natural dis-
+     asters are not into concerning.
+  Assumption 2: The environmental factors in which the forest is located do not change
+    (including but not limited to altitude, topography and soil properties).
+    Explanation: Environmental factors will directly affect forest to plant composition. For
+    example, sea and land locations are different in altitude, and the vertical distribution and
+    horizontal distribution of trees are different. What’s more, soil properties are divided into
+     acid, neutral, and alkaline, changes in soil will greatly reduce the survival rate of trees.
+    Therefore, it is assumed that the environment where the forest is located factors does not
+    change.
+  Assumption 3: The service life of forest products does not change.
+    Explanation: Due to the artificial use of forest products, the time of using products that
+    are already too short or too long is an order of magnitude larger than that of normal use
+    and has no reference significance. So, the service life of forest products can be ignored.
+  Assumption 4: We assume that the error caused by parameter estimation has a con-
+    trollable influence on the optimization effect.
+    Explanation: Due to the artificial use of forest products, the time of using products that
+    are already too short or too long is an order of magnitude larger than that of normal use
+    and has no reference significance. So, the service life of forest products can be ignored.
+
+     Additional assumptions are made to simplify analysis for individual sections. These as-
+sumptions will be discussed at the appropriate locations.校苑数模公众号
+3 Notations
+
+    Some essentail mathematical notations used in this paper are listed in Table 1.
+                       Table 1: Notations used in this paper
+     Symbol                             Description
+                           The biomass of the tree  years later
+                             The maximum biomass of the tree          𝑃𝑃𝑃𝑃(𝑡𝑡)                                                                                            𝑡𝑡           𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚
+
+=== PDF PAGE 5 ===
+Team # 2203489                                                      Page 5 of 25
+
+               The carbon storage of tree in the     carbon layer within the project
+                                     boundary in year                                                                        𝑖𝑖-th             𝐶𝐶𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑡𝑡           Carbon storage of wood forest products in year                                                                                                                              𝑡𝑡               The amount of carbon dioxide expected to be sequestered in time          𝐶𝐶ℎ𝑤𝑤𝑤𝑤−𝑡𝑡                                                                                                                               𝑡𝑡                               Priority factor of objective programming model            𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡                                                                                                                                                   𝑡𝑡                               Comprehensive Optimized Index                     𝑃𝑃𝑖𝑖                                  The best net income             𝐶𝐶𝐶𝐶𝐶𝐶                              Short for intensity of intermediate cutting               𝐸𝐸𝑛𝑛                   Optimum forest planting area during transition period             𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼
+    Note: There are some variables that are not listed here and will be discussed in detail in each                𝑆𝑆𝑇𝑇
+section.
+
+4 Model I: Carbon Sequestration Model
+4.1 Tree carbon sequestration model
+4.1.1 Tree Growth Model based on Logistic growth model
+    Considering the most basic case, the tree grows without any constraints, such as the envi-
+ronmental factors and its maximum biomass. In the above case, the biomass of the tree would
+conform to the following formula：
+
+                                                                                              (1)                                               𝑑𝑑𝑃𝑃𝑃𝑃(𝑡𝑡)    However, due to the morphological limitations= 𝑟𝑟𝑟𝑟𝑟𝑟(𝑡𝑡)of the trees themselves，The right side of                                                               𝑑𝑑𝑑𝑑
+Equation     should include maximum biomass blocking factor              We a-
+mend it to        (1)                                            (1 −𝑃𝑃𝑏𝑏(𝑡𝑡))/𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚,
+                                                                                              (2)                                       𝑑𝑑𝑃𝑃𝑃𝑃(𝑡𝑡)                    = 𝑟𝑟𝑟𝑟𝑟𝑟(𝑡𝑡)(1 −𝑃𝑃𝑃𝑃(𝑡𝑡) )   We choose the biomass of 𝑑𝑑𝑑𝑑the tree that just growing𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚as the initial value of the differential
+Equation    which is           .We can obtain the Cauchy problem of the first-order non-
+linear differential equation for biomass versus time:         (2),           𝑃𝑃𝑏𝑏(0) = 𝑝𝑝0
+
+                                                                                              (3)校苑数模公众号                                        𝑑𝑑𝑃𝑃𝑃𝑃(𝑡𝑡)                    = 𝑟𝑟𝑟𝑟𝑟𝑟(𝑡𝑡)(1 −𝑃𝑃𝑃𝑃(𝑡𝑡) )                   ቐ    𝑑𝑑𝑑𝑑                            𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚     Finally, after the operation, we get 𝑃𝑃𝑃𝑃(0)the Logistic= 𝑝𝑝0 biomass-time function                                                                                                      𝑃𝑃𝑃𝑃(𝑡𝑡):                                                                                              (4)                                                                                                        𝑒𝑒𝑟𝑟𝑟𝑟                              𝑃𝑃𝑃𝑃(𝑡𝑡) = 𝑝𝑝0 ∙𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚∙   We assume that the growth rate of the trees is a constant value. Since the growth rate                                                      𝑃𝑃𝑃𝑃𝑚𝑚𝑚𝑚𝑚𝑚+ 𝑝𝑝0(𝑒𝑒𝑟𝑟𝑟𝑟−1)
+of different species of trees is different, the growth rate has the following formula:                                                                                                                                                                      𝑟𝑟(𝑗𝑗)
+
+=== PDF PAGE 6 ===
+Team # 2203489                                                      Page 6 of 25
+
+                                                                                              (5)                                                    ∆𝑃𝑃𝑃𝑃(𝑡𝑡)   We have collected the growth rates𝑟𝑟𝑗𝑗=of different species of trees, which can be seen in                                                                                              𝑡𝑡
+Table   2：                Table 2: Notations used in this paper
+                  Species
+                 Natural larch                           3.08                                                      Rate(𝒎𝒎𝟑𝟑∙𝒉𝒉𝒉𝒉−𝟐𝟐/𝒚𝒚𝒚𝒚𝒚𝒚𝒚𝒚)                   Birch                               2.57
+                 Aspen                              2.74
+                   Artificial larch                          2.41
+
+
+    Hence, we can plot the graph of function         Figure                                      (3)，cf.        2.
+
+
+
+
+
+                        Figure 2: Tree’s Biomass-Time Curve
+4.1.2 Forest carbon sequestration model
+     In order to simplify this problem, we ignore the influence of environmental factors such
+as  forest  terrain,  temperature, water  source,  season,  etc., and  regard  the  forest  as a
+                   grid. In order to imitate the real forest environment, different kinds of trees
+are planted in the grid. The forest coverage rate     is not equal to90 𝑘𝑘𝑘𝑘× 90 𝑘𝑘𝑘𝑘     Therefore, the forest carbon sequestration in𝐹𝐹the grid can be expressed1.        as:
+
+                                                                                              (6)校苑数模公众号                                          𝐶𝐶𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑡𝑡= 𝐹𝐹∙෍(𝐵𝐵𝑡𝑡𝑟𝑟𝑒𝑒𝑒𝑒−𝑖𝑖,𝑗𝑗,𝑡𝑡⋅𝐶𝐶𝐶𝐶𝑗𝑗)    where                                                    𝑗𝑗=1
+             represents the carbon storage            of tree biomass in the i-th carbon
+          layer within the project boundary in the t-th year.                    𝐶𝐶𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑡𝑡                                               (𝑡𝑡 𝑐𝑐𝑐𝑐2−𝑒𝑒)               represents the forest biomass of tree species j in the i-th carbon layer
+         within the project boundary in the t-th year                    𝐵𝐵𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡         represents the biomass carbon content                     of tree species j.                                                                                (𝑡𝑡 𝑑𝑑. 𝑚𝑚).     In order𝐶𝐶𝐶𝐶𝑗𝑗 to calculate the value of forest vegetation(𝑡𝑡coverage𝐶𝐶× (𝑡𝑡 𝑑𝑑. 𝑚𝑚.the)−1)concept of NDVI (Nor-
+malized Vegetation Difference Index) must be introduced. It is an optical index that separates                                                                                          𝐹𝐹,
+
+=== PDF PAGE 7 ===
+Team # 2203489                                                      Page 7 of 25
+
+vegetation from water or soil and is closely related to the transpiration of vegetation. The cal-
+culation method of NDVI[1] is shown in the following                                                  formula(7):                                                                                              (7)                                             𝑁𝑁𝑁𝑁𝑁𝑁−𝑅𝑅    where                                     𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁=                                              𝑁𝑁𝑁𝑁𝑁𝑁+ 𝑅𝑅     NIR is the reflectance in the near-infrared.
+     R is the reflectance in the infrared bands.
+
+    The NDVI value of a specific area can be obtained from remote sensing data on
+Applying         the NDVI image can be obtained as shown in Figure 2：                                                                                                                         𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸.                𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴,
+
+
+
+
+
+                       Figure 2: The NDVI graph of Saihanba
+    Coverage grows as the color changes from green to blue. The pixel dichotomy model is a
+mature vegetation coverage estimation method proposed in previous studies. It is essentially a
+simple linear pixel decomposition that can better represent the changing characteristics of veg-
+etation coverage.              for calculating vegetation coverage using the basic dichotomy
+model is as follows:               Formula(8)
+                                                                                              (8)                                                    𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁−𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠    where               𝐹𝐹=                                                     𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑣𝑣𝑣𝑣𝑣𝑣−𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠                  is the NDVI value only covered by vegetation.
+                   is the NDVI value only covered by soil.              𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑣𝑣𝑣𝑣𝑣𝑣    The 𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑁𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠tree biomass            of the i-th carbon layer tree species j within the grid bound-ary has校苑数模公众号the following relationship:                                              𝐵𝐵𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡
+                                                                                              (9)
+    where                                      𝐵𝐵𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡= 𝑃𝑃𝑏𝑏𝑗𝑗(𝑡𝑡) ⋅𝑁𝑁𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡⋅𝐴𝐴𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡                   is the number of trees of the  -th carbon layer tree species   per unit
+                          within the grid boundary in the    year;                  𝑁𝑁𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡                                                                                   𝑖𝑖                                                                     𝑗𝑗                   is the            of the     carbon layer within the grid boundary.          area(𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟/ℎ𝑚𝑚2)                                                                    𝑡𝑡4.2 Linear𝐴𝐴𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡programmingarea(ℎ𝑚𝑚2)model of carbon𝑖𝑖-th   sequestration in forest products
+    Since our model is based on a fixed grid, we assume that the expansion of the forest size
+
+=== PDF PAGE 8 ===
+Team # 2203489                                                      Page 8 of 25
+
+is not considered in the forest management strategy, i.e., the forest area is a fixed value. In-
+creases in carbon sequestration can be achieved through increases in forest biomass and directly
+due to increases in forest soil carbon. Finally, if the inventory of long-lived forest products
+increases, the carbon stored in the inventory of forest products also increases.
+
+     Therefore, to achieve the most efficient forest management plan for sequestering carbon
+dioxide, we need to develop the following linear programming model. According to the whole
+process of wood harvesting, processing, decomposition and emission, wood forest products
+can be divided into three categories. The primary products are logs and fuel wood; the inter-
+mediate products are sawn timber, wood-based panels, paper and cardboard, etc.; the end prod-
+ucts are household products, building materials, paper products, etc[2]. To simplify the model-
+ing process, only three types of wood forest products are selected as representatives, namely
+fuel wood, paper and paper products, solid forest products.
+  Service life of forest products
+    The quality of wood products, use environment, frequency of use and other factors deter-
+mine their service life, but it is usually assumed that the service life of wood products is fixed,
+the decomposition rate of wood products is constant, and has a linear relationship with time.
+Considering the above factors, the indicators of wood products we have determined are as fol-
+lows:
+         Table 3: Convention factors of different wood and wood commodities
+                     Basic den-   Wood/Wood                Carbon     Proportion of long-term   Lifespan/                            sity /     products                     content           forest products         years                          (t·m-3)
+    Industrial logs        0.53          0.5        —        —
+     Fuelwood          0.53          0.5        —                1
+   Sawn timber         0.53          0.5                   0.8               50
+ Wood-based panel      0.55          0.5                   0.9               30
+   Paper and card-
+                          0.9           0.5                   0.7               20       board
+  Solid wood prod-
+                          0.6           0.5                   0.5               25
+         ucts
+
+  Basic density校苑数模公众号
+   Wood comes from the trunk and is the main body of the tree. Its main constituent elements
+are carbon        hydrogen       and oxygen        which means that half of the dry
+wood weight is carbon. Therefore, the calculation formula of wood carbon storage is as follows:         (50%),        (6%)           (43%),
+                                                                                       (10)
+    where              Carbon sequestration of products𝑗𝑗= 𝐶𝐶𝐶𝐶𝑗𝑗∙𝑉𝑉𝑗𝑗∙𝐵𝐵𝑑𝑑𝑗𝑗          represents the wood carbon content of tree species
+          is the volume of wood used to produce the product of species                  𝐶𝐶𝐶𝐶𝑗𝑗                                                                                                     𝑗𝑗.                    𝑉𝑉𝑗𝑗                                                                                                                          𝑗𝑗.
+
+=== PDF PAGE 9 ===
+Team # 2203489                                                      Page 9 of 25
+
+            is the basic density of wood of tree species    The 𝐵𝐵𝑑𝑑𝑗𝑗basic density of wood products determined in this𝑗𝑗.paper is shown in Table 3.
+  Calculation of carbon storage per unit volume of wood products of different types
+    Using the output of forest products in China in 2007[3], combined with the basic density
+and service life of wood products, the carbon storage per unit volume           of forest prod-
+ucts was calculated. It can be seen from Figure 3 that, most of the carbon is stored in solid                                                                           (𝑉𝑉𝑗𝑗= 1)wood. Improving the service life of wood products can increase the carbon accumulation of
+forest products and increase the output of wood products. In particular, the output of solid wood
+will be more conducive to the carbon sink effect of forest products.
+
+
+
+
+
+                   Figure 4: Carbon sequestration of forest products
+    Based on the above conditions, we assume that the proportion of wood used for different
+types of forest products is fixed every year, then we can obtain that the transformed value of
+carbon storage of forest products in year t should satisfy Equation                                                             (11).                                  3                          𝐶𝐶ℎ𝑤𝑤𝑤𝑤−𝑡𝑡= ෍෍(𝐶𝐶𝑠𝑠𝑠𝑠𝑠𝑠−𝑡𝑡𝑡𝑡∙𝑉𝑉𝑡𝑡𝑡𝑡,𝑗𝑗∙𝑂𝑂𝑂𝑂𝑡𝑡𝑦𝑦)                     (11)    where                                𝑡𝑡𝑡𝑡=1 𝑗𝑗=1
+                        the carbon storage per unit volume of wood products for various
+         purposes;            𝐶𝐶𝑠𝑠𝑠𝑠𝑠𝑠−𝑡𝑡𝑡𝑡represents                     the volume of wood products of tree species j used for various pur-校苑数模公众号         poses;            𝑉𝑉𝑡𝑡𝑡𝑡,𝑗𝑗represents   
+                                Paper and paper                  Solid wood                𝑡𝑡𝑡𝑡 is the category of wood products produced and processed             is the proportion of products still in use or discarded in t_0 years after produc-         (𝑡𝑡𝑡𝑡= 1: Carbon; 𝑡𝑡𝑡𝑡= 2:                 products; 𝑡𝑡𝑡𝑡= 3:             material);          tion,𝑂𝑂𝑂𝑂𝑡𝑡𝑦𝑦                                               (2)∙𝑊𝑊𝑊𝑊/𝐿𝐿𝐿𝐿𝑡𝑡𝑡𝑡);            is𝑂𝑂𝑂𝑂𝑡𝑡𝑦𝑦=the time𝑒𝑒(−lnfrom the production of forest products to the end of statistics；
+             is the products’ service life.          𝑊𝑊𝑊𝑊                 𝐿𝐿𝐿𝐿𝑡𝑡𝑡𝑡
+
+=== PDF PAGE 10 ===
+Team # 2203489                                                      Page 10 of 25
+
+    The objective function is to maximize the total carbon sequestration of forest products as
+follow:
+                                        𝑚𝑚𝑚𝑚𝑚𝑚 𝐶𝐶𝑠𝑠𝑠𝑠𝑠𝑠= ෍𝐶𝐶ℎ𝑤𝑤𝑤𝑤−𝑡𝑡                                                                                                                          𝑡𝑡
+                                                                                       (11)
+
+4.3 Establishment of the carbon sequestration model
+    Combining the above models, we can know that in our assumed grid, the amount of carbon
+dioxide that the forest and its products are expected to sequester in a period of time (T) satisfies
+the following formula：
+
+
+                                                                                       (12)                      44                        𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡=     [𝐹𝐹∙෍൫𝐵𝐵𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡⋅𝐶𝐶𝐶𝐶𝑗𝑗൯ +  𝐶𝐶𝑠𝑠𝑠𝑠𝑠𝑠]                      12      𝑗𝑗=1
+4.4 Calculations & Further Discussions
+    According to the above model building process, we can draw the best management plan
+for carbon sequestration:
+
+     1. Planting tree species with high carbon content can not only increase the carbon dioxide
+absorption of the forest itself, but also increase the carbon content of wood products.
+     2. By solving Equation          it can be known that the higher the value of      the greater
+the carbon sequestration of the final forest products, so the best forest management plan is to                          (12),                                                                          𝑉𝑉3,𝑗𝑗,produce solid wood products from the felled wood (ie. long-service life wood products).
+
+5 Model II: Economic Benefit-Based Forest Management Model
+
+5.1 Selection of forest management plan based on priority sequence model
+   On the basis of ecological engineering and market economics, according to the existing
+research on the value transfer of ecosystem services at home and abroad, at the same time, by
+referring to the "ecosystem service measurement index" in the "Forest Ecosystem Service校苑数模公众号
+Function Evaluation Specification", we established A new assessment system for forest eco-
+system services has been developed, as shown in the Figure 4.
+
+   We select two first grade indexes (ecological effects, economic effects) and correspond-
+ently select seven second grade indexes. Additionally, we do not select many unrelated indexes,
+which would remove obstacles for the subsequent model optimization and make a better mech-
+anism analysis of the influence of each index.
+
+   When we deal with programming problems, we usually list the objective function and
+constraint conditions according to the actual problems in most cases. Simultaneously, we want
+
+=== PDF PAGE 11 ===
+Team # 2203489                                                      Page 11 of 25
+
+a linear relationship between the first grade indexes and the second grade indexes. Therefore,
+we determine the index weights by the Analytic Hierarchy Process         and the results
+are shown in Table 4.                                                                                (𝐴𝐴𝐴𝐴𝐴𝐴)[4]
+                    Table 4. The indexes weight of forest system
+              First grade indexes   weight  Second grade indexes  weight
+                                                                0.2362
+                                                                0.1963             Ecological            0.6145         FA(𝑥𝑥11)                                                                0.1243                                            CFAOP(𝑥𝑥12)                            effects(𝑥𝑥1)                                0.0577                                                WC(𝑥𝑥13)                                                                0.1163                                                CDR(𝑥𝑥14)           Economic            0.3855                        0.0728                                                 PCG(𝑥𝑥21)                                                                0.1964                            effects(𝑥𝑥2)                NOP(𝑥𝑥22)                                                    TY(𝑥𝑥23)
+
+
+
+
+
+                   Figure 5: Concept map of the new forest system
+   We still obtain inspiration from operations research and introduce the concept of priority
+factor   Priority factor reflects the difference in the importance of goals When we do multiple
+goal planning. If there are   priority factors, it should satisfy the following formula:         𝑃𝑃.                                     𝑛𝑛                          𝑃𝑃1, 𝑃𝑃2, 𝑃𝑃3, ⋯, 𝑃𝑃𝑛𝑛(𝑃𝑃𝑘𝑘≫𝑃𝑃𝑘𝑘+1, 𝑘𝑘= 1,2,3, ⋯, 𝑛𝑛−1)                 (13)                 indicates that the priority of target     should be greater than     𝑃𝑃𝑘𝑘≫𝑃𝑃𝑘𝑘+1Taking Saihanba for example, we still use each𝑃𝑃𝑘𝑘 values of indexes in 2020.𝑃𝑃𝑘𝑘+1.At the same校苑数模公众号
+time, we add positive and negative deviation variables          to the objective programming
+model. The deviation variables are different from the rigid constraints of linear programming                                                                (𝑑𝑑+, 𝑑𝑑−)model, they are soft constraints[5]. If we hope the sequence from high to low is: ecological
+effects, economic effects, then the target programming model is:
+
+=== PDF PAGE 12 ===
+Team # 2203489                                                      Page 12 of 25
+                                                                          (14)
+
+     In the constraint condition, containing    means that it is allowed to fail to reach the                                    +target value, containing     means that it is allowed to exceed the target values, and containing                                                          𝑑𝑑𝑚𝑚                    −         means that it exactly reaches the target value. Our objective function minimizes the                               𝑑𝑑𝑚𝑚  +    −)weighted sum of the positive and negative deviations of all constraints, and restricts the second(𝑑𝑑𝑚𝑚 + 𝑑𝑑𝑚𝑚index of all aspects in different degrees. For example, the constraint condition containing
+           means that at least 60% of the GDP per capita of forest settlements comes from
+timber production. Therefore, the constraint condition uses the negative deviation variable0.6𝑥𝑥21 −𝑥𝑥23                                                                                           −.    As the Saihanba Forest is a national ecological protection area, we choose Ecological𝑑𝑑2ef-
+fects on the first floor, so we assign to it a priority factor      i.e. Economic effects is     Next, we can repeat the method provided above. By𝑃𝑃1,changing the priority of ecological𝑃𝑃2.
+effects and economic effects, we can gain the optimized solution data of the group                                                                                    1But with only the optimized solution data, we cannot judge which priorities make the food                                                                                                  𝐴𝐴2 = 2.system work best.
+
+     Therefore, we get inspiration from the Gini Coefficient[6] and put forward the concept of
+comprehensive optimized index      by rewriting Formula (12) to evaluate the effect of the
+forest system. We believe that the larger the     value is, the more the forest system equipped                                             (𝐶𝐶𝐶𝐶𝐶𝐶)with corresponding priority should be adopted. This is an evaluation method for the optimized                                                                𝐶𝐶𝐶𝐶𝐶𝐶
+system synthesis. Its calculation formula is:       𝑛𝑛   Among them,     represents𝐶𝐶𝐶𝐶𝐶𝐶=the100dimensionless× ෍ 𝑗𝑗=1±𝜔𝜔𝑖𝑖𝑢𝑢𝚤𝚤෥data obtained by min-max normalization(15)
+method. Its calculation formula is shown in Formula(16)：                                                 𝑢𝑢𝚤𝚤෥
+                                         𝑥𝑥𝑖𝑖−𝑚𝑚𝑚𝑚𝑚𝑚1≤𝑖𝑖≤𝑛𝑛{𝑥𝑥𝑗𝑗}                         𝑢𝑢𝚤𝚤෥=                                                              , 𝑢𝑢𝚤𝚤෥∈[0,1]                  (16)    According to the weights𝑚𝑚𝑚𝑚𝑚𝑚1≤𝑖𝑖≤𝑛𝑛൛𝑥𝑥𝑗𝑗ൟ−𝑚𝑚𝑚𝑚𝑚𝑚1≤𝑖𝑖≤𝑛𝑛{𝑥𝑥𝑗𝑗}of the second indexes obtained in Section 2.1, the interval value校苑数模公众号of      in this paper is between -5.77 and 94.26. We believe that the forest system whose
+value is closer to the right endpoint is optimized at the comprehensive level, on the contrary, it    𝐶𝐶𝐶𝐶𝐶𝐶                                                                                                                        𝐶𝐶𝐶𝐶𝐶𝐶is considered the worst. Additionally, in practice, we can't get the left and right endpoint value,
+we can only get to them indefinitely.
+
+   By drawing the heat map of     value (as shown in Figure 6), we clearly show which
+priority of forest system allocation is the most comprehensive optimized. The sequence from                                                  𝐶𝐶𝐶𝐶𝐶𝐶high to low is: ecological effects, economic effects. And                  is equal to 46.35.    Considering that the existence of some special forests𝐶𝐶𝐶𝐶𝐶𝐶𝑆𝑆𝑆𝑆𝑆𝑆ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎has a huge influence on the earth's
+
+=== PDF PAGE 13 ===
+Team # 2203489                                                      Page 13 of 25
+
+ecological environment and has non-renewable  ecological  benefits,  the index
+                            is defined, and  i corresponds to the Different forests, according to                                                                                                                                 𝑙𝑙𝑖𝑖(𝑙𝑙𝑖𝑖=Global Forest Resources Assessment 2020 (FRA 2020)[7], we define this type of forest0 𝑜𝑜𝑜𝑜 1; 𝑖𝑖= 1,2, ⋯, 𝑛𝑛)and the rest of the forests       The comprehensive algorithm combining the idea of model                                                                                                         𝑙𝑙𝑖𝑖= 1,and specific forests is as follow:                                𝑙𝑙𝑖𝑖= 0.
+ Algorithm 1: Transition point decision based on forest model and specific forests
+ Input:
+ Output:             𝐶𝐶𝐶𝐶𝐶𝐶 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟,   𝑙𝑙𝑖𝑖,  𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑇𝑇 for  =0 to T do     # Retest𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀to determine 𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃the priority𝑀𝑀    sequence tif                 = (ecological effects, economic effects) then     M = ecological𝐶𝐶𝐶𝐶𝐶𝐶      effects       else𝐶𝐶𝐶𝐶𝐶𝐶 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟
+              if                 = (economic effects, ecological effects) then
+                  if     satisfies       then                   𝐶𝐶𝐶𝐶𝐶𝐶 M𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝= ecological𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟effects               else𝑙𝑙𝑖𝑖             𝑙𝑙𝑖𝑖= 1
+                 continue
+           else
+             continue
+ End
+
+   By setting the outer loop to a constant loop with   increasing from small to large, the
+time complexity of the algorithm has not increased significantly, making calculation easy to be                                                                                                                  𝑡𝑡implemented.校苑数模公众号
+                   Figure 6. Bubble chart of     values (Saihanba)                                                                       𝐶𝐶𝐶𝐶𝐶𝐶5.2 Economic benefit model
+5.2.1 Intermediate cuttings     Intermediate cuttings refersintensity(𝑰𝑰𝑰𝑰𝑰𝑰𝑰𝑰)to regularly cutting down some trees in immature forests to
+preserve the good environmental conditions of the forest and promote tree growth and devel-
+opment. At the same time, part of the wood can be obtained to expand carbon sequestration
+
+=== PDF PAGE 14 ===
+Team # 2203489                                                      Page 14 of 25
+
+and create more economic benefits. The intensity of intermediate cuttings will directly deter-
+mine the number of retained trees and the degree of improvement in forest environmental con-
+ditions. Excessive or low harvesting intensity, will be bed for trees, either.
+
+     Therefore, it is very important to determine a reasonable intensity of intermediate cuttings.
+There are three types of intermediate cuttings: low, crown, geometric thinning. Intermediate
+cuttings                     is usually represented in two ways:
+     1. The change in the nutrient area of trees can be directly grasped by the number of trees,          intensity(𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼)and the expression method is as follows：
+
+                                                                                       (13)                                  𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑜𝑜𝑓𝑓 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡                  𝑛𝑛                  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛=                   100% =   100%                                 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏×       𝑁𝑁×     2. The quantity of thinned timber and the reduction of stand density can be directly under-
+stood by the timber volume, and the expression method is as follows:
+
+                                                                                       (14)                                 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 𝑜𝑜𝑜𝑜 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡                             𝑉𝑉𝑓𝑓              𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣=                      100% =   × 100%                              𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 𝑜𝑜𝑜𝑜 all 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏×                 𝑉𝑉𝑠𝑠𝑠𝑠𝑠𝑠    However, both methods have their shortcomings. Although the number of trees to be felled
+can be accurately obtained, it is impossible to determine the trees of which growth age group
+to be felled; Volume as a division cannot explain the change in nutrient area, so in order to
+more accurately determine the harvesting intensity, the model uses a combination of
+and                                                                                                                                               𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛        𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣.                         𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑜𝑜𝑜𝑜 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡                𝑑𝑑2                                                                                       (15)       ⎧𝑑𝑑=                          100% =  × 100%                         𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏×             𝑑𝑑1                                                                            𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣      ⎨                                                𝑑𝑑2 =      ⎩                                                       𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛    The intermediate cuttings method can be determined according to the calculation of the
+variable d according to formula (16):
+   When                                   apply to crown thinning;
+   When                                   apply to low thinning;         𝑑𝑑> 1 , 𝑑𝑑1 < 𝑑𝑑2  ,  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣>  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛 ,   When                                   apply to geometric thinning.         𝑑𝑑< 1 , 𝑑𝑑1 > 𝑑𝑑2  ,  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣<  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛 ,     After the two calculation methods are combined, the intermediate cuttings intensity         𝑑𝑑= 1 , 𝑑𝑑1 = 𝑑𝑑2  ,  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑣𝑣=  𝐼𝐼𝐼𝐼𝐼𝐼𝐶𝐶𝑛𝑛 ,and the corresponding intermediate cuttings   intensity can be obtained as follows:                                                                                                                                 (𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼)校苑数模公众号Table 5: height and DHB analysis under different IOIC in thinning
+                             Grand             Heaviness of harvesting
+                              weak          𝑰𝑰𝑰𝑰𝑰𝑰𝑰𝑰(%)                                 middle        𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼< 15%                            0%~20%                                   high  16% < 𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼< 25%                             21~40%                               extremely high  26% < 𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼< 35%                             40~60%
+5.2.2 Thinning cycle        𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼> 35%                               61~100%    The premature start of intermediate cuttings will affect the growth of trees before the ma-
+turity period and reduce the economic benefits and carbon sequestration of wood. The original
+
+=== PDF PAGE 15 ===
+Team # 2203489                                                      Page 15 of 25
+
+nutrients can no longer slow the growth of trees and make them inhibited. So controlling the
+tree harvesting cycle is crucial.
+
+    Lumber prices    benefits from carbon sequestration of wood    ,marginal logging costs
+  ,timber volume per plant    planting cost    Through the above variables, a reasonable                              𝑝𝑝,                                 ℎintermediate value can be determined, and the objective function is:𝑐𝑐                                     𝑉𝑉,                    𝐶𝐶0.
+                                                                                       (16)    However, in actual production𝐸𝐸𝑛𝑛= (ℎ+and 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡)e−𝑟𝑟𝑟𝑟−𝐶𝐶0life, we have learned that the planting and use of forest
+trees is not a one-time thing. After harvesting, we can still plant new trees to renew the forest.
+There are trees to be felled, forming a cyclic process of tree planting and harvesting, canceling
+the time limit of Equation (17), and changing to an infinite-time model.
+
+    This is the objective function becomes:
+
+                                                                                       (17)                                             1                     𝐸𝐸𝑛𝑛= [(ℎ+ 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡)e−𝑟𝑟𝑟𝑟−𝐶𝐶0] ⋅    At this time, the derivation of revenue against time is 1used−e−𝑟𝑟𝑟𝑟to solve the constraints:
+
+                                                                                       (18)   d𝑆𝑆                               1                               1      (ℎ+ 𝑝𝑝−𝑐𝑐)e−𝑟𝑟𝑟𝑟ቈd𝑉𝑉(𝑡𝑡) −𝑉𝑉(𝑡𝑡)𝑟𝑟቉⋅                   𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡)e−𝑟𝑟𝑟𝑟−𝐶𝐶0] ⋅                   e−𝑟𝑟𝑟𝑟𝑟𝑟   d𝑡𝑡=                          d𝑡𝑡          1 −e−𝑟𝑟𝑟𝑟−[(ℎ+                    (1 −e−𝑟𝑟𝑟𝑟)2    Under the condition of                         the optimal harvesting period     meets:                                    𝐶𝐶0 < (ℎ+ 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡),                                                  𝑡𝑡𝑝𝑝0                                                                                       (19)                     d𝑉𝑉(𝑡𝑡𝑝𝑝0)/d𝑡𝑡                     𝐶𝐶0                           𝑟𝑟                = ൤1 −    The ecological value𝑉𝑉(𝑡𝑡𝑝𝑝0)that a single(ℎ+tree can𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡𝑝𝑝0)൨⋅provide is extremely1 −e−𝑟𝑟𝑡𝑡𝑝𝑝0small, but the accumula-
+tion of trees into a forest will exert its benefits to the ecological environment, that is, the eco-
+logical benefits are indivisible. The impact of the forest is evenly distributed among the number
+of trees.
+
+                                                                                       (20)                                       1              𝐸𝐸𝑛𝑛= [(ℎ+ 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡)e−𝑟𝑟𝑟𝑟−𝐶𝐶0] ⋅               𝑊𝑊(𝑡𝑡)𝑙𝑙𝑙𝑙𝑙𝑙𝑋𝑋→∞ 𝑋𝑋                                     1 −e−𝑟𝑟𝑟𝑟+                       𝑡𝑡   When the condition                     is established, the optimal harvesting period      is:              ℎ+ 𝑝𝑝−𝑐𝑐> 0                                                                                    𝑡𝑡𝑝𝑝校苑数模公众号                    d𝑉𝑉(𝑡𝑡𝑝𝑝)/d𝑡𝑡                     𝐶𝐶0                       𝑟𝑟                = ൤1 −                +                                                                                       (21)                          𝑉𝑉(𝑡𝑡𝑝𝑝)       (ℎ+ 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡𝑝𝑝)൨ 1 −e−rtp                                  ൫𝑒𝑒𝑟𝑟𝑡𝑡𝑝𝑝−1൯൤𝑊𝑊(𝑡𝑡𝑝𝑝) −d𝑊𝑊(𝑡𝑡𝑝𝑝) 𝑡𝑡൨                                                                        d𝑡𝑡                                                                                      ⋅𝑙𝑙𝑙𝑙𝑙𝑙𝑋𝑋→∞ X                       (ℎ+ 𝑝𝑝−𝑐𝑐)𝑉𝑉(𝑡𝑡𝑝𝑝)𝑡𝑡𝑝𝑝2
+
+=== PDF PAGE 16 ===
+Team # 2203489                                                      Page 16 of 25
+
+
+
+
+
+                   Figure 7: Diagram of trees that should be felled
+    According to the forest management model we established, the optimal harvesting period
+   was obtained. At the beginning of a new period, the oldest and older trees were preferen-
+tially felled when harvesting existing trees. By analogy, the trees are harvested after reaching𝑡𝑡𝑝𝑝   years and above, taking into account the economic and environmental benefits, and follow-
+ing the principle of sustainable development, to achieve the goal of maximizing the benefits of𝑡𝑡𝑝𝑝forest land and not deteriorating forest functions.
+
+6 Case Study: Saihanba and Canada
+
+     In order to verify our forest management plan system model and solve the problems raised,
+we chose two typical forests to apply our model: Saihanba and Canada Forests.
+
+    The data applied in the two areas are based on the data of 2020[8], And the forest range is
+defined by administrative boundaries.校苑数模公众号6.1 Results of Forest Management Plan Based on Priority Sequence Model
+     In the previous section, we adopted an objective planning model with priority factors to
+realize the priority order adjudication of forest management plans, and solved the model by
+taking Saihanba as an example.
+
+     In this section, we wish to apply the model to various forests to determine their appropriate
+optimal forest management plans for forest managers to understand the best uses of the forest.
+However, the results of only one forest cannot reflect the universality of the model, and cannot
+explain the actual meaning of the numerical value. Therefore, we solve the model using Canada
+
+=== PDF PAGE 17 ===
+Team # 2203489                                                      Page 17 of 25
+
+as an example, and the thermal map of the result is shown in Figure 8. At the same time, our
+selected forests are located in developing and developed countries, which will make the com-
+parison more intense and facilitate our analysis.
+
+
+
+
+
+                    Figure 8: Bubble chart of     value (Canada)    According to Figure x, we can find that the sequence𝐶𝐶𝐶𝐶𝐶𝐶   of the optimized priority of the Can-
+ada forest management system from high to low is: economic effects, ecological effects. And
+              is equal to 35.69.𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶Based on the above analysis, according to the model judgment, Saihanba is suitable for
+the priority management plan of forest ecological benefit, while Canada is suitable for the pri-
+ority management plan of forest ecological benefit. This is also in line with the fact that Sai-
+hanba is a national forest park and that Canada is the top country in terms of total sawn timber
+and wood-based panel exports[9].
+
+
+
+
+
+               Figure 9: Annual tree cover loss by dominant driver in Canada校苑数模公众号6.2 Results of Economic Benefit First Model
+     In the application of the economic benefit model, we selected Douglas fir distributed in
+Alberta, Canada for analysis. The average density of the forest before thinning was
+           and the thinning followed the cutting growth time to     the following trees, cut                                                                4464down the trees in the areas with higher growth density, leaving the sparser parts, and at the𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡/ℎ𝑚𝑚2,                                                                                 𝑡𝑡2,same time cut down the trees with poor growth conditions, leaving the thinning principle of
+sustainable and healthy growth of trees, and the forest area is divided according to the thinning
+intensity. The grades were divided into three groups and added to the control group:
+
+=== PDF PAGE 18 ===
+Team # 2203489                                                      Page 18 of 25
+
+  Team A (degree high): Cut down      of the number of trees, i.e.,
+  Team B (degree middle): Cut down      of the number of trees, i.e.,           50%                               𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼= 50%;  Team C (degree low): Cut down      of the number of trees, i.e.,            35%                               𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼= 35%;  Team D (control group): no logging, i.e.,           15%                               𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼= 15%;           Table 6: height and DHB analysis𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼=under different0%;   IOIC in thinning
+ Team    Item    Average value  Standard deviation  Range  Minimum  Max
+      DBH/m       117.1            24.323          94       83       177
+  A
+        Height/m       9.91             9.904            3.9        8.2       12.1
+      DBH/m       117.3            21.062          82       77       159
+  B
+        Height/m      10.30             9.929            3.5        8.2        11.7
+      DBH/m       101.6            34.450         135       49       147
+  C
+        Height/m       9.37             13.348           4.5        7.2       10.2
+      DBH/m        87.6             33.929         128       30       184
+  D
+        Height/m       8.51             18.954           5.4        5.3        11.7
+
+     After analyzing the results of different thinning intensities and the control group with a
+thinning period     the average tree height reached     m, and the DBH (short for diameter
+at breast) of trees was concentrated between     and      m, indicating that thinning It plays                            𝑡𝑡𝑝𝑝,                            96.3an important role in promoting the growth of Douglas fir. Drawing a scatter plot of Douglas fir                                         8.2     12.5DBH Y and tree height value X, through a single regression analysis, it can be obtained that
+the correlation equation𝑌𝑌=of5.78the two+ 36.79is approximatedln 𝑋𝑋 (𝑅𝑅2 = 0.761to the logarithmic> 0.732)  function curve as:  (22)校苑数模公众号
+
+            Figure 10: Individual volume growth of Douglas fir after thinning
+    The thinning intensity has a positive impact on the forest environmental conditions and
+thus promotes the growth of the wood volume per tree, but in contrast, the growth volume of
+the wood volume per tree is Team B>Team A>>Team C>Team D. The results showed that,
+under the thinning intensity of Team C, the difference with the control group was weak, and
+the growth rate of tree diameter at breast height, tree height and per-tree wood volume was
+
+=== PDF PAGE 19 ===
+Team # 2203489                                                      Page 19 of 25
+
+extremely low compared with groups A and B, that is, the economic impact caused by exces-
+sive forest density. Reduced efficiency. And under the same conditions, the statistical results
+of Team B are better than that of Team B. Therefore, only by adopting appropriate thinning
+intensity can the forest exert its maximum economic benefits. And at this time,
+         can be obtained, which is in line with the middle range of                         in                                                                                                    𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼=the model, and the obtained optimal thinning intensity is reasonable.21.280%                                    16% < 𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼< 25%
+    The price of Douglas fir is           based on the average of the collected and sold mar-
+ket prices. Its planting cost includes the price of saplings, labor costs, transportation costs, etc.                          1500/𝑚𝑚3to obtain a planting cost of           According to the average density of the forest before
+thinning, it is There are 4464            and the average diameter of Douglas fir is                                      6$/𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝.After thinning, enough space for tree growth should be reserved for saplings to absorb nutrients                                        𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡/ℎ𝑚𝑚2,                                12 𝑚𝑚.and grow to maturity. As an abstract variable, the carbon sequestration benefit of wood can be
+multiplied by the price of carbon sequestration after using the carbon sequestration model to
+find its carbon sequestration amount. The price of carbon sequestration can be calculated using
+Canada’s current tax system for reducing greenhouse gas emissions, that is, a tax on carbon
+dioxide emissions, with a tax rate of           The formula for calculating carbon seques-
+tration benefits based on this tax rate is:                                       150$/𝑡𝑡(𝑐𝑐).                        12    According to the economicℎ=benefits[𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡×obtained150 and＄𝑡𝑡(𝑐𝑐)ൗ converted]     from the above, and brought(23)                        44
+into the economic benefit model for calculation, the following figure shows that the optimal
+thinning period is               12.510 𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦≈13 𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦.校苑数模公众号
+
+            Figure 11: Relationship between net income and thinning cycles
+6.3 Results of Canadian forests based on the Carbon Sequestration Model
+      First, in order to calculate the carbon sequestration of Canadian forests, we collected the
+classification and proportion of Canadian native forests. Here, we only calculate the tree spe-
+cies that account for more than    As shown in Figure    Canadian forest resources mainly
+include coniferous forest, broad-leaved forest, and mixed forest.                      1%.                   12,
+
+=== PDF PAGE 20 ===
+Team # 2203489                                                      Page 20 of 25
+
+
+
+
+
+            Figure 12: Annual tree cover loss by dominant driver in Canada
+    From the distribution of forest resources, it can be seen that the carbon sequestration of
+coniferous forests accounts for more than half of the carbon sequestration of Canadian forests.
+
+    Then, the major forestry products in the Canadian region include wood products, plank
+substrates, and other value-added wood products (i.e., solid wood products), which are in good
+agreement with the assumptions we made in Section    The total forest area in Canada is                4.2.so we can divide it into       grids of
+               and the formula      can be modified as:                                 3,470,000 𝑘𝑘𝑘𝑘2,                  42890 𝑘𝑘𝑘𝑘× 90 𝑘𝑘𝑘𝑘,               (24)                    44                     𝐶𝐶𝐶𝐶𝐶𝐶𝑡𝑡=     [𝑁𝑁∙𝐹𝐹∙෍൫𝐵𝐵𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡−𝑖𝑖,𝑗𝑗,𝑡𝑡⋅𝐶𝐶𝐶𝐶𝑗𝑗൯ +  𝐶𝐶𝑠𝑠𝑠𝑠𝑠𝑠]                                                                           (24)                    12          𝑗𝑗=1    where     is the number of grids,    Combined𝑁𝑁  with the collected Canadian𝑁𝑁= 428.forest-related data [10], by extending the carbon
+sequestration model established in Section     and MATLAB fitting the data to predict, we
+will calculate how much carbon dioxide can be sequestered by Canadian forests and their prod-                                        4.1ucts from        to       Affected by space, the calculation process will not be shown here.
+We will give the values of some important parameters and the final calculation results:        2020    2120.
+                       Table 7: Parameters and Their Values
+                               CDC校苑数模公众号                     455.33      100     0.498     70,780,800                               𝒑𝒑𝟎𝟎(𝒕𝒕 𝒉𝒉𝒉𝒉𝟐𝟐)    𝒕𝒕 (𝒚𝒚𝒚𝒚𝒚𝒚𝒚𝒚)    𝑪𝑪𝑠𝑠𝑠𝑠𝑠𝑠(𝒕𝒕)          (𝒎𝒎𝒎𝒎 𝑪𝑪𝑪𝑪𝟐𝟐)
+6.4 Optimal transition strategy based on forest planting area and tree
+felling objects
+    To develop transition policies that satisfy forest managers and all those who use forests,
+we first need a holistic view of the entire forest management industry. As proposed in "Guide-
+lines for the management of tropical forests"[11], each forest management plan should specify:
+
+=== PDF PAGE 21 ===
+Team # 2203489                                                      Page 21 of 25
+
+     The maximum area of forest products that can be harvested during a given time period,
+         or the maximum amount of forest products that can be harvested, or both;
+
+     Forest conservation actions to be carried out;
+
+     Forest development activities to be undertaken, including afforestation.
+
+     Therefore, if we want to formulate transition strategies, we need to focus on these aspects
+and analyze them.
+6.4.1 Tree felling object optimization strategy
+    Assuming that the thinning time of the optimal management plan is    years longer than
+the current thinning time of the forest, according to the calculation of the optimal thinning time                                                     10in our economic benefit model, it can be seen that the current management plan of the forest
+has already reached the optimal cutting time when the trees in the forest have not reached the
+optimal cutting time. This part of the trees is cut down, that is, the forest will cut down the trees
+that are still in the growing stage without waiting for their economic benefits to be maximized.
+Much higher than mature trees, it is also detrimental to carbon sequestration, which in turn
+affects ecological benefits.
+
+    For this approach, we should develop the following strategy:
+
+  Trees that have reached maturity are preferentially felled, and trees that have not reached
+    maturity should be protected until they reach maturity to maximize economic benefits.
+6.4.2 Optimizing strategy for forest development activities
+     In the optimal felling cycle calculation of the best management plan, and are crucial in-
+fluencing factors. Therefore, the extension of the thinning period of the current forest manage-
+ment plan must be closely related to these two factors. Both of these factors are closely related
+to the harvested wood volume, which is determined by the forest area. Therefore, the adjust-
+ment of forest area is crucial for a smooth transition to an optimal forest management plan.
+
+    Taking inspiration from the Environmental Kuznets Curve [12], we determine the follow-
+ing “inverted U-shaped” relationship between forest beneficiary satisfaction and forest area:校苑数模公众号
+
+
+
+
+
+                        Figure 12: Satisfaction-area Kuznets curve
+
+=== PDF PAGE 22 ===
+Team # 2203489                                                      Page 22 of 25
+
+     Therefore, we know that there is an optimal forest area that makes the satisfaction of forest
+beneficiaries reach the highest value, which is defined as     From this, we can determine
+that the optimal planting area during the transition period conforms to the following formula:                                                                                                               𝑠𝑠𝑜𝑜𝑜𝑜𝑜𝑜.
+                                                        𝑇𝑇                    𝑡𝑡                               1         2𝜎𝜎2                     𝑆𝑆𝑇𝑇= ෍ 𝑡𝑡=0(𝑠𝑠0 න0          𝑒𝑒−(𝑥𝑥−𝜇𝜇)2 𝑑𝑑𝑑𝑑−𝑠𝑠𝑜𝑜𝑜𝑜𝑜𝑜)                   (25)    Assume that the current planting plan of the forest satisfies Equation                                        √2𝜋𝜋𝜎𝜎                                                                    (14):
+    Then we define the disturbance                                      coefficient𝑐𝑐𝑡𝑡, 𝑡𝑡= 1,2, ⋯,as 𝑇𝑇follows:                       (26)                                                                                    𝑆𝑆𝑡𝑡̇ =                                                                         𝛿𝛿                                           𝑆𝑆𝑡𝑡−𝑆𝑆𝑡𝑡̇                          𝛿𝛿𝑡𝑡=                , 𝑡𝑡= 1,2, ⋯, 𝑇𝑇, 𝛿𝛿𝑡𝑡∈[0,1]                      (27)       It can be seen that     reflects𝑆𝑆𝑡𝑡 the degree of impact of changes in forest area over time on
+forest beneficiaries, and reflects the sensitivity of transitional policies to forest beneficiaries.                                               𝛿𝛿𝑡𝑡By combining the Monte Carlo algorithm for data initialization, we used MATLAB to fit
+Due to space constraints, we visualized the results as follows:                                                                                                                                                                 𝛿𝛿𝑡𝑡.
+
+
+
+
+
+                        Figure 13. Forest’s          Curve       It can be seen that with the change of time, 𝛿𝛿−𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇the over-planned adjustment makes the value
+of    increase in an overall upward trend and eventually stabilize.     𝛿𝛿7 Sensitivity Analysis校苑数模公众号
+     In the Tree’s Biomass Logistic Growth Model, both the biomass of the tree just growing
+and the growth rate of the tree have impacts on the results of the model. Since the final biomass
+of the tree is closely related to the growth rate of the tree, we only consider the effect of changes
+in the growth rate of the tree on the model. We want to analyze the sensitivity of this parameter.
+     Therefore, 𝑟𝑟𝑖𝑖=Re-simulate𝑟𝑟−0.05,the𝑟𝑟−0.1,calculation𝑟𝑟, 𝑟𝑟+ 0.05,results𝑟𝑟+and0.1obtain𝑖𝑖= 51,2,3,4,5sets of curves as shown(28)in
+Figure       14:
+
+=== PDF PAGE 23 ===
+Team # 2203489                                                      Page 23 of 25
+
+
+
+
+
+                        Figure 14: Sensitivity analysis of
+
+       It is indicated that with the increase of 5% of each step length, the number of biomass is
+on the rise. However, the growth did not change in the form of a curve. As we can see in Figure
+15, the biomass        of the tree changes by 3.5 percent at a rate of 0.05
+which is weakly relative to its total. Therefore          is not sensitive to the change of   which                       𝑃𝑃𝑃𝑃(𝑡𝑡)                                  m3 ∙hm−2/year,also shows that the model per se is non-sensitive to                                                             𝑃𝑃𝑃𝑃(𝑡𝑡)                                                     𝑟𝑟,                                                                                    𝑟𝑟.8 Evaluation of Strengths and Weaknesses
+8.1 Strengths
+  The main strength is its enormous extensible and including all factors into a single, robust
+    framework. For example, For BFMP(best forest management plan) decisions for different
+     forests, our decision prioritization model and BFMP formulation can be applied not only
+     to Saihanba and Canada, but also to forest management in other regions’ forests;
+   Determination of forest management plans such as optimal thinning cycles is scientific
+    and rational. In addition, the idea of the priority factor is creatively used by us and can be
+     applied to different practical situations, and the      value derived from this can provide
+     a direct reference for Forest Manager.                                                                             𝐶𝐶𝐶𝐶𝐶𝐶  The sensitivity analysis of the model demonstrates the effectiveness of the model under
+     different parameter combinations and prove the robustness of the model;
+  The visualization work is done very well by us, such as the work flow chart in the intro-
+     duction, the Logistic curve of tree growth, the relationship between income and thinning
+     cycle, and the disturbance coefficient curve etc. Data may reflect patterns, but not as ex-校苑数模公众号
+      plicit as images;
+   In the economic benefit model, two calculation methods are combined in the calculation
+     of thinning intensity and divided into different grades, and the accuracy is higher in the
+     calculation process. Secondly, the objective function of the optimal thinning cycle is op-
+     timized into an indefinite model after considering the influence of time, so that it is not
+     limited to a certain thinning cycle, and the optimal result determined by the model has
+      flexibility in the iterative process.
+
+=== PDF PAGE 24 ===
+Team # 2203489                                                      Page 24 of 25
+
+8.2 Weaknesses and Further Discussion
+  Our model contains a lot of parameters. The values of these parameters are closely related
+     to biology. Due to the diversity and complexity of organisms, the values of the parameters
+     will vary widely, which will affect the results of the model;
+  The goal programming model has certain subjectivity and ambiguity. The selection of
+     objective functions and weights is formulated under the subjective judgment of users, so
+       it has a certain subjective color. We can reduce the influence of subjective factors to some
+     extent by using expert ratings.
+   Ignoring the impact of government policies on people's plans to manage forests in the
+    modelling process.
+
+References
+
+[1] Goward S N, Markham B, Dye D G, et al. Normalized difference vegetation index meas-
+    urements from the Advanced Very High Resolution Radiometer[J]. Remote sens-ing of
+    environment, 1991, 35(2-3): 257-277.
+[2] Guo Minghui, Guan Xin, Li Jian.Carbon storage and carbon emission of wood forest prod-
+    ucts in China[J]. China Population,Resources and Environment,2010,20(S2):19-21.
+[3] Wei Yangyan. Research on trade of major wood forest products in China [D]. Chinese
+   Academy of Forestry, 2009.
+[4] Saaty T L. What is the analytic hierarchy process?[M]//Mathematical models for decision
+    support. Springer, Berlin, Heidelberg, 1988: 109-121.
+[5] Wagner H M. Linear programming techniques for regression analysis[J]. Journal of the
+    American Statistical Association, 1959, 54(285): 206-212.
+[6] Yitzhaki S. Relative deprivation and the Gini coefficient[J]. The quarterly journal of eco-
+    nomics, 1979: 321-324.
+[7] Nesha M K, Herold M, De Sy V, et al. An assessment of data sources, data quality and
+    changes in national forest monitoring capacities in the Global Forest Resources Assess-
+    ment 2005–2020[J]. Environmental Research Letters, 2021, 16(5): 054029.
+[8]  Jia Zhongkui, Gong Ningning, Yao Kai, et al. Effects of thinning intensity on growth pro-
+    cess and biomass of North China larch plantation in Saihanba [J]. Journal of Northeast
+    Forestry University, 2012, 40(3): 5-7.[9] McCalla校苑数模公众号D. Forest products and Upper Canadian development, 1815–46[J]. Canadian his-
+     torical review, 1987, 68(2): 159-198.
+[10] Rowe J S. Forest regions of Canada[J]. Forest regions of Canada., 1972 (1300).
+[11] Food and Agriculture Organization of the United Nations.
+    https://www.fao.org/state-of-forests/2020/en/，Jan 2020.
+[12] Dasgupta S, Laplante B, Wang H, et al. Confronting the environmental Kuznets curve[J].
+     Journal of economic perspectives, 2002, 16(1): 147-168.
+
+=== PDF PAGE 25 ===
+Team# 2203489
+     Team # 2203489                                                      Page 25 of 25
+
+    Newspaper: Rational Harvesting of Forests
+ 校苑数模公众号

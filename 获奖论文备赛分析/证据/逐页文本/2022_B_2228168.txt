@@ -1,0 +1,1081 @@
+=== PDF PAGE 1 ===
+    Problem Chosen              2022          Team Control Number
+                     MCM/ICM
+     B                        2228168                       Summary Sheet
+
+
+A Two-Stage Water Resource Optimal Operation Model
+
+            Based on Genetic Algorithm
+
+                     Abstract
+
+     In 2021, the Western United States experienced unprecedented dry weather that
+caused local reservoir levels to drop to record lows. Our team use operational research,
+mathematics, finance, computer science and other knowledge to build a mathematical
+model, providing a variety of practical solutions for reservoir water resource scheduling.
+      Firstly, we draw and fit the elevation and storage linear function of Lake Powell
+and Lake Mead  in  recent  ten  years. The  linear programming model  of  total
+transportation  cost  minimization  is  established  and  solved  by  matlab  linear
+programming solver. The amount of water extracted from Lake Powell and Lake Mead
+is 858333 acre-feet and 391666 acre-feet respectively. When there is no rainfall data,
+the solution is based on the objective of minimum transportation cost, and it is obtained
+that after 23 months, water resources will not be enough to meet the water demand of
+each state. At least 1051875.051 acre-ft is required for the 24th month. After that, the
+monthly external water supply amount for the two reservoirs is 1,118,780.48 acre-ft.
+     Secondly, we analyze the competing interests of agriculture, industry, residential
+water usage and electricity production; construct a two-stage programming model. The
+lower-level stage model solves the assignment of the total water intake and total power
+generation of the two dams, and the enhanced elite reservation genetic algorithm is used
+to get the optimal solution and the maximum value into the single-objective differential
+evolution algorithm for deeper optimization. The  results of production value  is
+$412,208,7017, and the total water consumption is 49,52007 acre-feet, with more water
+extracted from Lake Powell.
+     Thirdly, When there is not enough water to meet all water and electricity needs,
+we establish a nonlinear programming model under the premise of meeting the
+minimum demand ,to minimize the excess power generation and water discharge, so as
+to cope with the state of drought and water shortage for as long as possible. Genetic
+algorithm is used to solve the water and energy demand distribution of the system. The
+water extracted from Lake Powell and Lake Mead in a month is 1946626.71 acre-feet
+and 4040078.68 acre-feet, Glen Canyon Dam and Hoover Dam output 30037.82 acre-
+feet and 110848.56 acre-feet downstream respectively.
+     Fourthly, As drought intensifies, demand for electricity declines. If the degree of
+drought  is too high, the total electricity demand will not be satisfied. With the
+development of new energy technology, the demand for hydroelectric power  is
+decreasing. When the water demand is unchanged and the electricity demand decreases
+by 25%, 50% and 75% respectively, the calculation shows that the water demand for
+reservoirs in each state is much higher than the electricity demand. When water saving
+and electricity saving measures are adopted and the respective demand decreases by
+more than 75%, the water consumption of users can be satisfied.
+     Finally, We submit an article for Drought and Thirst magazine based on the above
+process.
+
+=== PDF PAGE 2 ===
+   Team # 2228168
+
+                    Contents
+
+
+1.   Introduction ............................................................................................................................... 1
+2.   Assumptions and Justification ................................................................................................... 2
+3.   Notations ................................................................................................................................... 3
+4.  Models and solutions of problem 1 ........................................................................................... 4
+     4.1 The optimal transportation .................................................................................................. 4
+          4.1.1 Water supply meets requirements ............................................................................. 4
+          4.1.2 Constraints on the height of the dam water level ..................................................... 6
+          4.1.3 Equilibrium constraints on Colorado River recharge and outflow ........................... 7
+          4.1.4 Dam release constraint ............................................................................................. 9
+          4.1.5 Objective function .................................................................................................... 9
+          4.1.6 Model solving ......................................................................................................... 10
+     4.2 Optimal duration of water allocation ................................................................................ 11
+     4.3 The relationship of external water transfer with time ....................................................... 12
+5.  Models and solutions of problem 2 ......................................................................................... 12
+     5.1 Lower-level model construction ........................................................................................ 13
+     5.2 Lower model solution ....................................................................................................... 14
+     5.3 Upper-level model construction ........................................................................................ 16
+     5.4 The final result of the upper model ................................................................................... 16
+6.  Models and solutions of problem 3 ......................................................................................... 17
+7.   Sensitivity Analysis ................................................................................................................. 18
+8.   Conclusions ............................................................................................................................. 20
+     8.1 Conclusions of the problem1 ............................................................................................ 20
+     8.2 Conclusions of the problem2 ............................................................................................ 20
+     8.3 Conclusions of the problem3 ............................................................................................ 20
+     8.4 Conclusions of the problem4 ............................................................................................ 20
+9.  Model Evaluation and Further Discussion .............................................................................. 20
+     9.1 Strengths............................................................................................................................ 20
+     9.2 Weakness ........................................................................................................................... 21
+10.  Article for Drought and Thirst magazine ................................................................................ 22
+
+=== PDF PAGE 3 ===
+   Team # 2228168                                   Page 1 of 23
+
+1. Introduction
+
+1.1 Problem Background
+
+    In 2021 , the western United States has experienced unprecedented dry weather ,
+which not only led to two of the nation's largest reservoirs of the Colorado River ,
+Lake Powell and Lake Mead , permanently low but also posed a threat to the
+production and life of the people . The low water flows have reduced the amount of
+electricity produced by hydropower plants , leading to interruptions in power supplies
+in these areas . As shown in Figure 1，the white ‘bathtub ring’ around Lake Mead
+shows the record low water levels as drought continues to worsen in Nevada [1].
+
+
+
+
+
+             Figure 1: the white ‘bathtub ring’ around Lake Mead
+
+    Because of such conditions, a rational, defensible water allocation plan for
+current and future water supply conditions is critically important. This article will use
+operational research, mathematics, physics, computer science, environmental science
+and other knowledge to construct mathematical models and finally provide practical
+solutions for the dam operations.
+
+1.2 Problem Restatement
+
+  ⚫  Considering the restrictions identified with the problem statement, we need
+         to address the following problems:
+  ⚫  Build mathematical models to develop rational water allocation plans for
+         current and future water supply conditions. Analyze how much water should
+       be drawn from each of Lake Mead and Lake Powell to meet customer water
+       and electricity needs.
+  ⚫  Without taking into account the replenishment of other water resources such
+        as rainfall, how long will it take before the demands are not met?
+  ⚫  According to the established mathematical model, analyze and solve the
+        competition relationship between general water use in agriculture, industry,
+        residence and electricity production water . Explain the standards used to
+        solve competitive interests clearly.
+  ⚫   If there is not enough water to supply the residents' water and electricity
+        needs, what should be done.
+
+=== PDF PAGE 4 ===
+   Team # 2228168                                   Page 2 of 23
+
+  ⚫  The water and electricity demands of the communities change over time.
+      What happens when analyzing population, agriculture, or industry growth or
+        shrinkage in affected areas?
+  ⚫  How should the model adjust as the proportion of renewable energy
+        technologies increases or when additional water and electricity savings are
+       implemented?
+
+
+1.3 Our work
+
+  ⚫  We collected the water level and stock data of Lake Powell and Lake Mead in
+         recent ten years, drew and fitted the water level and stock linear function of the
+       two reservoirs.
+  ⚫ We established a linear programming model for minimizing the total
+         transportation cost, taking the total water transfer and transportation cost as
+         the objective function, the amount of water taken from each state and the
+        discharge of two dams as the decision-making variables, and the discharge of
+         the dam, the level of the reservoir after dispatching, and the water resources
+       demand of each state as the constraints.
+  ⚫  we construct a two-stage mathematical model. The first stage model solved
+         the task assignment of the total water intake and total power generation of the
+       two dams, and the enhanced elite reservation genetic algorithm is used to put
+         the optimal solution and the optimal value into the single-objective
+         differential evolution algorithm for deeper optimization.
+  ⚫ We submit an article for Drought and Thirst magazine.
+
+2. Assumptions and Justification
+   ⚫  The starting point of water supply is set at the dam. The location of the
+       dam and the lake is close, and the distance calculation is more convenient.
+       So we can set the dam as the starting point of water supply.
+   ⚫  Water supply target points are set at the centroids of the state's planar
+         terrain. The water consumption in different regions of each state is
+         unbalanced. By setting the target points at the centroids of the state's planar
+          terrain, we can measure the distance directly .
+   ⚫  The transportation cost per unit of distance and unit of water flow in
+        each state is equal. The transportation distance and flow of water resources
+       may be different. Assuming the same unit transportation cost, it is
+         convenient to solve the distrubution scheme.
+
+=== PDF PAGE 5 ===
+   Team # 2228168                                   Page 3 of 23
+
+3. Notations
+
+       Symbols     Description
+        x p , i            dispatched water flow from Lake powell to state i
+        xm , i            dispatched water flow from Lake mead to state i
+          P ( t0 +T )          lake powell water level after a water dispatch
+       M ( t0 +T )         water levels at Lake Mead after a water dispatch
+                          the magnitude of surface water flow into Lake Mead during
+       q m                          the transfer period
+                          the magnitude of surface water flow into Mexico during the
+       q M
+                            transfer period
+                             electricity generated by Lake powell hydroelectric power
+      E p
+                         generation during water transfer period
+                             electricity generated by Lake mead hydroelectric power
+      Em
+                         generation during the water transfer period
+       d p , i             the distance from Lake Powell to State i
+       d m , i             the distance from Lake Mead to State i,
+            ik              the cost of state i unit distance unit water flow transportation
+      T              time required for a water dispatch
+       M ( t0 )              initial water level at Lake Mead before a water dispatch
+                          the magnitude of surface water flow into Lake powell during
+        q p
+                          the diversion period
+          P ( t0 )               initial water level at Lake powell before a water dispatch
+                          the magnitude of rainfall flow into Lake powell during the
+       q ,r p
+                          diversion period
+                          the magnitude of rainfall flow into Lake Mead during the
+       q,r m
+                            transfer period
+                          the lowest and highest water levels allowed by Lake Powell;
+      Pmin , Pmax                        corresponding to stagnant water levels and flood levels.
+                   minimum and maximum water levels allowed by Lake Mead;
+    M min , M max                        corresponding to standing water and flood levels
+                          the maximum water flow allowed into Lake Mead Mexico
+       qm ,max , q M ,max  during the dispatch period; corresponds to the maximum
+                         discharge of Colombier and Hoover Dams
+       S p ( P )         lake powell water level as a function of lake surface area
+       S m ( M )      Lake Mead water level as a function of lake surface area
+
+=== PDF PAGE 6 ===
+   Team # 2228168                                   Page 4 of 23
+
+4. Models and solutions of problem 1
+
+    Negotiating teams in the states asked us to build models to guide the operation of
+the dam, which is the ultimate goal of the issue.
+   We found that the water supply strategy affects the water level of the corresponding
+reservoirs of the two dams, which indirectly affects hydropower generation. This
+indicates that there are constraints on water supply and electricity demand. Our team
+temporarily separated the water supply and electricity demand, and set up several small
+stages to analyze and simplify the problem. And the complete model will eventually be
+shown in the second question.
+
+  ⚫   Firstly, meet the water needs.
+  ⚫  Secondly, meet the supply of power resources.
+  ⚫  Finally meet both water supply and electricity demand.
+
+    The demand for water resources mainly involves two aspects: the respective
+withdrawals of the two reservoirs and the distribution of the withdrawn water among
+the five states. Constraints need to be considered when analysing the model. The model
+we established is mainly subject to the following constraints.
+4.1 The optimal transportation
+
+4.1.1 Water supply meets requirements
+
+    Seven states in the Colorado River basin need to meet their water supply, and the
+amount of water flowing out of the United States needs to meet Mexico's requirements.
+    For the total water demand, through the relevant data of the Colorado River [2]
+and the distribution map [3] as shown below. We can get the water storage for five
+states: Arizona (AZ), California (CA), Wyoming (WY), New Mexico (NM), and
+Colorado (CO).
+    But at the same time, we also noticed that the Colorado River Basin covers more
+than the five states mentioned above, and two other states, Utah (UT) and Nevada (NV),
+also participate in the distribution of Colorado River water resources. Because water
+resources are interconnected and the large amount of water abstraction in the two states,
+it is unrealistic to ignore the impact of water abstraction in these two states. The final
+water demand table we obtained is shown in Table 1. In addition, Mexico has a water
+demand of 1.5MAF.
+
+=== PDF PAGE 7 ===
+Team # 2228168                                   Page 5 of 23
+
+
+              Table 1 Water requirement and proportion
+       State         Water Requirement (MAF)        Proportion
+CA (Lower Basin)                4.400                  29.3%
+CO (Upper Basin)                3.881                  25.9%
+ AZ (Lower Basin)                2.800                  18.7%
+ UT (Upper Basin)                1.725                  11.5%
+WY (Upper Basin)                1.050                  7.0%
+NM (Upper Basin)                0.844                  5.6%
+NV (Lower Basin)                0.300                  2.0%
+
+
+
+
+
+               Figure 2 Colorado River Basin Allocations
+
+
+       It is also important to note that due to the requirement to divide the pumping
+volume between the two lakes, the total pumping volume may not equal the total
+demand in each state. Additional sources of water may be obtained from other
+sources. Our proposed mathematical model only needs to account for the allocation
+of water withdrawals from the Colorado River.
+    Based on the above content, the constraint conditions of water supply
+corresponding to this part are as follows:
+                        ( x p , i + xm , i )T = Dw , i , =i   1,2...7              （1）
+
+                 Dw , M
+                            qm                   （2）
+                       T
+
+=== PDF PAGE 8 ===
+   Team # 2228168                                   Page 6 of 23
+
+
+        In Formula (1), the first half of the equation represents the total water supply
+    of the two reservoirs to State i in time period T, and the right side of the equation
+    represents the water demand of State i.
+            It's a constraint on the water supply in seven states. Equation (2) is an
+    inequality reflecting the requirement that does not affect Mexico's water demand.
+
+4.1.2 Constraints on the height of the dam water level
+
+      As for the water level elevation limitation of Glen Canyon Dam (Lake Powell)
+   and The Hoover Dam (Lake Mead), the following table2 can be obtained through
+    data sorting of the US Bureau of Reclamation[4,5]:
+
+
+                  Table2 Dam-related attribute values (feet)
+               Elevation               Glen Canyon Dam          Hoover Dam
+      Maximum Water Surface              3711.0                   1232.0
+      Top of Dead Storage Pool              3370.0                    895.0
+        Streambed at Dam Axis               3132.0                   2640.0
+
+
+
+
+
+         Figure 3 Schematic diagram of dam and associated elevation
+
+       The altitude of the Top of Dead Storage Pool is hmin . The altitude of the.
+   Maximum Water Surface is hmax . The altitude of the river bed of dam foundation
+    is hbase . While meeting the pumping needs of the states, the water levels in the two
+   dams should also be limited between hmin and hmax , which results in the following
+    inequality constraints:
+
+                  Pmin  P ( t + T )  Pmax
+                                            （3）
+             M min  M ( t + T )  M max
+
+=== PDF PAGE 9 ===
+   Team # 2228168                                   Page 7 of 23
+
+
+4.1.3 Equilibrium constraints on Colorado River recharge and outflow
+
+    Considering the replenishment and consumption balance of the Colorado River
+water resources, as well as the mutual constraints between the two DAMS, the reservoir
+water balance conditions need to be met:
+
+                                                                       7                   P ( t 0 + T )                                    
+                  S p ( P ) dP =                                                 x p , i  T                            q p + q r , p − q m −                P ( t0 )                                                                           i =1    
+                                            （4）
+                                                                           7              M ( t0 + T )                                       
+                  S m ( M ) dM =                                                    xm , i  T                              qm + qr , m − q M −                M ( t0 )                                                                               i =1    
+
+
+
+
+
+          Figure 4 Water level - storage capacity characteristic curve
+
+
+    Figure4 shows the relationship between the water level elevation of Lake Mead
+(height from the hbase ) and the water volume of the reservoir. We obtain the water level
+- storage capacity characteristic curves of two reservoirs in recent ten years.
+                       y = 9.1e + 04* x − 3.1e + 07
+                                            （5）
+                  R _ square = 0.9925
+
+       It can be seen from the water-level and storage capacity characteristic curves of
+the two reservoirs in the past decade [6] that the range of changes in the water level and
+storage capacity of the two lakes can be approximately linear and R 2  close to 1.
+Therefore, the lake area can be set as a fixed value, which does not change with the
+change of water level. Then:
+
+                    P ( t 0 + T )
+                  S p ( P ) dP = S p  ( P ( t 0 + T ) − P ( t 0 ) )                P ( t0 )
+                                            （6）              M ( t 0 + T )
+                   S m ( M ) dM = S m  ( M ( t 0 + T ) − M ( t 0 ) )                M ( t 0 )
+
+=== PDF PAGE 10 ===
+   Team # 2228168                                   Page 8 of 23
+
+
+    The above equation illustrates the relationship between water level and reservoir
+volume originally expressed by integration, which degenerates into the product of the
+difference between water level change and the average surface area of the reservoir.
+    At the same time, the change of reservoir water volume remains conserved. The
+change of reservoir water quantity is equal to the amount of water flowing into the
+current reservoir and the increase of water replenished by rainfall in time T minus the
+amount of evaporation from the reservoir and the reduction of water supply withdrawn
+from the reservoir in time T.
+
+
+
+
+
+                   Figure 5 Colorado River reservoir - dam system
+
+
+                                                                    7            S p  ( P ( t 0 + T ) − P ( t 0 ) ) =                                                       x p , i  T                             q p + q r , p − qe , p − q m − 
+                                                                                           i =1    
+                                            （7）
+                                                                      7            S m  ( M ( t 0 + T ) − M ( t 0 ) ) =                                                          x m , i  T                               q m + q r , m − qe , m − q M − 
+                                                                                             i =1    
+    Therefore, equation (3) representing water level control and equation (7)
+representing access balance can be transformed into the following equation:
+                                                      7                                             Pmax − P ( t 0 ) ) S p  ( P ( t 0 ) − Pmin )                                            x p , i  T  S p  (                  q p + qr , p − qe , p − qm − 
+                                                                             i =1    
+                                                                  7                  （8）                                                                                      M max − M ( t 0 ) ) S m  ( M ( t 0 ) − M min )                                               x m , i  T  S m  (                    q m + q r , m − qe , m − q M − 
+                                                                                i =1    
+
+    In the equation, the leftmost of the inequality represents the difference between
+the initial water amount of two reservoirs and the water amount of the dead pool. The
+middle of the inequality represents the total amount of water flowing in and out, as
+shown in the system diagram above. The far right of the inequality represents the
+difference between the maximum water level of two dams and the amount of water
+below the initial water level.
+
+=== PDF PAGE 11 ===
+   Team # 2228168                                   Page 9 of 23
+
+
+4.1.4 Dam power generation constraint
+
+    According to the public data provided by the US Reclamation Bureau [4,5], the
+Installed Capacity of Glen Canyon Powerplant is 1,320,000 kW, and the Installed
+Capacity of Hoover Powerplant is 2,078,800 kW. The formula is derived from the
+calculation of water energy:
+                    N = AQH net                   （9）
+
+    In the formula, N represents the power generation of the hydropower station, A is
+the output coefficient, and its value is related to the conversion rate of water and
+electricity. In this problem, the value is 9.81. Q is the amount of water discharged
+from the dam, H net is the difference between the water level of the upstream reservoir
+and the riverbed of the dam axis. Since the data does not mention the maximum flow
+rate of power generation flow, but has the above maximum power generation.
+Therefore, we obtain the range of the maximum power generation water flow Q by
+inverse calculation.
+
+            N max, p
+     qm ,max =              = 160218.01( acre − feet per month )
+               9.81( Pmax − hbase , p )
+                                                （10）
+             N max, m
+     q M ,max =               = 253627.06( acre − feet per month )
+               9.81( M max − hbase , m )
+
+    Therefore, there is a constraint on the flow of water out of the dam q :
+
+                         0  qm  qm ,max
+                                                 （11）
+                         0  q M  q M ,max
+
+4.1.5 Objective function
+
+        Considering that there may be no unique solution to this problem, optimization
+    objectives need to be added to this mathematical model to determine the optimal
+    solution, so we turn our attention to the objective function of minimum cost related
+    to water resources allocation.
+        For  the  allocation  of  water  resources, we  regard   it  as  a warehouse
+    transportation problem, taking the dams corresponding to the two reservoirs as the
+   water intake points, and the water levels P and M of the two reservoirs as the water
+    stock indicators. Since the center of gravity of water demand in each state is
+    different and difficult to determine, we use the geographic center of gravity of the
+   seven states as the destination of water allocation to simplify the problem, and use
+    the transportation distance as the transportation cost. The length of each connection
+    is shown in the table below:
+
+=== PDF PAGE 12 ===
+  Team # 2228168                                   Page 10 of 23
+
+
+
+
+
+                         Figure 6: water resource allocation
+                Table 3 Transportation distance by state (mile)
+        STATE                 Glen Canyon dam            Hoover dam
+        CA                       562.756                     353.238
+        AZ                       225.368                     257.871
+       NM                       429.163                     612.090
+        CO                       448.691                     686.919
+       WY                       613.939                     802.099
+        UT                       210.327                     358.346
+        NV                       320.672                     320.672
+    According to the above basic conditions, we can start to build the optimization
+model. The objective function of water allocation cost in seven states is as follows:
+
+                                         7
+              C =                                      ( d p , i x p , i + d m , i xm , i ) ki T                （12）           
+                                                                         i =1
+
+4.1.6 Model solving
+
+     In summary, the simplified objective function and constraints can be obtained as
+follows:
+
+                        7
+     Min C =                       ( d p , i x p , i + d m , i xm , i )T      
+                                         i =1
+       s.t :
+        ( x p , i + xm , i )T = Dw , i , =i   1,2...7
+                                                          7     
+      S p Pmin  S p P ( t 0 ) +                                               x p ,i  T  S p Pmax                     q p + qr , p − qm − qe , p − 
+                                                                                 i =1                  （13）
+                                                             7     
+      S m M min  S m M ( t 0 ) +                                                  xm , i  T  S m M max                       qm + qr , m − q M − qe , m − 
+                                                                                     i =1    
+    Dw , M
+          qm  qm ,max
+      T
+     0  q M  q M ,max
+
+=== PDF PAGE 13 ===
+      Team # 2228168                                   Page 11 of 23
+
+
+        The water surface data, flow data and rainfall data of the two lakes in January 2021
+     are selected as the test. It is assumed that the water transfer time is one month, and the
+     transportation cost per unit distance per unit water flow in each state is the same. Then
+     the water resource allocation scheme corresponding to the minimum transportation cost
+    can be obtained.
+                            Table4 Basic data for January 2021
+
+                                                                          Lake
+        CA      AZ    NM     CO   WY    UT     NV            Mexico
+                                                                 Mead
+
+ Lake
+            0       233333    70333.3   323417   87500   143750      0       0   —
+Powell
+
+ Lake
+         366666.7      0         0        0        0        0      25000  —    125000
+Mead
+
+
+    4.2 Optimal duration of water allocation
+
+        Given that demand is fixed, it can be assumed that each state has a fixed monthly
+     water requirement, since there is no additional rainfall water supply. Then, the total
+    monthly water inflow of the two lakes is:
+
+                                                 7 Dw , i
+                                    =-1106074.571 acre - feet per month   （14）   =q  q p − qe , p − q M − qe , m −                                                                                       i =1 T
+
+             It can be seen that q <0 , the total water volume of the two reservoirs is constantly
+
+     decreasing. Water resource scheduling ends when the available water stocks in the lake
+     are insufficient to meet the water needs of individual states. Considering the month as
+     the unit dispatching time, the above water resources optimal dispatching model is used
+     circularly and the reservoir water level after dispatching is updated. When there is no
+     feasible solution to the water resources optimal dispatching model, the number of cycles
+     obtained is the duration of dispatching.
+        The scheduling process and results are as follows:
+
+=== PDF PAGE 14 ===
+  Team # 2228168                                   Page 12 of 23
+
+
+
+
+
+                     Figure 7 Water resource scheduling process
+
+    According to the figure above, the duration of water dispatching is 23 months.
+
+4.3 The relationship of external water transfer with time
+
+    As can be seen from the previous content, when there is no additional water supply,
+the resources of the reservoir cannot meet the water demand of each state in the 24th
+month. At this time, the remaining available storage capacity of the two reservoirs is 0
+and 54199.52 acre-ft respectively; and the total monthly water demand of the user is
+1375000.00 acre-ft, so at least 1375000.00-54199.52-0=1320800.48 acre-ft of water
+needs to be transferred.
+     Since then, the two reservoirs have no usable stock. In order to ensure water
+demand, the minimum monthly water diversion is −=q  -1106074.571 acre - feet .
+
+5. Models and solutions of problem 2
+
+    Considering the competitive interests of agricultural, industrial, residential and
+electricity production water, as well as the transportation costs of water resources, we
+establish a two-stage model.
+   On the basis of satisfying the residential water consumption of each state, the
+lower-level model introduces the agricultural water efficiency and industrial water
+efficiency functions of each state.
+    Taking the total production benefit of seven states and the dam power production
+benefit as the objective function, the maximization optimization model of  total
+production  benefit  is  established  to solve  the  agricultural and  industrial water
+consumption of each state. The upper layer model considers the transportation cost
+
+=== PDF PAGE 15 ===
+  Team # 2228168                                   Page 13 of 23
+
+
+between the reservoir and each state, while the lower layer model considers the water
+consumption of each state and the amount of water pumped from the reservoir as the
+demand and constraint, establishes the transportation cost minimization optimization
+model, and obtains the water extracted from the two reservoirs by seven states
+respectively.
+5.1 Lower-level model construction
+
+      If a more accurate solution is adopted according to the resources required per unit
+production value of each state, the decisional variables of the objective function of the
+model will reach 18. There are 14 variables related to gross agricultural and industrial
+production and 4 variables related to dam and reservoir systems. Therefore, we
+comprehensively calculated the agricultural and industrial GDP of each state, the
+following formula:
+
+                                                      7
+                      A =                           Ai              
+                                                                                                i =1
+                                                （15）                                                     7
+                                         I =                                                 I i              
+                                                                                              i =1
+
+
+                                       7
+             max Z =                     Ai + I i )T + ( E p + Em − ET )            （16）           (
+                                                                     i =1
+
+   The object function is to maximize the agricultural effectiveness and the remaining
+electricity effectiveness as A, I; the water cost electricity cost effectiveness of the
+remaining water pumping.  and  representing the electricity price and average
+water price. The reason for the occurrence of excessing hydropower is mainly due to
+the assumption  that the general  electricity and water consumption  (agricultural,
+industrial and residential) is proportional to a certain proportion, and the electricity and
+water quantities are often not allocated exactly.
+   The constraints of the lower model are similar to the first question, as follows:
+⚫  Equation constraints of dam power generation and electricity demand:
+
+                                                                                                            3                                             ( q p + qr , p − qm − qe , p − W p ) T                                                                          E p = Aqm  ( P (t 0 ) − H p ) T +                                           2 S p                                                                                 
+                                                                                                                3       （17）                                              ( qm + qr , m − q M − qe , m − Wm ) T      Em = Aq M  ( M (t 0 ) − H m ) T +                                
+                                             2 S m                                                                                    
+      ET = ( e A A + eI I + eR p ) T
+
+
+⚫  The amount of water withdrawn from the two reservoirs and the supply-demand
+
+    balance conditions for agricultural, industrial and residential water usage during
+
+    the operation:
+
+=== PDF PAGE 16 ===
+  Team # 2228168                                   Page 14 of 23
+
+               w p + wm  w A A + wI I + wR p                （18）
+
+⚫  Boundary conditions for agricultural and industrial production effectiveness:
+
+                      A, I  0                      （19）
+
+⚫  For reservoir water level constraints and dam outlet flow constraints, see the
+
+    corresponding constraints in the first question.
+
+5.2 Lower model solution
+
+    Considering this model is a nonlinear optimization problem, and the traditional
+method is not easy to solve, we use genetic algorithm to get best solution.
+    Genetic Algorithm (GA) is a computational model that simulates the natural
+selection of Darwin's theory of biological evolution and the biological evolution
+process of the genetic mechanism. It is a method to search for optimal solutions by
+simulating the natural evolution process.
+   The algorithm class we adopted in our first step implements a genetic algorithm
+that enhances  elite retention. The algorithm flow  is as follows: 1) Initialize the
+population of N individuals according to the coding rules. 2) Stop if the stop condition
+is met, otherwise continue to execute. 3) Statistical analysis of the current population,
+such as recording its optimal individual, average fitness, etc. 4) Independently select N
+mothers from the current population. 5) Perform the crossover operation on these N
+mothers independently. 6) Independently mutate the N crossover individuals. 7)
+Combine the parent population and the population obtained by crossover mutation to
+obtain a population with a size of 2N. 8) Select N individuals from the combined
+population according  to the selection algorithm  to obtain a new generation of
+population. 9) Go back to step 2. The algorithm should set a larger probability of
+crossover and mutation, otherwise there will be more and more repeated individuals in
+the new generation population generated.
+   The optimal solution and optimal value calculated in the first part are substituted
+into the single-objective differential evolution algorithm to solve. The main difference
+between the algorithm flow and the above algorithm is as follows: 1) The current-to-
+best method is used to select each vector of the differential mutation, and for the current,
+the population is subjected to differential mutation to obtain mutant individuals. 2)
+Combine  the  current population and mutant  individuals, and use  the binomial
+distribution crossover method to obtain the test population. 3) Using the one-to-one
+survivor selection method between the current population and the experimental
+population to obtain a new generation population.
+   The basic parameters used by the genetic algorithm to enhance elite retention in
+this model are the population size of 200, the stagnation threshold for single-objective
+optimization is 1e-6, and the maximum upper limit of the evolutionary stagnation
+counter is 500; in the second part, the single-objective differential evolution In the
+solution of the algorithm, the differential evolution parameter F is 0.7, the crossover
+probability is 0.7, and the rest are the same as the first part of the algorithm. The original
+
+=== PDF PAGE 17 ===
+  Team # 2228168                                   Page 15 of 23
+
+
+data used by the model is as follows [2].
+
+                 Table5 General water and electricity basic data
+         wA      wI      wR p         e A              Ie          Re p
+
+                    acre-            acre-
+                                                      acre-        Kwh/(dollar-    Kwh/(dollar-
+    Unit        feet/(dollar-     feet/(dollar-                                          Kwh/month
+                                               feet/month         year)            year)
+                    year)           year)
+
+   CA      0.000542696   0.000005641     1723320      0.114796028    0.150928147   7293666667
+
+   AZ      0.001144970   0.000000919     1073697      0.533816413    0.461587407   2893333333
+
+  NM      0.000518059   0.000003299     650427      0.157604499    2.983333333   572666667
+
+   CO      0.000512741   0.000014216     1768389      0.153402536    0.599208144   1617083333
+
+  WY      0.001541188   0.000018583     639581      0.114617435    5.329381443   237416667
+
+   UT      0.001265428   0.000029644     1299426      0.313739157    0.471251241   811666667
+
+   NV      0.002884264   0.000003058     562958      1.144706228    1.484587813   1072333333
+
+
+    Through the two genetic algorithm model solutions, the optimal value change
+curve of the second part is as follows:
+
+
+
+
+
+        Figure8 Best objective Value Trace Plot (Best value is 4.61e^10)
+
+      It can be seen that the model basically obtains the optimal solution after the 200th
+iteration, and the final result of stopping the iteration is 4.61e^10 (dollar). The rest of
+the results are shown in the table below:
+
+=== PDF PAGE 18 ===
+  Team # 2228168                                   Page 16 of 23
+
+
+                       Table6 The results of variables
+   PARAMETER          UNIT             RESULT
+        A                        dollar                4122087017.49
+               I                        dollar                      0.00
+
+          q m                 acre-feet/month              160218.01
+
+       w p                 acre-feet/month             3901904.00
+
+          q M                 acre-feet/month              253627.06
+
+        wm                 acre-feet/month             2425104.00
+
+5.3 Upper-level model construction
+
+    The total resources obtained from lower-level model, which are allocated using a
+model similar to the first question to simplify the mathematical model.
+   The objective function is:
+
+                                              7
+                 Min C =                                          ( d p , i x p , i + d m , i xm ,i )T               （20）            
+                                                                                 i =1
+
+     Constraint:
+   （1）Water demand conditions for each state
+                           ( x p , i + xm , i )T = Dw , i , =i   1,2...7
+                                                （21）
+             Dw , i = ( wA , i Ai + wI , i I i + wR , i pi ) T
+    （2）Reservoir water supply conditions:
+
+                                 x p , i = W p            7
+                                                                                   i =1
+                                                （22）
+                                 xm , i = Wm            7
+                                                                                   i =1
+
+5.4 The final result of the upper model
+
+               Table7 Water Allocation Results by State (arce-feet)
+                           Lake Powell              Lake Mead
+
+      CA                       0                     2988144.83
+      AZ                    537806.912                    0
+
+     NM                   163131.647                    0
+
+      CO                    468407.551                    0
+     WY                   276657.046                    0
+      UT                    283708.325                    0
+      NV                       0                     234151.097
+
+=== PDF PAGE 19 ===
+  Team # 2228168                                   Page 17 of 23
+
+6. Models and solutions of problem 3
+
+      If there is not enough water to meet all water and electricity needs, such as
+extreme dry weather, and minimum water and electricity demands cannot be met,
+only the equitable distribution of each state is considered without considering
+economic benefits, and the possible replenishment of water from the outside is not
+taken into account in our model. Therefore, we consider reducing the consumption of
+additional resources as much as possible under the minimum water and electricity
+consumption in a long-term drought. According to the model in the previous question,
+we change its objective function to be:
+          min Z = ( E p + Em − ET ,min ) + (W p + Wm − WT ,min )         （23）
+
+    The economic value of water and electricity we use represents the size of the
+abundant part of resources.and are the average unit electricity and water charges
+
+respectively.
+
+    For E min and Wmin we have the following equation:
+              ET ,min = ( e A ,min + eI ,min + eR ,min ) T
+                                                （24）
+          WT ,min = ( wA ,min + wI ,min + wR ,min ) T
+                    ET ,min  E p + Em
+                                                （25）
+              WT ,min  W p + Wm
+
+    The equation on the right represents the minimum demand for water and
+electricity for agriculture, industry and residents. The demand is based on the gross
+agricultural and industrial production and the number of residents. The height
+difference between the water level and the dead water level is also 50% of the original
+value in January 2021. If the demand for water and electricity is constant, there is no
+feasible solution to this situation.
+    At the same time, we note that Mexico will be affected by a severe water
+shortage, and in this case we estimate the minimum amount of water allocated to
+Mexico in proportion to population. Then there are constraints:
+
+                  Dw , M ,min
+                               q M                    （26）
+                         T
+
+    The amount of water replenishment in the Colorado River basin, which is
+affected by drought, is set at 0 for simplicity of calculation. Then there are constraints:
+                                                                                                      3                                                 ( − qm − qe , p − W p ) T                                                                      E p = Aqm  ( P (t 0 ) − H p ) T +                                          2 S p                                                                     
+                                                （27）
+                                                                                                               3                                                  ( qm − qM − qe , m − Wm ) T        Em = AqM  ( M (t 0 ) − H m ) T +                          
+                                             2 S m                                                                              
+
+=== PDF PAGE 20 ===
+  Team # 2228168                                   Page 18 of 23
+
+
+    For other constraints, be consistent with question 2. Since there are few decision
+variables in this case, we only use the first part of the genetic algorithm in the
+previous question to solve, and the solution results are as follows:
+
+
+
+
+
+                   Figure9 Population objective function curve
+
+                          Table8 Variables results
+      VARIABLE             UNIT                RESULT
+
+          q m                    acre-feet/month                  30037.82
+
+       w p                    acre-feet/month                 1946626.71
+
+          q M                    acre-feet/month                  110848.56
+
+        wm                    acre-feet/month                 4040078.68
+
+
+    The results show that the height difference between water level and dead water
+level in January 2021 is 50% of the original value and the minimum demand is 10%
+of the original value. In the case of no water replenishment, the whole system can still
+achieve water and energy demand distribution, and meet the minimum extra
+consumption to maintain the overall water storage of the reservoir.
+7. Sensitivity Analysis
+
+    According to the distribution result of question 3, when the water level of the
+original reservoir decreases by 50% due to drought, if the original water and electricity
+demand is reduced to 10%, the water and electricity demand of each state can be
+satisfied, and the hydropower resources are rich.
+   When the water level of the original reservoir decreases by 50%, 75% and 85%
+due to drought, and the demand for electricity and water is met, the percentage of
+decrease of electricity and water is obtained.
+
+=== PDF PAGE 21 ===
+  Team # 2228168                                   Page 19 of 23
+
+
+                   Table9 Drought sensitivity analysis results
+
+                                                                  Percentage drop in
+  Reservoir water level drop %   Decrease in water demand%
+                                                                               electricity demand %
+
+         50%                 87．00                89．82
+         75%                 87．04                96．74
+         85%                 90．38                     100
+
+
+       It can be seen from  the  results  that with  the deepening of drought,  the
+corresponding electricity demand also decreases. And when the degree of drought is
+too high (reservoir water level drops by more than 85%), the total electricity demand
+will not be met.
+    With the development of new energy technology, the demand for hydraulic power
+generation decreases accordingly. When the demand for electricity decreases by 25%,
+50% and 75% respectively under the condition of constant water demand, the flow of
+dam and the amount of water pumped from reservoir are obtained. However, after
+calculation, it is found that the model of minimum resource consumption corresponding
+to the reduction of electricity demand alone has no shape solution, indicating that the
+demand for reservoir water in each state is much higher than the demand for electricity.
+    Considering that the implementation of water saving and  electricity saving
+measures is equivalent to the reduction of total water demand and electricity demand,
+it is discussed that when the total demand for water and electricity decreases by 25%,
+50% and 75% respectively, the corresponding dam discharge and reservoir drainage
+amount will be calculated.
+
+  Table10 Energy-saving and water-saving measures sensitivity analysis results
+         Demand for
+       water and electricity     25%       50%            75%
+        Percentage decline
+
+            q m       —      —         30275.72402 acre-feet
+
+         w p       —     —         13272078.49 acre-feet
+
+            q M       —     —          253627.06 acre-feet
+
+         wm       —     —         1694688.057 acre-feet
+
+
+   When the percentage of water and electricity demand drops by more than 75%,
+user water can be satisfied, and the pumping volume of Lake Powell and Lake Mead is
+13272078.49 and 1694688.057 acre-feet respectively. The outflow flows of the two
+DAMS are 30275.72402 and 253627.06 acre-feet respectively.
+
+=== PDF PAGE 22 ===
+  Team # 2228168                                   Page 20 of 23
+
+8. Conclusions
+
+8.1 Conclusions of the problem1
+
+ ⚫  Since the water supply strategy will affect the water level of the corresponding
+     reservoirs of the two DAMS, and thus indirectly affect hydropower generation, it
+     indicates that there are certain constraints on water supply and power demand.
+ ⚫  According to the characteristic curve of water-level and reservoir capacity, the
+     range of water level change and reservoir capacity change can be approximately
+      linear, and the lake area can be set as a fixed value, which does not change with
+     the change of water level.
+ ⚫ When there is no feasible solution to the optimal water resource dispatching model,
+     the cycle times obtained are the duration of dispatching. Results The duration of
+     water dispatching is 23 months.
+ ⚫  In order to ensure water demand, the minimum monthly water transfer  is
+   −=q  -1106074.571 acre - feet per month .
+
+8.2 Conclusions of the problem2
+
+    The results of question 3 are shown in Table 6,7.
+8.3 Conclusions of the problem3
+
+    The results of question 3 are shown in Table 10.
+8.4 Conclusions of the problem4
+
+    As drought intensifies, demand for electricity declines. When the degree of
+drought  is too high, the total electricity demand will not be satisfied. With the
+development of new energy technology, the demand for hydroelectric power  is
+decreasing. When the water demand is unchanged and the electricity demand decreases
+by 25%, 50% and 75% respectively, the calculation shows that the water demand for
+reservoirs in each state is much higher than the electricity demand. When water saving
+and electricity saving measures are adopted and the respective demand decreases by
+more than 75%, the water consumption of users can be satisfied.
+
+9. Model Evaluation and Further Discussion
+
+9.1 Strengths
+
+⚫  The model takes into account the benefits of industrial, agricultural water, and
+     electricity production. The pumping volume of each lake is scheduled through the
+    optimization model of transportation cost.
+⚫    It takes into account not only the scheduling of how much water to draw from the
+    two lakes, but also the difference in transportation costs between states
+⚫   Considering the competitive  interests of  agricultural,  industrial,  residential and
+     electricity production water, as well as the transportation costs of water resources, we
+
+=== PDF PAGE 23 ===
+  Team # 2228168                                   Page 21 of 23
+
+
+     establish a two-stage model. We use the genetic algorithm when solving the model,
+    which greatly improves the efficiency of the computer.
+⚫  The model is based on certain theories. Through literature review, we carefully
+     select the model. Therefore, our model can be consistent with the actual situation
+    as much as possible.
+⚫  The data we collected are very sufficient and the accuracy of simulation is very
+    high.
+9.2 Weakness
+
+⚫  The transportation cost function for each state depends only on distance, and
+    distance depends only on the location of each state's center of mass and dam. The
+    model may not represent the actual transportation of water.
+⚫  The model can only solve the water scheduling problem in a fixed time period.
+
+=== PDF PAGE 24 ===
+  Team # 2228168                                   Page 22 of 23
+
+10.   Article for Drought and Thirst magazine
+
+    In 2021, the western United States has experienced unprecedented dry weather.
+The persistent drought has caused local reservoir water levels to drop to record lows.
+  Low water flows have reduced the
+amount of electricity produced by
+hydropower plants, leading to
+interruptions in power supply in these
+areas. If the water level in the reservoir
+behind the dam is low enough,
+hydroelectric power generation stops.
+People's lives are also seriously
+threatened by the drought. According to
+the U.S. Drought Monitoring Center,
+about 40 percent of the U.S. is currently
+experiencing drought conditions.
+                                        Figure 9. Drought map of the US [7]
+
+                                            Powell and Mead, the two largest
+                                                reservoirs in the United States on the
+                                         Colorado River, have been in a state of
+                                      low water levels for a long time due to
+                                             drought.
+                                         Lake Mead formed by the Hoover
+                                  Dam, the water level before the dam is
+                                     45.72m lower than the highest water
+                                                    level, reaching the lowest level in
+                                                  history.
+           Figure 10 Lake Mead [7]
+    Negotiating teams in the states asked us to build models to guide the operation of
+the dam, which is the ultimate goal of the issue.We found that the water supply strategy
+affects the water level of the corresponding reservoirs of the two dams, which indirectly
+affects hydropower generation. Our team temporarily separated the water supply and
+electricity demand, and set up several small stages to analyze and simplify the problem.
+    According to the constraints, the optimization model is established and solved.
+The duration of water dispatching  is 23 months.The remaining available storage
+capacity of the two reservoirs is 0 and 54199.52 acre-ft respectively; and the total
+monthly water demand of the user is 1375000.00 acre-ft, so at least 1375000.00-
+54199.52-0=1320800.48 acre-ft of water needs to be transferred. Since then, the two
+reservoirs have no usable stock. In order to ensure water demand, the minimum monthly
+water diversion is −=q  -1106074.571 acre - feet per month .
+   We analyze the competing interests of water for agriculture, industry, residential
+water, and electricity production, and construct a two-stage mathematical model. In
+
+=== PDF PAGE 25 ===
+  Team # 2228168                                   Page 23 of 23
+
+January 2021, the optimal gross production value is $412,208,7017, and the total water
+consumption is 49,52007acre-feet, with more water extracted from Lake Powell.
+    The height difference between water level and dead water level in January 2021
+is 50% of the original value and the minimum demand is 10% of the original value. In
+the case of no water replenishment, the whole system can still achieve water and
+energy demand distribution, and meet the minimum extra consumption to maintain
+the overall water storage of the reservoir.
+   When there is not enough water to meet all water and electricity demands, we
+establish a nonlinear programming model under the premise of meeting the minimum
+demand, minimize the excess power generation and water discharge, so as to cope with
+the state of drought and water shortage for as long as possible. Genetic algorithm is
+used to solve the water and energy demand distribution of the system. The water
+extracted from Lake Powell and Lake Mead in a month is 1946626.71acre-feet and
+4040078.68acre-feet respectively. Glen Canyon Dam and The Hoover Dam output
+30037.82arce-feet and 110848.56acre-feet downstream respectively.
+                                      MCM
+                                                                 22thFeb2022
+11.  References
+
+[1]  https://www.theguardian.com/us-news/2021/jul/13/hoover-dam-lake-mead-severe-drought-us-
+    west
+
+[2]  Management of the Colorado River: Water Allocations, Drought, and the Federal Role,
+
+     https://crsreports.congress.gov/product/pdf/R/R45546
+
+[3]  Congressional Research Service (CRS), using data from USGS, ESRI Data & Maps, 2017, Central Arizona
+
+     Project, and ESRI World Shaded Relief Map
+
+[4]  Glen Canyon Powerplant (usbr.gov)
+
+[5]  Hoover Powerplant (usbr.gov)
+
+[6]  https://www.usbr.gov/uc/water/hydrodata/reservoir_data/919/dashboard.html
+
+[7]  https://www.americanrivers.org/river/colorado-river

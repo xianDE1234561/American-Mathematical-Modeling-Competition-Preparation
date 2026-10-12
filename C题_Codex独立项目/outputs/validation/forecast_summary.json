@@ -1,0 +1,19 @@
+{
+  "requested": 80,
+  "converged": 80,
+  "failures": [],
+  "draws": 20000,
+  "target_delegations": 205,
+  "first_candidates": 65,
+  "expected_first_count": 3.3842,
+  "first_count_lo95": 0.0,
+  "first_count_hi95": 7.0,
+  "mode_first_count": 3,
+  "mode_probability": 0.2171,
+  "expected_total_medals": 1039.0,
+  "expected_gold_medals": 328.0,
+  "total_budget": 1039,
+  "gold_budget": 328,
+  "aggregate_constraint": "each draw preserves 2024 provided gold and total budgets; unreported AIN aggregate excluded",
+  "budget_uncertainty": "conditional fixed-budget scenario; alternative opportunity scenarios separate"
+}

@@ -1,0 +1,61 @@
+{
+  "project": "2025 MCM Problem C",
+  "prepared_date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "files": [
+    {
+      "relative_path": "source/2025_MCM_Problem_C.pdf",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\2025_MCM_Problem_C.pdf",
+      "bytes": 344688,
+      "sha256": "2e7204a59e581ad986e02a08b54666374eb7a691c47e4594d7f5fd970349b2ff",
+      "copy_verified": true,
+      "source_sha256": "e3d1dcd7c06ba457b288ae8426707adb209fedf6f0823dcda2ba16f994708bf7",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    },
+    {
+      "relative_path": "data/raw/data_dictionary.csv",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\数据\\data_dictionary.csv",
+      "bytes": 3736,
+      "sha256": "0373a24a1a080151a00c307aee28f4d2b4bf0520b285cac45d3cf0deedac8497",
+      "copy_verified": true,
+      "source_sha256": "0373a24a1a080151a00c307aee28f4d2b4bf0520b285cac45d3cf0deedac8497",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    },
+    {
+      "relative_path": "data/raw/summerOly_athletes.csv",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\数据\\summerOly_athletes.csv",
+      "bytes": 23809049,
+      "sha256": "71ef8f0708489bee65549644d878050c3898582df767a698918a99396c671e43",
+      "copy_verified": true,
+      "source_sha256": "71ef8f0708489bee65549644d878050c3898582df767a698918a99396c671e43",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    },
+    {
+      "relative_path": "data/raw/summerOly_hosts.csv",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\数据\\summerOly_hosts.csv",
+      "bytes": 1187,
+      "sha256": "72a964ce4ae9004852c37e0e434b21d62fdcabf2569cd90d9742df4f1e68dc46",
+      "copy_verified": true,
+      "source_sha256": "72a964ce4ae9004852c37e0e434b21d62fdcabf2569cd90d9742df4f1e68dc46",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    },
+    {
+      "relative_path": "data/raw/summerOly_medal_counts.csv",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\数据\\summerOly_medal_counts.csv",
+      "bytes": 38303,
+      "sha256": "84ac7c96c36f3fb50e440768091c59a35acbbccf65edc9aebbd2e7531cb76999",
+      "copy_verified": true,
+      "source_sha256": "84ac7c96c36f3fb50e440768091c59a35acbbccf65edc9aebbd2e7531cb76999",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    },
+    {
+      "relative_path": "data/raw/summerOly_programs.csv",
+      "original_path": "真题\\03_C题_Models for Olympic Medal Tables\\数据\\summerOly_programs.csv",
+      "bytes": 7539,
+      "sha256": "510b55ddc444d473ebb261da1a92b5ef5b2c145efbeadba0d92cc48f5d08a687",
+      "copy_verified": true,
+      "source_sha256": "510b55ddc444d473ebb261da1a92b5ef5b2c145efbeadba0d92cc48f5d08a687",
+      "packaging_note": "Five raw CSV files are byte-identical to source; PDF metadata removed in upload copy"
+    }
+  ]
+}

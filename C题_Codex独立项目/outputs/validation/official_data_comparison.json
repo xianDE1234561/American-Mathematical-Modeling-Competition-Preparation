@@ -1,0 +1,42 @@
+{
+  "verified_date": "2026-10-09",
+  "official_url": "https://www.contest.comap.org/undergraduate/contests/mcm/contests/2025/problems/2025_Problem_C_Data.zip",
+  "archive_sha256": "7aa96d640cc7f47ffc9bd5ba30631498949d63aec4942b7642d49b33af176a99",
+  "files": [
+    {
+      "filename": "data_dictionary.csv",
+      "archive_path": "2025_Problem_C_Data/data_dictionary.csv",
+      "official_sha256": "0373a24a1a080151a00c307aee28f4d2b4bf0520b285cac45d3cf0deedac8497",
+      "local_sha256": "0373a24a1a080151a00c307aee28f4d2b4bf0520b285cac45d3cf0deedac8497",
+      "byte_identical": true
+    },
+    {
+      "filename": "summerOly_athletes.csv",
+      "archive_path": "2025_Problem_C_Data/summerOly_athletes.csv",
+      "official_sha256": "71ef8f0708489bee65549644d878050c3898582df767a698918a99396c671e43",
+      "local_sha256": "71ef8f0708489bee65549644d878050c3898582df767a698918a99396c671e43",
+      "byte_identical": true
+    },
+    {
+      "filename": "summerOly_hosts.csv",
+      "archive_path": "2025_Problem_C_Data/summerOly_hosts.csv",
+      "official_sha256": "72a964ce4ae9004852c37e0e434b21d62fdcabf2569cd90d9742df4f1e68dc46",
+      "local_sha256": "72a964ce4ae9004852c37e0e434b21d62fdcabf2569cd90d9742df4f1e68dc46",
+      "byte_identical": true
+    },
+    {
+      "filename": "summerOly_medal_counts.csv",
+      "archive_path": "2025_Problem_C_Data/summerOly_medal_counts.csv",
+      "official_sha256": "84ac7c96c36f3fb50e440768091c59a35acbbccf65edc9aebbd2e7531cb76999",
+      "local_sha256": "84ac7c96c36f3fb50e440768091c59a35acbbccf65edc9aebbd2e7531cb76999",
+      "byte_identical": true
+    },
+    {
+      "filename": "summerOly_programs.csv",
+      "archive_path": "2025_Problem_C_Data/summerOly_programs.csv",
+      "official_sha256": "510b55ddc444d473ebb261da1a92b5ef5b2c145efbeadba0d92cc48f5d08a687",
+      "local_sha256": "510b55ddc444d473ebb261da1a92b5ef5b2c145efbeadba0d92cc48f5d08a687",
+      "byte_identical": true
+    }
+  ]
+}

@@ -1,0 +1,1952 @@
+[
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2100454",
+    "institution_awards": "Shanghai Jiao Tong University , China — SIAM Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2100454.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2101951",
+    "institution_awards": "Beijing Institute of Technology , China — Ben Fusaro Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2101951.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2120808",
+    "institution_awards": "Central South University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2120808.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2122025",
+    "institution_awards": "University of Electronic Science and Technology of China , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2122025.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2103782",
+    "institution_awards": "Jiangnan University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2103782.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "A",
+    "team": "2110178",
+    "institution_awards": "Chongqing University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-A/outstanding/2110178.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "B",
+    "team": "2102199",
+    "institution_awards": "Nanjing University of Posts & Telecommunications , China — Frank Giordano Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-B/outstanding/2102199.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "B",
+    "team": "2104673",
+    "institution_awards": "Xi'an Jiaotong University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-B/outstanding/2104673.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "B",
+    "team": "2105363",
+    "institution_awards": "Xidian University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-B/outstanding/2105363.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "B",
+    "team": "2116496",
+    "institution_awards": "National University of Defense Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-B/outstanding/2116496.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "B",
+    "team": "2127300",
+    "institution_awards": "Hohai University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-B/outstanding/2127300.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2107870",
+    "institution_awards": "University of Colorado Boulder , CO, USA — MAA Award & SIAM Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2107870.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2107815",
+    "institution_awards": "Beijing Jiaotong University , China — ASA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2107815.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2109298",
+    "institution_awards": "University of Oxford , United Kingdom — INFORMS Award & AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2109298.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2101166",
+    "institution_awards": "Shanghai Jiao Tong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2101166.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2101587",
+    "institution_awards": "Shanghai Jiao Tong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2101587.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "C",
+    "team": "2123823",
+    "institution_awards": "Soochow University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-C/outstanding/2123823.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2124668",
+    "institution_awards": "The College of William & Mary , VA, USA — SIAM Award & MAA Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2124668.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2101855",
+    "institution_awards": "Fudan University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2101855.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2106028",
+    "institution_awards": "Shanghai Jiao Tong University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2106028.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2124497",
+    "institution_awards": "University of Electronic Science and Technology of China , China — Leonhard Euler Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2124497.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2100112",
+    "institution_awards": "Beijing Normal University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2100112.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2100242",
+    "institution_awards": "Northwestern Polytechnical University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2100242.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2107091",
+    "institution_awards": "Xidian University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2107091.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "D",
+    "team": "2121604",
+    "institution_awards": "China Agricultural University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-D/outstanding/2121604.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "E",
+    "team": "2119893",
+    "institution_awards": "Nanjing Agricultural University , China — SIAM Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-E/outstanding/2119893.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "E",
+    "team": "2102057",
+    "institution_awards": "Shenzhen University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-E/outstanding/2102057.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "E",
+    "team": "2113869",
+    "institution_awards": "Southwestern University of Finance and Economics , China — Rachel Carson Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-E/outstanding/2113869.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "E",
+    "team": "2119031",
+    "institution_awards": "Northeastern University(CN) , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-E/outstanding/2119031.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "E",
+    "team": "2122175",
+    "institution_awards": "Anhui University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-E/outstanding/2122175.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2109443",
+    "institution_awards": "Renmin University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2109443.pdf",
+    "selected": true
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2103649",
+    "institution_awards": "Shanghai Jiao Tong University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2103649.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2106074",
+    "institution_awards": "China University of Petroleum (East China) , China — Vilfredo Pareto Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2106074.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2123945",
+    "institution_awards": "University of Electronic Science and Technology of China , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2123945.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2102185",
+    "institution_awards": "South China University of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2102185.pdf",
+    "selected": false
+  },
+  {
+    "year": 2021,
+    "problem": "F",
+    "team": "2122374",
+    "institution_awards": "Xiamen University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2021/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2021-F/outstanding/2122374.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2212245",
+    "institution_awards": "Zhejiang University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2212245.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2207343",
+    "institution_awards": "Harbin Institute of Technology , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2207343.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2216547",
+    "institution_awards": "Huazhong University of Science and Technology , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2216547.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2200289",
+    "institution_awards": "Southeast University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2200289.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2209466",
+    "institution_awards": "Beihang University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2209466.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2209812",
+    "institution_awards": "Huazhong University of Science and Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2209812.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "A",
+    "team": "2210307",
+    "institution_awards": "University of Electronic Science and Technology of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-A/outstanding/2210307.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2213970",
+    "institution_awards": "Xi'an Jiaotong University , China — AMS Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2213970.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2228168",
+    "institution_awards": "Hohai University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2228168.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2202748",
+    "institution_awards": "Dalian Maritime University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2202748.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2211922",
+    "institution_awards": "Chongqing University , China — Frank Giordano Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2211922.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2200084",
+    "institution_awards": "Shanghai University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2200084.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "B",
+    "team": "2207864",
+    "institution_awards": "Qingdao University of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-B/outstanding/2207864.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2229059",
+    "institution_awards": "Columbia University , NY, USA — MAA Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2229059.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2200401",
+    "institution_awards": "ShanghaiTech University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2200401.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2200688",
+    "institution_awards": "South China University of Technology , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2200688.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2224507",
+    "institution_awards": "Ningbo University of Finance & Economics , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2224507.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2203120",
+    "institution_awards": "Shaanxi University of Science & Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2203120.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2204883",
+    "institution_awards": "Beijing Institute of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2204883.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2208834",
+    "institution_awards": "Tianjin University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2208834.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2212336",
+    "institution_awards": "Jiangxi University of Finance and Economics , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2212336.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2218743",
+    "institution_awards": "University of International Business and Economics , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2218743.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "C",
+    "team": "2218931",
+    "institution_awards": "Northwest University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-C/outstanding/2218931.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "D",
+    "team": "2224178",
+    "institution_awards": "Nanjing Tech University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-D/outstanding/2224178.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "D",
+    "team": "2208928",
+    "institution_awards": "Beijing Normal University , China — Leonhard Euler Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-D/outstanding/2208928.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "D",
+    "team": "2215444",
+    "institution_awards": "Northeastern University(CN) , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-D/outstanding/2215444.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "D",
+    "team": "2218897",
+    "institution_awards": "Southwest University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-D/outstanding/2218897.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2203489",
+    "institution_awards": "Dalian University of Technology , China — AMS Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2203489.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2218144",
+    "institution_awards": "Hainan University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2218144.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2220714",
+    "institution_awards": "Fuzhou University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2220714.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2223495",
+    "institution_awards": "Zhengzhou University , China — Rachel Carson Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2223495.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2202171",
+    "institution_awards": "Nanjing University of Information Science & Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2202171.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2202666",
+    "institution_awards": "Renmin University of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2202666.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2202838",
+    "institution_awards": "South China University of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2202838.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2209336",
+    "institution_awards": "South China Normal University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2209336.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2216618",
+    "institution_awards": "Tsinghua University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2216618.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "E",
+    "team": "2223269",
+    "institution_awards": "Tongji University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-E/outstanding/2223269.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2209952",
+    "institution_awards": "Renmin University of China , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2209952.pdf",
+    "selected": true
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2211240",
+    "institution_awards": "Wuhan University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2211240.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2220722",
+    "institution_awards": "University of International Business and Economics , China — Vilfredo Pareto Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2220722.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2224021",
+    "institution_awards": "Renmin University of China , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2224021.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2204803",
+    "institution_awards": "Wuhan University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2204803.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2208238",
+    "institution_awards": "Southwest Jiaotong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2208238.pdf",
+    "selected": false
+  },
+  {
+    "year": 2022,
+    "problem": "F",
+    "team": "2218577",
+    "institution_awards": "South China Normal University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2022/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2022-F/outstanding/2218577.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2303950",
+    "institution_awards": "Beijing Institute of Technology , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2303950.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2300336",
+    "institution_awards": "University of Electronic Science and Technology of China , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2300336.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2309229",
+    "institution_awards": "Beijing Institute of Technology , China — Ben Fusaro Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2309229.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2316994",
+    "institution_awards": "Shanghai Jiao Tong University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2316994.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2322687",
+    "institution_awards": "Columbia University , NY, USA — MAA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2322687.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2300661",
+    "institution_awards": "Fudan University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2300661.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "A",
+    "team": "2321860",
+    "institution_awards": "Xi'an Jiaotong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-A/outstanding/2321860.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "B",
+    "team": "2318300",
+    "institution_awards": "Duke University , NC, USA — COMAP Scholarship Award & MAA Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-B/outstanding/2318300.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "B",
+    "team": "2300136",
+    "institution_awards": "Tsinghua University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-B/outstanding/2300136.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "B",
+    "team": "2315379",
+    "institution_awards": "Tiangong University , China — Frank Giordano Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-B/outstanding/2315379.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2314151",
+    "institution_awards": "Northeastern University of China , China — COMAP Scholarship Award & ASA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2314151.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2318982",
+    "institution_awards": "East China Normal University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2318982.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2301192",
+    "institution_awards": "Zhejiang University of Finance and Economics , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2301192.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2322645",
+    "institution_awards": "Columbia University , NY, USA — INFORMS Award & MAA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2322645.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2300348",
+    "institution_awards": "University of Electronic Science and Technology of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2300348.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2307166",
+    "institution_awards": "Renmin University of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2307166.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2307946",
+    "institution_awards": "Shanghai University of Finance and Economics , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2307946.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2309397",
+    "institution_awards": "Nanjing University of Posts & Telecommunications , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2309397.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2310767",
+    "institution_awards": "Tianjin University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2310767.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2311035",
+    "institution_awards": "The Chinese University of Hong Kong, Shenzhen , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2311035.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2311717",
+    "institution_awards": "Xidian University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2311717.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "C",
+    "team": "2318036",
+    "institution_awards": "Renmin University of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-C/outstanding/2318036.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "D",
+    "team": "2300229",
+    "institution_awards": "University of Electronic Science and Technology of China , China — Leonhard Euler Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-D/outstanding/2300229.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "D",
+    "team": "2303967",
+    "institution_awards": "Shanghai Jiao Tong University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-D/outstanding/2303967.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "D",
+    "team": "2304962",
+    "institution_awards": "China University of Petroleum , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-D/outstanding/2304962.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2320131",
+    "institution_awards": "Tianjin University , China — COMAP Scholarship Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2320131.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2307336",
+    "institution_awards": "Wuhan University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2307336.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2308000",
+    "institution_awards": "China University of Geosciences Beijing , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2308000.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2312411",
+    "institution_awards": "Chang'an University , China — Rachel Carson Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2312411.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2301428",
+    "institution_awards": "Nanjing University of Posts & Telecommunications , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2301428.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2305598",
+    "institution_awards": "Liaoning Universitya , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2305598.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2314354",
+    "institution_awards": "Southwest Jiaotong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2314354.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "E",
+    "team": "2314817",
+    "institution_awards": "Sun Yat-Sen University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-E/outstanding/2314817.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "F",
+    "team": "2305794",
+    "institution_awards": "Beijing Institute of Technology , China — COMAP Scholarship Award & INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-F/outstanding/2305794.pdf",
+    "selected": true
+  },
+  {
+    "year": 2023,
+    "problem": "F",
+    "team": "2315018",
+    "institution_awards": "Soochow University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-F/outstanding/2315018.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "F",
+    "team": "2311258",
+    "institution_awards": "Xidian University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-F/outstanding/2311258.pdf",
+    "selected": false
+  },
+  {
+    "year": 2023,
+    "problem": "F",
+    "team": "2311517",
+    "institution_awards": "Renmin University of China , China — Vilfredo Pareto Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2023/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2023-F/outstanding/2311517.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "A",
+    "team": "2424371",
+    "institution_awards": "Xi'an Jiaotong University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-A/outstanding/2424371.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "A",
+    "team": "2400996",
+    "institution_awards": "Wuhan University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-A/outstanding/2400996.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "A",
+    "team": "2407093",
+    "institution_awards": "Beijing Institute of Technology , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-A/outstanding/2407093.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "A",
+    "team": "2405424",
+    "institution_awards": "Xi'an Jiaotong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-A/outstanding/2405424.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "A",
+    "team": "2425397",
+    "institution_awards": "Wuhan University of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-A/outstanding/2425397.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "B",
+    "team": "2419984",
+    "institution_awards": "Tongji Universit y, China — AMS Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-B/outstanding/2419984.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "B",
+    "team": "2425792",
+    "institution_awards": "Shanghai Jiao Tong University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-B/outstanding/2425792.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "B",
+    "team": "2407038",
+    "institution_awards": "UESTC , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-B/outstanding/2407038.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "B",
+    "team": "2411570",
+    "institution_awards": "China University of Geosciences Beijing , China — Frank Giordano Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-B/outstanding/2411570.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2401445",
+    "institution_awards": "Renmin University of China , China — COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2401445.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2401919",
+    "institution_awards": "Renmin University of China , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2401919.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2401298",
+    "institution_awards": "Fudan University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2401298.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2410482",
+    "institution_awards": "Beijing Normal University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2410482.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2403774",
+    "institution_awards": "China University of Petroleum , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2403774.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2406176",
+    "institution_awards": "Beijing Institute of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2406176.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2406324",
+    "institution_awards": "Shanghai Jiao Tong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2406324.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2409404",
+    "institution_awards": "Nanjing Institute of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2409404.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2409961",
+    "institution_awards": "Beihang University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2409961.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2418251",
+    "institution_awards": "Chongqing University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2418251.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "C",
+    "team": "2425454",
+    "institution_awards": "Wuhan University of Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-C/outstanding/2425454.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "D",
+    "team": "2429211",
+    "institution_awards": "Harvey Mudd College , CA, USA — MAA Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-D/outstanding/2429211.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "D",
+    "team": "2417004",
+    "institution_awards": "East China Normal University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-D/outstanding/2417004.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "D",
+    "team": "2417831",
+    "institution_awards": "Tsinghua University , China — Leonhard Euler Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-D/outstanding/2417831.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "D",
+    "team": "2419588",
+    "institution_awards": "National University of Defense Technology , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-D/outstanding/2419588.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2410889",
+    "institution_awards": "Shenzhen University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2410889.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2400860",
+    "institution_awards": "Zhejiang Sci-Tech University , China — Rachel Carson Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2400860.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2407414",
+    "institution_awards": "Xi'an Jiaotong University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2407414.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2413552",
+    "institution_awards": "Soochow University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2413552.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2401102",
+    "institution_awards": "Renmin University of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2401102.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "E",
+    "team": "2410578",
+    "institution_awards": "Renmin University of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-E/outstanding/2410578.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "F",
+    "team": "2409949",
+    "institution_awards": "Renmin University of China , China — SIAM Award & COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-F/outstanding/2409949.pdf",
+    "selected": true
+  },
+  {
+    "year": 2024,
+    "problem": "F",
+    "team": "2413565",
+    "institution_awards": "Xi'an University of Posts and Telecommunications , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-F/outstanding/2413565.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "F",
+    "team": "2422054",
+    "institution_awards": "Shanghai Jiao Tong University , China — Vilfredo Pareto Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-F/outstanding/2422054.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "F",
+    "team": "2426941",
+    "institution_awards": "Hunan Normal University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-F/outstanding/2426941.pdf",
+    "selected": false
+  },
+  {
+    "year": 2024,
+    "problem": "F",
+    "team": "2417340",
+    "institution_awards": "Jiangsu Normal University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2024-F/outstanding/2417340.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "A",
+    "team": "2511565",
+    "institution_awards": "Fudan University , China — COMAP Scholarship Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-A/outstanding/2511565.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "A",
+    "team": "2501567",
+    "institution_awards": "Zhejiang University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-A/outstanding/2501567.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "A",
+    "team": "2501909",
+    "institution_awards": "Nanjing University of Posts and Telecommunications , China — Ben Fusaro Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-A/outstanding/2501909.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "A",
+    "team": "2504218",
+    "institution_awards": "Harbin Institute of Technology, Weihai , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-A/outstanding/2504218.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "A",
+    "team": "2500836",
+    "institution_awards": "Nanjing University of Posts and Telecommunications , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-A/outstanding/2500836.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2501687",
+    "institution_awards": "Peking University , China — COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2501687.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2509557",
+    "institution_awards": "Zhejiang University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2509557.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2502617",
+    "institution_awards": "Central University of Finance and Economics , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2502617.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2503268",
+    "institution_awards": "Shanghai Tech University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2503268.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2504448",
+    "institution_awards": "Rice University , TX, USA — MAA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2504448.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2505199",
+    "institution_awards": "Nanjing University of Science and Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2505199.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "B",
+    "team": "2517929",
+    "institution_awards": "University of science and technology Beijing , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-B/outstanding/2517929.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2513314",
+    "institution_awards": "Xi'an Jiaotong University , China — COMAP Scholarship Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2513314.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2510862",
+    "institution_awards": "Dongbei University of Finance and Economics , China — AMS Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2510862.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2514362",
+    "institution_awards": "National University of Defense Technology , China — ASA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2514362.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2522820",
+    "institution_awards": "Stuyvesant High School , NY, USA — MAA Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2522820.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2500759",
+    "institution_awards": "Anhui Normal University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2500759.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2501869",
+    "institution_awards": "Jinan University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2501869.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2503389",
+    "institution_awards": "Sichuan University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2503389.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2505964",
+    "institution_awards": "Nanjing University of Science and Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2505964.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2507817",
+    "institution_awards": "China Three Gorges University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2507817.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2510006",
+    "institution_awards": "Southern University of Science and Technology , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2510006.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2510185",
+    "institution_awards": "Chongqing University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2510185.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2514461",
+    "institution_awards": "Shanghai Jiao Tong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2514461.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2515235",
+    "institution_awards": "Northeastern University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2515235.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2516178",
+    "institution_awards": "Xiamen University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2516178.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2516695",
+    "institution_awards": "China University of Petroleum-Beijing at Karamay , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2516695.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2517690",
+    "institution_awards": "Zhengzhou University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2517690.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2521556",
+    "institution_awards": "Xi'an Jiaotong University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2521556.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "C",
+    "team": "2524070",
+    "institution_awards": "Nanjing Agricultural University , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-C/outstanding/2524070.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "D",
+    "team": "2516219",
+    "institution_awards": "National University of Defense Technology , China — COMAP Scholarship Award & SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-D/outstanding/2516219.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "D",
+    "team": "2504188",
+    "institution_awards": "Nanjing University of Posts & Telecommunications , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-D/outstanding/2504188.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "D",
+    "team": "2507692",
+    "institution_awards": "BNU-HKBU United International College , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-D/outstanding/2507692.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "D",
+    "team": "2519935",
+    "institution_awards": "Hangzhou Dianzi University , China — Leonhard Euler Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-D/outstanding/2519935.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "E",
+    "team": "2515136",
+    "institution_awards": "University of Electronic Science and Technology of China , China — COMAP Scholarship Award & Rachel Carson Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-E/outstanding/2515136.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "E",
+    "team": "2508861",
+    "institution_awards": "China University of Labor Relations , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-E/outstanding/2508861.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "E",
+    "team": "2502355",
+    "institution_awards": "Wuhan University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-E/outstanding/2502355.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "E",
+    "team": "2517273",
+    "institution_awards": "South China Agriculture University , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-E/outstanding/2517273.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "F",
+    "team": "2507789",
+    "institution_awards": "University of Electronic Science and Technology of China , China — COMAP Scholarship Award & Vilfredo Pareto Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-F/outstanding/2507789.pdf",
+    "selected": true
+  },
+  {
+    "year": 2025,
+    "problem": "F",
+    "team": "2521039",
+    "institution_awards": "China Agricultural University , China — SIAM Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-F/outstanding/2521039.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "F",
+    "team": "2504223",
+    "institution_awards": "Xi'an University of Technology , China — AMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-F/outstanding/2504223.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "F",
+    "team": "2513705",
+    "institution_awards": "Beijing Normal University , China — INFORMS Award",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-F/outstanding/2513705.pdf",
+    "selected": false
+  },
+  {
+    "year": 2025,
+    "problem": "F",
+    "team": "2517199",
+    "institution_awards": "University of Electronic Science and Technology of China , China",
+    "award": "Outstanding Winner",
+    "official_result_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+    "download_url": "https://www.modelscope.cn/datasets/wuxiaojun/Math-Modeling-BAO/resolve/master/pdfs/mcm/2025-F/outstanding/2517199.pdf",
+    "selected": false
+  }
+]

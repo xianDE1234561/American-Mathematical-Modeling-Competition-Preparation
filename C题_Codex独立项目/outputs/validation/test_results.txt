@@ -1,0 +1,12 @@
+test_coaching_recommendations_have_current_participation (test_validity.ValidityTests.test_coaching_recommendations_have_current_participation) ... ok
+test_first_medal_and_interval_outputs (test_validity.ValidityTests.test_first_medal_and_interval_outputs) ... ok
+test_future_draws_are_jointly_feasible (test_validity.ValidityTests.test_future_draws_are_jointly_feasible) ... ok
+test_future_outcomes_do_not_enter_features (test_validity.ValidityTests.test_future_outcomes_do_not_enter_features) ... ok
+test_integer_allocation_and_zero_support (test_validity.ValidityTests.test_integer_allocation_and_zero_support) ... ok
+test_original_inputs_unchanged (test_validity.ValidityTests.test_original_inputs_unchanged) ... ok
+test_sport_scenario_totals_match_declared_budgets (test_validity.ValidityTests.test_sport_scenario_totals_match_declared_budgets) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.139s
+
+OK

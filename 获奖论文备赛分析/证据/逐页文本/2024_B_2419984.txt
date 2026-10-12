@@ -1,0 +1,1247 @@
+=== PDF PAGE 1 ===
+      Problem Chosen                 2024            Team Control Number
+                        MCM/ICM
+      B                                2419984                           Summary Sheet
+
+  Time is Life: Precise Localization and Faster Search
+
+
+                             Summary
+
+
+    After losing contact with the main ship, a suitable positioning model, search equipment, and
+search strategy for the submersible can signiﬁcantly reduce rescue time and increase the success
+rate of the rescue mission.  In this paper, based on diﬀerent malfunction scenarios of the sub-
+mersible, a positioning model and search strategy for the submersible’s movement have been es-
+tablished, providing some suggestion for maritime rescue.
+
+   For Problem 1, ﬁrstly, we searched for the depth and ocean current information in the Ionian
+Sea and ﬁtted the seaﬂoor topography. Then, a location model is conducted. Utilizing the fourth-
+order Runge-Kutta method, numerical solutions are obtained, and potential motion trajectories
+are plotted. The primary uncertainties in the model include the submersible’s initial state, ocean
+currents, and fault conditions. Therefore, the submersible should be equipped with sensors such as
+GPS and inertial navigation systems, regularly sending position information, depth, motion data,
+and surrounding ocean current data to the host ship.
+
+   For Problem 2, we used the entropy-weight method to calculate the weights of performance
+data and costs for the corresponding rescue devices. Employing a cost-beneﬁt model, scores are
+obtained.Considering the characteristics of each rescue device, we determined the following strat-
+egy: primarily using drones for surface search, sonar for underwater search, and purchasing a small
+quantity of AUVs for deeper regions.
+
+   For Problem 3, we ﬁrst discretize the search area into grids and added realistic disturbances
+to ocean currents and fault conditions.  Using the Monte Carlo simulation method, we obtain
+the probability of the submersible appearing in each grid over time. Subsequently, utilizing the ant
+colony algorithm and continually updating the objective function based on the Bayesian probabilitymodel over微信公众号：数学模型time, we identify the most eﬃcient search path, achieving a 43% probability of ﬁnding
+the submersible within 10 hours. Finally, by setting diﬀerent search start times, we ﬁnd that starting
+later resulted in a lower probability of ﬁnding the submersible within 10 hours.
+
+   For Problem 4, the possible extensions of the model is discussed. For areas with more complex
+terrain and stronger ocean currents, such as the Caribbean Sea, relevant disturbances need to be
+increased.  In cases with multiple submersibles, communication between them would facilitate
+search and rescue.
+
+    Finally, we analyze the impact of drag coeﬃcient errors on the model and evaluate the strengths
+and weaknesses of model.And a two-page Memo has been written for the Greek government.Keywords:微信号：MATHmodelsDynamics Model, Monte Carlo Simulation, Ant Colony Algorithm, Cost-Beneﬁt
+Analysis based on EWM, Bayesian Detection
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 2 ===
+Team # 2419984                                                        Page 2 of 25
+
+                      Contents
+
+1  Introduction                                                               3
+    1.1  Problem Background   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+    1.2  Restatement of the Problem .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+    1.3  Our Work   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   4
+
+2  Assumptions and Justiﬁcations                                                4
+
+3  Notations                                                                  5
+
+4  Model Preparation                                                          5
+    4.1  Safety Strategy   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   5
+    4.2  Seaﬂoor Topography   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+    4.3  The relevant parameters of the submersible    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+
+5  Models and Solutions of Problem 1                                            6
+    5.1  Location Model  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+    5.2  Model Solving    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+    5.3  Uncertainty of the Model  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  11
+    5.4  Measures and Equipment to Reduce Uncertainty .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+          5.4.1   Measures   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+          5.4.2  Equipment   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+
+6  Models and Solutions of Problem 2                                           13
+    6.1  Rescue Equipment    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+    6.2  Cost-Beneﬁt Model Based on Entropy Weight Method    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+    6.3  Evaluation Results and Analysis   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+
+7  Models and Solutions of Problem 3                                           15
+    7.1  Model preparation .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+    7.2  Model for Searching    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  17
+          7.2.1   Search Strategy  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  17
+          7.2.2  Ant Colony Algorithm for Planning Search Paths  .  .  .  .  .  .  .  .  .  .  .  .  .  .  18    7.3 微信公众号：数学模型Results and Analysis   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  19
+          7.3.1   Planning Results of Search Route   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  19
+          7.3.2  The Impact of Start Time for Searching   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  20
+
+8  Model Expansion and Promotion for Problem 4                                 20
+    8.1  Diﬀerent Maritime Regions .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  20
+    8.2  Multiple Submersibles   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+
+9  Sensitivity Analysis                                                         22
+
+10 Strengths and Weaknesses                                                   22
+   10.1 Strengths    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  22  微信号：MATHmodels   10.2 Weaknesses   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  23
+
+References                                                                   23
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 3 ===
+Team # 2419984                                                        Page 3 of 25
+
+1  Introduction
+
+1.1  Problem Background
+
+   With the development of diving technology, deep-sea diving has gradually found its way into
+the tourism industry and has become a favorite among many tourists. With the help of diving
+equipment such as submarines, tourists can explore the mysterious underwater world and enjoy
+the beauty of the ocean ﬂoor. A Greek company called "Maritime Cruises Mini-Submarines "
+(MCMS) manufactures submersibles capable of descending into the deep sea. MCMS now hopes
+to use their submersibles to lead tourists on an adventurous exploration of the sunken shipwrecks
+in the Ionian Sea.
+
+
+
+
+
+                          Figure 1: Beautiful Deep Sea Bottom[1]
+
+
+   However, due to the current state of diving technology and submarine manufacturing tech-
+niques, there may be issues such as communication interruptions and loss of propulsion during the
+descent. When encountering such problems, it is crucial to quickly and accurately determine theapproximate微信公众号：数学模型location of the submersible for subsequent rescue operations. This requires a compre-
+hensive consideration of factors such as underwater topography, seawater density, ocean currents,
+and other practical considerations.
+
+1.2  Restatement of the Problem
+
+   For the requirements and tasks given, we restate them to help better position the focus of our
+work.
+
+
+   • Build a model to predict the underwater vehicle’s location over time after losing commu-
+      nication with the host ship, and analyze the uncertain factors during the prediction process.     Based微信号：MATHmodelson this, determine the equipment that the underwater vehicle should be equipped with
+      to reduce prediction uncertainty and the information that should be sent to the host ship
+      before an incident.
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 4 ===
+Team # 2419984                                                        Page 4 of 25
+
+
+   • Taking into account costs associated with availability, maintenance, readiness, and usage of
+       this equipment, determine the additional search or rescue equipment that the host ship and
+      rescue vessels should carry, if necessary.
+
+   • Develop a model based on the information from the location model in Task 1 to determine
+      the initial deployment point and search pattern , in order to minimize the time it takes to ﬁnd
+      a lost submersible. Then provide a probability function for ﬁnding the submersible.
+
+   • Extend the model established above to make it applicable in diﬀerent marine environments
+     and with varying numbers of submersibles.
+
+1.3  Our Work
+
+   To address the mentioned issues, our work can be illustrated with the following ﬂowchart:
+ 微信公众号：数学模型
+
+
+
+
+
+                           Figure 2: The Framework of Our Work
+
+
+2  Assumptions and Justiﬁcations   • During微信号：MATHmodelsthe time when the submersible loses contact, the weather at sea is stable, and
+      signiﬁcant changes are unlikely to occur.  In most cases, the ocean is calm. Moreover,
+      abrupt weather changes are not the focus of the model study.
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 5 ===
+Team # 2419984                                                        Page 5 of 25
+
+
+   • If a submersible touches the bottom during the descent process, it will be unable to
+    move on its own. Due to the presence of abundant sediment on the seabed, the buoyancy
+      will signiﬁcantly decrease, making it diﬃcult for the submersible to resurface on its own.
+
+   • All rescue equipment can be deployed within one hour after the submersible goes miss-
+      ing. For maritime search and rescue, time is precious. One hour is suﬃcient if the rescue
+      preparations are thorough.
+
+
+3  Notations
+
+
+  symbol                   Deﬁnitions                      unit
+
+   M           The total mass of the submersible         Kg
+    V            The volume of the submersible.           m3
+     a          The acceleration of the submersible         m/s2
+     g                   Gravity Acceleration               m/s2
+      v             The speed of the submersible           m/s
+      vc               Ocean Current Velocity             m/s
+     ρ               The density of seawater.            Kg/m3
+    F f      The resistance experienced by the submersible    N
+    FB                    Buoyancy               N
+    Cd                 Coeﬃcient of Drag             ∖
+     Re                  Reynolds Number              ∖
+         t            The time for search and rescue            h
+
+
+Note: There are some notations that are not listed here and will be discussed in detail in each 微信公众号：数学模型section.
+
+4  Model Preparation
+
+4.1  Safety Strategy
+
+    In the actual submersion process of a submersible, in the event of an accident, communication
+with the main ship may be lost. Based on the fundamental principles of search and rescue, to
+ensure safety,  it is advisable to stay in place after losing contact with the main ship. Due to
+the diﬃculty of determining the submersible’s position in the deep sea and the main ship being
+unaware of the submersible’s status, it is recommended that, after losing contact with the main ship,the submersible,微信号：MATHmodelsregardless of whether it still has propulsion, should immediately cease movement
+to avoid complicating the search and rescue eﬀorts.
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 6 ===
+Team # 2419984                                                        Page 6 of 25
+
+
+4.2  Seaﬂoor Topography
+
+   When the submersible loses propulsion, its movement may be inﬂuenced by the underwater
+topography. Therefore, we consulted relevant information[2] on the underwater topography of the
+Ionian Sea and ﬁtted the seaﬂoor terrain.
+
+
+
+
+
+                       Figure 3: The topographic map of the Ionian Sea
+
+
+4.3  The relevant parameters of the submersible
+
+   When  establishing  the model,
+obtaining appropriate parameters for
+the submersible  is essential.  The
+ﬁgure on the right  illustrates one
+type of submersible, indicating rele-
+vant dimensions of the submersible.
+The maximum designed depth for
+the submersible in the right ﬁgure
+is 4000 meters, which corresponds 微信公众号：数学模型
+to the maximum depth of the Ionian
+Sea.                                             Figure 4: The submersible[3]
+
+
+5  Models and Solutions of Problem 1
+
+5.1  Location Model
+
+   For the convenience of model establishment and subsequent analytical calculations, we take
+the sea level as the xy-plane, with the vertical direction as the z-axis.• Location微信号：MATHmodelsmodel in the vertical direction
+
+   Based on the previously mentioned safety strategy, after losing communication with the host
+ship, the submersible immediately ceases active movement, regardless of whether  it still has
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 7 ===
+Team # 2419984                                                        Page 7 of 25
+
+
+propulsion, and ascends promptly. According to Newton’s second law, we have:
+
+                           Maz = −Mg + FB −F f                                    (1)
+
+where az represents the vertical acceleration of the submersible, FB is the buoyancy it experiences,
+and F f is the resistance acting on the submersible in the vertical direction.
+
+   According to the working principle of the submersible, the ascent or descent of the submersible
+is determined by the amount of seawater in the submersible’s water tank. We can express the total
+mass of the submersible as follows:
+                    M = m + mwater                                       (2)
+
+where m is the total mass of the submersible excluding the water tank, and mwater is the mass of the
+water tank. To simplify the model, we assume a constant rate of water inﬂow and outﬂow in the
+water tank until it is ﬁlled or emptied.
+
+     It is worth noting that after losing propulsion, other power systems of the submersible
+may also fail. If the submersible’s other power systems have not failed, it can ascend normally.
+However, if the other power systems of the submersible fail, it will be unable to ascend by expelling
+water from the ballast tank. Instead, it may sink to the seabed or ascend to certain neutral buoyancy
+points under the inﬂuence of initial velocity and acceleration. At this point, the mass of water in
+the tank remains at its initial value. The impact of whether the submersible can drain and ascend
+normally will be discussed and validated in subsequent model solutions.
+
+   According to Archimedes’ principle of buoyancy[4], we have:
+
+                     FB = ρgV    ρ ≈1.022 −0.01z (g/cm3)                          (3)
+                                             1500
+
+where ρ is the density of seawater and V is the volume of the submersible.
+
+   Due to the relatively small ascent and descent speeds of the submersible, the water ﬂow around
+its surface is in a laminar state during motion.Therefore, the water ﬂow resistance acting on the
+submersible can be expressed as follows: 微信公众号：数学模型1
+                           F f = 2Cd · ρAv2                                       (4)
+
+where Cd is the drag coeﬃcient, A is the area of the submersible’s upper and lower surfaces, ρ is
+the density of water, and v is the speed of the submersible.Moreover, the direction of water ﬂow
+resistance is always opposite to the direction of the submersible’s movement.
+
+   According to ﬂuid dynamics knowledge, the drag coeﬃcient Cd in laminar ﬂow can be deter-
+mined by the Reynolds number Re:
+                                        64
+                                   Cd =                                               (5)
+                                      Re
+At diﬀerent ﬂow rates, the Reynolds number varies. Since the relative velocity is time-varying,  微信号：MATHmodels
+we assume a constant value for Re based on empirical values, and subsequently calculate the
+drag coeﬃcient Cd. The impact of the assumed Cd values on the model will be discussed in the
+subsequent sensitivity analysis.
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 8 ===
+Team # 2419984                                                        Page 8 of 25
+
+
+   So far, by simultaneously combining equations (2), (3), (4), (5), and (6), the diﬀerential equa-
+tion for the vertical motion of the submersible can be obtained:
+
+                         d2z                              64         (m + mw(t)) ·   = −(m + mw(t)) · g + ρ(z) · gV −1 ·       · ρ(z) · A · (dz )2          (6)
+                            dt2                           2  Re            dt
+
+• Location model in the XY plane
+
+   Compared to the vertical direction, the movement of the submersible in the XY plane is not
+inﬂuenced by buoyancy but is signiﬁcantly aﬀected by ocean currents. According to the safety
+strategy mentioned earlier, the submersible’s propulsion force is considered to be 0.  Firstly, we
+analyze the movement of the submersible in the x-direction. According to Newton’s second law,
+we have:
+                     M · ax = Fcx                                         (7)
+
+At this point, the submersible is only inﬂuenced by ocean currents.
+ 微信公众号：数学模型
+                             Figure 5: Currents in Ionian Sea[5]
+
+
+   The ﬁgure displays a schematic representation of the currents in a speciﬁc area of the Ionian
+Sea at a certain time. The diagram provides information about the general direction and average
+velocity of the currents[6] in the depicted region.
+
+   Since ocean currents generally have a relatively small and stable velocity, they can be consid-
+ered to be in a laminar ﬂow state.Therefore, Fcx can be expressed as follows:
+
+                                  Fcx = 12Cdx · ρAx(v −vcx)2  微信号：MATHmodels (8)                                                                                                                                                                                                           Cdx = Re64
+
+where Ax represents the area of the submersible subjected to the action of ocean currents.
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 9 ===
+Team # 2419984                                                        Page 9 of 25
+
+
+    Similarly, we can obtain a similar motion model for the submersible in the y-direction. Com-
+pared to the model in the vertical direction, the challenge in determining the coordinates of the
+submersible in the xy-plane lies in the uncertainty of ocean currents.
+
+5.2  Model Solving
+
+    In the vertical direction, due to the complexity of equation (7), it is diﬃcult to obtain an analyti-
+cal solution through mathematical methods. Therefore, we use a numerical method —Runge-Kutta
+method for solving.
+
+•The fourth-order Runge-Kutta method
+
+   When solving the model, we employ the fourth-order Runge-Kutta method with a higher pre-
+cision, and the truncation error is O(h5), where h is the chosen step size.
+
+   For the initial value problem of the ﬁrst-order ordinary diﬀerential equation given as follows:
+
+                                                                                         ˙z = f(t, z)
+                                                                                                  (9)                                                                                                                                                                                                                                                                        z(t0) = z0
+
+
+   The recursive formula for solving using the fourth-order Runge-Kutta method is:
+
+                                    tn+1 = tn + h
+                          k1 = f(zn, tn)
+                          k2 = f(zn + h2 · k1, tn + h2)                                                                                          (10)
+                          k3 = f(zn + h2 · k2, tn + h2)
+                          k4 = f(zn + h · k3, tn + h)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   h                                 zn+1 = zn + 6 · (k1 + 2k2 + 2k3 + k4)
+
+yn is determined by the sum of the current y(n −1) and the unit time change. The unit time change
+is the product of the time interval h and the approximate slope.
+
+• Algorithm improvement and application 微信公众号：数学模型
+
+   ⋄Step1:Determination of Initial Conditions: The data such as the submersible’s velocity
+     and acceleration can be obtained from corresponding sensors. The velocity and acceleration
+      transmitted to the main ship at the last moment can be considered as the submersible’s initial
+      velocity and acceleration.
+
+   ⋄Step2:Diﬀerential Equation Processing: Since the established position model is a second-
+      order diﬀerential equation, it needs to be transformed into a ﬁrst-order diﬀerential equation.
+      Simultaneously, the ﬁrst-order derivative terms are moved to the left side of the equation,  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 10 ===
+Team # 2419984                                                       Page 10 of 25
+
+
+     and the remaining terms are moved to the right side. The transformed equation is:
+
+                   x ′(t) = u(t)
+                   y′(t) = v(t)
+                     z ′(t) = w(t)
+                          2Cdx1       · ρAx · (u(t) −vcx)2
+                 u ′(t) =                                                                (11)
+                          (m + mw(t))
+                                   12Cdy · ρAy · (v(t) −vcy)2                   v′(t) =
+                          (m + mw(t))
+                    −(m + mw(t)) · g + ρ(z) · gV −12 · Fc · ρ(z) · A · (w(t))2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      w′(t) =
+                                     (m + mw(t))
+
+   ⋄Step3:Iterative solution of the algorithm: Set the step size h=1s, iterate over a length of
+     10 hours, calculate the values of k1, k2, k3, k4 corresponding to the two diﬀerential equations
+      using the recursive formula, and then determine the next discrete value z(n + 1).
+
+• Results and Analysis
+
+   To solve and validate the model we established, we randomly select a point in the deep sea as
+the initial position of the submersible, and provide initial velocity and acceleration values for the
+submersible.
+
+  ⋄When the submersible can resurface normally:
+
+   At this point, the submersible’s water tank drains normally until it is empty. By substituting
+the initial velocity and acceleration of the submersible and iterating continuously, we can plot the
+trajectory of the submersible’s motion after losing contact with the host ship as follows: 微信公众号：数学模型  微信号：MATHmodels
+
+
+                 Figure 6: Possible trajectories of the submersible’s movement
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 11 ===
+Team # 2419984                                                       Page 11 of 25
+
+
+   The selected initial point in the ﬁgure is (18, 37, -3147) (where x and y coordinates represent
+longitude and latitude, and z is the depth). The submersible initially descends a short distance
+under the inﬂuence of the initial velocity and then begins to resurface. In the xy plane, due to the
+inﬂuence of ocean currents, the position continuously shifts over time.
+
+
+  ⋄When the submersible cannot resurface normally:
+
+
+   At this point, there is a malfunction in the water tank. Considering real-world scenarios, we as-
+sume that after the water tank failure, its mass follows a uniform distribution between the minimum
+and maximum mass:
+
+    In this case, due to the uncertainty in the initial state and water tank mass, the submersible may
+either touch the bottom or reach the neutral buoyancy point. Through multiple simulations, we
+obtained trajectories where the submersible either hits the bottom or hovers, as shown below:
+
+
+
+
+
+                 Figure 7: Possible trajectories of the submersible’s movement
+
+
+    In the left ﬁgure, due to a malfunction in the water tank, the submersible continuously sinks tothe seabed微信公众号：数学模型as gravity exceeds buoyancy.
+
+    In the right ﬁgure, a portion of the water in the submersible’s water tank is discharged. Upon
+reaching a speciﬁc depth, the submersible remains in a suspended state due to the decreased density
+of seawater, experiencing slight oscillations above and below the neutral buoyancy point.
+
+5.3  Uncertainty of the Model
+
+   During the process of model establishment and solving, we have identiﬁed that the position of
+the submersible can be inﬂuenced by the following uncertainties:
+
+
+   • Initial Position: The submersible’s location before losing contact varies, and the starting  微信号：MATHmodels      point for model establishment diﬀers. This leads to signiﬁcant diﬀerences in the subsequent
+     movement trajectory of the submersible.
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 12 ===
+Team # 2419984                                                       Page 12 of 25
+
+
+   • Initial Velocity and Acceleration: According to the safety strategy mentioned earlier, the
+      submersible will immediately deactivate propulsion after losing contact with the main ship.
+     The submersible will then commence movement with initial velocity and acceleration. The
+       initial conditions have a signiﬁcant impact on the predicted results of the model.
+
+   • Ocean Currents: For a submersible that has lost propulsion, the force exerted by ocean
+      currents is the primary reason for its continuous movement. Ocean currents vary with time,
+      seasons, and the temperature of seawater, exhibiting signiﬁcant short-term randomness. This
+     randomness is a crucial uncertainty factor in the model.
+
+   • Seabed Topography: As the exact underwater topography cannot be precisely determined
+      in advance, the submersible’s movement may be constrained by the terrain, introducing un-
+      certainty to the model.
+
+5.4  Measures and Equipment to Reduce Uncertainty
+
+5.4.1  Measures
+
+   For potential accidents, reducing uncertainty factors means improving safety. To minimize
+uncertainties in the model, enhance the likelihood and accuracy of predictions, the submersible
+should regularly transmit its position information, movement speed and acceleration, ocean
+current information, as well as data about the surrounding environment or terrain to the
+main ship before losing contact with the host ship.
+
+5.4.2  Equipment
+
+  We recommend equipping the submersible with the following devices:
+
+
+   • GPS Positioning Device:GPS is a technology that determines location using satellite sig-
+       nals. However, underwater, GPS signals cannot penetrate the water surface directly, so the
+      submersible’s GPS positioning typically requires coordination with buoys or surface vessels.
+
+   • Inertial Navigation System:An inertial navigation system uses sensors such as accelerome- 微信公众号：数学模型       ters and gyroscopes to measure the submersible’s acceleration and angular velocity. Velocity
+     can be obtained through integration.
+
+   • Underwater High-Deﬁnition Camera:Can be used to observe underwater environments,
+      acquire seaﬂoor topography, thereby reducing the risk of encountering hazards.
+
+   • Pressure Sensor:As the water pressure in the deep sea is approximately linearly related to
+      depth, the depth at which the submersible is located can be calculated based on the measured
+      water pressure.
+
+   • Magnetometer:By measuring the Earth’s magnetic ﬁeld, the submersible’s orientation can
+     be determined.  微信号：MATHmodels
+
+   • Current Detection Sensors:By detecting the direction and speed of ocean currents, the
+      impact of random currents on predictions can be reduced.
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 13 ===
+Team # 2419984                                                       Page 13 of 25
+
+6  Models and Solutions of Problem 2
+
+6.1  Rescue Equipment
+
+   According to the position model established in the previous section, when the submersible loses
+contact with the main ship, it may sink to the seaﬂoor, remain at certain neutral buoyancy points, or
+rise to the sea surface depending on diﬀerent failure scenarios. This presents varied requirements
+for search and rescue operations. We deﬁne regions with depths below 3000 meters as deep-water
+zones and those above 3000 meters as shallow-water zones. To address all possible situations,
+we have researched equipment designed for search and rescue in surface, shallow-water, and
+deep-water areas. The speciﬁcations and costs of these devices are presented in the table below:
+
+
+                           Table 1: Equipment and Parameters[7]
+
+                                                    Failure Rate   Detection                                       Maintenance  Operating
+          Equipment and Parameters                                      Precision(cm)  Accuracy(%)  Price($)
+                                             (%)       Range                                               Cost($)      Cost($)
+                            Search and
+                                              1       18.4 × 106        7.8           92        1034       50         14
+        Surface            Rescue Drones
+                         Maritime Search
+                                                       0.5       6 × 106        11.6          94        3415       100         20
+                        and Rescue Boats
+                           Side-scan Sonar          0.05        224          10.2          98       24995      200         90
+  Shallow-water Zone  Autonomous Underwater
+                                                       0.1         30           2.5           99.4      35248      900         87
+                            Robot
+                   Autonomous Underwater
+                                                       0.2         67          5            98.6      45652      1000        120
+                               Vehicle
+                           Side-scan Sonar           0.2        400          40.8          95       24995      200         90
+   Deep-water Zone   Autonomous Underwater
+                                                       0.4         30           4.5           98.9      35248      900         87
+                            Robot
+                   Autonomous Underwater
+                                                       1.0         65          6           96       45652      1000        120
+                               Vehicle
+
+
+where, precision represents the minimum distance that the equipment can resolve.The smaller the
+value, the stronger the resolution capability of the device.
+
+   Taking into account the performance of the equipment and the associated costs of purchasing,
+maintaining, and using, we adopt a cost-beneﬁt model based on the entropy weight method to
+evaluate various rescue devices. This aims to achieve the optimal conﬁguration while ensuringrescue eﬃciency.微信公众号：数学模型
+
+6.2  Cost-Beneﬁt Model Based on Entropy Weight Method
+
+   • Entropy weight method to determine weights
+     Due to the diﬀerent working areas applicable to diﬀerent devices, and the performance of
+      the same device varies at diﬀerent depths, it is necessary to determine the optimal devices
+      separately for the surface, shallow water, and deep water areas. Taking the evaluation of the
+      shallow water area as an example:
+
+      (1) Standardize the performance parameters
+      Input the various performance indicators and cost indicators of the three types of equipment      in the微信号：MATHmodelsshallow water area into the matrix. For the failure rate and minimum resolution ac-
+      curacy in the beneﬁt indicators, since smaller values indicate better equipment performance,
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 14 ===
+Team # 2419984                                                       Page 14 of 25
+
+
+       their reciprocals are written into the matrix.
+
+                                                  x11  x12    · · ·  x14
+                                                  x21  x22    · · ·  x24
+                                 X0 =             ...                     ...    ...                ...                              (12)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                  xn1  xn2    · · ·  xn4
+
+     As all evaluation indicators are non-negative, the standardization formula is used as follows:
+                                                                      xij
+                                                              zij = √∑n                                     (13)
+                                                                     i=1 x2ij
+
+     Then we can get the standardized matrix Z0.
+      (2) Entropy Calculating
+     The matrix Z0 obtained through standardization can be further used to calculate the proba-
+       bility matrix P, where the calculation formula for each element pi j in P is as follows:
+                                                                           zij
+                                                        pij = ∑n                                      (14)
+                                                                    i=1 zij
+      Then,the entropy value ej of the ith index can be deﬁned as:
+             ∑n
+                             e j = −1       pij ln(pi j)( j = 1, 2, · · · , 4)                     (15)
+                                        ln n
+                                                       i=1
+     The range of entropy value ej is [0, 1].The larger the e j is,the greater the diﬀerentiation
+      degree of index  j is, and more information can be derived. Hence, higher weight should be
+      given to the index. Therefore,the weight Wj is deﬁned as follows:
+                                   1 −e j
+                         Wj = ∑m               j = 1, 2, · · · , 4                        (16)                                                j=1(1 −e j),
+
+   • Cost-beneﬁt evaluation model
+
+      Multiplying the weights corresponding to various performance indicators of rescue equip-
+     ment by the normalized data yields the weighted matrix. At this point, the beneﬁts and costs      of微信公众号：数学模型each rescue device can be represented as follows:
+                              ∑m
+                                          Ei =    j=1 WjPij
+                                                                                          (17)                                                                                     Ctotal(i)                                                                                                                                                                                                                                                            Ci =  ∑C
+     Where Ei represents the beneﬁt indicator, and Ci represents the cost indicator. Ci includes
+      the expenses for the purchase, maintenance, and single-use of the equipment. To achieve
+       better visual representation, we have also normalized C.
+
+     Then, the evaluation score (REC) for each device can be represented by the ratio of E to C
+      as follows:
+                                                     Ei
+                                             Reci =                                      (18)
+                                                  Ci  微信号：MATHmodels
+    By comparing the scores, the superiority and inferiority of each rescue device can be deter-
+     mined. A higher score indicates relatively better performance and relatively lower costs for
+      the device.
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 15 ===
+Team # 2419984                                                       Page 15 of 25
+
+
+6.3  Evaluation Results and Analysis
+
+   Based on the evaluation model, combined with the relevant data in Table 2, we conducted eval-
+uations of rescue equipment in the sea surface, shallow water area, and deep water area, obtaining
+scores for ﬁve types of rescue equipment: Autonomous Underwater Vehicle (AUV), Autonomous
+Underwater Robot (AUR), Side-scan Sonar (SSS), Search and Rescue Drones (SRD), and Mar-
+itime Search and Rescue Boats (MSRB). The results are displayed as follows:
+
+
+
+
+
+                                Figure 8: Evaluation Results
+
+
+   From the chart, it can be observed that in surface search and rescue, the score of Search and
+Rescue Drones (SRD) is signiﬁcantly higher than Maritime Search and Rescue Boats, demonstrat-
+ing higher search and rescue eﬃciency and lower costs. In shallow water and deep water areas, the
+score of Side-scan Sonar (SSS) is also signiﬁcantly higher than others. Therefore, the combination
+of Drones and Sonar as the main search and rescue equipment is reasonable.
+
+     It is worth noting that, although SSS has a high score, it is powerless in deeper depths. How- 微信公众号：数学模型
+ever, AUVs can operate in deeper regions. And AUR has the highest exploration accuracy, making
+it advantageous in dealing with more complex seabed terrain. Therefore, we recommend the main
+search and rescue equipment to be Search and Rescue Drones and Side-scan Sonar, with a
+smaller number of AUVs and AURs. This approach can ensure search and rescue eﬃciency as
+much as possible within an acceptable cost range, preparing for any possible scenarios.
+
+7  Models and Solutions of Problem 3
+
+7.1  Model preparation
+
+   Using the location model, we can determine the trajectory of the submersible if the initial  微信号：MATHmodels
+position of the submersible, fault conditions, ocean current data, and seaﬂoor topography are all
+known.However, in reality, the fault conditions of the submersible, ocean current speed, and di-
+rection are subject to signiﬁcant randomness. Therefore, the submersible may appear in diﬀerent
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 16 ===
+Team # 2419984                                                       Page 16 of 25
+
+
+locations in the ocean with varying probabilities, and these probability distributions will change
+over time. To obtain the probability distribution of the submersible’s position over time, we employ
+Monte Carlo simulation.
+
+• Divide Search Area into Grids
+
+   As the submersible loses or shuts oﬀpropulsion, its speed gradually approaches the speed of
+ocean currents over time.  Therefore, we calculated the maximum range the submersible could
+reach after 10 hours. We divided the area into grids with dimensions of 400m in length and width,
+resulting in a total of 30 × 75 grids. By discretizing the region, we can use numerical methods to
+simulate the probability of the submersible appearing at various points. This approach is helpful
+in actual search operations to avoid overlooking potential locations.
+
+• Monte Carlo Simulation
+
+   To simulate the real movement of the submersible, we ﬁrst simulated the uncertainty of ocean
+currents. Over a short period, the stable speed and direction angle of ocean currents can be approx-
+imated to follow a normal distribution:
+
+                                             vc ∼N(vc, σ21)                                                                                          (19)                                                                                                                                                                                                           θ ∼N(θ, σ22)
+
+where vc and θ represent the average speed and average direction angle of the ocean currents,
+respectively.
+
+    Additionally, if the submersible can resurface normally, the rescue operation will be much
+easier. Therefore, we focus on analyzing the situation of a malfunction in the submersible’s water
+tank and assume that the mass of water in the tank follows a uniform distribution:
+
+                           mw ∼U(mmin, mmax)                                 (20)
+
+
+  We selected the same longitude and latitude as in Question 1 for the moment when the sub-
+mersible lost contact with the main ship, with a depth set at 1500 meters.Then, using Monte Carlo
+random number simulation, we generated 100,000 sets of possible states and substituted them into 微信公众号：数学模型
+the positioning model to determine the coordinates of the submersible at 1, 2, ..., 10 hours later.
+
+    In Figure 9, we can observe the results simulated from these 100,000 initial state points.
+
+
+   • The left graph illustrates the distribution of these points after 10 hours. Due to the initial
+      perturbations, among these points, 19.1% can reach the sea surface, 17.2% remain at depths
+     between 0 to 1500 meters, 36% stay at depths between 1500 to 3000 meters, and 27.67%
+      are at the seaﬂoor.As the number of simulations is suﬃcient, the proportion of occurrences
+      in a speciﬁc area can approximate the probability of the submersible appearing there.
+
+   • In the diagram on the right, a top-down view of the trajectories of these simulated points  微信号：MATHmodels
+      within 10 hours is depicted. It can be observed from the diagram that the trajectories diverge
+     outward along the average direction of the ocean currents, further highlighting the signiﬁcant
+      impact of the uncertainty of the ocean currents on the submersible’s trajectory.
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 17 ===
+Team # 2419984                                                       Page 17 of 25
+
+
+
+
+
+                 Figure 9: Possible trajectories of the submersible’s movement
+
+
+    In the left of ﬁgure 10, we speciﬁcally depict the trajectories of points that sink to the seaﬂoor
+and those that resurface to the neutral buoyancy point over the course of 10 hours. The trajecto-
+ries of points resurfacing to the neutral buoyancy point are roughly similar to those described in
+Problem 1.
+
+   And the probability heatmap depicting the likelihood of the submersible resurfacing to the sea
+level over time is shown in the right in ﬁgure 10.From the heatmap, it can be observed that the water
+tanks capable of resurfacing normally can reach the sea surface in approximately 1 hour. With the
+increase in time, there is a slight increase in the number of submersibles capable of resurfacing to
+the sea surface. This aligns well with the actual scenario. 微信公众号：数学模型
+
+
+
+
+
+                         Figure 10: Some speciﬁc simulation points
+
+
+7.2  Model for Searching7.2.1  Search微信号：MATHmodelsStrategy
+
+   The equipment used for search and rescue varies depending on the location where the sub-
+mersible goes missing. In problem two, we identiﬁed Drones as the main maritime search equip-
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 18 ===
+Team # 2419984                                                       Page 18 of 25
+
+
+ment and sonar as the primary underwater search equipment. Maritime and underwater searches
+should be conducted simultaneously.
+
+7.2.2  Ant Colony Algorithm for Planning Search Paths
+
+   Through Monte Carlo simulation, we can determine the probability of the submersible appear-
+ing in a speciﬁc grid at a certain moment and simulate the trajectory of the submersible over a
+period of time. For points that have already been searched, we can simulate their subsequent
+positions. These points will disappear from the subsequent search maps. Taking into account
+the time required for each set of equipment to search a grid, we set the search period T = 1h. Since
+T is relatively short, and the submersible’s position changes minimally, we assume its position
+remains unchanged within one search cycle and update the position at the beginning of the next
+search cycle.
+
+  ▲Bayesian Probability Model
+     The probability of ﬁnding the submersible is time-varying and depends on the search results
+      of the previous cycle. Using the Bayesian probability model:
+
+                                         P(Ai) · P(B|Ai)
+                              P(Ai|B) =                              , i = 1, · · · , n                    (21)                                          n∑
+                                          P(Al) · P(B|Al)
+                                                      l=1
+
+      the probability within the current search cycle can be expressed as follows:
+
+                                       P(i) = P(i −1) + P(i −1) · Pi                          (22)
+
+      where: P(i) represents the probability of ﬁnding it until the i-th search, and Pi represents the
+      probability of ﬁnding it in a single search.
+
+   ▲Objective Function for Search
+     The probability of ﬁnding the submersible after time t is denoted as P(t). In addition to being
+      related to the choice of the search route, with the increase in search time, P(t) generally
+      exhibits a trend of initially increasing and then decreasing[8]. To minimize the time required
+      to locate the submersible, we have established the following objective function: 微信公众号：数学模型
+                                   S (t) = e−kt · P(t)                                (23)
+
+     where the urgency level based on time is reﬂected in the parameter k.
+
+  ▲Determine the starting point
+
+      Since all the uncertain factors in the simulation approximately follow a normal distribution,
+      the probability is relatively large around the point of maximum probability. Therefore, to
+     improve search eﬃciency and reduce search time, we choose the grid with the highest prob-
+       ability as the starting point for the search.  ▲Algorithm微信号：MATHmodelsﬂowchart
+
+      In order to visually represent the process of utilizing the ant colony algorithm, we have
+     drawn the algorithm ﬂowchart as shown below:
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 19 ===
+Team # 2419984                                                       Page 19 of 25
+
+
+
+
+
+                       Figure 11: Flowchart for Ant Colony Algorithm
+
+
+7.3  Results and Analysis
+
+7.3.1  Planning Results of Search Route
+
+   One hour after the loss of contact, relevant equipment begins the search. The grid with the
+highest probability at 1 hour is selected as the initial deployment point. By applying the ant colony
+algorithm and periodically updating the search map, iterating until convergence, we can obtain the
+search route as shown in the following diagram:
+
+
+
+
+
+             (a) Planning Route                          (b) Iteration Results
+
+                      Figure 12: Diﬀerent probabilities with diﬀerent t
+
+
+   The diagram (a) provides a top-down view of 100,000 simulated points, with the black areaindicating微信公众号：数学模型the initial point positions and the white area representing the stopping points after 10
+hours of search. The light red bands cover 80% of the simulated points along the direction of the
+ocean currents.
+
+     It can be observed that most simulated points are distributed near the direction of the ocean
+currents, and the search path obtained through the ant colony algorithm also follows the direction
+of the currents. This result is reasonable as it aligns with the actual outcomes.
+
+    In (b) of ﬁgure 12, the probability of ﬁnding the submersible on the sea surface during each
+iteration of the ant colony algorithm is displayed. When the number of iterations reaches 40, the
+probability of ﬁnding the submersible on the sea surface within 10 hours converges to around 12%.
+As revealed by previous simulations, only 19% of the total number of submersibles can resurface  微信号：MATHmodels
+to the sea surface within 10 hours. Therefore, the probability of ﬁnding the submersible on the sea
+surface within 10 hours is higher at 63%. Due to lower search eﬃciency, the success rate of ﬁnding
+the submersible underwater will be lower than on the sea surface .
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 20 ===
+Team # 2419984                                                       Page 20 of 25
+
+
+7.3.2  The Impact of Start Time for Searching
+
+    In the above model, we took t=1h. However, in reality, t is often greater than one hour due to
+various factors. Therefore, to study the impact of t on the 10-hour model, we obtained the time-
+dependent overall probability of ﬁnding the submersible within 10 hours of search initiation under
+the conditions of t=1h, 3h, and 5h, with the remaining parameters being the same, as shown in the
+following graph:
+
+
+
+
+
+                        Figure 13: Planning Results of Search Route
+
+
+   From the graph, it can be observed that if the search starts at t=1h, the probability of ﬁnding the
+submersible within 10 hours reaches 43%. The later the search is initiated, the lower the probability
+of ﬁnding the submersible within 10 hours. If the search begins at t=5h, the probability of ﬁnding
+the submersible within 10 hours is only about 10%. This tells us that time is crucial for rescue
+operations. Therefore, after the submersible loses contact with the main ship, rescue eﬀorts should
+be deployed as soon as possible to increase the probability of ﬁnding it in a short time.8  Model微信公众号：数学模型Expansion and Promotion for Problem 4
+
+   The model, being based on the actual parameters of the submersible and the ocean, possesses
+strong generalizability.
+
+8.1  Diﬀerent Maritime Regions
+
+   When considering rescue operations in diﬀerent maritime regions, it is crucial to have a com-
+prehensive understanding of the local climate, topography, and ocean currents. Taking the Caribbean
+Sea as an example:
+
+
+   • Climate and Ocean Currents  微信号：MATHmodels
+     The Caribbean Sea has a tropical oceanic climate, with highly unstable atmospheric condi-
+      tions and the presence of tropical storms locally from June to November each year. There-
+       fore, compared to the Mediterranean climate in the Ionian Sea, the surface ocean currents
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 21 ===
+Team # 2419984                                                       Page 21 of 25
+
+
+      in the Caribbean Sea are more intense and complex. When simulating ocean current data in
+      the relevant area, it is necessary to increase the perturbation values of local ocean currents
+      over time. This will cause a submersible that loses power to quickly lose the inﬂuence of its
+       initial velocity, resulting in a more divergent movement trajectory.
+
+   • Topography
+     The terrain in the Ionian Sea is relatively ﬂat, but it is the opposite near the Caribbean
+      Sea. The underwater terrain in the vicinity of the Caribbean Sea has large ﬂuctuations,
+      with numerous reefs and rocks, contributing to numerous shipwrecks in the Caribbean Sea.
+      Therefore, when simulating, accidents caused by the submersible hitting rocks must be con-
+      sidered. It is necessary to enhance the physical model to simulate the impact of collisions on
+      the submersible’s path. After hitting a rock, the submersible immediately loses power and
+        its original velocity, with a probability of mass loss. It should be able to drift with the ocean
+      currents to prevent the simulation from mistakenly detecting it as being stuck at the bottom.
+
+
+
+
+
+                        Figure 14: The Topography of Caribbean Sea
+
+
+   Combining these two factors makes search operations in the Caribbean more complex, placing
+higher demands on the accuracy of the model and simulated data.
+
+8.2  Multiple Submersibles 微信公众号：数学模型
+
+    In scenarios where there are multiple submersibles in a relatively small area, we analyze that,
+assuming normal communication with the mothership, simultaneous loss of communication or
+mechanical failure for multiple submersibles is rare and can be disregarded. Therefore, after the
+ﬁrst submersible loses contact, judgment needs to be made based on its last communication status.
+
+    In the event of a submersible loss, real-time ocean currents, atmospheric conditions, and the
+geographical status of the last known position before the loss should be checked.
+
+
+   • If there are local storms or severe marine activities: the mothership needs to immediately
+     warn the remaining submersibles to leave or stay away from the relevant area.  微信号：MATHmodels
+   • If no danger is detected near the lost submersible: the remaining submersibles do not
+     need to avoid it. Under favorable conditions, they can approach the missing submersible
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 22 ===
+Team # 2419984                                                       Page 22 of 25
+
+
+      for timely deployment of subsequent search and rescue eﬀorts. According to the results of
+      the third question, this signiﬁcantly increases the probability of locating the missing sub-
+      mersible.
+
+9  Sensitivity Analysis
+
+   Due to the close relationship between the drag coeﬃcients of the submersible and the shape,
+size, and maritime conditions of the actual submersible, the drag coeﬃcients in all three direc-
+tions are estimated values. In this section, a sensitivity analysis is conducted on these three drag
+coeﬃcients. By varying them by ±1%, 2%,and 4%, while keeping other conditions constant, the
+trajectories for these six scenarios are simulated. A comparison is made between these simulated
+trajectories and the original trajectory, resulting in the two graphs presented below.
+
+
+
+
+
+                       Figure 15: The impact of drag coeﬃcient errors
+
+   From the graph a, it can be observed that after 10 hours in the xy dimensions, the deviation
+of the trajectory does not exceed 400 meters in any direction. This is within an acceptable range, 微信公众号：数学模型
+indicating that it does not signiﬁcantly aﬀect the main direction of the trajectory. Additionally,
+in the grid-based map used in the third question, such deviations also have no impact.Through
+extensive practical simulations, it has been observed that the position region in the z-direction of
+the submersible stabilizes after 3 hours.  Therefore, a deviation value at 3 hours is considered.
+From the graph b, it can be seen that in the z dimension, the maximum deviation does not exceed
+40 meters, which is still within an acceptable range.
+
+10  Strengths and Weaknesses
+
+10.1  Strengths  微信号：MATHmodels   • This model, starting from a dynamics perspective, has established a relatively accurate pre-
+       dictive model for the submersible, oﬀering high precision in its predictions.
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 23 ===
+Team # 2419984                                                       Page 23 of 25
+
+
+   • The paper adopts a cost-beneﬁt model based on the entropy weighting method to evaluate
+      sensors, ensuring more accurate assignment of weight values when calculating beneﬁts.
+
+   • The paper utilizes theories related to Bayesian detection and combines them with Ant Colony
+      Optimization. It considers the impact of certain probabilities being tested ﬁrst on the subse-
+      quent sample space during detection, aligning more closely with reality.
+
+
+10.2  Weaknesses
+
+   • Due to the diﬃculty in calculating the drag coeﬃcient, this paper only estimates an ap-
+      proximate value. Accurate measurement is required when extending the model to practical
+      application scenarios.
+
+   • In the predictive model, a method of discretizing time is used to determine the ﬁnal probabil-
+       ity of successful rescue. Due to the insuﬃcient level of discretization, there may be certain
+       errors.
+
+References
+
+ [1] https://pxhere.com/en/photo/1237494?utm_content=shareClip&utm_medium=
+    referral&utm_source=pxhere
+
+ [2] NOAA National Centers for Environmental Information. 2022: ETOPO 2022 15 Arc-Second
+     Global Relief Model. NOAA National Centers for Environmental Information. https://
+    doi.org/10.25921/fd45-gt74 Accessed [3 February,2024].
+
+ [3] https://tritonsubs.com
+
+ [4] Zeng Guanghui, Zang Haipeng, Gu Zezue. Study on the Longitudinal Motion Characteristics
+     of a Powerless Submarine Underwater Drift [C]// Salvage and Rescue Committee of The
+     China Institute of Navigation. Proceedings of the 8th China International Salvage Forum.
+     Naval Submarine Academy, 2014: 3. 微信公众号：数学模型 [5] Gai,˘aM.,˘aG.   Civitarese,˘aG.   L.   Eusebi   Borzelli,˘aV.   Kovaevi,˘aP.-M.   Poulain,˘aA.
+     Theocharis,˘aM. Menna,˘aA.  Catucci,  and˘aN.  Zarokanellos˘a(2011),˘aOn  the  relationship
+     between the decadal oscillations of the northern Ionian Sea and the salinity distributions in
+     the eastern Mediterranean,˘aJ. Geophys. Res.,˘a116, C12002, doi:10.1029/2011JC007280.
+
+ [6] ESR; Dohan, Kathleen. 2022. Ocean Surface Current Analyses Real-time (OSCAR) Sur-
+     face Currents - Interim 0.25 Degree (Version 2.0). Ver. 2.0. PO.DAAC, CA, USA. Dataset
+     accessed [2024-02-03] at˘ahttps://doi.org/10.5067/OSCAR-25I20
+
+ [7] https://marinesonic.com/
+
+ [8] Potomac Management Group, Inc. (2006). A Simple Guide to Conducting Ground Search  微信号：MATHmodels
+     and Rescue Detection Experiments. Washington, D.C.: United States Coast Guard Oﬃce of
+     Search and Rescue.
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 24 ===
+Team # 2419984                                                       Page 24 of 25
+
+Memo
+
+To: The Government of Greece
+From: MCM Team #2419984
+Date: Feb 5th,2024
+Subject:Scientiﬁc positioning and rescue eﬀorts ensure the safety of deep-sea tourism.
+
+
+Dear Oﬃcer of the Government of Greece,
+
+     It has come to our attention that a company in your country, MCMS, has developed a type of
+submersible suitable for tourists to explore the seabed. However, the potential for loss of commu-
+nication restricts its application and development. Therefore, we have established a dynamic and
+kinematic model of the submersible (see page ten), as well as a search and rescue strategy based
+on this model.
+
+    Firstly, after conducting a comprehensive force analysis on the submersible, we established a
+kinematic model considering the impact of ocean currents in the Ionian Sea region on its move-
+ment. We found that once the submersible loses communication, its possible positions are greatly
+inﬂuenced by ocean currents. Worse still, we discovered that there are few ocean current mon-
+itoring points near the Ionian Sea, leading to inaccurate ocean current data and, consequently,
+excessive uncertainty in the submersible’s position. Installing more ocean current detection sta-
+tions in the Ionian Sea could signiﬁcantly improve the accuracy of determining the position of the
+lost submersible.
+
+   Secondly, through a comprehensive evaluation of the performance and cost indicators of var-
+ious search and rescue devices, we determined that the optimal equipment for surface and under-
+water searches are drones and sonar, respectively.
+
+    Thirdly, based on the kinematic model, using Monte Carlo simulation and ant colony algorithm,
+we found an optimal search and rescue solution that is most likely to locate the submersible as
+follows: 微信公众号：数学模型  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 25 ===
+Team # 2419984                                                       Page 25 of 25
+
+
+   The results suggest that the search path should be as perpendicular as possible to the curve
+predicted by the dynamic model, and the one-way search path should increase with time.
+
+    Additionally, for a lost submersible, time is of the essence, and the probability of successfully
+ﬁnding it decreases sharply with increasing time, as shown in the table below:
+
+   The search and rescue route should be as perpendicular as possible to the trajectory predicted
+by the dynamic model, and as time progresses, the length of each search path should also increase.
+Additionally, we have found that the probability of successfully detecting the submersible steeply
+decreases over time. The results are as follows in the table below:
+
+
+
+
+
+    Therefore, we recommend dispatching relevant detection equipment to the designated area as
+quickly as possible once the mothership loses communication with the submersible. Our model
+also indicates that deploying more detectors, with larger detection widths and higher accuracy, in-
+creases search eﬃciency and the probability of successfully detecting the submersible. Purchasing
+and stockpiling more advanced detection equipment (such as underwater detection vehicles, under-
+water robots, high-precision sonar, etc.) and strengthening cooperation with the MCMS company
+will signiﬁcantly increase the probability of ﬁnding the lost submersible.
+
+    In conclusion, with the use of advanced sensors and the position and search models we have
+established, there is a high probability of quickly locating the submersible after an accident, while
+ensuring the speed of rescue operations. We sincerely hope that the Greek government considers
+these suggestions to ensure the safety of tourists and promote the development of deep-sea tourism.
+
+   Thank you for considering this vital matter. I am available for any further discussion or clariﬁ- 微信公众号：数学模型
+cation regarding the proposed model and technology.
+
+
+
+
+
+                                                                       Yours sincerely
+
+                                                                    #2419984  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                              2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯

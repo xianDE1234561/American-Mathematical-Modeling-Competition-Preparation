@@ -1,0 +1,6 @@
+{
+  "n": 65,
+  "spearman_rho": 0.48253253638976334,
+  "p_value": 4.689907966244157e-05,
+  "limitations": "Exploratory association, overlapping windows and medal-unit measurement error; not causal."
+}

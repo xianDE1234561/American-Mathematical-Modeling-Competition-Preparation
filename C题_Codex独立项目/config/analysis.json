@@ -1,0 +1,22 @@
+{
+  "seed": 20251009,
+  "training_start": 1996,
+  "first_test_year": 2008,
+  "validation_years": [
+    2008,
+    2012,
+    2016,
+    2020
+  ],
+  "holdout_year": 2024,
+  "forecast_year": 2028,
+  "simulation_draws": 20000,
+  "prediction_interval": 0.95,
+  "future_participation": "2024 delegation roster excluding AIN, whose country aggregate is absent",
+  "future_program": "2024 event structure retained; explicit alternative scenarios",
+  "coaching_scenario_uplift": [
+    0.1,
+    0.2,
+    0.3
+  ]
+}

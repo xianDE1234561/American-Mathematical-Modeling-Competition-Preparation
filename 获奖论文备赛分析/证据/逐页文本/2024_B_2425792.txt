@@ -1,0 +1,1291 @@
+=== PDF PAGE 1 ===
+      Problem Chosen                2024            Team Control Number
+                        MCM/ICM
+       B                               2425792                           Summary Sheet
+
+ Save the Submersible: An Combined Method
+of Computational Fluid Dynamics and Kalman
+                       Filter
+
+
+                             Summary
+
+
+     Exploration of shipwrecks on the seabed by submersibles represents a blue ocean for tourism
+development.  Yet presently there’s an absence of procedures to ensure the safekeeping of sub-
+mersibles in case of an incident. In an effort to bridge the gap, our team construct the following
+model to realize more accurate localization and prompt search.
+
+      First, to locate. We collected data of ocean currents, seawater density, and seafloor geography
+which are the main uncertainties affecting the submersible’s motion.  Then, we established the
+Computational Fluid Dynamics equation via simplified Fossen’s Six Degrees of Freedom model.
+With the prerequisites of Kalman Filter all met, we can safely adopt the computationally efficient
+Kalman Filtering. Utilizing the ”update-predict” recursive mechanism embedded in Kalman
+filtering, inaccuracies engendered by cumulative errors are mitigated, thereby realizing the trajectory
+correction. Moreover, upon calculation of the submersible’s probability distribution in space, we
+found the trajectory that the defective submersible would most likely to follow.
+
+    Then, to prepare.  To enhance rescue efficiency, we assembled data of rescue equipment
+available on the market and their corresponding parameters.  Predicated upon 14 indicators, we
+used the Principle Component Analysis to construct and selected the three primary components
+with the highest contribution rate. This analysis thus afforded a composite score for each item of
+equipment, thereby determining three devices for the host ship and three for the rescue vessels.
+
+     Next, to search. We employed further the predicted estimate covariance matrix from the
+Kalman filter results. Combined with the probability density function of a multivariate normal
+distribution, a standard statistical 95% confidence 3D Space is computed and then interpreted as
+the feasible zone for search. As discussed in the previous section, we deploy multi-beam sonar,
+combined bathymetry and side scan sonar on the host ship for an Along-Isobath Search.微信公众号：数学模型
+    Furthermore, to extrapolate. We’ve done 2 extrapolations to the model. For one thing, we
+examined our model in different ocean environments. The validation of employing our model for
+location prediction is thus established. For another, on superimposing the concept of the Voronoi
+Diagram, we derived a model to assure that multiple submersibles cooperate without collisions,
+and effectuate the most rapid monitoring of the defective submersible in an incident.
+
+     Finally, in our sensitivity and error analysis, we found that seawater density and external
+environmental disturbances significantly impact submersible path prediction accuracy, with high
+sensitivity and larger prediction errors (RMSE values 1.55 m and 2.10 m, respectively).  Pro-
+peller rotation speed and submersible mass showed lower impacts on model accuracy, with lower
+sensitivity(RMSE values 1.12 m and 1.17 m, respectively). 微信号：MATHmodels
+Keywords: Kalman Filter    Inertial Navigation   Computational Fluid Dynamics   Principle
+Components Analysis   Voronoi Diagram
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 2 ===
+Team 2425792                                                            Page 1 of 24
+
+                        Contents
+
+1  Introduction                                                                2
+    1.1  Background  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   2
+    1.2  Problem Restatement   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+    1.3  Our Approach  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   4
+
+2  Model Preparation                                                          4
+    2.1  Assumptions and Justifications  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   4
+    2.2  Notations   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   5
+
+3  Task 1: Location Prediction Model Incorporating the Kalman Filter                6
+    3.1  Consideration for Uncertainties and Equipping the Submersible .  .  .  .  .  .  .  .  .  .  .   6
+    3.2  Computational Fluid Dynamics Analysis  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+    3.3  Mechanism of Kalman Filter   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   8
+    3.4  Model establishment   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+    3.5  Fine-tuning Kalman Filter    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  10
+    3.6   Results and Analysis    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  10
+
+4  Task 2: Equipment Preparation for Host Ship and Rescue Vessel                  11
+    4.1  Equipment Selection by Principal Component Analysis   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  11
+    4.2   Results and Analysis    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+
+5  Task 3: Feasible Zone and Search Pattern                                      14
+    5.1  Determination of Feasible Zone for Search .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  14
+    5.2  Cumulative Distribution Function of Probability  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+    5.3  Search Pattern Based on Sonar Scanning  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+    5.4   Results .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  16
+    5.5  Analysis of the Results   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  18
+
+6  Task 4: Model extrapolation                                                 18
+    6.1  Caribbean Sea  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  18微信公众号：数学模型    6.2  Coorporation strategy between multiple submersibles  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  19
+
+7  Sensitivity Analysis and Error Analysis                                        20
+
+8  Evaluation and Promotion of Model                                           21
+    8.1   Strengths    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+    8.2  Weaknesses and Possible Improvements   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+
+References                                                                   21
+
+Memo for the Greek Government                                                23 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 3 ===
+Team 2425792                                                            Page 2 of 24
+
+1  Introduction
+
+1.1  Background
+
+    Submersibles represent cutting-edge technology designed to explore the depths of our oceans.[1]
+Different from submarines that are capable of independent operations, submersibles is typically
+tethered or assisted by a host ship.  Notably, manned submersibles that carries humans to ar-
+rive at complex deep sea environments quickly and accurately, have recently witnessed global
+advancements.[2]
+
+    This progress has spurred Maritime Cruises Mini-Submarines (MCMS) to envision the inte-
+gration of submersibles into underwater tourism in the the Ionian Sea, a region known for its rich
+history and myriad sunken shipwrecks.
+
+
+
+
+
+                                   Figure 1: Background
+
+    The prospect of offering tourists exhilarating ventures to the ocean’s depths, however, faces
+challenges in the wake of the 2023 Titan submersible incident, [3] a catastrophic underwater im-
+plosion resulting in no survivors due to inherent defects. The fundamental cause of the mishap
+was the inability to swiftly pinpoint and search the submersible, thereby profoundly decelerating
+the rescue. The incident has sparked widespread concerns regarding the localization and rescuing微信公众号：数学模型
+speed of submersibles after it was defected underwater.
+
+     Generally, two types of defect of a submersible can occur.(Fig.2) 微信号：MATHmodels
+
+                      Figure 2: Submersible’s defects and consequences
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 4 ===
+Team 2425792                                                            Page 3 of 24
+
+
+    Once a defective submersible lose its propulsion, it might end up situated on the seafloor or at
+a level of neutral buoyancy, where it neither descends nor ascends. However, in the complex and
+dynamic deep water environments, the submersible can be drifted away by currents and difference
+of seawater density. Once a defective submersible lose its communication to the host ship, it is
+hardly possible for the host ship to locate the submersible. Therefore, enhancing the accuracy of
+localization before the rescue is the first challenge. Moreover, once the area where the submersible
+might be situated is determined, the search pattern for rescue is to be improved.
+
+     In order to relieve public concerns and obtain approval for submersible tourism from regulators,
+MCMS requires our team to construct models for better locating the submersible over time and
+developing search patterns for the rescue. Furthermore, our model aims to shed light on innovative
+methodologies to equip the host ship and rescue vessels and minimize the rescue time.
+
+
+1.2  Problem Restatement
+
+     In reaction to MCMS requirements, we have been assigned to develop models for the purposes
+of:
+
+• Localization
+
+      - Construct models to accurately forecast the submersible’s location over time.
+
+      - Take into account uncertainties such as currents, varying sea densities, and the geographical
+features of the Ionian Sea.
+
+      - Design the information the submersible can intermittently relay back to the host ship to
+minimize these uncertainties.
+
+      - Determine the equipment needed for an effective transmission of this information.
+
+• Equipment Recommendation
+
+      - Propose additional search equipment that MCMS should employ on the host ship.
+
+      - Consider myriad indicators affecting the performance of the equipment.
+
+      - Evaluate and choose the most proper equipment for the search of submersible.
+
+      - Derive what extra equipment a rescue vessel might necessitate.
+
+• Search微信公众号：数学模型
+      - Develop a model that utilizes data from the localization models to suggest initial deployment
+points for the rescue equipment.
+
+      - Minimize the duration required to find a lost submersible by constructing a model of the
+search strategy.
+
+      - Express the probability of finding the submersible as a function of time and cumulative search
+results.
+
+• Adaptation
+
+      - Explore the potential to broaden the applicability of the constructed model to incorporate
+other oceanic tourist destinations.      -微信号：MATHmodelsIdentify necessary adjustments to the model to accommodate multiple submersibles moving
+within a similar vicinity.
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 5 ===
+Team 2425792                                                            Page 4 of 24
+
+
+1.3  Our Approach
+
+    The approach of our model is as follows:
+
+    • Establish Computational Fluid Dynamics (CFD) equations taking into account the uncer-
+tainties.
+
+    • Employ the Kalman filter to correct inaccuracies and improve trajectory estimation through
+the ”update-predict” recursive algorithm.
+
+    • Utilize the probability distribution of the submersible’s position to fit a trajectory of higher
+confidence for more precise localization.
+
+    • Analyze and select rescue equipment based on Principle Component Analysis for the host
+ship and rescue vessels.
+
+    • Use the probability density function to compute a 95% confidence 3D space and deploy the
+Along-Isobath Search Strategy within this space to reduce the searching time.
+
+    • Discuss the extrapolation of the model in the Caribbean sea.
+
+    • Combine the Voronoi Diagram with our Search Model to actualize the cooperation between
+submersibles.
+微信公众号：数学模型
+
+
+
+
+                                  Figure 3: Our Approach
+
+
+2  Model Preparation
+
+2.1  Assumptions and Justifications 微信号：MATHmodels
+• Assumption 1: The submersible is a spherical rigid body.
+
+      - Justification: The choice of spherical shape is based on the principle of isotropy, which means
+that the submersible exhibits the same properties and behavior in every direction, allowing us to
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 6 ===
+Team 2425792                                                            Page 5 of 24
+
+
+simplify the fluid dynamics analysis by eliminating the need to consider the impacts of roll, pitch
+and yaw motions.
+
+• Assumption 2: The submersible operates generally at the neutral buoyancy level.
+
+      - Justification: By maintaining neutral buoyancy, the submersible remains at a desired depth
+without continuous adjustments.  This reduces the complexity and energy requirements of the
+submersible’s operations.
+
+• Assumption 3: The submersible retains an invariant density after an incident.
+
+      - Justification: In the absence of consideration of other disturbances (initial velocity, ocean
+currents, etc.), this assumption ensures that the submersible remains at the neutral buoyancy level
+after an incident, which reduces the factors requisite for localization.
+
+• Assumption 4: Lost of communication and lost of propulsion of the submersible (the two types
+of defects shown in Fig. 2) takes place simultaneously.
+
+      - Justification: Should the submersible merely detect its disconnection, it would then power
+down its propulsion systems so as to introduce less deviations. Should the submersible solely lose
+power, the submersible could simply send a signal to the host ship to instigate rescue operations,
+which falls out of consideration.
+
+
+2.2  Notations
+
+                              Table 1: Definition of Symbols
+
+         Symbol                        Definition                        Unit
+
+      M                  inertia matrix of the rigid body           kg · m2
+        C                 Coriolis-centripetal force matrix             kg
+       D                        fluid damping matrix                kg/s
+            g(η)            restoring forces under static conditions       N
+             Fprop                  thrust force of the propellers         N
+              τ      external environmental disturbances (such as currents)   N
+       m                mass of the submersible                kg
+          V                volume of the submersible            m3
+            v         speed matrix of submersible relative to earth      m/s微信公众号：数学模型ρ                        density of water                kg/m3
+          n                     propeller rotation speed               rad/s
+          u                          vehicle’s speed                m/s
+            d                        propeller diameter           m
+         KT                         thrust coefficient                              -
+            ν              vector of linear and angular velocities       −
+
+
+
+    The main variables and parameters while specific value of those parameters will be given later
+are defined in Tbl. 1. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 7 ===
+Team 2425792                                                            Page 6 of 24
+
+3  Task  1:   Location  Prediction Model Incorporating  the
+   Kalman Filter
+
+3.1  Consideration for Uncertainties and Equipping the Submersible
+
+     In the deep-ocean environments, there exists myriad uncertainties that could hinder the accu-
+racy of our prediction.(Fig. 4)
+
+
+
+
+
+                      Figure 4: Uncertainties of Localization Prediction
+
+     In order to decrease the uncertainties, it is necessary for the submersible to periodically transmit
+a plethora of data collected by various sensors equipped onboard to the host ship, including the
+velocity data collected by the Inertial Measurement Unit (IMU), salinity collected by environmental
+sensors, the force exerted by the water flow measured by pressure sensors, and so forth.
+
+     Accordingly, we adopt the Inertial Navigation System (INS) to localize the submersible,
+which necessitates motion sensors such as accelerometer, gyroscope, and magnetometer and a
+computer to continuously calculate the position of the submersible in motion without the need for
+external references.  [4] In addition, we can equip the submersible with environmental sensors to
+capture further information.
+
+     Correspondingly, the submersible should periodically send the following data back to the host
+ship:
+
+1. Position Updates: The calculated latitude, longitude, and depth.
+
+2. Velocity Data: The velocity of the submersible in 6 dimensions.
+
+3. Sensor Readings: Processed sensor data from the accelerometer, gyroscope, and magnetometer.
+
+4. Health and Status: The operational status of the submersible, such as the remaining propulsion.微信公众号：数学模型
+5. Environmental Data: Temperature, salinity, or water density that might affect INS performance.
+
+    The host ship can use this information to apply corrections to INS data and ensure the the
+accuracy of submersible’s localization. Additionally, the periodic communication helps in case of
+an emergency, conducting search and rescue operations.
+
+
+3.2  Computational Fluid Dynamics Analysis
+
+   We established the motion equations for the submersible, employing data collected by sensors
+on the submersible, to calculate its trajectory.    The微信号：MATHmodelsdynamics of the submersibles are primarily influenced by hydrodynamic forces, static
+forces(gravity and buoyancy), thrust of propellers, environmental disturbance(such as ocean currents
+and density differences). In the work of Fossen 1994, [5] the dynamics of an Autonomous Underwater
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 8 ===
+Team 2425792                                                            Page 7 of 24
+
+
+Vehicle (AUV) are captured by a comprehensive six degrees of freedom (6DOF) model. The generic
+form of the model is given by:
+
+
+          M ˙ν + C(ν)ν + D(ν)ν + g(η) = τ + Fprop                         (1)
+
+    See also Table 1 for definition of symbols.
+
+
+
+
+
+                    Figure 5: Computational fluid dynamics(CFD) analysis
+
+    This relative velocity vsub is used in the drag force equation to account for the effect of the
+stochastic ocean current on the submersible’s dynamics.
+
+                                  vsub = v −ucurrent                                     (2)
+
+                           u sin(θ) cos(ϕ)
+                                  ucurrent =  u sin(θ) sin(ϕ)                                    
+                                    u cos(θ)
+
+     In the course of thermodynamics, [6] we learned that the force exerted by the propeller and the
+currents are:微信公众号：数学模型
+                                   ||Fprop||2 = (1 −t)ρn2d2KT                                 (3)
+
+
+                        ||Fprop||2 sin(θ) cos(ϕ)
+                          Fprop =   ||Fprop||2 sin(θ) sin(ϕ)                               (4)                                      
+                                               ||Fprop||2 cos(θ)
+                               Fcurrent = −1                                                  (5)                                         2ρCdA||vsub||2vsub
+
+    where || · ||2 stands for the Euclidean norm (also known as the L2 norm)
+
+     In order to simplify Fossen’s model, we made these assumptions: The submersible operates ata relatively微信号：MATHmodelsconstant depth, and the influence of heave, roll, and pitch motions are negligible over
+the time scale of interest.  Consequently, the dynamic effects associated with these motions are
+omitted for the sake of model parsimony and computational efficiency.
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 9 ===
+Team 2425792                                                            Page 8 of 24
+
+
+     Therefore, in this case(in the form of matrix), we have:
+
+                     mdv = Fcurrent + Fprop                                  (6)
+                                  dt
+
+     Particularly, when the submersible malfunctioned, Fprop = 0. This CFD(Computational Fluid
+Dynamics) is the foundation of the following parts.
+
+
+3.3  Mechanism of Kalman Filter
+
+    The former model is based on differential equations and sensor data, specifically from an
+IMU(Inertial Measurement Unit).  Both the model and the IMU data satisfy the conditions of
+a Markov chain, where the state vector at any given moment is related to that in the previous
+timeframe. This is possible due to the deterministic nature of classical Newtonian mechanics.
+
+    For statistics and control theory, Kalman Filtering is a computationally efficient algorithm that
+uses a series of measurements observed over time, including statistical noise and other inaccuracies,
+and produces estimates of unknown variables that tend to be more accurate than those based on a
+single measurement alone, by estimating a joint probability distribution over the variables for each
+timeframe. It recursively estimates the system states through prediction and update steps.
+
+    Now, we apply Kalman Filter to the differential equations. We assume that all sensor measure-
+ment errors (systematic errors) and process errors of the real environment (random errors) have a
+mean of zero, follow a normal distribution, and are independent with respect to time. Under these
+conditions, the Kalman Filter emerges as the most appropriate model for estimating the states of a
+dynamic system from a series of incomplete and noisy measurements.微信公众号：数学模型
+                    Figure 6: How Kalman Filter works: Predict & Update
+
+• Prediction steps
+
+     Predicted state estimate:
+                                        ˆxk|k−1 = Fkˆxk−1|k−1 + Bkuk                                 (7)
+
+     Predicted error covariance: Pk|k−1 = FkPk−1|k−1Fk⊤ + Qk
+• Update steps
+
+    Observation residual: yk = zk −Hkˆxk|k−1
+     Residual covariance: Sk = HkPk|k−1H⊤k + Rk 微信号：MATHmodels    Optimal Kalman gain: Kk = Pk|k−1H⊤k S−1k
+    Updated state estimate: ˆxk|k = ˆxk|k−1 + Kkyk
+    Updated error covariance: Pk|k = (I −KkHk)Pk|k−1
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 10 ===
+Team 2425792                                                            Page 9 of 24
+
+
+3.4  Model establishment
+
+    The state vector of the Kalman Filter is defined as:
+
+               x = [xsub, ysub, zsub, ˙xsub, ˙ysub, ˙zsub, ¨xsub, ¨ysub, ¨zsub]⊤                  (8)
+
+where xsub, ysub, zsub are the coordinates of the submersible’s center of mass relative to the initial
+zero position of the submersible’s IMU (Inertial Measurement Unit).
+
+   We choose the IMU reference frame for its stability - it remains fixed and doesn’t move along
+with the submersible, which in turn allows for more precise global positioning. The adoption of
+this frame provides a stationary point-of-reference, enabling us to accurately measure changes in
+the position and velocity of the submersible over time. Furthermore, the data generated by the IMU
+inherently aligns with this coordinate framework, which greatly facilitates future calculations.
+
+     Next, based on data provided by various sensors, we select the following observation vector:
+
+                z = [˙xsub, ˙ysub, ˙zsub, ¨xsub, ¨ysub, ¨zsub, Ftot,x, Ftot,y, Ftot,z]⊤
+
+where we make full use of the velocity terms provided by the submersible’s IMU and we can
+calculate the acceleration terms using the CFD in the mean while.
+
+   We rewrite the two vectors above in a more compact form. Let⃗xsub = [xsub, ysub, zsub] be the
+three-dimensional coordinates of the submersible,⃗Ftot be the composition of forces. Thus, the state
+vector and the observation vector become:
+                                                  h⃗           i⊤      h     ˙⃗       ¨⃗     i⊤                  x =  xsub, ˙⃗xsub, ¨⃗xsub     z =  xsub, xsub,⃗Ftot
+
+
+    Now, let’s write the state transition equation, which is the matrix equivalent to the following
+mapping f  : xk−1|k−1 7→xk|k−1. Generally, the transition matrix is equal to the Jacobian matrix
+of the transition equation, as shown in Eq. 7. In our case, this mapping is linear, so the Jacobian
+matrix turns out to be the coefficient matrix. Based on the compact state representation, we can
+express it using matrix block form.
+
+    For the convenience of expression, we define:
+
+                      1  0  0     0  0  0微信公众号：数学模型not                         not
+                               I3 =  0  1  0    0 =  0  0  0                            ,          
+                               0  0  1          0  0  0
+
+
+    Thus, the state transition matrix derived from the predicted state estimate is:
+
+                        I3  dt · I3   12dt2 · I3 
+                      F =  0     I3     dt · I3                                     
+                             0   0        I3
+
+     In the submersible model, no quantity can be known precisely or measured accurately. There-
+fore, we forego the opportunity to provide known external inputs to the Kalman model via thecontrol微信号：MATHmodelsvector, thus preventing these noisy and uncertain factors from directly affecting the state.
+In other words:
+              B = 0  0  0  0  0  0  0  0  0 ⊤, u = [0]
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 11 ===
+Team 2425792                                                           Page 10 of 24
+
+
+     Finally, we express the observation matrix H, which maps the observation space to the real
+space:
+                    0  I3   0 
+             H =  0  0    I3           to z = H · x                               subject
+                         0  0  I3/m
+
+where m denotes the mass of the submersible.
+
+    Thus, we fully integrate the data collected by the sensor installed on the submersible into the
+model for data fusion, and jointly reduce the prediction error. Specifically, we can extract real-time
+IMU data and obtain the pose quaternion of the submersible from the industrial high-precision
+gyroscope as well as the three-axis acceleration from the accelerometer. Using the gyroscope’s
+quaternion, we convert the acceleration calculated by CFD to the IMU’s fixed coordinate system
+before updating the observation vector. The extensibility of this observation matrix is high. If we
+have additional sensors, such as a Doppler velocimeter, we can also include the velocity prediction
+in the observations.
+
+      It’s also worth mentioning that in the case of a communication loss, we will prune the sensor-
+based observation from the matrices, and the filter can continue working smoothly.
+
+
+3.5  Fine-tuning Kalman Filter
+
+    The efficacy of the Kalman filter is significantly influenced by the accurate modeling of the
+process noise covariance matrix Q and the measurement noise covariance matrix R. These matrices
+represent the expected uncertainty in our process model and measurement sensors, respectively. An
+iterative process of testing and refinement is typically employed to adjust Q and R until the filter’s
+performance meets the desired criteria for accuracy and reliability. This tuning process is crucial
+for achieving optimal filter performance and is often the difference between a good estimation and
+a great one. According to our extensive empirical testing, we eventually adopted the parameters
+that add some extent of uncertainty to the output of CFD while giving credit to the data directly
+gained from accessible high-precision sensors.
+
+                2 · I3    0     0     5 · I3   0   0 
+           R =   0    0.5 · I3   0   Q =   0   3 · I3  0                               ,             
+                     0     0    5 · I3         0    0    I3微信公众号：数学模型
+
+3.6  Results and Analysis
+
+     In the MATLAB environment, we have simulated the trajectory after the malfunction of the
+submersible takes place based on our localization model. 微信号：MATHmodels
+
+
+Figure 7: Simulated Trajectory in MATLAB (a)(b)(c) Evolution of the trajectory (d) Bottom view of the trajectory
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 12 ===
+Team 2425792                                                           Page 11 of 24
+
+
+    As shown in Fig.7, the submersible without propulsion is drifted by the currents. The red dots
+on the surface of the ocean signify the current density. The trajectory manifests a spiraling pattern,
+which is a consequence of the vortex-like ocean current disturbances. Moreover, due to the initial
+downward direction of velocity at the commencement of the incident, the spiral path displays a
+trend of downward divergence. The result is as expected.
+
+    Beyond potential impacts from the underwater currents, our simulation takes into account
+potential collisions imparted by the seabed geography.  Within geography featuring protruding
+submarine mountain bridges, the collision detection module embodied in the model can identify
+abrupt velocity alterations and modify the trajectory prediction accordingly.(Fig.8)
+
+
+
+
+
+   Figure 8: Spacial case: underwater landscape Figure 9:  Spatial probability distribution of
+   blocked the route of the submersible         the defective submersible
+
+     Further elaborating, Fig.9 provides a display of the probable area of occurrence of the sub-
+mersible deduced through Kalman Filter prediction in the aftermath of an incident.  The blue
+trajectory reflects the bona fide path of the submersible, while the red scatter points portray the
+spactial probability distribution computed by the model.
+
+
+4  Task 2: Equipment Preparation for Host Ship and Rescue微信公众号：数学模型
+   Vessel
+
+4.1  Equipment Selection by Principal Component Analysis
+
+     In order to improve communication between the submersible and the host ship to achieve
+more accurate positioning and rapid search and rescue operations, we recommend equipping the
+host ship with additional search devices. The market offers a diverse array of devices designed for
+this purpose, each distinguishable by various performance indicators. To analyze and compare the
+indicators and select the most suitable devices, we propose employing the Principal Component
+Analysis (PCA), which allows us to to screen out key variables and reduce the complexity of thesituation.微信号：MATHmodels
+
+    The main modeling steps are described below.
+
+    • Sample matrix: 14 representative devices available on the market are chosen and 13
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 13 ===
+Team 2425792                                                           Page 12 of 24
+
+
+performance indicators denoted by ai are established. Each device is then conceptualized as a
+vector xn = (xn1, . . . , xn13). Thus, we construct the sample matrix X14×13 to represent all the data
+we collected from the manufacturer.
+
+    • Standardization: We standardize X by subtracting the mean from each row and dividing
+each row by its standard deviation.
+
+    • Covariance matrix: The element cij of the covariance matrix C represents the covariance
+between indicators ai and aj and is given by:
+
+                                         n
+                                1
+                                       cij =  X (xki −¯xi)(xkj −¯xj)
+                         n −1
+                                        k=1
+
+where xki and xkj are the standardized values of variables i and j for the k-th observation, and ¯xi
+and ¯xj are their respective means.
+    • Eigendecomposition and contribution rate: We calculate eigenvalues and corresponding
+eigenvectors of C. On the basis of the eigenvalues, we can solve the contribution rate and the
+accumulative contribution rate of the parameters.
+    Table 2: Eigenvectors and contribution rate corresponding to the 3 principal components
+
+             Indicator                   PC1       PC2       PC3
+
+           Cost                        0.3839593   -0.1153862  0.0901579
+           Workforce                   0.3467707   0.0078141   0.3145092
+             Availability                  -0.3274316  0.0775631   -0.2925692
+           Maintenance                 0.3120141   0.2352130   0.3001698
+            Readiness                    -0.1001557  0.5512866   -0.0502958
+           Energy Consumption          0.3824945   -0.0713404  -0.1810475
+            Detection Distance            0.2562031   0.2695921   -0.0706944
+            Resolution                   0.2663515   0.1367001   -0.3954241
+            Detection Speed              0.3297991   -0.0073919  -0.3388978
+             Adaptability                  -0.0286098  0.1725088   0.5167477
+             Anti-Interference Capability    0.2460527   0.1149641   -0.2996652
+           Ease of Operation             -0.2363936  0.4295668   -0.1816506
+             Failure Rate                  0.0939937   0.5453001   0.1261542微信公众号：数学模型Variance Contribution Rate       0.4779      0.2267      0.1520
+           Cumulative Contribution Rate    0.4779      0.7046      0.8566
+
+    According to Tbl. 2, We selected the first three components as the three principle components
+PC1, PC2, PC3, representing respectively the cost-effectiveness, the operational reliability, and the
+human resource aspects.
+
+
+4.2  Results and Analysis
+
+     Multiplying the contribution rate with the value of corresponding principle components, we
+can obtain the composite scores of our 14 devices as shown in Tbl. 3. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 14 ===
+Team 2425792                                                           Page 13 of 24
+
+
+                          Table 3: Composite Scores by Equipment
+
+        Equipment                                         Composite Score
+
+         Perry Slingsby Multi-Beam                            0.8313
+        Deep Trekker DTX2                                    -0.905
+         Teledyne BlueView Multi-Beam Sonar                 1.8536
+        Deep Trekker Side Scan Sonar                           -0.7821
+        Edgetech Combined Bathymetry and Side Scan Sonar  1.5798
+         Divex AUV-1000                                       -2.6028
+        Deep Trekker DTX2 AUV                              -0.4873
+        James Fisher JF-AUV                                 1.0914
+         Perry Slingsby Explorer AUV                           0.285
+         Divex ROV-1000                                       -0.0834
+          Soil Machine Dynamics Quantum EV                 1.3665
+        James Fisher Innovator                                 -1.0597
+         Kystdesign Seaglider                                   -1.2779
+         Perry Slingsby Triton                                 0.1904
+
+    From the result above, we find that Perry Slingsby Multi-Beam, Perry Slingsby Side Scan
+Sonar and Divex AUV-1000 are the most suitable devices to be equipped on the host ship.(Fig. 10)
+Following is a brief introduction of the 3 devices:
+
+    • Teledyne BlueView Multi-Beam Sonar: a type of active sonar system that propels a series
+of sound pulses underwater to a plethora of angles and manifests a 3D depiction of the ocean floor.
+
+    • Edgetech Combined Bathymetry and Side Scan Sonar: a sonar combining bathymetry
+and broad detection that projects sound pulses toward both sides underwater while receiving their
+echoes subsequently, thereby generating a 2D image of large areas of the seabed.
+
+    • Soil Machine Dynamics Quantum EV: a Remotely Operated Vehicle (ROV) that has
+commendable tool/instrument carriage capacity, enabling operations reaching depths of up to 6000
+meters.微信公众号：数学模型 微信号：MATHmodels
+Figure 10: Equipment for the host ship and rescue vessels (a)Teledyne BlueView Multi-Beam Sonar (b)Edgetech
+
+Combined Bathymetry and Side Scan Sonar (c)Soil Machine Dynamics Quantum EV (d)Impact Subsea ISS360 Sonar (e)Imenco
+
+Cameras and Lights (f)Allied Luffing Arm Rescue Boat Davit System
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 15 ===
+Team 2425792                                                           Page 14 of 24
+
+
+     Concurrently, we choose the Soil Machine Dynamics ROV as our rescue vessel.  Similarly,
+using the same PCA method, we conclude that the following equipment can be equipped for the
+rescue vessel: Impact Subsea ISS360 Sonar, Imenco Cameras and Lights and Allied Luffing Arm
+Rescue Boat Davit System.(Fig. 10)
+
+
+5  Task 3: Feasible Zone and Search Pattern
+
+
+   By further exploiting the Kalman Filter, establishing more effective searching patterns and
+utilizing appropriate equipment, our model can reduce the searching time of a defective submersible
+with the help of a high localization accuracy, even without direct communication of the submersible
+with respect to the host ship.
+
+
+5.1  Determination of Feasible Zone for Search
+
+     Previously, we have only utilized the predictive information from the Kalman filter for the
+temporary location of the submersible. However, we can further exploit other useful properties of
+the Kalman filter. With this intuition, we considered using the predicted estimate covariance matrix
+Pk|k−1 maintained by Kalman to calculate the probability distribution of the submersible’s potential
+locations.
+
+     Let’s assume that the errors in the x-y-z axes are independent of each other. This assumption
+allows us to conveniently use a multivariate Gaussian distribution to represent the distribution of the
+submersible’s position at the current moment, which is the first three dimensions predicted by the
+Kalman filter (as defined in the state vector of the Kalman filter, in Eq.8). Consider the probability
+density function of a multivariate normal distribution:
+
+                               1
+                f(x; µ, Σ) =                                    exp −1  −µ)⊤Σ−1(x −µ)                  (9)             p(2π)k|Σ|       2(x
+
+    where, in our Kalman filter results, k is taken to be 3
+
+     • µ is the 3-dimensional position prediction given by the Kalman filter.微信公众号：数学模型
+     • Σ is a 3 × 3 matrix representing the covariance between x-y-z coordinates.
+
+     • |Σ| is the determinant of the predicted covariance matrix Pk|k−1.
+
+     • Σ−1 is the inverse of the covariance matrix.
+
+   By leveraging the probability density function in conjunction with Kalman filtering predictions,
+we can accurately ascertain the likelihood of the submersible’s presence at any given point in space.
+To estimate the search area with the highest probability, we employ a standard statistical 95%
+confidence region in three-dimensional space, which represents the zone where the submersible
+is most likely to be found. The concept of the 95% confidence region is depicted in Fig.11, where wehave 微信号：MATHmodelssimplified the representation to consider only the x-y plane, thereby enhancing the diagram’s
+clarity for demonstrative purposes.
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 16 ===
+Team 2425792                                                           Page 15 of 24
+
+
+
+
+
+            Figure 11: feasible zone of possible appearance, enclosed by red ellipse
+
+    Hereby, we define this three-dimensional 95% confidence region as the feasible zone, and
+subsequent search and rescue operations can be considered within this feasible zone.
+
+    To more accurately reflect the intricate dynamics of the ocean environment,  it would be
+advantageous to extend our model to encompass a multi-particle dispersion simulation. This would
+entail employing the Kalman filter to track the paths of several hypothetical particles simultaneously,
+thereby improving the model’s relevance and effectiveness.
+
+
+5.2  Cumulative Distribution Function of Probability
+
+    To determine the probability of locating the submersible as a function of time and amassed
+search results, we must consider the nonlinear dynamics of our physical model and the inherent
+chaotic behavior  it introduces.   [7] For instance, in the most basic scenario where the system
+could undergo bifurcation, the computational model is unable to discern such occurrences. At
+any moment, a new potential trajectory could split from the current predicted one. Therefore, the
+probability of finding the submersible after time t is
+
+                                              1
+                                   P(found|t) =
+                                             αt
+
+where α is a decay coefficient proportional to the entropy of the natural seabed environment.微信公众号：数学模型Our model suggests that using past search results to predict a submersible’s future location
+is ineffective, as the submersible’s position is subject to change over time due to factors like ocean
+currents. The fact that the submersible wasn’t found in a given area before doesn’t mean it won’t be
+there later. Search failures can also stem from the limited detection capabilities of equipment in a
+complex underwater environment. Incorporating a time-sensitive probability model based on past
+searches could lead to overfitting and obscure the actual location. Hence, in line with Occam’s
+razor, we exclude such complex factors for a simpler, more effective model.
+
+
+5.3  Search Pattern Based on Sonar Scanning
+
+    Rather than relying on an uncertain probability model to ascertain the precise probability of 微信号：MATHmodels
+the submersible’s presence at various locations, a more pragmatic approach involves strategizing an
+effective search trajectory. Utilizing the feasible zone outlined by the Kalman filter, a comprehensive
+search within this boundary is efficient.
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 17 ===
+Team 2425792                                                           Page 16 of 24
+
+
+
+
+
+                       Figure 12: Sonar-based Isobath Search Strategy
+
+     After confirming the search area, it is practical to employ more effective search techniques,
+such as sonar scanning. Based on the specifications referenced, [8] the previously selected Teledyne
+Marine Sonar is capable of operating at depths up to 6000 meters, which is suitable for the intended
+marine environment. The sonar emits a conical acoustic beam with a maximum single-beam width
+of 3°. This presents an important strategic consideration: optimizing the navigation routes of rescue
+vessels to maximize the surveyed area per unit time, thus minimizing the total time required for the
+search.
+
+    Given a marine environment with a uniform slope, similar to a flattened incline, we need to
+consider the geometry of the sonar’s conical detection beam for efficient coverage. As the sonar
+sweeps across the seabed, its detection beam forms an elliptical projection on the ocean floor (Fig.
+12). The maximum coverage width can be achieved as the major axis of the elliptical projection
+coincides with the sonar’s horizontal beam spread.
+
+    The key observation is that when a search ship equipped with sonar moves perpendicular to
+the geographical gradient (along isobath), the coverage width will reach its maximum and will form
+the largest coverage area during the movement, thus saving the most time. The aforementioned
+searching pattern is visualized in Fig.14
+
+    As the search progresses, paths with lower likelihoods are eliminated, and the corresponding
+particles are excluded from further consideration by the Kalman filter. Then, based on the current
+distribution of particles, a corresponding number of new particles are generated in high-probability
+zones to participate in further iterations of the model.
+
+
+5.4  Results微信公众号：数学模型    Based on the predictions from the Kalman filter, we can calculate the current feasible zone, as
+shown in Fig. 13. 微信号：MATHmodels
+
+       Figure 13: Temporal distribution probability heatmap of the defective submersible
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 18 ===
+Team 2425792                                                           Page 17 of 24
+
+
+    The initial deployment of the rescue vessel should be where the defective submersible transmit
+its last signal.
+
+     Subsequently, search and rescue vessels equipped with the Teledyne Marine Sonar system are
+dispatched to the potential feasible zones to conduct isobath searches.
+
+
+
+
+
+                             Figure 14: Isobath Search strategy
+
+    Furthermore, we refine the model by implementing supplementary Kalman filters that account
+for particle dispersion, resulting in the identification of multiple probable search areas. It is advisable
+to deploy a number of search and rescue vessels to these areas and, depending on their respective
+probabilities, methodically inspect the regions along isopath. Presented below is a heatmap that
+accurately tracks three such particles:微信公众号：数学模型 微信号：MATHmodelsFigure 15: Heatmap of Three-Particle Dispersion Based on the Kalman filter
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 19 ===
+Team 2425792                                                           Page 18 of 24
+
+
+5.5  Analysis of the Results
+
+    The utilization of the Kalman filter for predicting the feasible zone has proven to be an effective
+method in determining the probable location of the drifting submersible over time. The temporal
+probability heatmap (Fig. 13) provides a visual representation of the distribution of probabilities,
+indicating where the submersible is most likely to be found at different times.
+
+    As depicted in Fig. 14, the methodical positioning of search and rescue vessels leverages the
+maximization of sonar swath width to optimize the coverage of the designated search zone. This
+strategic approach serves to decrease the length of the search path, thereby diminishing the duration
+necessary to thoroughly survey the area.
+
+
+6  Task 4: Model extrapolation
+
+6.1  Caribbean Sea
+
+     In the former case, we have already examined the Ionian Sea. Our analysis revealed three
+significant characteristics of the sea that markedly influence the trajectory of a malfunctioning
+submersible: ocean currents, seafloor landscape, and variations in seawater density.
+
+     Therefore, as we transition our model to the case of the Caribbean Sea, our initial step entails
+modeling the marine environment of the Caribbean Sea.
+
+     Currents: The Caribbean Sea experiences a range of currents and turbulence, influenced
+by wind patterns and the interaction of water with underwater topography.  Strong currents can
+challenge the submersible’s propulsion system and dramatically affect its path, requiring more
+sophisticated navigation algorithms to compensate for drift.  Turbulence can introduce noise to
+sensor measurements, particularly for IMUs, complicating the task of accurate state estimation.微信公众号：数学模型
+
+
+
+
+           Figure 16: Ocean current maps: Caribbean Sea(Left) and Ionian Sea(right)
+
+    Landscape: The Caribbean Sea’s bathymetry, marked by sharp gradients and diversity, includes
+features like abyssal plains and coral reefs, affecting hydrodynamics and complicating navigation. In
+contrast, the Ionian Sea’s uniform bathymetry offers a predictable setting for submersible activities.
+In the Caribbean, submersibles are at greater risk of seabed collision due to the intricate topography
+and active currents, increasing the chances of entrapment when malfunctioning. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 20 ===
+Team 2425792                                                           Page 19 of 24
+
+
+
+
+
+       Figure 17: Underwater geography maps: Caribbean Sea(Left) and Ionian Sea(right)
+
+    For submersible deployment in the Caribbean,  it is imperative to integrate advanced fault
+management protocols and terrain-following algorithms to navigate this intricate landscape. sub-
+mersibles should be equipped with precise bathymetric mapping capabilities and sensors for real-
+time terrain assessment to circumvent topographic obstacles. Implementing contingency strategies
+for system failures is also vital to minimize the risks associated with the Caribbean’s challenging
+underwater conditions.
+
+
+6.2  Coorporation strategy between multiple submersibles
+
+    Voronoi diagrams are a mathematical concept used to divide a space into regions such that
+each point in a region is closer to its designated seed point than to any other.  In the context of
+cooperative submarine drones, each drone can be considered a seed point, and any location in the
+space is associated with the drone closest to it. This method allows for the effective management
+of the distances between drones, ensuring they are evenly distributed across the operational area.
+
+    Submarines move according to the following rules to maintain an optimal distance:
+
+    • Every submersibles stay in its own zone.
+
+    • If the submarine detects that neighboring submarines are too close, it will adjust its position
+to increase the distance.
+
+     Detection and Response to Drone Failures once a drone goes offline (i.e., beyond communica-
+tion range), its neighboring drones are immediately notified. These drones then:
+
+    • Initiate the previous searching model, using sonar to scan for the possible location of the
+disconnected drone.微信公众号：数学模型
+    • Upon locating the disconnected drone, approach and establish a temporary communication
+link.
+
+    • Continuously report the position and status of the malfunctioning drone to the main vessel. 微信号：MATHmodels
+
+
+ Figure 18: Neighbouring submersibles(green) approaching to monitor the power-failed one(red)
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 21 ===
+Team 2425792                                                           Page 20 of 24
+
+7  Sensitivity Analysis and Error Analysis
+
+
+     In order to analyze the impact of various factors on the submersible’s position prediction
+model, we have adopted a comprehensive approach: evaluating sensitivity by comparing the cosine
+similarity of the submersible’s path before and after variable perturbations, and quantifying the
+prediction error. We consider the following varying parameters: seawater density (ρ), external
+environmental disturbances represented by current force (Fcurrent), propeller rotation speed (n),
+and the mass of the submersible (m). The ultimate goal is to minimize prediction error, thereby
+enhancing the accuracy of the path prediction.
+
+    Cosine similarity, a metric ranging from -1 to 1, quantifies the directional similarity between
+two vectors.  Prediction error is quantified as the root mean square error (RMSE) between the
+predicted and actual paths. We conducted the simulation in MATLAB over 1000 iterations with a
+step size of 0.1 second. Cosine similarity measures the alignment between the actual path and the
+predicted path of the submersible, while the RMSE provides a scalar value of the average deviation
+magnitude from the actual path.
+
+ Variable ID  Perturbed Similarity  Similarity Change   Sensitivity  Prediction Error (RMSE)
+
+     ρ              0.94                -0.06         High             1.55 m
+   Fcurrent            0.93                -0.07         High             2.10 m
+    n              0.98                -0.02        Low              1.12 m
+   m              0.95                -0.05       Medium            1.17 m
+
+     Table 4: Path cosine similarity and prediction error after model parameter perturbations
+    The results suggest that seawater density and external environmental disturbances significantly
+affect the submersible’s path prediction accuracy, as indicated by high sensitivity and large prediction
+errors, while propeller rotation speed and submersible mass have a lower impact.
+
+    To visually represent the influence of parameter variability on the accuracy of the submersible’s
+path prediction, we have plotted the actual versus predicted trajectories in a 3D MATLAB sim-
+ulation.  This graphical depiction serves as an alternative method to convey the sensitivity and
+error metrics, with deviations between the trajectories directly corresponding to the magnitude of
+prediction error and sensitivity to parameter changes.微信公众号：数学模型
+
+
+
+
+
+Figure 19: A comparison of predicted (green) and actual (blue) locations under different levels of
+environmental turbulence, as modulated by the variance parameter α.
+
+    From the visualization, it’s apparent that despite significant increases in turbulence, our model 微信号：MATHmodelsmaintains a smooth prediction trajectory, demonstrating a relatively high degree of robustness
+against uncertainty.
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 22 ===
+Team 2425792                                                           Page 21 of 24
+
+8  Evaluation and Promotion of Model
+
+8.1  Strengths
+
+     1. The model is well-designed to accommodate varying geographic and environmental factors,
+thus ensuring applicability across regions with diverse terrains beyond just the Ionian Sea.
+
+     2.  Demonstrating high scalability, our fundamental assumptions do not restrict possible
+enhancements. As such, our model serves as an asset providing foundational structure for further
+advanced adaptations.
+
+     3. The user-friendly nature of our model demands only minimal fine-tuning of a few hyper-
+parameters.
+
+     4. The close-to-reality design of our model derives from comprehensive data fusion utiliz-
+ing various sensors in conjunction with the sophisticated Computational Fluid Dynamics (CFD)
+equation.
+
+     5. We consider an extensive and versatile array of measuring instruments contributing to the
+completeness of our approach.
+
+     6. To effectively address the inherent non-linearity of dynamics, the Kalman Filter simultane-
+ously maintains multiple possible trajectories rather than only one possibility.
+
+
+8.2  Weaknesses and Possible Improvements
+
+     1. Given the inherently chaotic characteristics of CFD, there’s a requirement for establishing
+a more judicious method concerning the generation and exclusion of unlikely trajectories.
+
+     2. It may be beneficial to adopt a probability-based strategy instead of deterministic searching.
+This could potentially maximize the utilization of accumulated search results, which in turn would
+open up scopes for overall improvement [9].
+
+
+References [1]微信公众号：数学模型Cui, W. An Overview of Submersible Research and Development in China. J. Marine. Sci.
+     Appl. 17, 459–470 (2018). https://doi.org/10.1007/s11804-018-00062-6
+
+ [2] Kohnen,  W.  2007 MTS  Overview  of  Manned  Underwater  Vehicle   Activity.”
+    Marine  Technology   Society  Journal  42,   no.  1  (March   1,   2008):    26–37.
+     https://doi.org/10.4031/002533208786861236.
+
+ [3] Wikipedia contributors. Titan submersible implosion. https://en.wikipedia.org/wiki/
+    Titan_submersible_implosion
+
+ [4] Basic Principles of Inertial Navigation Seminar on inertial navigation systems. AeroStu-
+     dents.com. Tampere University of Technology, page 5 微信号：MATHmodels
+ [5] Fossen T I. Handbook of marine craft hydrodynamics and motion control [M]. John Wiley
+    and Sons, 2011.
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 23 ===
+Team 2425792                                                           Page 22 of 24
+
+
+ [6] C¸engel, Y. A.; Boles, M. A. Instructor Solutions Manual for Thermodynamics: An Engineer-
+     ing Approach; [John Wiley and Sons]: [2015]
+
+ [7] S. Neil Rasband, Chaotic Dynamics of Nonlinear Systems Dover Books on Physics, Courier
+    Dover Publications, 2015, ISBN 978-0486795997.
+
+ [8] Teledyne   Marine,   Deep   Water   Echosounder,   Teledyne   Marine,    Available:
+    https://www.teledynemarine.com/en-us/products/product-line/Pages/
+    Deep-Water-Echosounder.aspx.
+
+ [9] D. Agbissoh OTOTE, B. Li, B. Ai, S. Gao, J. Xu, X. Chen, and G. Lv, ”A Decision-Making
+     Algorithm for Maritime Search and Rescue Plan,” Sustainability, vol. 11, no. 7, p. 2084, 2019.
+     [Online]. Available: https://doi.org/10.3390/su11072084
+微信公众号：数学模型 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 24 ===
+Team 2425792                                                           Page 23 of 24
+
+Memo for the Greek Government
+
+   TO: Myron Flouris - Secretary General for Tourism Policy and Development
+   CC: Olga Kefalogianni - Minister of Tourism, Ministry of Tourism (Greece)
+  FROM: MCM Team 2425792
+   DATE: February 5, 2024
+   SUBJECT: Locate
+
+
+
+Dear officials,
+
+      It is with distinct honor that I introduce to you our meticulously crafted model specifi-
+cally designed for the Maritime Cruises Mini-Submarines (MCMS). This esteemed corpo-
+ration displays a profound interest in the maritime relics located in the depths of the Ionian
+Sea—a priceless cultural heritage.  These submerged vestiges stand as silent testaments
+to seafaring undertakings spanning across various epochs of history, which inclues naval
+vessels from the ancient Roman and Greek eras, mercantile ships hailing from the medieval
+period, in addition to military and commercial maritime craft that met their watery demise
+amidst the throes of WWI and WWII. For this reason, MCMS envisions these historical
+remnants as focal points of intrigue for the submersible tourists, thereby initiating plans to
+develop tourism via submersibles.
+
+    Nevertheless, the pursuit of these submerged archaeological riches carries its fair share
+of complications. The situation is of high complexity as these relics are nestled deep within
+the oceanic abyss where there could be potential risks encompassing dynamic currents, poor
+communication signals, and intricate sea floor geography.
+
+   As a result, in an effort to secure the safety of tourists, a thorough study of submersible
+localizing and searching within the depths of the ocean is necessitated, so as to promptly
+perform rescue operations in case of an incident. MCMS has entrusted our team with the
+task of modelling the process of submersible localization and search.微信公众号：数学模型
+Modelling
+
+   The core concept of our model consists of:  Localization—Uncertainty Reduc-
+tion—Search and Rescue.
+
+    Localization: Given that the Ionian Sea reaches depths of up to 5267 meters, traditional
+methods of tracking submersibles become impracticable. Thus, we opt to employ an Inertial
+Localization System for positioning. With certain adjustments to Fossen’s Six Degrees of
+Freedom model, a Computational Fluid Dynamics equation is established to represent the
+dynamics of submersible in the complex marine environment, with which the submersible’s
+trajectory could be calculated. 微信号：MATHmodels    Uncertainty Reduction: However, inherent cumulative errors in the Inertial Measure-
+ment Unit (IMU) and the localization model necessitate further refinement. Therefore, we
+employ the Kalman filter for corrections of the submersible’s location and predictions in
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯
+
+=== PDF PAGE 25 ===
+Team 2425792                                                           Page 24 of 24
+
+
+case of lost connectivity.
+
+    Search and Rescue: Should the submersible lose contact and cease to transmit signs, it
+will autonomously shut down its power system. The host ship will then utilize the ongoing
+predictions generated by the Kalman filter to determine the probability of the submersible to
+appear at various points in the ocean. Rescues will consequently be initiated by the rescue
+vessels sent by the host ship based on the method of isobathic searching, a common marine
+rescue procedure.
+
+Proposal for the Equipment Onboard
+
+    In order to enhance the capacity and efficiency of our localization and search operations,
+it is incumbent upon us to equip advanced equipment onboard. A comprehensive study and
+analysis of available equipment in the marine sector is conducted, employing the robust
+method of Principal Component Analysis (PCA), a process allowing the evaluation and
+selection of the equipment most suitable for deployment based upon a variety of performance
+parameters.
+
+    Included among the recommended equipment to be onboard the host ship are the Perry
+Slingsby Multi-Beam, Perry Slingsby Side Scan Sonar, and Divex AUV-1000. Each device
+has been selected based on its particular strengths, spanning from high-resolution, three-
+dimensional sonographic visualization to wide-area detection coverage and autonomous
+operations at considerable depths.
+
+Extrapolation of the Model
+
+   Our model boasts a high degree of portability, enabling it to perform localization and
+search operations across diverse marine environments.  The allocation of surface work
+zones is designed to maximize the rapid response of nearby submarines to an incident site,
+while maintaining safe distances between them. This approach ensures that in an accident,
+support submarines can quickly reach the scene and continuously monitor the signal from
+the defective vessel.
+
+
+    In conclusion, our model presents a comprehensive solution for securing the safety of微信公众号：数学模型
+tourists on the submersible. By embracing this model, the government can pave the way for
+the development of submersible tourism, enabling visitors to witness the rich history and
+cultural significance preserved beneath the ocean’s surface.
+
+   We humbly request the government’s support and approval for the implementation of
+this solution, as it will not only safeguard the lives of submersible tourists, but also contribute
+to the preservation and exploration of the priceless cultural heritage submerged in the Ionian
+Sea. 微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                   2   关注数学模型
+
+                                                                                                                                                                                                                                                                                                MATHmodels   获取更多资讯

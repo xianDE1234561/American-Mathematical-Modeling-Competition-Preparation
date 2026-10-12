@@ -1,0 +1,28 @@
+{
+  "total_pdf_pages": 19,
+  "main_solution_pages": 18,
+  "AI_report_start_page": 19,
+  "expected_sections": 19,
+  "reportlab_export": "solution.pdf",
+  "standalone_latex": "solution.tex, independent editable rendering",
+  "all_205_forecasts_in_appendix": true,
+  "visual_QA": "passed: all 19 final rendered pages inspected in two contact sheets; pages 4, 7, 14 inspected at full size",
+  "appendix_pages": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "verified_country_rows_and_values": 205,
+  "unique_source_labels": 26,
+  "source_references_resolved": true,
+  "source_citations_resolved": true,
+  "longtables_manually_validated": 5,
+  "numerical_tests": "7 passed",
+  "PDF_sha256": "2f6dd960d91021c84295c69df9625df81d19353e5400eac2a666b8c664050c88",
+  "latex_compile": "unverified: native compiler environment directory error",
+  "chktex": "unavailable; supplied format script returned UNAVAILABLE",
+  "project_skill": "latex-paper-en 6.0.0",
+  "text_bounds_check": "0 text blocks outside page safety bounds"
+}

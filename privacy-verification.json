@@ -1,0 +1,15 @@
+{
+  "files_checked": 300,
+  "pdfs_checked": 124,
+  "pdf_first_pages_pixel_identical": 124,
+  "project_report_all_pages_pixel_identical": true,
+  "images_metadata_checked": 23,
+  "official_zip_crc_checked": 9,
+  "csv_structure_checked": 47,
+  "project_raw_csv_hashes_unchanged": 5,
+  "python_files_parse_checked": 13,
+  "privacy_issues": [],
+  "broken_links": [],
+  "neutral_commit_identity": "Preparation Materials <noreply@example.invalid>",
+  "existing_project_tests": "7 passed; full modeling pipeline not rerun for packaging"
+}

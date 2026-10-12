@@ -1,0 +1,165 @@
+medal_name,NOC,mapping_method
+United States,USA,exact normalized supplied Team match
+Greece,GRE,exact normalized supplied Team match
+Germany,GER,documented naming alias
+France,FRA,exact normalized supplied Team match
+Great Britain,GBR,exact normalized supplied Team match
+Hungary,HUN,exact normalized supplied Team match
+Austria,AUT,exact normalized supplied Team match
+Australia,AUS,exact normalized supplied Team match
+Denmark,DEN,exact normalized supplied Team match
+Switzerland,SUI,exact normalized supplied Team match
+Mixed team,MIX,documented naming alias
+Belgium,BEL,exact normalized supplied Team match
+Italy,ITA,exact normalized supplied Team match
+Cuba,CUB,exact normalized supplied Team match
+Canada,CAN,exact normalized supplied Team match
+Spain,ESP,exact normalized supplied Team match
+Luxembourg,LUX,exact normalized supplied Team match
+Norway,NOR,exact normalized supplied Team match
+Netherlands,NED,exact normalized supplied Team match
+India,IND,exact normalized supplied Team match
+Bohemia,BOH,exact normalized supplied Team match
+Sweden,SWE,exact normalized supplied Team match
+Australasia,ANZ,exact normalized supplied Team match
+Russian Empire,RUS,documented naming alias
+Finland,FIN,exact normalized supplied Team match
+South Africa,RSA,exact normalized supplied Team match
+Estonia,EST,exact normalized supplied Team match
+Brazil,BRA,exact normalized supplied Team match
+Japan,JPN,exact normalized supplied Team match
+Czechoslovakia,TCH,exact normalized supplied Team match
+New Zealand,NZL,exact normalized supplied Team match
+Yugoslavia,YUG,documented naming alias
+Argentina,ARG,exact normalized supplied Team match
+Uruguay,URU,exact normalized supplied Team match
+Poland,POL,exact normalized supplied Team match
+Haiti,HAI,exact normalized supplied Team match
+Portugal,POR,exact normalized supplied Team match
+Romania,ROU,exact normalized supplied Team match
+Egypt,EGY,exact normalized supplied Team match
+Ireland,IRL,documented naming alias
+Chile,CHI,exact normalized supplied Team match
+Philippines,PHI,exact normalized supplied Team match
+Mexico,MEX,exact normalized supplied Team match
+Latvia,LAT,exact normalized supplied Team match
+Turkey,TUR,exact normalized supplied Team match
+Jamaica,JAM,exact normalized supplied Team match
+Peru,PER,exact normalized supplied Team match
+Ceylon,SRI,documented naming alias
+Trinidad and Tobago,TTO,exact normalized supplied Team match
+Panama,PAN,exact normalized supplied Team match
+South Korea,KOR,exact normalized supplied Team match
+Iran,IRI,exact normalized supplied Team match
+Puerto Rico,PUR,exact normalized supplied Team match
+Soviet Union,URS,exact normalized supplied Team match
+Lebanon,LIB,documented naming alias
+Bulgaria,BUL,exact normalized supplied Team match
+Venezuela,VEN,exact normalized supplied Team match
+United Team of Germany,GER,documented naming alias
+Iceland,ISL,exact normalized supplied Team match
+Pakistan,PAK,exact normalized supplied Team match
+Bahamas,BAH,exact normalized supplied Team match
+Ethiopia,ETH,exact normalized supplied Team match
+Formosa,TPE,documented naming alias
+Ghana,GHA,exact normalized supplied Team match
+Morocco,MAR,exact normalized supplied Team match
+Singapore,SGP,exact normalized supplied Team match
+British West Indies,WIF,documented naming alias
+Iraq,IRQ,exact normalized supplied Team match
+Tunisia,TUN,exact normalized supplied Team match
+Kenya,KEN,exact normalized supplied Team match
+Nigeria,NGR,exact normalized supplied Team match
+East Germany,GDR,exact normalized supplied Team match
+West Germany,FRG,exact normalized supplied Team match
+Mongolia,MGL,exact normalized supplied Team match
+Uganda,UGA,exact normalized supplied Team match
+Cameroon,CMR,exact normalized supplied Team match
+Taiwan,TPE,documented naming alias
+North Korea,PRK,exact normalized supplied Team match
+Colombia,COL,exact normalized supplied Team match
+Niger,NIG,exact normalized supplied Team match
+Bermuda,BER,exact normalized supplied Team match
+Thailand,THA,exact normalized supplied Team match
+Zimbabwe,ZIM,exact normalized supplied Team match
+Tanzania,TAN,exact normalized supplied Team match
+Guyana,GUY,exact normalized supplied Team match
+China,CHN,exact normalized supplied Team match
+Ivory Coast,CIV,documented naming alias
+Syria,SYR,exact normalized supplied Team match
+Algeria,ALG,exact normalized supplied Team match
+Chinese Taipei,TPE,exact normalized supplied Team match
+Dominican Republic,DOM,exact normalized supplied Team match
+Zambia,ZAM,exact normalized supplied Team match
+Suriname,SUR,exact normalized supplied Team match
+Costa Rica,CRC,exact normalized supplied Team match
+Indonesia,INA,exact normalized supplied Team match
+Netherlands Antilles,AHO,exact normalized supplied Team match
+Senegal,SEN,exact normalized supplied Team match
+Virgin Islands,ISV,documented naming alias
+Djibouti,DJI,exact normalized supplied Team match
+Unified Team,EUN,exact normalized supplied Team match
+Lithuania,LTU,exact normalized supplied Team match
+Namibia,NAM,exact normalized supplied Team match
+Croatia,CRO,exact normalized supplied Team match
+Independent Olympic Participants,IOA,documented naming alias
+Israel,ISR,exact normalized supplied Team match
+Slovenia,SLO,exact normalized supplied Team match
+Malaysia,MAS,exact normalized supplied Team match
+Qatar,QAT,exact normalized supplied Team match
+Russia,RUS,documented naming alias
+Ukraine,UKR,exact normalized supplied Team match
+Czech Republic,CZE,exact normalized supplied Team match
+Kazakhstan,KAZ,exact normalized supplied Team match
+Belarus,BLR,exact normalized supplied Team match
+FR Yugoslavia,SCG,documented naming alias
+Slovakia,SVK,exact normalized supplied Team match
+Armenia,ARM,exact normalized supplied Team match
+Burundi,BDI,exact normalized supplied Team match
+Ecuador,ECU,exact normalized supplied Team match
+Hong Kong,HKG,exact normalized supplied Team match
+Moldova,MDA,exact normalized supplied Team match
+Uzbekistan,UZB,exact normalized supplied Team match
+Azerbaijan,AZE,exact normalized supplied Team match
+Tonga,TGA,exact normalized supplied Team match
+Georgia,GEO,exact normalized supplied Team match
+Mozambique,MOZ,exact normalized supplied Team match
+Saudi Arabia,KSA,exact normalized supplied Team match
+Sri Lanka,SRI,exact normalized supplied Team match
+Vietnam,VIE,exact normalized supplied Team match
+Barbados,BAR,exact normalized supplied Team match
+Kuwait,KUW,exact normalized supplied Team match
+Kyrgyzstan,KGZ,exact normalized supplied Team match
+Macedonia,MKD,exact normalized supplied Team match
+United Arab Emirates,UAE,exact normalized supplied Team match
+Serbia and Montenegro,SCG,exact normalized supplied Team match
+Paraguay,PAR,exact normalized supplied Team match
+Eritrea,ERI,exact normalized supplied Team match
+Serbia,SRB,exact normalized supplied Team match
+Tajikistan,TJK,exact normalized supplied Team match
+Samoa,SAM,exact normalized supplied Team match
+Sudan,SUD,exact normalized supplied Team match
+Afghanistan,AFG,exact normalized supplied Team match
+Mauritius,MRI,exact normalized supplied Team match
+Togo,TOG,exact normalized supplied Team match
+Bahrain,BRN,exact normalized supplied Team match
+Grenada,GRN,exact normalized supplied Team match
+Botswana,BOT,exact normalized supplied Team match
+Cyprus,CYP,exact normalized supplied Team match
+Gabon,GAB,exact normalized supplied Team match
+Guatemala,GUA,exact normalized supplied Team match
+Montenegro,MNE,exact normalized supplied Team match
+Independent Olympic Athletes,IOA,documented naming alias
+Fiji,FIJ,exact normalized supplied Team match
+Jordan,JOR,exact normalized supplied Team match
+Kosovo,KOS,exact normalized supplied Team match
+ROC,ROC,documented naming alias
+San Marino,SMR,exact normalized supplied Team match
+North Macedonia,MKD,documented naming alias
+Turkmenistan,TKM,exact normalized supplied Team match
+Burkina Faso,BUR,exact normalized supplied Team match
+Saint Lucia,LCA,exact normalized supplied Team match
+Dominica,DMA,exact normalized supplied Team match
+Albania,ALB,exact normalized supplied Team match
+Cabo Verde,CPV,documented naming alias
+Refugee Olympic Team,EOR,documented naming alias

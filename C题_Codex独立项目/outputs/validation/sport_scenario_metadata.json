@@ -1,0 +1,14 @@
+{
+  "USA_top3_proxy_categories": [
+    "Aquatics",
+    "Athletics",
+    "Gymnastics"
+  ],
+  "event_budget_2024": 329.0,
+  "fixed_budget_reallocation_sum": 328.99999999999994,
+  "limitations": [
+    "Shares use reconstructed medal-unit proxies, not fully reconciled national medals.",
+    "Opportunity elasticity 1 is a scenario assumption, not a causal estimate.",
+    "Multi-category athlete records are marked Mixed disciplines."
+  ]
+}

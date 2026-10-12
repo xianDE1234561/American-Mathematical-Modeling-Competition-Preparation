@@ -1,0 +1,1311 @@
+=== PDF PAGE 1 ===
+              Problem Chosen                 2021            Team Control Number          微信公众号：数学模型
+                              MCM/ICM
+           F                           2109443                                  Summary Sheet
+
+         Diagnosis and Treatment for Higher Education: Toward (1,1)
+
+            The higher education system is directly linked to the development potential of a country.
+          Building a healthy and sustainable higher education system is of profound significance. Re-
+          garding this issue, we mainly need to solve three problems in this paper: identify and measure
+           the system health, formulate policies towards better health and evaluate the effectiveness of
+          our policies.
+               In order to build a set of models that can be applied to assess the health of higher education
+          systems in all countries, we built our health assessment indicator system based on the edu-
+           cation indicator system proposed by the OECD. After determining the index system, we use
+           the Entropy Weight Method (EWM) to calculate the weights of the secondary indicators. We
+          determine the Education Power (EP) and the Sustainability Index (SI) to reflect the overall
+           level and sustainability of a higher education system and combined the AHP to calculate the
+           score. Then, we introduce the McKinsey matrix commonly used in management to measure
+           the health of a certain higher education system. We determine the classification range of EP
+         and SI through the K-means Clustering Algorithm and divide the McKinsey matrix into 9
+          boxes. We use the coordinate (EP, SI) and the distance d to reflect the health status of higher
+          education system in a particular country. We apply the HA model to some countries, and select
+           Italy as the object of analysis based on the results, where there is room for improvement in the
+          higher education system.
+             Combining the results of the HA model and analyzing the scores of the secondary indica-
+            tors, we propose the vision of migrating the health state point from the current position to an
+          upper right position for Italy. Specifically, we will increase the EP to 0.6 and make the SI as
+           close as possible to 0.41. In order to realize this vision, we put forward 5 policies, formulate a
+          12-year phased development plan from the perspectives of EI and EO, and set a clear imple-
+          mentation timetable.
+               In order to evaluate the effectiveness of the policies, we compare the health state of the
+          higher education system in Italy in the next 12 years with and without policy intervention. For
+          non-intervention situation, we use ARMA, ARIMA, AR to predict the changes of secondly  微信公众号：数学模型
+           indicators. For policy-intervention situation, we establish a multiple linear regression model
+         between some indicators to reflect the interaction between variables after analyzing the corre-
+           lation of secondly indicators. We plot the results on the McKinsey matrix and the results show
+            that through policy intervention, the development of the health state of the higher education
+         system in Italy has achieved the expectations of our vision. The distance between the health
+            state point and the optimal point (1,1) is 0.28 shorter than the natural development without
+           intervention. In addition, through comparison, we analyzed the difficulties and specific im-
+          pacts of policy implementation.
+                 Finally, we carry out a sensitivity analysis of the evaluation model and an error analysis
+          of the prediction model, demonstrating the robustness and accuracy of our models. We also  微信号：MATHmodels
+          evaluate and extend the model.
+        Keywords: Entropy weight method; AHP; McKinsey matrix; Time series prediction
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 2 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 2 of 25
+
+                                Contents
+
+        1 Introduction................................................................................................... 3
+             1.1 Problem Background and Restatement......................................................................... 3
+             1.2 Literature Review ........................................................................................................ 3
+             1.3 Our Work..................................................................................................................... 4
+
+        2 Assumptions and Justifications .................................................................... 5
+        3 Notations ........................................................................................................ 6
+        4 Health Assessment Model ............................................................................. 6
+             4.1 HA Indicator System ................................................................................................... 6
+             4.2 Education Power and Sustainability Index ................................................................. 12
+             4.3 Health Assessment Based on McKinsey Matrix ......................................................... 12
+             4.4 Application of the Health Assessment Model ............................................................. 13
+
+        5 Migrate to A Healthy and Sustainable State .............................................. 13
+             5.1 Analysis of Italy’s Current Higher Education System ................................................. 13
+             5.2 The Ideal Vision for Italy’s Higher Education System ................................................ 14
+             5.3 Policy Making for Italy’s Higher Education System ................................................... 15
+
+        6 Effectiveness Evaluation Model of Our Policies ........................................ 17
+             6.1 Prediction of system health without policy ................................................................. 17
+             6.2 Evaluation of Policy Implementation Effect ............................................................... 18
+             6.3 Policy Difficulties and Impact Analysis ..................................................................... 21
+
+        7 Sensitivity Analysis and Error Analysis ..................................................... 22
+             7.1 Assessment Model Sensitivity Analysis ..................................................................... 22
+             7.2 Prediction model error analysis .................................................................................. 23  微信公众号：数学模型        8 Model Evaluation and Further Discussion ................................................ 23
+             8.1 Strengths ................................................................................................................... 23
+             8.2 Weaknesses ............................................................................................................... 24
+             8.3 Further Discussion ..................................................................................................... 24
+
+        References ...................................................................................................... 25  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 3 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 3 of 25
+
+       1 Introduction
+
+         1.1 Problem Background and Restatement
+
+             With the rapid growth of modern technology, countries have laid great emphasis on their
+          higher education development, which is an important manifestation of national competitive-
+           ness. Building a healthy, sustainable higher education system is of profound significance for a
+           country’s long-term development.
+               In the context of the global pandemic, many problems in the higher education system arise,
+          including the lack of skilled workers of health major and professional medical researchers, the
+           lack of funds for the education system, and the disruption of international exchange. Besides,
+           to react effectively to the unexpected pandemic hinges on the wisdom and effort of educated
+         and skilled citizens.[1] Therefore, it is critical to reflect on our higher education system, identify
+              its strengths and weaknesses, and renew strategies to strengthen it.
+              Considering the background, in this paper we are required to solve the following problems:
+             Task 1: Select proper indicators and build a model or a suite of models to evaluate the
+           health of any nation’s system of higher education. Apply the model to assess the health of
+           several countries’ higher education systems.
+             Task 2: Choose a country which has room to improve its higher education system based
+         on the analysis of Task 1. Describe an achievable and practical vision of the selected country’s
+         system which should meet the requirements of a healthy and sustainable higher education sys-
+          tem. Measure the health of the newly proposed system and the current one. Propose necessary
+           policies and a detailed implementation timeline to realize the vision.
+             Task 3: Analyze the effectiveness of these policies with the model in Task 1. Discuss the
+          implementation difficulties and their real-world impacts during the implementation and in the
+         end state.
+
+         1.2 Literature Review
+
+              Since the middle and late 1980s, education indicators and education indicator systems
+         have become hot topics in educational research all over the world. A comprehensive education  微信公众号：数学模型
+           indicator system can help decision-makers learn about the real state of the higher education
+         system and support future planning.
+           Many international organizations have carried out related research and proposed indicator
+          systems respectively. A classical structure proposed by James N. Johnstone comprises the ed-
+          ucation inputs, process, and products.[2] UNESCO referred to Johnstone’s approach to reflect
+           the change of educational system using education supply, demand, enrollment and participation,
+           internal efficiency and output with a special concern for education equity and quality.[3] Simi-
+             larly, based on the CIPP evaluation model, OECD (Organization for Economic Cooperation
+         and Development) put forward the framework of the OECD Indicators of Education Systems
+         (INES), which includes the inputs, participation, and outputs of education.[1]  微信号：MATHmodels
+               In addition, many countries and regions have built their own education evaluation system.
+       An example is the indicator system of the European Union, which involves the three European
+          policy priorities (employability, matching of supply and demand, accessibility).[4] Focusing on
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 4 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 4 of 25
+
+           the actual education problems, SSPEI (Special Study Panel on Education Indicators) from Na-
+           tional Center for Education Statistics advocated the construction of an educational index sys-
+         tem from six major areas in the United States.[5]
+             Although there are already many indicator systems to assess education systems, there is
+         no system particularly built for higher education system. Besides, in line with Target 4.3 of
+          Sustainable Development Goal 4 to “by 2030, ensure equal access for all women and men to
+           affordable and quality technical, vocational and tertiary education, including university,”
+       UNESCO encourages a healthy and sustainable higher education system with equitable access
+           to quality higher education and enhanced mobility and accountability. Therefore, it is necessary
+           to build a model to measure and assess the health of a system of higher education and give
+          policy suggestions accordingly.
+
+         1.3 Our Work
+
+                 First of all, we review relevant literature and choose the education evaluation system
+          based on CIPP proposed by OECD as the reference of our indicator system. Then we collect
+          required data and carry out data pre-processing. Next, we adopt EWM and AHP methods to
+          evaluate the national higher education power. Referring to the McKinsey matrix, we add a
+           sustainability dimension and establish a health assessment model for higher education system.
+               Secondly, we apply our model to analyze the health state of higher education systems in
+        some representative countries and select Italy as our evaluation object. Based on the reality of
+             Italy, we put forward a reasonable development vision and a phased higher education promo-
+           tion policy.
+               After that, we quantify the effectiveness of the policies. When we quantify the policy
+            effects, we take into account the interaction of indicators. Then we compare the results with
+           the predicted Italian health scores in the absence of policies.
+                 Finally, we analyze the impact of policies on Italy during and after the implementation
+         and point out the difficulties in improving the health of the higher education system.  微信公众号：数学模型  微信号：MATHmodels
+                                       Figure 1. Our workflow
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 5 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 5 of 25
+
+       2 Assumptions and Justifications
+
+            To simplify our problems, we make the following basic assumptions, each of which is
+          properly justified.
+                 1. We assume that the environment in which the country is located is relatively stable.
+          This means that when we measure and predict the health of a country, the country we choose
+           will not undergo dramatic changes. For example, major financial crises and global public health
+          emergencies such as the COVID-19 will not occur in the next few decades.
+                Justification: We know that global emergencies are small probability events. Although
+           regional emergencies occur from time to time, the overall international situation is stable.
+          Small-scale incidents that happen occasionally will not have a fundamental impact on the coun-
+             try. Therefore, we believe that it is reasonable to assume that the future international environ-
+         ment is relatively stable.
+                 2. We assume that the higher education level of countries with better economic con-
+           ditions can represent and reflect the development of global higher education. This means
+            that we can select some representative countries to train our evaluation model, and the results
+          of the model can be applied to all countries.
+                Justification: The country's economic strength is the basis for the development of higher
+           education. Economically backward countries tend to invest more energy to deal with infra-
+           structure construction. According to ranking lists of higher education levels published by some
+           authoritative organizations, the top-ranked countries tend to have higher levels of economic
+          development. Based on this, we can show that the economically developed countries have made
+           great contributions to the development of higher education, and these countries can well rep-
+           resent the development of global higher education.
+                 3. We assume that a specific country can be regarded as a macroscopic Strategic
+          Business Unit.
+                Justification: Similar to an independent business or department, the development of a
+           specific country is relatively independent. For certain specific undertakings, such as education,
+          environmental protection, and economics, development plans or decisions need to be made.         These微信公众号：数学模型plans or decisions can affect the country's status and living conditions in the international
+          environment, and are related to the country's future development. Therefore, the status of a
+           specific country in the international environment is similar to the positioning of a company or
+          department in the market, so the country can be regarded as a macroscopic Strategic Business
+           Unit.
+                 4. We assume that the health status of a country's higher education system can be
+         comprehensively and scientifically reflected through limited and reasonably selected in-
+           dicators.
+                Justification: The health of a country's higher education system is determined by many
+            factors. Because of the interaction between these factors, some factors can be eliminated with-          out affecting微信号：MATHmodelsthe evaluation effect, and finally a limited number of factors that can fully reflect
+           the health status can be screened out.
+                 5. We assume that when the international environment is relatively stable and there
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 6 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 6 of 25
+
+             is no policy intervention, the indicators we select show regularity in the short term. This
+           regularity can be embodied in stability, linear changes, nonlinear changes or periodic fluctua-
+            tions.
+                Justification: As the international environment is relatively stable and there is no outside
+           intervention, in the short term, various indicators of a country will continue to develop along
+          with the original trend, and will not be subject to sudden changes due to disturbances within
+         and outside the system. Therefore, the changes of these indicators over time show regularity.
+
+       3 Notations
+
+            The key mathematical notations used in this paper are listed in Table 1.
+                                Table 1: Notations used in this paper
+               Symbol                           Definition
+             HD                          Health Degree
+                EP                         Education Power
+                     SI                            Sustainability Index
+              EC                         Education context
+               EPA                      Education participation
+                    EI                          Education input
+              EO                         Education output
+
+       4 Health Assessment Model
+
+             System Health is a measure of the ability of an organization or system to align around a
+       common vision, execute against that vision effectively, and renew itself through innovation and
+           creative thinking. If we consider a system healthy, the system should not only achieve a high
+           level in various aspects, but also be sustainable and balanced in these aspects.
+            The health assessment model for a system of higher education we are going to build should
+         meet the following requirements:
+         ⚫  The model should be universal, which can be applied to any nation in the world. So
+                    the indicators we select should be applicable for most countries.  微信公众号：数学模型         ⚫  The model should be comprehensive, exhausting various aspects of higher education.
+         ⚫  The model should develop a proper measure to evaluate the health state of the higher
+                   education system at a national level.
+         ⚫  The model should be robust. The evaluation results of the model are relatively stable
+                  with the possible disturbance of uncertainties.
+
+         4.1 HA Indicator System
+
+           4.1.1 Determination of indicators and Data Collection
+            To build the HA indicator system, we need to select representative indicators. In our pre-
+          vious research, we summarize the different education indicator systems all over the world.  微信号：MATHmodels         Through comparison, the framework of the OECD Indicators of Education Systems stands out
+           for its universality and reasonability. It reflects a consensus among professionals on how to
+         measure the current state of education. Therefore, we choose INES as the framework of our
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 7 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 7 of 25
+
+           indicator system.
+             However, INES is not closely related to higher education and it doesn’t focus on health
+          assessment. So we make necessary modifications to the original framework to better address
+          our purpose:
+                  First, we involve the education context into our system. The context sector not only covers
+         economic and social factors that serve as the foundation of education improvement but also
+          includes literacy rate, duration of compulsory education, etc. to reflect the basic education ca-
+           pacity of a country.
+              Second, we change specific indicators in the original framework to focus on health as-
+          sessment and higher education.
+            Our indicator framework is presented as follows:
+             Education context: the background information of higher education development, in-
+          cluding economic and social situations and basic education capacity.
+             Education input: the financial and human resources invested in higher education.
+             Education participation: the gender difference of higher education access and the level
+          of international exchange.
+             Education output: higher education coverage, completion rate, and output of scientific
+           research.  微信公众号：数学模型
+                                 Figure 2. The HA indicator framework
+
+               After identifying the indicator framework, we collect data from authorized sources, in-
+          cluding World Bank Data[6], UNESCO Institute for Statistics[7], International Labour Organi-
+           zation, ILOSTAT database[8]. Concerning that we are discussing the state of higher education,
+       we mainly choose the countries with a certain level of economic development. Finally, we get
+         20 second-level indicators. Here we present our indicator system.  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 8 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 8 of 25
+
+                                   Table 2. the HA indicator system
+             Level 1   Level 2                                                       Unit
+                 DCE             Duration of compulsory education             years
+                                 Expenditure on education as % of total government ex-
+                  EET                               %
+            Education                                  penditure
+             Context   GDP              GDP per capita                US$
+                  LR             Literacy rate, population 25-64 years       %
+                 UR           Unemployment of total labor force       %
+                               Government expenditure on post-secondary non-ter-
+                GEN                               %
+                                                      tiary education as % of GDP
+                              Government expenditure on tertiary education as % of
+                 GET                               %
+                                     GDP
+            Education
+                               Government expenditure per student, tertiary % of
+               Input    GEPT                              %
+                                  GDP per capita
+                                   Teachers in post-secondary non-tertiary education,
+                 TN                                                 number
+                                                     both sexes
+                   TT     Teachers in tertiary education programmes, both sexes  number
+                                Gross enrolment ratio for tertiary education, adjusted
+                   GPIA                                                                             -
+                                             gender parity index (GPIA)
+            Education             Gross enrolment ratio, post-secondary non-tertiary,
+                     GPI                                                                              -
+               Participa-                        gender parity index (GPI)
+                  tion              Net flow ratio of internationally mobile students (in-
+                 NFR                               %
+                                       bound - outbound), both sexes
+                  PTR                  Pupil-teacher ratio, tertiary                        -
+                   ERT        Gross enrolment ratio for tertiary education     %
+                 ERN     Gross enrolment ratio, post-secondary non-tertiary    %
+
+                 GRT               Gross graduation ratio in tertiary       %
+
+            Education           Labor force with advanced education % of total labor                    LF                               %
+             Output                                      force  微信公众号：数学模型
+                                   Percentage of graduates from Science, Technology,
+                STEM   Engineering and Mathematics programmes in tertiary   %
+                                                       education
+                 PUB                  PUB               %
+
+            The indicators requiring special clarification are GPI, GPIA, the Net flow ratio of inter-
+           nationally mobile students and PUB.
+           GPI and APIA represent the ratio of female to male gross enrolment rates at different
+           levels of education, as a reflection of fairness in the education process. In general, a value less
+          than 1 indicates disparity in favor of males and a value greater than 1 indicates disparity in          favor微信号：MATHmodelsof females.
+           The Net flow ratio of internationally mobile students shows the total number of foreign
+          higher education students studying in a country (inbound students) minus the total number of
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 9 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 9 of 25
+
+           students studying at the same level of education in that country (outbound students) as a per-
+          centage of the country's total higher education enrolment.
+         A country’s PUB score: To describe the output of scientific research, we adopt the ad-
+           justed PUB score as the indicator. The PUB score is the relative score of the number of papers
+          included in the Science Citation Index-Expanded and Social Science Citation Index.[9] To cal-
+           culate a country’s PUB score, we first find the PUB scores of the country’s universities in the
+          top 1000 world universities. Then for a specific country, we calculate the average PUB score
+          of the first 10 universities as the country’s PUB score.
+           4.1.2 Data Pre-processing
+            Data Filling: Because of the limited access to national data, the data have some missing
+           values. To deal with this problem, we adopt the following approaches.
+         ⚫   If a certain indicator of a country has rather few missing data of the years and the
+                     indicator has a relatively small variance, we adopt the mean completer method and
+                  use the average value of other years to fill the missing one.
+         ⚫   If a certain indicator of a country has rather few missing data of the years and the
+                     indicator has a relatively strong correlation with the year indicator, we use the regres-
+                    sion interpolation method.
+         ⚫   If a certain indicator of a country lacks data for all years, we fill in the data of this
+                     indicator with the mean of all countries considering the specific meaning of the indi-
+                      cator.
+           By processing missing values, we have obtained complete data for 49 countries of the past
+          twenty years.
+             Handling Outliers: Through descriptive statistics and box plots, we analyzed each indi-
+           cator in all countries and found some highly abnormal outliers that deviated from the mean by
+        more than twice the standard deviation.
+        ⚫  For data with a significant level of α<0.01, we discarded it and processed it according
+                    to the above-mentioned missing value processing method.
+        ⚫  We also found data that clearly deviated from the actual meaning, for example, the
+                  enrollment rate exceeded 100%. We also discarded these outliers.
+           4.1.3 Data Normalization  微信公众号：数学模型
+          Now that we have got a complete and accurate dataset, we need to normalize the data of
+           different indicators so that they can be compared on the same scale. The 20 indicators can be
+          divided into three categories. We carry out different methods for normalization.
+         ⚫  Benefit Attributes: the larger, the better.
+
+
+
+         ⚫  Cost Attributes: the smaller, the better.
+
+
+
+         ⚫   Interval Attributes: an interval attribute’s optimal value lies in a certain interval [a, b].  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 10 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 10 of 25
+
+
+
+
+
+              For most of the indicators, it is quite clear whether they are benefit or cost attributes. But
+       we are uncertain about whether STEM is a benefit attribute or an interval attribute. Here we
+          propose a method to find out which is true. In the common sense, we believe that the more
+           high-level universities means the higher teaching level. We rank our selected countries by the
+         number of high-level universities and the percentage of STEM graduates respectively. It turns
+          out that there is almost no overlap between their top 6 universities. So we conclude that STEM
+             is an interval attribute and we specify the interval using the range of the STEM of the top 11
+           countries in the number of high-level universities ranking list, which is [16.7, 32].
+
+            Table 3. the comparison between STEM and the number of high-level universities
+                   Top 6 conutries by the num-  Top 6 conutries by the per-
+                      ber of high-level universities  centage of STEM graduates
+                               United States                  Singapore
+                             United Kingdom               Germany
+                            Germany                         India
+                                    Australia                       Austria
+                                  France                 Russian Federation
+                              Canada                       Finland
+           4.1.4 Calculate the Education Power (EP) – Entropy Weight Method (EWM) & AHP
+          We introduce the Education Power (EP) as the overall description of a country’s higher
+          education level.
+            The entropy weight method (EWM) is commonly used as a weighting method that
+         measures value dispersion in decision-making. It assumes that the greater the degree of disper-  微信公众号：数学模型           sion, the greater the degree of differentiation, and more information can be derived. Thus,
+          higher weight should be given to the index, and vice versa.[10] We use the entropy weight
+         method to estimate the weight values of the second-level indicators.
+             Suppose we have n indicators and m countries in total.
+          We first standardize the measured values. The standardized value of the i th indicator of
+           the sample country j is denoted as pij.
+
+
+                                                                                                         (1)  微信号：MATHmodels
+               In EWM, the entropy value Ei of the i th indicator is calculated.
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 11 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 11 of 25
+
+
+
+                                                                                                         (2)
+
+
+            The larger the Ei is, the greater the differentiation degree of index i is, and higher weight
+          should be given to the index. Therefore, the weight wi of index i is calculated as follows.
+
+
+                                                                                                         (3)
+
+
+              Then, we get the weight value vector of each three dimensions. The comprehensive per-
+         formance of sample country j by considering the total n indicators can be obtained as
+
+                                                                                                         (4)
+
+              Since our indicator system is divided into four dimensions, education context, input, par-
+            ticipation, and output, and they comprise nec, nei,, nepa and neo indicators respectively. Thus, we
+          apply EWM to the four dimensions respectively and calculate four scores Ss to describe the
+         higher education level of the four dimensions.
+
+
+
+
+
+                                                                                                         (5)
+
+
+
+
+
+              Then, we apply EWM to our data and get the weights of indicators for each dimension.
+
+                                   Table 4. the indicators’ weights
+                               Indicator   Weight         Indicator   Weight  微信公众号：数学模型DCE      0.0090         GPIA     0.2486
+                        EET      0.3441          GPI      0.3110
+                                     EPA
+                 EC    GDP      0.5073        NFR      0.1747
+                        LR       0.0577         PTR      0.2657
+                      UR      0.0820        ERT      0.1397
+                     GEN      0.5270        ERN      0.2693
+                       GET      0.1482        GRT      0.1347
+                                   EO
+                        EI    GEPT     0.2330          LF       0.0936
+                      TN      0.0492       STEM     0.0606
+                         TT       0.0426        PUB      0.3021  微信号：MATHmodels
+               Next, to find the weights of the four dimensions, we adopt AHP method. The weight value
+           vector is
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 12 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 12 of 25
+
+                                                                                                         (6)
+            The overall description of a country’s higher education level Education Power is calcu-
+            lated.
+                                                                                                         (7)
+         4.2 Education Power and Sustainability Index
+
+               In the previous analysis, we introduce Education Power (EP) to give an overall descrip-
+           tion of a country’s higher education level. Now we introduce another index – the Sustainabil-
+            ity Index (SI) to describe the sustainability and balance of the system of higher education. We
+           will use the combination of EP and SI to assess the health of the system of higher education.
+              SI is defined as the education output-input ratio.
+
+
+                                                                                                         (8)
+
+
+                     It reflects the conversion efficiency of educational resources. Higher SI means greater
+           potential of future development and higher viability of current policies in the long run.
+
+         4.3 Health Assessment Based on McKinsey Matrix
+
+            To combine the impacts of EP and SI to assess the health performance of the higher edu-
+           cation system, we adopt the McKinsey matrix.
+            The McKinsey matrix is a classical tool to help manage complex business portfolios. It
+          puts the industry attractiveness on the Y-axis and the competitive strength of a business unit on
+           the X-axis so that a business unit is assessed from the two dimensions. Nowadays, McKinsey
+          matrix has also been applied to evaluate sustainable urbanization.[11]
+               Here, we modified the McKinsey matrix to our problem. We put EP on the X-axis and SI
+         on the Y-axis to construct the McKinsey matrix. To identify the nine boxes in the McKinsey
+           matrix, we adopt K-means Clustering Algorithm to find the threshold values. We cluster the
+           selected countries into three categories according to EP and SI respectively. Then we adopt the          average微信公众号：数学模型of the three sort centers as the two threshold values. The threshold values are shown
+           in the following table.
+                              Table 5. the divisions of McKinsey Matrix
+                             EP                      SI
+                                      0-0.30                   0-0.14
+                                     0.30-0.60                 0.14-0.41
+                                      0.60-1                   0.41-1
+
+          We locate the health state point (EP, SI) on the plot and then calculate the distance to
+           the point (1,1) as the final assessment of the health of the higher education system.  微信号：MATHmodels(9)
+            The smaller d is, the healthier the higher education system is.
+          Up to now, we constructed a comprehensive health assessment model of higher education
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 13 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 13 of 25
+
+          system. d represents the overall health level of the higher education system. Specifically, Edu-
+           cation Power (EP) serves as the overall description of a country’s higher education level and
+           Sustainability Index (SI) reflects the potential of future development and viability of current
+            policies.
+         4.4 Application of the Health Assessment Model
+
+          Now that we have constructed the health assessment model, we apply the model to the
+          United States, the United Kingdom, Czech Republic, Italy and Thailand to give an analysis of
+           the health state of their higher education systems. The results are shown in the following figure
+         and table.
+                          Table 6. the health assessment of selected countries
+             country     EC      EI    EPA    EO       SI     EP      d
+          United Kingdom   0.4905    0.1072    0.5909    0.7064    0.6646    0.6563    0.4803
+           United States     0.5874    0.1238    0.4448    0.5560    0.5197    0.5775    0.6397
+                 Italy        0.2147    0.3678    0.5061    0.4983    0.1911    0.4457    0.9806
+              Thailand      0.4050    0.3508    0.0000    0.3160    0.1372    0.3529    1.0785
+            Switzerland     0.8966    0.4729    0.8734    0.0601    0.0085    0.4061    1.1558
+
+
+
+
+
+                               Figure 3. GE matrix of selected countries  微信公众号：数学模型
+           Among the five countries, the United Kingdom has the highest score in both EP and SI
+         and is in the optimal box of the matrix. The other countries all have room for improvement in
+            their higher education systems. Italy is one of the earliest western countries in the world to
+          develop higher education and set up universities. To identify its problems and facilitate the
+           future health development of its higher education system, we select Italy to do a case study.
+
+       5 Migrate to A Healthy and Sustainable State
+
+         5.1 Analysis of Italy’s Current Higher Education System            The微信号：MATHmodelshealth state point of Italy falls on the bottom box in the middle of the matrix, indicat-
+          ing that Italy’s higher education system has a medium power and a relatively low level of sus-
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 14 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 14 of 25
+
+            tainability. We also rank all the selected countries by the scores of the four dimensions respec-
+           tively and it is found that Italy is in the middle or lower reaches of these four indexes. To clarify
+           the deficiencies of the higher education system of Italy, we compare some second-level indi-
+           cators between Italy and some other representative countries.
+
+                    Table 7. the comparisons between Italy and European countries
+                  EC     EPA           EI             EO
+             country
+                  EET  NFR  PTR  GET  GEPT  ERT  ERN  LF  STEM
+           United States    13.3    4.7    12.0    1.5     19.4     88.2     5.3    73.3    16.7
+          United Kingdom  14.2   16.4   15.6    1.4     38.0     60.0     2.3    83.8    23.9
+            Sweden       15.8    2.9    12.3    1.8     43.2     67.0     3.3    83.6    27.5
+           Norway      16.0    -3.1    8.6     2.1     39.8     82.0     3.2    83.5    22.1
+                  Italy         8.3     1.2    20.1    0.8     24.3     61.9     2.8    74.8    16.4
+              France        9.7     6.7    17.4    1.2     31.6     65.8     1.5    76.6    26.9
+              Finland       11.9    4.5    19.8    1.7     33.9     88.2     6.4    74.0    27.3
+         Czech Republic    9.9     8.8    17.9    0.7     20.3     64.1     7.5    76.2    23.9
+               Austria       11.0   12.7    7.2     1.7     36.2     85.1     4.7    77.4    30.1
+
+          We discover the following information:
+         ⚫   Italy, as a developed country, has a good economic and social foundation, but the poor
+                   education context is mainly due to the lack of government investment in education.
+         ⚫  The government's spending on tertiary education is inadequate and on post-secondary
+                   education is relatively reasonable.
+         ⚫  The proportion of men and women participating in higher education is balanced, but
+                    the international attraction is weak, and the resources of teachers are relatively short.
+         ⚫   Italy's overall performance in education output is far from satisfactory. The enrolment
+                      rate in higher education is relatively low, and higher education should be further pop-
+                    ularized and encouraged.
+         ⚫   Italy has a low proportion of STEM graduates and a relatively low level of labor force,
+                      this may be due to the more developed art and design industry in Italy and the lack of
+                     attention to science and technology.  微信公众号：数学模型
+         5.2 The Ideal Vision for Italy’s Higher Education System
+
+            Aimed at the health goal of the higher education system, we describe an ideal vision for
+           the higher education system of Italy and prove its rationality and attainability.
+          We believe that the closer the health state point is to (1,1), the healthier the higher educa-
+           tion system is. Now the health state point of Italy is in the middle box of McKinsey matrix.
+        The ideal for Italy’s higher education system is that the health state point can migrate from
+          the current position to an upper right position.
+                 Italy has a solid economic and social foundation and it’s well-known for its long history
+           in higher education. Besides, Italy has diverse higher education institutions. Also, Italy has  微信号：MATHmodels         always attached great importance to higher education and has made continuous reforms to
+           stimulate the development of higher education, for example, promote the decentralization of
+          education and accelerate the Bologna Process.[12]
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 15 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 15 of 25
+
+              Considering practical difficulties, we consider it is very hard to migrate to the upper right
+          box, otherwise, the development of other fields may be hindered. Therefore, the vision we
+          propose for Italy’s higher education system is to migrate the health state point from the
+          current position to the yellow area, which is marked in figure 4. Specifically, the EP score
+          should reach 0.60, entering the optimal interval. As for SI, we hope to increase it as much as
+           possible without explicitly requiring it to reach 0.41, the threshold value of the optimal interval.
+
+
+
+
+
+                         Figure 4. The vision for Italy’s higher education system
+            To fulfill our vision, we are required to improve the higher education system from the four
+          dimensions and also improve output-input ratio to ensure the viability of policies in the long
+           run. Relating to the HA indicator system we have built, we picture the ideal vision in the fol-
+         lowing aspects:
+             Education context: The country's economic and social foundation are consolidated. Pro-
+           vide guarantee and support for the development of higher education.
+             Education input: Higher education becomes an important object of government invest-
+           ment, and the policy of giving priority to the development of higher education has been im-
+           plemented.
+             Education participation: All young people of school age enjoy equal access to higher
+           education. A perfect international exchange mechanism and an open and inclusive academic
+         environment is formed, and the integration of higher education in Europe is basically realized.
+             Education output: All the education resources are properly allocated. The coverage of  微信公众号：数学模型
+          higher education expands significantly. More universities reach world top class.
+
+         5.3 Policy Making for Italy’s Higher Education System
+
+             Based on the previous analysis, we propose a series of policies to achieve the ideal health
+            state of the higher education system.
+               Policy 1: Increase government spending on education, especially on post-secondary
+          education. In Italy, all public universities are almost free of tuition. Only after 2000, the Italian
+          Ministry of Education began to impose symbolic fees on public institutions due to the influx
+          of foreign students.[13] So the development of higher education is largely dependent on govern-
+         ment support.  微信号：MATHmodels
+               Policy 2: Create an open and inclusive academic environment to improve interna-
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 16 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 16 of 25
+
+           tional attraction and further expand international academic exchange. Facilitate and ac-
+          celerate the Bologna Process.[14]
+               Policy 3: Give greater autonomy to higher education institutions. Reduce policy re-
+           strictions on them. In this way, the institutions can decide independently how to allocate edu-
+           cational resources according to its current state, which may improve the efficiency of the re-
+           sources. These institutions can carry out more autonomous scientific research activities, thus
+         promoting the progress of scientific research.[13]
+               Policy 4: Give publicity to the importance of receiving high education, especially
+          post-secondary. Popularize and encourage the public to receive higher education. Increase the
+          enrolment ratio of different levels of higher education.
+               Policy 5: Improve the treatment of teachers. Attract more qualified people to become
+           teachers, thus cut down pupil-teacher ratio to provide better education quality.
+            To implement these policies in detail, we built a timeline for the execution of the policies
+          based on real-world constraints. We set the policy for the next 12 years and divided the 12 years
+           into four phases. To achieve a healthy higher education system, we put forward five targeted
+           policies from four aspects: educational background, input, output, and process. They're not
+          doing it all at the same time, given the realities and the national resource constraints, but they're
+          doing it in different phases.  微信公众号：数学模型
+
+
+
+                                 Figure 5. The implementation timeline
+              2021-2023: As a result of the global pandemic, we face several serious problems, includ-
+          ing a lack of skilled workers for the health profession and professional medical researchers, a
+           lack of funding for the education system, and a disruption of international exchanges. We need
+           to increase the post-secondary enrolment rate as soon as possible to meet the needs of skilled
+           health graduates. The metric implemented in our system is to increase the ERN by 8% (that is,
+           to increase it by a factor of 1.08, the same as below). Meanwhile, in terms of higher education  微信号：MATHmodels
+          process and output, NFR will be increased by 3% and PUB score will be increased by 5%.
+              2024-2026: After the outbreak, the economy will gradually recover. The government
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 17 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 17 of 25
+
+          should give priority to the development of higher education, increase investment in higher ed-
+           ucation, and promote international exchanges. Corresponding indicators will be EET and GEN
+           indicators increased by 5% and 8%. At the same time, the higher education enrolment rate
+          continued to increase, and ERN continued to increase by 6%. In terms of higher education
+          process and output, increase NFR by 10% and PUB score by 4%.
+              2027-2029: With the first two phases in place, most policy intensity diminishes. Start to
+           increase the policy intensity on teachers, and reduce PTR by 2. International communication
+          increased NFR by 8%, EET and GEN by 4% and 6%, ERN by 4%, and PUB by 3%.
+              2030-2032: Confinement of policy implementation to further support the development of
+          higher education institutions in a more academic and knowledge-based society. ERN increased
+         by 4%, while EET and GEN increased by another 3%.NFR increased by 6%, PUB increased
+         by 3%, and PTR decreased by 1.
+
+       6 Effectiveness Evaluation Model of Our Policies
+
+               In the fifth part, based on the actual situation in Italy, we describe the vision of an achiev-
+          able and reasonable development of higher education and propose specific policies and imple-
+          mentation timetables. Next, we hope to evaluate the effectiveness of the policy in as intuitive
+          a way as possible. To do this, we compare Italy's scores on EP, SI and d with and without
+          policy implementation.
+
+         6.1 Prediction of system health without policy
+
+             Through the time series diagram, we find that most of the indicators of Italy from 2000 to
+         2019 have long-term trends and volatility. The time sequence diagram of some indicators is as
+          follows ：  微信公众号：数学模型
+
+                           Figure 6. Time Series Diagram of STEM, PTR, EET
+
+               Therefore, in the absence of policy intervention, we analyze the time series of each index
+         one by one to predict (except the compulsory education years which are stable in the foreseea-
+           ble time). Since the implementation cycle of the policy is not very long for 12 years, we use
+          autoregressive moving average model (ARMA), autoregressive integrated moving aver-
+         age model (ARIMA) and autoregressive model (AR) to predict the indicators and achieve
+         good results. Here we use SPSS.24 for time series prediction. The prediction results of some
+          indexes are as follows：  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 18 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 18 of 25
+
+
+
+
+
+                                                                                                                                                                                                                                                         true value
+
+                                                                                                                                                                                                                                                                                      fitted value
+
+                                                                                                                                                                                                                                                               predictive value
+
+
+
+
+
+                                             Forecast of GDP based on ARMA (1,1)                       Forecast of GRT based on AR (2)
+
+
+
+
+
+                                             Forecast of TT based on ARMA(2,2)                        Forecast of EET based on ARIMA (2,1,2)
+
+                          Figure 7. Time prediction sequence of some indicators
+
+         6.2 Evaluation of Policy Implementation Effect
+
+          Now we want to focus on the change and improvement of the health state of the higher
+          education system of Italy, so it’s reasonable to keep the other countries’ data unchanged in the
+          period we are going to discuss and calculate the health scores of Italy. Otherwise, the assess-
+         ment will be largely dependent on the performance of other countries and our assessment will
+          not reflect the real progress of the higher education system of Italy as the assessment model we
+         have constructed measure the relative health level of a country in the world. Based on this
+          assumption, we can use the Health Assessment Model in Part4 to evaluate the health status
+           scores after the implementation of the policy and without the policy.
+                 First, using the time series prediction model obtained above, we predict the change of
+           health status of Italian higher education system without new policy intervention in the next 12
+           years. We substituted these predicted data into the health assessment model we build in Part 4.
+       We get Italy's scores on EP, SI and d without policy implementation.  微信公众号：数学模型
+              Next, we need to quantify the impact of policies to specific indicators.
+               In our policy, we have proposed the goal of improving indicators by stages, but the indi-
+           cators often do not improve unilaterally as expected. Because of the correlation between the
+           indicators in the rating system, an increase in one indicator often leads to a change in the indi-
+           cators associated with it. In order to scientifically evaluate the rationality of the policy, we first
+          conduct correlation analysis on all indicators, and use multiple linear regression to build a lin-
+           ear relationship for indicators with strong correlation, so as to quantify the impact in the real
+          world.
+            The correlation results of some indicators are shown as follows:  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 19 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 19 of 25
+
+
+
+
+
+                                 Figure 8. Variable correlation diagram
+               Considering that there is a non-single corresponding relationship between the various
+           indicators in the evaluation system and the ease of interpretation in the real world, we select
+           the method of multiple linear regression to construct the equation that the indicators regulated
+         by policy hope are independent variables and other indicators are dependent variables. First of
+              all, we test the normality of the dependent variables and choose the indicators to construct. We
+            select equations with high significance and good overall fitting to simulate the impact of poli-
+           cies on indicators that are not involved. In Table 8 We show the relevant test results of Equation
+           (10). It can be seen that the coefficients of PTR and EET pass the significance test, while the F
+             test shows the p-value is 1.842e-8, so the overall significance of the equation is acceptable. The
+           other equations are shown as follows:
+                            Table 8. the relevant test results of equation 10
+                                       standard error              t             p
+                                constant          2.3919          19.377      1.65e-11***
+
+                       EET            0.326            4.646      0.000378***
+
+                       PTR           0.1298           6.344       1.82e-5***
+
+                                  * p<0.05 ** p<0.01  微信公众号：数学模型
+
+                                                                                                 (10)
+
+                                                                                                 (11)
+
+                                                                                                 (12)
+               In this way, we find out the progress of higher education system of Italy in the next 12
+          years with policy intervention.
+                Finally, we plot the prediction results to get a visualized description of the effectiveness
+          of our policies.
+                   If we don’t implement these policies, although the EP score will grow steadily, the SI  微信号：MATHmodels          score will fall sharply, resulting in a less healthier system.
+             With policy intervention, EP score will increase steadily with time. At the same time, the
+          SI shows an upward trend with fluctuations. At the end of 12 years, both EP and SI reach high
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 20 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 20 of 25
+
+           scores compared with no intervention situation. EP has reached the optimal interval and SI has
+        become really close to the threshold value of the optimal box. This is in line with our expecta-
+           tions that it is indeed very difficult to improve SI score. But we still see a huge progress in SI.
+        So we can consider that our policies can support the migration from the current state to the
+          proposed state. Italy can realize its vision.
+
+
+
+
+
+                  Figure 9. The prediction results without and with policy implementation
+
+                 Specifically, we visualize the variation trends of EP and SI when there are policies imple-
+          mented. Figure 10. indicates that in the first few years of policy implementation, the SI, i.e.,
+           the output-input ratio, and EP score increase. In the mid-term, the SI score declines slightly.
+          This is because after we invest more financial and human resources into the higher education
+          system, the resources cannot be properly allocated and utilized in a timely manner, resulting in            inefficient微信公众号：数学模型use of resources and a decline in the output-input ratio. In the later period, the two
+          items increase synchronously and our system reaches a relatively stable state.
+              Figure 11. depicts the variations of distances with and without policy implementation. It
+             is obvious that our policies can effectively decrease the distance and ameliorate the system
+           health.  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 21 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 21 of 25
+
+
+
+
+
+          Figure 10. The variation of EP and SI with policies  Figure 11. The variation of distances
+
+            From the above analysis, it is demonstrated that our policies are very effective in improv-
+          ing system health. They can support the migration from the current state to the ideal state.
+
+         6.3 Policy Difficulties and Impact Analysis
+
+            Our policy implementation has different emphases in different periods. We analyze the
+          impact of policies on the transition process and the end state as follows.
+              Transition state:
+                Prior to 2023, policy focused on tertiary education. At the national level, this will enhance
+           the country’s reserve of professionals to deal with the follow-up impact of the epidemic, to
+          prevent the national unemployment surge. This is an opportunity for development and a chal-
+          lenge for universities that are not well developed in Italy. For students, it can enhance their
+            skills and enhance their competitiveness.
+               After 2023, the government’s investment in institutions of higher learning has gradually
+           increased. At the national level, this will increase the financial pressure of the government to
+        some extent. But for institutions of higher learning, this will help them conduct more sophisti-
+          cated scientific research. At the same time, the international academic exchange atmosphere in
+            Italy will be freer, attracting more high-level talents to Italy and accelerating the process of
+          Bologna. The number of teachers will increase, and the system management of university
+           teacher mobility will gradually fade.  微信公众号：数学模型End State:
+            The strength and sustainability of Italian higher education will reach a higher level. The
+             state, society and schools will gradually benefit from the returns of higher education. Univer-
+            sity research strength, the world ranking will increase. The talent gap in various disciplines will
+         be supplemented. The overall academic quality of students will be improved.
+                Difficulties:
+                1.It can be seen that the vision we propose is to achieve coordinated progress in education
+           strength and sustainability in Italy. But from the results, it is difficult to reach the level of the
+          world-class higher education power such as Britain and the United States. Italy ' s higher edu-
+           cation has always been a national centralized management, in a short period of time to reach          or even微信号：MATHmodelsexceed the threshold requires greater national capital investment. For Italy, which suf-
+           fered a serious economic setback in 2998 and the economy is still in recovery period, huge
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 22 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 22 of 25
+
+           capital investment is not realistic. Italy 1995-2019 GDP growth chart. (from World Bank web-
+             site )
+
+
+
+
+
+                                Figure 12. Italy 1995-2019 GDP growth
+              2.In the ecosystem of higher education, output reflects input with time lag.[15] This makes
+                it impossible to get returns in the short term after the government increases its expenditure on
+          higher education. The government may face short-term financial pressure.
+
+       7 Sensitivity Analysis and Error Analysis
+
+         7.1 Assessment Model Sensitivity Analysis
+
+                Sensitivity analysis determines how the variations of an independent variable affect a par-
+            ticular dependent result under a given set of assumptions, in which way we can test the robust-
+          ness of the results. In sensitivity analysis, one or more parameters vary across a plausible range.
+          In the meanwhile, the change of the corresponding result is recorded and assessed. To test
+         whether our models’ results are sensitive to the change of the input parameters, we need to
+           carry out sensitivity analysis.
+               In the actual data calculation, the data often fluctuate due to artificial error and unpredict-
+          able factors. In order to analyze the stability of our entropy weight model when the original
+          data is inaccurate or fluctuates, we use sensitivity analysis to evaluate the model.
+            To simulate the fluctuation of the data, we calculate the variance of the indicator xi after
+           normalization. The greater the variance is, the greater the volatility of the indicator is. It turns  微信公众号：数学模型
+          out that ERN has the largest variance. So we add a stochastic disturbance termεi to the data
+          of ERN. We assume the stochastic disturbance fluctuates randomly in the range of 10% of the
+           oringinal data. Since the normalized data is located in the [0, 1] interval, we define the data
+            after adding the stochastic disturbance as
+                                                                                                 (13)
+         εi is a random number in the [0, 0.1] interval generated from MATLAB.
+              Then, we use the new data to calculate the weights using the entropy weight method. By
+         comparing the weights with and without stochastic disturbance, we find that the changes of the
+          weights are within 3%, which shows that the weights obtained by EWM is not seriously           affected微信号：MATHmodelsby the data error and fluctuation. Our health assessment model is relatively stable.
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 23 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 23 of 25
+
+
+
+
+
+                            Figure 13. Weights with and without disturbance
+
+         7.2 Prediction model error analysis
+
+          We set the error of each index data 𝑥𝑖 as 𝑢𝑖. Based on the concept of random error term
+           in econometrics, we make the following assumption on 𝑢𝑖: 𝑢𝑖  is a random variable that fol-
+         lows normal distribution and takes 0 as the mean variance as a constant. 𝑢𝑖  is independent of
+           indicator data, which means:
+
+                                          𝑐𝑜𝑣(𝑢𝑖, 𝑥𝑖) = 0 （i = 2,1....n）
+
+          We get the index data after being disturbed:
+                                    𝑥𝑖+ 𝑢𝑖
+
+             Based on the prediction results of Italy  ' s scores in the disturbed time series, we analyze
+           the error of the prediction model in 6.1. It can be seen from the results that our prediction model
+         can control the error within an acceptable range.
+                       Table 9. Prediction of Italian d score after adding disturbance
+                                   2020     2023     2026     2029     2032
+                d without disturbance    0.9909    0.8739    0.8835    0.8357    0.7404  微信公众号：数学模型d with disturbance     0.9919    0.8884    0.8744    0.8272    0.7239
+
+       8 Model Evaluation and Further Discussion
+
+         8.1 Strengths
+
+                 1. The selection of evaluation indicators is scientific and comprehensive. We adopt the
+         framework of the OECD Indicators of Education Systems for its universality and reasonability.
+       We also make necessary modifications to better address our purpose, including involving the
+          education context and adjust specific indicators.
+                 2. Data preprocessing. We have filled missing data and handled the outliers on the ac-  微信号：MATHmodels
+          quired data. For different indicators, we have adopted different processing methods, and mod-
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 24 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 24 of 25
+
+            ified the processing results based on the actual meaning, and finally obtained a relatively com-
+           plete data set.
+                 3. Application of management thinking. Based on Assumption 3, we regard a specific
+          country as a Strategic Business Unit, and thus introduce the McKinsey matrix commonly used
+           in management. We adopt McKinsey matrix creatively to analyze the combine effects of EP
+         and SI to give an overall description of the health state of the national higher education system.
+                 4. Comprehensive application of multiple methods. We use relatively objective meth-
+         ods - EWM and AHP to identify the weights of the multiple indicators. Also, we use K-Means
+          Clustering Algorithm to find the threshold values of the McKinsey matrix. The combination of
+          multiple methods has constructed a scientific evaluation system.
+                 5. The evaluation model is robust. We did a sensitivity analysis on the weights. We made
+           the weight coefficients of several indicators fluctuate in a small range and found that the list of
+           countries' sustainable development levels did not change significantly, indicating that our eval-
+          uation model has high stability.
+
+         8.2 Weaknesses
+
+                 1. The model does not consider the impact of sudden factors. Based on Assumption 1,
+           the international environment in which the country is located is relatively stable, so we did not
+          consider the disturbance of sudden impact factors when applying the model. The international
+         environment is stable as a whole, and the impact of sudden impact factors on the model results
+             is minimal, so the results of our model are still accurate and well-founded. But undoubtedly,
+          considering the impact of individual emergencies will make our model more accurate.
+                 2. The data used by the model is incomplete. Due to objective reasons, we are unable
+           to obtain all the data of the required indicators, and these data inevitably have missing values.
+         Although we have dealt with missing values, the accuracy of model fitting is still affected to a
+           certain extent.
+                 3. The model is only suitable for short-term forecasting and evaluation. Based on
+         Assumption 5, the changes of various indicators over time show regularity in the short term.
+         Although we can still achieve relatively ideal results for long-term forecasts, this result may
+           deviate significantly from the actual situation.  微信公众号：数学模型
+         8.3 Further Discussion
+
+           8.3.1 Model Improvement
+          We can add sudden impact factors in the evaluation model and prediction model, and as-
+           sign values to this indicator by means of normal distribution random numbers. In this way, the
+          impact of various emergencies in the real world on the model results is simulated, and the
+          accuracy of the prediction model is improved on the premise of ensuring the accuracy of the
+          evaluation model.
+           8.3.2 Model Extension
+          We have established a scientific model for evaluating and predicting the health of the  微信号：MATHmodels
+          higher education system. By modifying the model, we can apply it to the evaluation and pre-
+           diction of the health of the education system at other stages of education.
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 25 ===
+          微信公众号：数学模型
+         Team # 2109443                                                      Page 25 of 25
+
+       References
+
+           [1] OECD (2020), Education at a Glance 2020: OECD Indicators, OECD Publishing, Paris,
+          https://doi.org/10.1787/69096873-en.
+
+           [2] James N．Johnstone．Indicators of Education Systems［Z］．Paris：UNESCO，1981．
+
+           [3] Xu Ling. (2004). Analysis and thinking of international educational index system. Educa-
+           tional Science (02),18-21. doi:.
+
+           [4]  Lassnigg,  L.  Indicators  for  quality  in VET European  experience [EB/OL].  http:/
+           /www.ihs.ac.at/publications/soc/rs63.pdf, 2003:81-86 .
+
+           [5] Special Study Panel on Education Indicators. Education Counts: An Indicator System to
+         Monitor the Nation's Educational Health [R]. Washing ton, D.C.: National Center for Education
+            Statistics, 1991(NCES 91-634).
+
+           [6] World Bank Data, http://data.worldbank.org
+
+           [7] http://data.uis.unesco.org/
+
+           [8] http://datalib.edina.ac.uk/catalogue/ilostat
+
+           [9] http://www.shanghairanking.com/ARWU-Methodology-2019.html
+
+          [10] Yuxin Zhu, Dazuo Tian, Feng Yan, "Effectiveness of Entropy Weight Method in Decision-
+         Making", Mathematical Problems in Engineering, vol. 2020, Article ID 3564835, 5 pages, 2020.
+          https://doi.org/10.1155/2020/3564835
+
+           [11] YANG Wei, & JIANG Xiao-li. (2017). Evaluating Sustainable Urbanization of Resource-
+          based City by a McKinsey Matrix Based Method: A Case Study of Jincheng. Value Engineering,
+          16, 5–9.
+
+          [12] Huang Qibing. (2005). Review of the reform of higher education in italy. Foreign Educa-
+           tion Studies (08),38-40 doi:.  微信公众号：数学模型
+          [13] Jia Shuli & Wang Yan. (2008). The characteristics and enlightenment of Italian higher
+           education. Contemporary Education Forum (Macro-Educational Studies)(10),112-114. doi:.
+
+          [14] Bi Chaohui. (2008). The reform of the quality assurance system of higher education in
+            Italy during the Bologna process. A Study on Higher Education in Heilongjiang Province
+           (03),52-55. doi:.
+
+          [15] Ahn Taesik & Cooper William W.(1988). Some statistical and DEA evaluations of relative
+           efficiencies of public and private institutions of higher learning. 22(6), 259-269.  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯

@@ -1,0 +1,1286 @@
+=== PDF PAGE 1 ===
+          Problem Chosen           2021微信公众号：数学模型Team Control Number
+               MCM/ICM
+     A       Summary Sheet    2100454
+
+     GAME: A Seer on Fungi Living Strategies and
+            Biodiversity Based on Gause’s Model
+
+                                 Summary
+
+         Decomposition of organic matters by fungi, an indispensable part of carbon cycle, can
+     make carbon reused in the environment. A recent article explores the impact of different
+        traits on its decomposition effeciency. In this paper, we focus on two main traits, hyphal
+      extension rate and moisture tolerance, together with interactions among fungi and various
+      environmental conditions, to simulate the breakdown of woody ﬁbers and comprehend the
+      importance of biodiversity.
+
+        Our GAME model is made up of the initials of four task names. Before we start our ex-
+       periments, we build up a prediction model to simulate the cross action among different fungi
+     and their effect on the decomposition process of woody ﬁbers. We adopt Gause’s Compet-
+        itive Model to uncover the interactions among species and derive a differential system by
+       considering the change of woody ﬁbers amount. The model describes growth, hyphal ex-
+       tension, competition, and decomposition of fungi.
+
+            Firstly, in order to simplify the model, we ﬁx temperature T = 22 ◦C, and set the trait
+      parameters of three different fungi artiﬁcially. Experiment results shown that our model is
+       of high reasonability since the predicted decomposition rate is nearly 30%, which approxi-
+      mately equals to veriﬁed research results.
+
+          Secondly, we are to choose ﬁve representitive fungi as our experiment objects, which are
+       P.Flavidoalba.S., P.Hartigii.N., M.Tremellosus.N., P.Sangioneus.S., and H.Setigerum.N.,
+       respectively. After describing their typical characteristics, we introduce the Moisture/Tem-
+      perature Tolerance Factor for calibrating. Based on the model proposed, we ﬁnd that the
+       species P.Flavidoalba.S. is always dominant at Columbus (temperate) in short-term (7 days)
+     and long-term (122 days), due to its general advantage on moisture. Also, rapid ﬂuctuation
+      experiment indicates those who adapt the environment well will be in dominance.           Thirdly,微信公众号：数学模型we choose ﬁve cities, Santa Fe (Arid), Sioux Falls (semi-arid), Columbus (tem-
+       perate), Atlanta (arboreal), and Codaj´as (rain forest), and do the same prediction on the
+      previous step. The result shows that, except for the leading fungus P.Flavidoalba.S., other
+       species’ density gradually decrease, but never tend to 0.  Additionally, P.Flavidoalba.S.,
+       P.Sangioneus.S., M.Tremellosus.N. will have a consistent competition in tropical rain for-
+        est, since they have their unique advantages in this environment. The decomposition rate
+       will be relatively better for higher temperature and moisture to some extent.
+
+          Fourthly, we explore the decomposition efﬁciency of the system by changing the number
+       of fungus, and discover that they actually have positive correlation in all areas. Moreover, it
+         is shown that compared with arid region, tropical rain forest will have a higher requirement
+       for biodiversity since it has a relatively stable climate.  微信号：MATHmodels
+          After modelling, we also conduct sensitivity analysis, which reveals our model’s robust-
+      ness to some parameters. We ﬁnally summarize our strengths and weaknesses. A brief
+       conclusion is also presented in the paper.
+
+      Keywords: Decomposition Rate, Multi-environment, Gause’s Model, Biodiversity
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 2 ===
+      Team # 2100454                                                      Page 2 of 25          微信公众号：数学模型
+
+     GAME: A Seer on Fungi Living Strategies and
+            Biodiversity Based on Gause’s Model
+
+
+                               February 9, 2021
+
+
+                          Contents
+
+
+
+      1  Introduction                                                                 3
+
+           1.1  Background   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    3
+
+           1.2  Our Work .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    3
+
+           1.3  Data Pre-processing .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    5
+
+
+      2  Assumptions                                                                 5
+
+
+      3  Abbreviation and Deﬁnitions                                                  6
+
+      4  The GAME Model                                                            7
+
+           4.1  Gause’s Model for Predicting Fungus’ Decomposition of Woody Fibers  .  .  .  .    7
+
+                 4.1.1  Model Description   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    7
+
+                 4.1.2  Inplementation   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    8
+
+           4.2  Antagonism Effect and Stability .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   10
+
+                 4.2.1  Background of This Problem   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   10
+
+                 4.2.2  Moisture Tolerance Analysis    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   12
+
+                 4.2.3  Methods to Analyze Antagonism Effect  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   12  微信公众号：数学模型4.2.4  Inplementation   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   13
+
+           4.3  Multi-environment Experiment for Revealing Habitats   .  .  .  .  .  .  .  .  .  .  .  .  .   14
+
+           4.4  Efﬁciency, Robustness, and Biodiversity   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17
+
+
+      5  Sensitivity Analysis                                                         18
+
+
+      6  Strengths and Weaknesses                                                   19
+
+           6.1  Strengths  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   19
+
+           6.2  Weaknesses    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   20  微信号：MATHmodels
+
+      7  Conclusion                                                                 20
+
+      Appendices                                                                    24
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 3 ===
+      Team # 2100454                                                      Page 3 of 25          微信公众号：数学模型
+
+    1  Introduction
+
+      1.1  Background
+
+        The carbon cycle is the biogeochemical cycle key to make Earth capable of sustaining life,
+      by which carbon is exchanged among the biosphere, pedosphere, geosphere, hydrosphere,
+     and atmosphere of the Earth. Part of the carbon cycle includes photosynthesis, vegetative
+      growth and decomposition, allowing carbon to be renewed and used in other forms [1]. The
+      decomposition of plant material and woody ﬁbers is a key component in this cycle.
+
+          Fungi, a group of eukaryotic organisms, plays important role in decomposing woody
+      ﬁbers [2, 3]. The role of fungi in carbon cycle is schematically shown in Figure 1.
+
+          Recently, an article points out that wood decomposition rate varies greatly among fungi
+      which have different traits [4]. In particular, the slow growing strains are less capable of
+      decomposing woody ﬁbers while has higher moisture tolerance. On the contrary, the fast
+      growing strains tend to exist in more favorable environments, which has more stable mois-
+       ture and temperature.
+
+
+
+
+
+                               Figure 1: The Fungi and Carbon Cycle  微信公众号：数学模型
+      1.2  Our Work
+
+          In this problem, the growth rate of the fungus and the fungus tolerance to moisture are
+       the only two traits we considered. We evaluate the importance of biodiversity by accom-
+       plishing several tasks:
+
+      Task 1  We are to build a prediction model in order to reveal fungus’ evolution as well as their
+       decomposition of woody ﬁbers.
+
+       We use the data from the article mentioned in Section 1.1, making log-log linear regres-
+       sion to determine decomposition curve. Then we use Gause’s competitive model to make
+       the prediction. We take the interaction of different fungus into consideration and design a  微信号：MATHmodels
+      122-day-experiment to validate our model.
+
+      Task 2  We give the stimulation on a ﬁxed region in both short- and long-term to describe the grow-
+       competitive tendency of various species. A exploration on rapid ﬂuctuation weather is also provided
+        to show the system roundly.
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 4 ===
+      Team # 2100454                                                      Page 4 of 25          微信公众号：数学模型
+
+         Applying the model we established in Task 1, we ﬁrst choose ﬁve typical fungi and ex-
+       cavate their trials in [7], and we pick up temperature and moisture data in Columbus, Ohio
+       as from September to December. We set short-term a week while long-term 122 days. For
+      rapid ﬂuctuation stimulation, we choose a segment in Santa Fe, New Mexico and periodi-
+       cally extend it to 122 days, then we give analysis on what is predicted.
+
+      Task 3  To explore the advantages and disadvantages for each kind of fungus, we conduct the exper-
+       iments to describe the dynamics of interactions in long-short terms. Different environments are also
+       considered to achieve the generality and completeness.
+
+            First we choose ﬁve representitive cities in different climate and show their geographic
+       locations. Then we do similar experiments in Task 2 under variant environments. By con-
+       trasting and analyzing the results in detail, we get a more comprehensive understanding
+     and conclusion.
+
+      Task 4  We are to consider the inﬂuence of biodiversity in different environments, as well as the
+       fungus diversity requirement of those regions.
+
+         Applying decomposition rate of 122 days as the indicator of biodiversity in various en-
+      vironments, we are to consider 5, 3 and 2 kinds of equal-total-density species and make
+      corresponding experiment. Then, the conception of inﬂuence rate of diversity decrease is
+      introduced to show the extent how a region requires biodiversity. From this we can dig out
+     some results for reference.
+
+         For better understanding of the overall model, a ﬂowchart is provided to describe our
+       process.  微信公众号：数学模型  微信号：MATHmodels
+
+
+
+
+                           Figure 2: The Framework of the GAME Model
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 5 ===
+      Team # 2100454                                                      Page 5 of 25          微信公众号：数学模型
+
+
+
+      1.3  Data Pre-processing
+
+        The estimation for the decomposition rates, given the growth rate, is shown in Figure 3,
+      each triangle represents a fungal isolate.
+
+
+
+
+
+      Figure 3: The relationship between the log of hyphal extension rate (mm/day) of various
+       fungi and the log of decomposition rate (% mass loss over 122 days) at various temperatures
+       (10◦C, 16◦C, 22◦C).
+
+         Using the data [4] provided by the research group mentioned in Section 1.1, we do least
+      square regression for the relationship between the log of decomposition rate and the log of
+       extension rate. Results are shown in Table 1.
+
+                    Table 1: Parameter Estimates of Different Temperature Settings
+
+                      Temperature          Parameter Estimates
+                             Setting     Slope   Intercept  R-square  P-value
+                         10◦C      0.3847   1.5190     0.4477   <0.0001
+                         16◦C      0.6930   1.5789     0.3464    0.0003
+                         22◦C      0.2225   2.6330     0.1568    0.0204  微信公众号：数学模型
+
+    2  Assumptions
+
+
+         To simplify the problem, we make the following basic assumptions, each of which is
+      properly justiﬁed.
+
+         • Assumption 1: The decomposition rate of a certain fungus is consistent in the decay
+             cycle when all conditions are constant. Thus, we take the rate in the middle stage as
+            the decomposition rate.
+            ,→Justiﬁcation: According to the research article mentioned in Section 1.1, the fungi exam-  微信号：MATHmodels             ined are most relevant with respect to the decay of woody materials in the middle of their decay
+               cycle. Therefore, we can assume that the decomposition rate of a certain fungus is consistent.
+
+         • Assumption 2: Inherent growth rate is positively correlate with inherent hyphal ex-
+            tension rate when all conditions are consistent.
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 6 ===
+      Team # 2100454                                                      Page 6 of 25          微信公众号：数学模型
+
+            ,→Justiﬁcation: As the inherent growth rate and inherent hyphal extension rate are both
+             drived by the growth of hyphae, we can assume that there exists positive correlation.
+
+         • Assumption 3: All fungi shares a common environmental capacity.
+
+            ,→Justiﬁcation: For model simplication, we suppose that they have a equal environmental
+              capacity, since these cannot be discriminated in experimental environment.
+
+         • Assumption 4: The diffusion of external fungus should be ignored.
+
+            ,→Justiﬁcation: Here we only consider a relatively closed region where outside fungus can
+             hardly diffuse in this area, which means the growth of each species will only depend on its
+               proliferation rate.
+
+         • Assumption 5: No inﬂuential human being activities.
+
+            ,→Justiﬁcation: Though most of our data are driven from the nature, we design all experiment
+             in laboratory environment which has nearly no human being activities except adjusting its
+             temperature and moisture.
+
+
+    3  Abbreviation and Deﬁnitions
+
+
+       We begin by deﬁning a list of nomenclature (symbols) used in this article, cf. Table 2.
+
+                                       Table 2: Nomenclature
+
+           Symbol                     Deﬁnition                         Unit
+               T(t)             temperature at where fungi grow              ◦C
+                ϕ(t)             relative humidity at where fungi grow           /
+            V (t)                relative density of woody ﬁbers             /
+                 Fi(t)                 density of the i-th fungus                g/m2
+                     li(t)             hyphal length of the i-th fungus           mm/day
+               ri(T, ϕ)          inherent growth rate of the i-th fungus        g/(m2 · day)
+            mi(T, ϕ)     inherent hyphal extension rate of the i-th fungus     mm/day
+                cij(T, ϕ)      relative competitiveness of species i to species j        /  微信公众号：数学模型
+                  ni         the enviornmental capacity of the i-th fungus        g/m2
+         K                 the comprehension capacity               g/m2
+               p               the growth-hyphal extension ratio             /
+                µi1(T)     moisture-controlled relative hyphal extension rate    mm/day
+                                           for the i-th fungus
+                µi2(ϕ)   temperature-controlled relative hyphal extension rate   mm/day
+                                           for the i-th fungus
+             G(ϕ)                moisture tolerance factor                /
+           H(T)              temperature tolerance factor               /  微信号：MATHmodelsDji     122 days decomposition rate for i fungi in j-th region      /
+                  Ij       inﬂuence rate of diversity decrese for j-th region       /
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 7 ===
+      Team # 2100454                                                      Page 7 of 25          微信公众号：数学模型
+
+    4  The GAME Model
+
+
+        Now, we are to state our model in detail.
+
+
+      4.1  Gause’s Model for Predicting Fungus’ Decomposition of Woody Fibers
+
+          In this section, we apply Gause’s Competitive Model and use ﬁnite difference method to
+     make the prediction.
+
+
+        4.1.1  Model Description
+
+
+         To predict the distribution of different species of fungi in the future, together with the
+       efﬁciency of decomposition, we construct a differential equation model based on Gause’s
+      Competitive Model for describing population competition [5]. Here we denote t as the time
+       indicator, and T(t), ϕ(t) as the temperature and moisture, respectively.
+
+          Let V (t) be the density of woody ﬁbers, and Fi(t), li(t) be the density and hyphal length
+       of the i-th fungus, respectively, i = 1, 2, · · · , s. Following by the requirement of evaluating
+       the importance of biodiversity, we assume that there are no woody ﬁbers new produced in
+      order to quantify the woody ﬁbers decomposed by fungi. That is, the total weight loss of
+     woody ﬁber equals to the decomposition amount. The change of V is composed of each fun-
+       gus’ decomposition activity, which is associated with its extension rate and the total species
+       density here. For each species Fi, its growth will face the pressure of competition from other
+       fungi. And for hyphal extension rate li, based on its inherent growth rate, it will be inﬂu-
+      enced by species competition. A schematic map is presented in Figure 4.  微信公众号：数学模型
+
+
+
+
+
+                           Figure 4: Competition Among Different Fungi
+
+
+          In the left cube (light green color), total species density is high.  Consequently, their
+       generative hyphaes meet and interact with each other. In the right cube (dark green color),
+       there exists no competition as total species density is low.  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 8 ===
+      Team # 2100454                                                      Page 8 of 25          微信公众号：数学模型
+
+        Hence the ordinary differential functions for prediction are listed as follows:
+     
+      ∑s                                            dli        + F2 + · · · + Fs      dV            = −    f(T, ϕ,    ) · V  · (1 −F1                  )           dt                 dt          K               i=1     
+           dFi       = ri(T, ϕ) · Fi · (1 −ci1(T, ϕ)F1 −ci2(T, ϕ)F2 −· · · −cis(T, ϕ)Fs ),   i = 1, 2, · · · , s           dt                            n1           n2                ns                     dli           + F2 + · · · + Fs       = mi(T, ϕ)(1 −F1                  ),   i = 1, 2, · · · , s
+            dt             K
+                                                                                                             (1)
+      where
+
+         • f(·, ·, ·): The decomposition rate function, determined by Figure 3.
+
+         • K: The comprehensive environmental capacity for fungi.
+
+         •  ri(·, ·): The inherent growth rate for each species, related to temperature and moisture.
+
+         • ni: The environmental capacity for each fungus.
+
+         • mi(·, ·): The inherent hyphal extension rate for each species, related to temperature
+          and moisture.
+
+         •  cij(·, ·): The relative competitiveness of species i. More precisely, we have
+                                      
+                                              1     c1(T, ϕ)   · · ·  c1(T, ϕ)
+                                                                        c2(T, ϕ)     1        · · ·  c2(T, ϕ)                                                          C = (cij)s×s =                                                          (2)                           · · ·          · · ·       · · ·       · · · 
+                                                  cs(T, ϕ)  cs(T, ϕ)   · · ·     1
+
+          where ci(T, ϕ) = 1 − s∑mi(T,ϕ)   is the inherent competitive coefﬁcient, negatively corre-
+                                           mj(T,ϕ)
+                                          j=1
+             lated to mi.
+
+
+         To approch the prediction of species as well as decomposition amount, we need a nu-
+       merical scheme for explaining how they evolve in both short-term and long-term. Since
+          it is an 1-order ordinary differential system which does not contain higher-order term and  微信公众号：数学模型
+      high-dimensional grid, we shall apply traditional Finite Difference Method for solving this
+      system numerically [6]. we are able to derive results in simulating environments, which will
+      be illustrated detailly in the next part.
+
+
+        4.1.2  Inplementation
+
+
+         To balance the calculating efﬁcency and simulation vraisemblance, we create three rep-
+       resentative species, which have great differences in inherent hyphal extension rate, inherent
+      growth rate, and resource consumption rate, to simulate the circumstance of competition.
+      The attribute of each species and set parameters are listed in Table 3. Other parameters set       in this simulating微信号：MATHmodelsexperiment are listed in Table 4.
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 9 ===
+      Team # 2100454                                                      Page 9 of 25          微信公众号：数学模型
+
+                    Table 3: Attributes and Parameter Set for Three Chosen Species
+
+         Species         Attributes                        Parameter Set
+      Number  Tolerance  Dominance  Extension Rate  Growth Rate  Consumption Rate
+           1      High     Low             1.5              0.1                1.2
+           2     Median    Median           4.5              0.3                1.1
+           3      Low      High           10.5             0.7                1.0
+              1 Extension rate, growth rate, and consumption rate are all relative value.
+
+
+                       Table 4: Other Parameters in the Simulating Experiment
+
+                                     Parameter                   Value
+
+                      Environmental capacity for single species       100
+                     Environmental capacity for multiple species      200
+                            Environment temperature            22◦C
+                                           Initial hyphal length               1 mm
+                                Experiment period              122 days
+
+
+          In this experiment, we assume that temperature and moisture are both consistent and
+      optimal for three species to grow and multiply, that is, competitiveness is the only factor
+     we taken into consideration. Initial density of fungi is: 20 (species 1), 15 (species 2), and 0.5
+       (species 3), respectively. The simulating result is shown in Figure 5.  微信公众号：数学模型
+
+
+
+
+
+                           Figure 5: The Density Change of Fungi by Time
+
+
+        By analyse the changing tendency in the gragh above, we can derive the following sig-
+       niﬁcant conclusions:  微信号：MATHmodels
+         • Although species 3 has low density at the beginning, its density increases rapidly by
+           time and gradually outcompetes other two species for its high competitiveness.
+
+         • The density of species 1 and 2 decreases as time went by though they have large initial
+             density.
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 10 ===
+      Team # 2100454                                                     Page 10 of 25          微信公众号：数学模型
+
+         • The species that has the highest competitiveness will be the only winner if environ-
+          ment keeps consistent, but other species may maintain a relatively low density, rather
+           than extincting entirely.
+
+          Figure 6 shows relative decomposition efﬁciency of three species. Figure 7 shows rela-
+       tive density of woody ﬁbers. We can ﬁnd that: Decomposition efﬁciency decreases by time,
+       giving the reason that competition between species and increase in its populaiton both make
+       the contribution. In 0-15 days, the decrease rate is fast because it does not reach the balance.
+     When it reaches the balance (15-122 days), the decrease rate becomes much slower. Besides,
+     we can see that woody ﬁbers mass loss is about 30% in an experiment period, which approx-
+       imately equals to the result in the research article mentioned in Section 1.1, further validates
+       the reasonability of our model.
+
+
+
+
+
+      Figure 6: Relative Decomposition Efﬁciency  Figure 7: Relative Density of Woody Fibers by
+       of Three Species by Time                   Time
+
+
+      4.2  Antagonism Effect and Stability
+
+          In this part, we choose the temperate environment as experiment environment and ana-
+       lyze the impact of changing atmospheric trends on the growth mode of fungi and assess the
+      impact of variation of local weather patterns on the rate of woody ﬁber decomposition.  微信公众号：数学模型
+
+
+        4.2.1  Background of This Problem
+
+       We are to pick up 5 typical species for better readability and analyzability, without loss
+       of generalizability. They are listed as follows, together with their major characteristics in
+      graphs below, all data about fungi is acquired from a research article about fungi decompo-
+        sition [7]. Figure 8 demonstrates the hyphal extension rate of ﬁve different species changed
+      by temperature. Figure 9 shows the hyphal extension rate of ﬁve different species changed
+      by water potential. Each Species’ strength and weakness are shown in Figure 10.
+
+         • P.Flavidoalba.S.  This species has the ability of maintaining hyphal extension rate  微信号：MATHmodels
+          under pretty low water potential. There are great chance detecting this at arid or semi-
+            arid region.
+
+         • P.Hartigii.N.  This species is a representative of disadvantaged fungi, with a rela-
+             tively low hyphal extension rate. However, it may tolerate extreme weather and rapid
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 11 ===
+      Team # 2100454                                                     Page 11 of 25          微信公众号：数学模型
+
+            ﬂuctuation, which may survive from catastrophe.
+
+         • M.Tremellosus.N.  This species has a high requirement on water potential, since it
+           decays rapidly when going away from its optimal moisture. Where it exists may have
+           a relatively stable climate.
+
+         • P.Sanguineus.S.  This species can reach the maximum of hyphal extension rate, with
+           a relatively high optimal temperature interval. Tropical region may be the best habitat
+             for this fungus.
+
+         • H.Setigerum.N.  This species can proliferate well in extreme wet area, but it cannot
+             tolerate a relatively high temperature.  It may be the dominant fungus at where the
+           water potential is sufﬁcient large.
+
+
+
+
+
+      Figure 8:  Hyphal Extension Rate of Five  Figure 9: Relative Density of Woody Fibers
+       Species Changed by Temperature           by Time  微信公众号：数学模型  微信号：MATHmodels
+
+      Figure 10: Ability Value of Each Fungus. (HT: Heat Tolerance, CT: Cold Tolerance, WT: Wet
+       Tolerance, DT: Drought Tolerance, VT: decomposition rate of a fungus when at its optimal
+       temperature, VM: decomposition rate of a fungus when at its optimal moisture)
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 12 ===
+      Team # 2100454                                                     Page 12 of 25          微信公众号：数学模型
+
+          In this problem, we choose Columbus, Ohio as our experiment environment, which is
+      a representitive of temperate climate. All the climate data are acquired from the wunder-
+      ground website [8].
+
+          Short-term and long-term climate trend including temperature and humidity in Colum-
+      bus are shown in Figure 11 and Figure 12.
+
+
+
+
+
+      Figure  11:   Short-term  Climate Trend  in  Figure  12:   Long-term  Climate Trend  in
+      Columbus: Data collected from September 1st  Columbus: Data collected from September 1st
+       to September 7th at hourly intervals.            to December 31st at daily intervals.
+
+
+        4.2.2  Moisture Tolerance Analysis
+
+
+              It is well-known that if a fungus has a relatively better hyphal extension rate, it will per-
+      form relatively worsely on moisture or temperature tolerance. Good examples are m.trem.n
+     and p.har.n above.
+
+         To measure this signiﬁcant indicator and explore the inﬂuence on decomposition rate,
+     we introduce the Moisture Tolerance Factor G(ϕ) to quantiﬁcate this trait. Suppose µi1(ϕ)
+      be the moisture-controlled relative hyphal extension rate for the i-th fungus (Figure 9), then
+     we deﬁne G(ϕ) as
+                                                         µi1(ϕ)
+                                      G(ϕ) =                                                 (3)  微信公众号：数学模型µi1(ϕ0)
+      where
+                                         ϕ0 = Argmax µi1(ϕ)
+                                                             ϕ∈[0,100%]
+
+         Taking G(ϕ) ≥50% be the standard for optimal moisture, it can be calculated obviously
+       that m.trem.n will have smaller optimal moisture interval than p.har.n, which can actually
+       reﬂect the mositure tolerance of these species.
+
+                                                                  µi2(T)
+           Similarly, we can determine H(T) = µi2(T0) be the Temperature Tolerance Factor, which
+       will be applied in prediction later.  微信号：MATHmodels
+        4.2.3  Methods to Analyze Antagonism Effect
+
+
+          In order to get the relationship between hyphal extension rate and decomposition rate,
+     we do interpolation use the linear regression result of 10◦C, 16◦C, 22◦C in Section 1.3. As the
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 13 ===
+      Team # 2100454                                                     Page 13 of 25          微信公众号：数学模型
+
+       trend of 16◦C deviates largely from the other two temperature, we only use the regression
+       result of 10◦C and 22◦C to do the linear interpolation of intercept. Besides, to reach better
+       universality, we set slope λ to 0.44, which is the regression coefﬁcient of log(geometric mean
+      decomposition rate) across 10◦C, 16◦C, 22◦C ∼log(hyphal extension rate).
+
+        The interpolation result of decomposition rate versus hyphal extension rate on different
+      temperature is shown in Figure 13.
+
+
+
+
+
+                                 Figure 13: The Interpolation Result
+
+        As there exists good correlation between water potential and humidity [9], we unify
+      water potential and relative humidity by making linear mapping from relative humidity to
+      water potential. Higher relative humidity represents larger water potential.
+
+
+        4.2.4  Inplementation
+
+
+          Indeed, all parameters as well as coefﬁcient functions need to be determined before we  微信公众号：数学模型
+      approach our results.  First, we consider the inherent hyphal extension rate mi(T, ϕ) as a
+      production of optimal value times two inhibiting factors. More precisely, we set
+
+                                  mi(T, ϕ) = mimax · G(ϕ) · H(T)                                (4)
+
+      where
+                               mimax = max{µi1(ϕ0), µi2(T0)}                                 (5)
+
+         Then, by the positive correlation between growth rate and hyphal extension rate men-
+       tioned in Assumption 2, we consider ri = p·mi, where p is a rescaling factor that we initially
+        set it be 0.2. Here we also suppose that each fungus has a enviromental capacity ni = 100,
+     and the comprehensive enviromental capacity K = 300 since species competition will have  微信号：MATHmodels
+      an impact on it.
+
+         Then, we simulate the evolution process, with initial species density
+                          [                                ]
+                          F1(0), F2(0), F3(0), F4(0), F5(0) = [1, 25, 5, 15, 10] g · m−2
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 14 ===
+      Team # 2100454                                                     Page 14 of 25          微信公众号：数学模型
+
+     and hyphal length li(0) = 1 mm. By the Python code presented in Appendix 7, we derive
+       the evolution data as ﬁgures shown below.
+
+
+
+
+
+       Figure 14: Short-term Fungi’s Density Trend    Figure 15: Long-term Fungi’s Density Trend
+
+
+        From those curves above, we are able to analyse how different fungi grow and compete
+       to each other. Some meaningful results are reﬁned below:
+
+         • Though P.Flav.S has the lowest initial density, it can still be dominant at a visible speed,
+          and ﬁnially be the only winner. This can be predicted by its general advantage on
+            moisture.
+
+         • Other species has a higher initial density, but after only a short growth period, they
+             will be dominated by P.Flav.S, but they will tend to a lower amount rather than ex-
+              tinction, which indicates that once the environment has some dramatic change (like
+           temperature increasing), they may have probability to be dominant.
+
+         • The decomposition speed is becoming slower, since the temperate region has a rela-
+             tively steady environmental mositure, as well as slowly decresing temperature since
+            the data we take is from September to December.
+
+          Since the temperate environment is relatively mild in environment, we need to explore
+       that if there’s a persistent rapid ﬂuctuation on weather, how will the evolution become. Here     we take微信公众号：数学模型part of data in an arid region, Santa Fe, New Mexico, which has some period rapid
+      ﬂuctuation in data. We select the segment from 21st, Oct. to 9th, Nov., and periodically
+      continuous extend this segement to 122 days. The result is shown in Figure 16 and 17.
+
+          This achieves a consensus on our common sense: for rapid ﬂuctuation, only those who
+      have a high adaption will be probably dominant. P.Flav.S is just this kind of fungus since
+          it performance well in a pretty wide range of moisture. It cannot be ignored that the ﬂuc-
+       tuation of temperature is still in middle and low range, and it can be predicted that higher
+      ﬂuctuation in temperature will weaken the advantages of P.Flav.S.
+
+
+      4.3  Multi-environment Experiment for Revealing Habitats  微信号：MATHmodels
+         To get more comprehensive understanding of interaction between different fungi, we
+     do similar experiments as in the last task in different environment including arid, semi-
+        arid, temperate, arboreal, and tropical rain forests in long-term. The representitive cities we
+      choose are shown in Figure 18.
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 15 ===
+      Team # 2100454                                                     Page 15 of 25          微信公众号：数学模型
+
+
+
+
+
+      Figure 16: The weather segment of Santa Fe  Figure 17: Fungi’s Density Trend in rapid ﬂuc-
+      (from 50th day to 69th day)                    tuation
+
+
+
+
+
+                           Figure 18: The Location of Representitive Cities
+
+        Dynamics of the interactions in long-term trends is shown in Figure 19. We can make the
+       following conclusions:
+
+         • The species p.ﬂav.s (blue line) always shows predominance in the ecosystem due to its           high微信公众号：数学模型competitiveness, which is also in accord with the radar map (Figure 10).
+
+         • Other Species’ population gradually decrease though they have larger initial density
+           than p.ﬂav.s. However, they are not extinct but maintain a certain amount of their
+            colonies under the great pressure of p.ﬂav.s.
+
+         • P.har.n (golden line) has low competitiveness. However, it can survive well in arid and
+            semi-arid environment for it performs well in cold and dry conditions.
+
+         • Although m.trem.n (green line) and h.seti.n (purple line) have low drought tolerance, it
+           can also survive in arid and semi-arid area, feeling that they just hide away to protect
+           themselves from the ﬁerce competition between other fungi.         • In微信号：MATHmodelstropical rain forest, p.ﬂav.s (blue line), p.sang.s (red line), and m.trem.n (green line) are
+            continuously competing. Although m.trem.n has poor performance in dry tolerance,
+              this weakness can be neglected in this condition. For p.sang.s, its heat tolerance is much
+             better than p.ﬂav.s though its other attributes may be poorer. We can ﬁnd that p.sang.s
+          and m.trem.n shaken the dominant position of p.ﬂav.s.
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 16 ===
+      Team # 2100454                                                     Page 16 of 25          微信公众号：数学模型
+
+
+        Condition   Temperature and Humidity Trend  Density of Fungi Change by Time
+
+
+
+
+           Arid
+
+
+
+
+
+         Semi-arid
+
+
+
+
+
+       Temperate
+
+
+
+
+
+         Arboreal  微信公众号：数学模型
+
+
+
+
+
+          Tropical
+           Rain
+           Forest  微信号：MATHmodels
+
+
+      Figure 19: Dynamics of Interaction of Five Fungi in Five Different Conditions: Left column
+         is the trend of temperature (red line) and humidity (blue line) in a certain area; Right column
+         is the density of fungi change by time, each color represents a certain species of fungi.                                                                                            Blue:关注数学模型
+                                                                                                                                                                                                                            2
+       p.ﬂav.s, Golden: p.har.n, Green: m.trem.n, Red: p.sang.s, Purple: h.seti.n.                          MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 17 ===
+      Team # 2100454                                                     Page 17 of 25          微信公众号：数学模型
+
+         For deeply considering variable situations of different environments, we provide some
+      comparison graphs of the total decomposition amount of these ﬁve regions in short- and
+       long-term. It is consensus to our common sense that for relatively higher temperature and
+      moisture in a certain range, the decomposition efﬁciency will be correspondingly better.
+
+
+
+
+
+      Figure 20: The decomposition amount in vari-  Figure 21: The decomposition amount in vari-
+       able environments (in 7 days)                  able environments (in 122 days)
+
+
+      4.4  Efﬁciency, Robustness, and Biodiversity
+
+          In this section, we are to explore one of the most inﬂuential terminology of macrobiol-
+       ogy, biodiversity in ecosystem. As we know, if an ecosystem has a strong robustness, this
+       characteristic will frequently be linked to a rich biodiversity.
+
+        Here we are willing to show fungi diversity’s impact on ecosystem’s efﬁciency of decom-
+       positing ground litter and woody ﬁbers. Firstly, we take tropical rain forest as our experi-
+     ment environment. Promising the total density of fungi and density ratios of each selected
+       one, we started to select the ﬁrst 3 and ﬁrst 2 species to evolve under this circumstance. Our
+      model gives the predicitons of decomposition amount in 122 days, which is shown below.  微信公众号：数学模型
+
+
+
+
+
+      Figure 22: The Decomposition   Figure 23:  The Decomposi-   Figure 24: The Decomposition
+     Amount of Five Fungi Species   tion Amount of Three Fungi  Amount of Two Fungi Species
+        in 122 Days                     Species in 122 Days               in 122 Days
+
+
+         For preciseness, we provide the accurate consumption percentage:  微信号：MATHmodels
+                             [D55, D53, D52] = [63.803%, 43.116%, 34.110%]
+
+         It is actually decreasing as the reduction of the number of fungi species. For clearness and
+       universality, we also conduct the experiment in other four environments, with other condi-
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 18 ===
+      Team # 2100454                                                     Page 18 of 25          微信公众号：数学模型
+
+       tions maintaining. And the comparison graph among ﬁve results is presented in Figure 25,
+      which veriﬁes this positive correlation between decomposition rate and fungi’s diversity.
+
+
+
+
+
+               Figure 25: The Inﬂuence of Diversity on Decomposition Rate in 122 days
+
+
+         Considering that the importance of biodiversity can be viewed clearly in environments
+      with different degrees of variability, we design a comparison about the inﬂuence rate of
+       diversity decrese between arid region and tropical rain forests since they are two typical
+      environments of high and low variablity, respectively (see Figure 19). The representation of
+       the inﬂuence rate of diversity decrease in i-th region is
+
+                                  1    5 −Di3   Di5 −Di2   Di3 −Di2                                       Ii =       +      +               ]                           (6)                                 3[Di Di5       Di5       Di3
+
+        By computation, we can obtain the arid I1 = 18.405%, and rain forest I5 = 33.283%. This
+       indicates that to some extent, the tropical rain forest need a more adequate biodiversity than
+       arid region, since the former has a more stable ecosystem, which requires more effective
+       fungi to play a role as decomposers to avoid a single ruler.  微信公众号：数学模型
+    5  Sensitivity Analysis
+
+
+          In our model, we have introduced some subjective parameters, which is necessary for us
+       to experiment their sensitivity to them.
+
+        Here we comprehensively analyze probable unstable factors, typically we choose the
+      growth-hyphal extension ratio p and common environmental capacity n1 = n2 = · · · = ns =
+       n. The ratio p comes from the assumption that the growth rate positively correlates with
+      hyphal extension rate, with initial value p = 0.2. And the environmental capacity has an
+        initial value 100, which is endowed with a strong artiﬁciality. So here we take the range  微信号：MATHmodels
+                                   p ∈[0.05, 0.3],  n ∈[50, 175]
+
+       to verify the robustness of our model. We design a heat map for explaining how these
+      parameters affect total decomposition rate, which we actually regard as the indicator of bio-
+        diversity. It is worth mentioning that we do this experiment on Columbus, Ohio (temperate)
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 19 ===
+      Team # 2100454                                                     Page 19 of 25          微信公众号：数学模型
+
+      from 1st. September to 31st. December. totally 122 days, and the comprehensive environ-
+      mental capacity K will be permanantly scaled by K = 3n.
+
+
+
+
+
+      Figure 26: The corresponding decomposition amount for different growth-hyphal extension
+        ratio p and environmental capacity n
+
+
+        From this graph, we are able to observe that ﬁx other parameters and initial values, when
+       the ratio p increses, the decomposition rate will monotonously decrease; when the environ-
+      mental capacity n increses, the decomposition rate will monotonously increase. However,
+      once we note that the growth/vanish rate is decreasing to 0, we will have sufﬁcient reasons
+       to deduce that in a certain interval, they will converge to a value which will be not far away
+      from the decomposition rate driven by p = 0.2, n = 100.
+
+          Therefore, to some extent, our model is robust when considering change of these two
+       parameters.
+
+
+    6  Strengths and Weaknesses  微信公众号：数学模型
+
+        Here some strengths and weaknesses of our GAME Model are listed for better under-
+      standing and application.
+
+
+      6.1  Strengths
+
+         • Strong Universality. Our model is mainly based on a classical Gause’s model, which
+                is used to revealing how species have interactions with each other, particularly for
+           micro-organism like fungi. Indeed, we can also apply this to some associated pre-
+             diction, like the proliferation, competition as well as reciprocal of different species.  微信号：MATHmodels           Namely, once we obtain the initial data as well as all personal features, environmental
+            parameters, and how they evolve in the future, a reasonable and robust prediction will
+           be presented.
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 20 ===
+      Team # 2100454                                                     Page 20 of 25          微信公众号：数学模型
+
+         • Precise Interpretability. The result reveals that our model performs well since it is
+             consistent with our common sense and biological explanation. Moreover, results of
+          some academic articles in micro-organism ﬁeld can also vindicate the predicted con-
+            clusion wherever those fungi species live.
+
+         • High Accuracy. Since fungi’s competition will be quite sensitive to outside circum-
+             stance, especially for ﬂuctuation of timely temperature and moisture, our model can
+           accomplish this sensitivity which can be rapidly reﬂected on predicted result.
+
+
+      6.2  Weaknesses
+
+         • Roughly Decision in Fitting. For log(Hyphal Extension Rate)-log(Decomposition Rate)
+            curve, from original data, we can only get the regression information of T = 10 ◦C,
+          T = 16 ◦C, and T = 22 ◦C. We choose to use the linear interpolation of horizontal
+             intercept for each temperature since decoration rate may be positively associated with
+            temperature, but indeed this can be determined more meticulously, like parabolic in-
+             terpolation or spline interpolation.
+
+         • Simple Indicator of Competitive Factor. When establishing this model, we regard
+            competitiveness ci(T, ϕ) as an intrinsic feature of species i that is fair to all other species.
+          However, the relative advantages may have difference when facing different kinds of
+             fungi.
+
+
+    7  Conclusion
+
+
+          In this paper, we ﬁrst do a signiﬁcant pre-processing about the estimation for the decom-
+       position rates, with the regression, as well as traits of these fungi like temperature and mois-
+       ture situation. Then, we establish our model called GAME (Gause’s Competitive model,
+      Antagonism effect, Multi-environment experiment, and Efﬁciency) to summarize our work
+       for predicting how the fungi evolution game becomes when facing different circumstances
+     and their decomposition efﬁciency as an indicator of biodiversity. During the boost of anal-
+        ysis, we offer a reasonable evolution of the ﬁve typical fungi at various stimulating environ-
+     ment in both short-term and long-term by Gause’s Competitive model and ﬁnite difference  微信公众号：数学模型      method. Also, we analyse these different species’ hyphal extension rate and moisture tol-
+       erance, then derive and compare their special advantages and disadcantages when facing
+       different environment for correspondence. Through the creature decrease experiment, we
+      compare the decomposition amount to verify that biodiversity plays an important role in
+       general nature. To make our model more strict and precise, we make sensitivity analysis
+     and discuss its strengths and weaknesses for reference. Moreover, an introductory college
+       level biology textbook will also be provided for people to learn how fungi grow, compete as
+       well as the contribution of signiﬁcant biodiversity.  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 21 ===
+          微信公众号：数学模型
+  微信公众号：数学模型  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 22 ===
+          微信公众号：数学模型
+  微信公众号：数学模型  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 23 ===
+      Team # 2100454                                                     Page 23 of 25          微信公众号：数学模型
+
+    References
+
+
+        [1] Bush and Martin, “Climate change and renewable energy: How to end the climate cri-
+             sis,” pp. 109–141, 2020.
+
+        [2] “Why some mushrooms may be magic for climate change,” Time, 2014.
+
+        [3] “Spore dispersal in fungi.” [Online]. Available: www.botany.hawaii.edu.
+
+        [4] Nicky Lustenhouwer, Daniel S. Maynard, Mark A. Bradford, Daniel L. Lindner, Brad
+          Oberle, Amy E. Zanne, and Thomas W. Crowther, “A trait-based understanding of wood
+         decomposition by fungi,” Proceedings of the National Academy of Sciences of the United
+            States, vol. 117, pp. 11 551–11 558, 2020.
+
+        [5] G. F. Gause, “Experimental populations of microscopic organisms,” ECOLOGY, vol. 18,
+          pp. 173–179, 1937.
+
+        [6] R. L. Burden and J. D. Faires, Numerical analysis. 5th ed. PWS Publishing Co., 1988.
+
+        [7] Daniel S. Maynard, Mark A. Bradford, Kristofer R. Covey, Daniel Lindner, Jessie Glaeser,
+         Douglas A. Talbert, Paul Joshua Tinker, Donald M. Walker, and Thomas W. Crowther,
+          “Consistent trade-offs in fungal trait expression across broad spatial scales,” Nature Mi-
+            crobiology, vol. 4, pp. 846–853, 2019.
+
+        [8] “Temperature data.” [Online]. Available: https://www.wunderground.com/
+
+        [9] “Water potential verses moisture.” [Online]. Available: https://www.metergroup.com/
+          environment/articles/deﬁning-water-potential/  微信公众号：数学模型  微信号：MATHmodels
+
+
+
+
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 24 ===
+      Team # 2100454                                                     Page 24 of 25          微信公众号：数学模型
+   Appendices
+
+
+     Source Code on Competitive Model
+
+      import numpy as np
+      import matplotlib.pyplot as plt
+      from math import exp
+      import pandas as pd
+      import Get_hyphal_rate
+      import dataprocess
+
+      fungi_names = [’p.flav.s’, ’p.har.n’, ’m.trem.n’, ’p.sang.s’, ’h.seti.n’]
+      def lineartransform(x):  # turn moisture to water potential
+          y = -5 + x / 20
+          return format(y, ’.2f’)
+
+      def f(hyphal_rate, temperature, factor):  # get decomposition rate by interpolation
+          delta = (2.633 - 1.519) / 120
+          a = int((temperature - 10) / 0.1)*delta+1.519
+          y = exp(a) * (hyphal_rate ** (0.44))*factor/100/122
+          return y
+
+      def get_m(humidity, temperature, fungi_names):  #  get the growth-hyphal extension ratio
+          water_potential = lineartransform(humidity)
+          m, factor = Get_hyphal_rate.get_hyphal_rate(fungi_names, water_potential,
+                                                      temperature)
+          # get_hyphal_rate: get hyphal extension rate under certain moisture and temperature
+          return m, factor
+
+      delta_t, s, t_step = 1, 5, 122
+      F, D, l = np.ones((s, t_step)), np.ones((s, t_step-1)), np.ones((s, t_step))
+      V = np.zeros(t_step)
+      V[0], K = 1, 300
+      F[:, 0] = np.array([1, 25, 5, 15, 10])
+      n = np.array([100, 100, 100, 100, 100])
+      T, H = dataprocess.get_longTH(0)
+      for i in range(t_step-1):
+          humidity = H[i]
+          temperature = T[i]
+          print(i)
+          m, factor = get_m(humidity, temperature, fungi_names)
+          r = np.diag(m/5)
+          c = [1-mi/np.sum(m) for mi in m]
+          C = np.array([[1, c[0], c[0], c[0], c[0]],
+                        [c[1], 1, c[1], c[1], c[1]],
+                        [c[2], c[2], 1, c[2], c[2]],
+                        [c[3], c[3], c[3], 1, c[3]],
+                        [c[4], c[4], c[4], c[4], 1]])
+          vector = F[:, i]/n
+          B = np.diag(np.diag(r*F[:, i]))@C
+          F[:, i+1] = F[:, i]+(r@F[:, i]-B@vector)*delta_t
+          l[:, i+1] = l[:, i]+delta_t*(1-(np.sum(F[:, i]))/K)*m.T
+          D[:, i] = f((1-(np.sum(F[:, i]))/K)*m.T, temperature, factor)
+          V[i+1] = V[i]+(-np.sum(D[:, i]))*delta_t*V[i]*(1-(np.sum(F[:, i]))/K)  微信公众号：数学模型
+      t = [i*delta_t for i in range(t_step)]
+      plt.plot(t, F[0, :], c=’steelblue’, label=’p.flav.s’)
+      plt.plot(t, F[1, :], c=’darkorange’, label=’p.har.n’)
+      plt.plot(t, F[2, :], c=’forestgreen’, label=’m.trem.n’)
+      plt.plot(t, F[3, :], c=’firebrick’, label=’p.sang.s’)
+      plt.plot(t, F[4, :], c=’mediumpurple’, label=’h.seti.n’)
+      plt.xlabel("Time(day)", fontsize=16)
+      plt.ylabel("The density of fungi"+""+"(g/m"+"\u00b2"+")", fontsize=16)
+      plt.tick_params(labelsize=14)
+      plt.legend(fontsize=10)
+      plt.show()
+
+      plt.plot(t, V, c=’b’, alpha=0.6, linewidth=2)
+      plt.xlabel("Time(day)", fontsize=14)
+      plt.ylabel("Relative density of woody fibers", fontsize=14)
+      plt.tick_params(labelsize=12)
+      plt.show()  微信号：MATHmodels
+     Source Code on Getting hyphal rate
+
+      import numpy as np
+      import pandas as pd
+      import matplotlib.pyplot as plt
+
+      def get_name():
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯
+
+=== PDF PAGE 25 ===
+      Team # 2100454                                                     Page 25 of 25          微信公众号：数学模型
+
+
+          temp_dataset = pd.read_csv("Fungi_temperature_curves.csv")
+          temp_data = temp_dataset.values
+          fungi_name = np.unique(temp_data[:, 0])
+          return fungi_name
+
+      def get_temp(name_list, temp, temp_dataset):
+           a = []
+           for i in range(len(name_list)):
+               slice = temp_dataset[(temp_dataset[’species’] == name_list[i]) &
+                                    (temp_dataset[’type’] == ’smoothed’)]
+               slice1 = slice[slice[’temp_c’] == float(temp)]
+               a.append(slice1[’hyphal_rate’].values[0])
+           return np.array(a)
+
+      def get_moi(name_list, moi, moi_dataset):
+          a = []
+          for i in range(len(name_list)):
+              slice = moi_dataset[(moi_dataset[’species’] == name_list[i]) &
+                                  (moi_dataset[’type’] == ’smoothed’)]
+              a.append(slice[slice[’matric_pot’] == float(moi)][’hyphal_rate’].values[0])
+          return np.array(a)
+
+      def get_moi_max(name_list, moi_dataset):
+          a = []
+          for i in range(len(name_list)):
+              slice = moi_dataset[(moi_dataset[’species’] == name_list[i]) &
+                                  (moi_dataset[’type’] == ’smoothed’)]
+              a.append(np.max(np.array(slice[’hyphal_rate’])))
+          return np.array(a)
+
+      def get_temp_max(name_list,temp_dataset):
+          a = []
+          for i in range(len(name_list)):
+              slice = temp_dataset[(temp_dataset[’species’] == name_list[i]) &
+                                   (temp_dataset[’type’] == ’smoothed’)]
+              a.append(np.max(np.array(slice[’hyphal_rate’])))
+          return np.array(a)
+
+      def get_hyphal_rate(name_list, moi, temp):
+          temp_dataset = pd.read_csv("Fungi_temperature_curves.csv")
+          moi_dataset = pd.read_csv("Fungi_moisture_curves.csv")
+          temp_max = get_temp_max(name_list, temp_dataset)
+          moi_max = get_moi_max(name_list, moi_dataset)
+          moi_hyphal_rate = get_moi(name_list, moi, moi_dataset)
+          temp_hyphal_rate = get_temp(name_list, temp, temp_dataset)
+
+          max_rate = np.array([max(temp_max[i], moi_max[i]) for i in range(len(temp_max))])
+          a = moi_hyphal_rate/moi_max
+          b = temp_hyphal_rate/temp_max
+          hyphal_rate = max_rate*a*b
+          return hyphal_rate, a
+
+      fungi_names= [’p.flav.s’, ’p.har.n’, ’m.trem.n’, ’p.sang.s’, ’h.seti.n’]
+      x = np.linspace(0, -5, 501)
+      for name in fungi_names:
+          moi_dataset = pd.read_csv("Fungi_moisture_curves.csv")
+          moi_data = moi_dataset.values
+          slice = moi_dataset[(moi_dataset[’species’] == name) &
+                              (moi_dataset[’type’] == ’smoothed’)]          y 微信公众号：数学模型= slice["hyphal_rate"].values
+          plt.plot(x,y,label=name)
+          plt.yticks(np.linspace(0, 10, 6), fontsize=12)
+          plt.xticks(np.linspace(-5, 0, 6), fontsize=12)
+          plt.ylabel("Hyphal extension rate(mm/day)", fontsize=14)
+          plt.xlabel("Water potential(MPa)", fontsize=14)
+          plt.grid(color=’grey’, linestyle=’--’, linewidth=1, alpha=0.3)
+
+      plt.legend()
+      plt.show()
+
+      x = np.linspace(-5, 50, 5501)
+      for name in fungi_names:
+          moi_dataset = pd.read_csv("Fungi_temperature_curves.csv")
+          moi_data = moi_dataset.values
+          slice = moi_dataset[(moi_dataset[’species’] == name) &
+                              (moi_dataset[’type’] == ’smoothed’)]
+          y = slice["hyphal_rate"].values
+          plt.plot(x,y,label=name)          plt.yticks(np.linspace(0,微信号：MATHmodels15, 6), fontsize=12)
+          plt.xticks(np.linspace(0, 50, 6), fontsize=12)
+          plt.ylabel("Hyphal extension rate(mm/day)", fontsize=14)
+          plt.xlabel("Temperature()", fontsize=14)
+          plt.grid(color=’grey’, linestyle=’--’, linewidth=1, alpha=0.3)
+      plt.legend()
+      plt.show()
+
+                                                                                                                                                                                                                            2   关注数学模型
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                     MATHmodels微信号：MATHmodels                                                    获取更多资讯

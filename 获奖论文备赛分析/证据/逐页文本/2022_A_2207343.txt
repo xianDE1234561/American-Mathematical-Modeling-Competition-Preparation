@@ -1,0 +1,1257 @@
+=== PDF PAGE 1 ===
+      Problem Chosen                 2022            Team Control Number
+     A              MCM/ICM         2207343                           Summary Sheet
+
+    Optimal Power Allocation −Ride to The Future
+
+                             Summary
+
+  Who would have thought that the champion of the Tokyo Olympics cycling time trial was a
+mathematician? Believe it or not, math does it. In this paper, we will build a mathematical model of
+the power curve to help riders win races.
+
+    In Task 1, we build a power-duration model based on biological principles. This model has three
+stages: Extreme, Severe, Heavy. After substituting the searched rider data into the model, we plot
+the power curves of the sprinter and time trial specialist of diﬀerent genders.
+
+    In Task 2, we ﬁrst use the power curve in Task 1 to build the Human Energy Expenditure
+Model, which describes the rider’s constraints on energy limits. We analyzed the dynamic bicycle
+model to determine the Pout −v relationship during cycling. By analyzing the characteristics of the
+track, we establish a piecewise nonlinear programming model with a wide range of applications for
+straights, curves, and slopes. For large slope segments or sharp bends, we made detailed calculations
+individually. Finally, the optimal output power curves of the riders when riding on the three courses
+in Task 1 are solved by Mathematica. The completion times are shown in the table below. Compared
+with the champion, our model lags within 6%, reﬂecting the model’s accuracy.
+                                                  Male time       Female time
+      Course       Male sprinter    Female sprinter
+                                                                             trial specialist       trial specialist
+   Self-designed       47.53min         48.58min         46.48min         48.20min
+      In Japan         62.68min         40.97min         56.03min         33.63min
+     In Belgium        58.15min         59.62min         53.03min         54.05min
+
+    After the model is solved, we perform sensitivity analysis in Task 3 and Task 4. For weather
+factors, we focus on the eﬀects of wind speed and direction. When the wind speed changes within
+±2m/s and the direction changes within ±180◦, we get the change graph of the output power with
+Python. We conclude that the model is robust as its sensitivity to crosswinds is within 1%. And it
+has a 10% impact on headwinds, which provides us with ideas for team competition strategies.
+
+  We also tested the model’s sensitivity to rider deviations. Taking the Belgian track as an example,
+                          gwe establish the riders’ actual output power function Pout and add a random disturbance term Pout to
+simulate the randomness of the rider. After calculation, the riders can ﬁnish the race before they run
+out of energy. The time lag is within 2%.
+
+    Inspired by the model’s high sensitivity to headwind, we develop a team time trial strategy in
+Task 5. The results are shown in the table below.
+
+          Stage            Balance(48%)         Storage(27%)          Sprint(25%)
+       Formation        Pyramid formation        Linear array         Shield formation
+
+    Finally, we write to Directeur Sportif with a race guidance for time trial specialists and sprinters.
+
+Keywords: power curve, nonlinear programming, dynamics model, formation planning
+
+=== PDF PAGE 2 ===
+Team # 2207343                                                            Page 1 of 22
+
+
+                        Contents
+
+
+
+1  Introduction                                                                 2
+
+    1.1  Restatement of the Problem .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   2
+
+    1.2   Literature Review  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+
+    1.3  Our Work   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   3
+
+
+2  Assumptions and Justiﬁcations                                                 4
+
+
+3  Notations                                                                   4
+
+
+4  Three stage power-duration models                                             4
+
+    4.1  The Establishment of power-duration model  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   5
+
+    4.2  The Solution of Power-Duration Model .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+
+
+5  Piecewise Nonlinear Programming for Time Trial                                 6
+
+    5.1  The Establishment of Human Energy Expenditure Model  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   6
+
+    5.2  The Mathematical Relationship Between Power Output And Speed  .  .  .  .  .  .  .  .  .  .   7
+
+    5.3  The Racing Strategy of Self-designed course .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   8
+
+         5.3.1   Analysis of Riding Strategies on Curved Roads   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+
+         5.3.2   Analysis of Straight Riding Strategy  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   9
+
+    5.4  The Strategy of 2021 UCI World Championship time trial course  .  .  .  .  .  .  .  .  .  .  .  11
+
+         5.4.1  The Strategy of Straight and Ramp Riding in Belgium course .  .  .  .  .  .  .  .  .  12
+
+         5.4.2  The Strategy of Turning in Belgium course   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+
+    5.5  The Strategy of 2021 Olympic Time Trial course    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+
+         5.5.1  The Strategy for Regular Road Sections in Japan   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  14
+
+         5.5.2  The Strategy for Special Road Sections in Japan .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+
+
+6  Sensitivity Analysis                                                          16
+
+    6.1   Sensitive Analysis of Weather    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  16
+
+    6.2   Sensitive Analysis of Rider Deviations  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  18
+
+
+7  Further Discussion of The Team Time Trial                                     19
+
+
+8  Model Evaluation and Further Discussion                                       21
+
+    8.1   Strengths    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+
+    8.2  Weaknesses   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+
+    8.3  Conclusion    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+
+=== PDF PAGE 3 ===
+Team # 2207343                                                            Page 2 of 22
+
+
+1  Introduction
+
+1.1  Restatement of the Problem
+
+   Cycling is characterized by high power output over a period. This capability can be summarized
+by a power curve representing the maximum power a cyclist has generated over time. Due to the
+limited endurance of humans, the power curve generally slopes downward to the right, as shown in
+ﬁg. 1.
+
+   The power curve is used to specify pacing strategies for diﬀerent courses. And it can prevent
+the rider from incurring signiﬁcant energy losses on impulse. This can be useful in any cycling race
+requiring pacing, such as a time trial, Strava segment, or mid-race climb. Using diﬀerent riding
+powers on diﬀerent road conditions can help riders store energy for sprints and win races.
+
+
+
+
+
+                                    Figure 1: Power curve
+
+  We are developing a mathematical model for diﬀerent types of cyclists. This model is limited
+by the total energy a cyclist can expend, focusing on several characteristics of the cyclist, such as
+the riding capacity, the position of the rider, and the output power of the rider. Based on the above
+understanding, we need to solve the following problems:
+
+     • Deﬁne the power curve of a time trial specialist and a sprinter, and consider the genders.
+
+     • Use each power proﬁle deﬁned in Task 1 to apply the model to the following time trial.
+
+      ◦2021 Olympic Time Trial course in Tokyo, Japan,
+      ◦2021 UCI World Championship time trial course in Flanders, Belgium,
+      ◦At a minimum, a self-designed track that includes at least four sharp turns and a nontrivial
+           road grade. The end of the course should be near its start point.
+
+     • Determine the model’s sensitivity to weather factors, including wind speed and direction.
+
+     • Analyze how sensitive the results are to rider deviations from the target power distribution.
+
+     • Further, discuss extending the model to a six-player team time trial and get the best results.
+     Team time is determined by when the fourth rider crosses the ﬁnish line.
+
+     • Write a two-page rider’s race guidance for a Directeur Sportif of a team, which should focus
+     on the result of a time trial course and a rider.  It needs to include a model summary and an
+
+=== PDF PAGE 4 ===
+Team # 2207343                                                            Page 3 of 22
+
+
+     overview of directions. Readers are people with no mathematical background.
+
+1.2  Literature Review
+
+   Power proﬁling has always been a scorching area of cycling research. Since the invention of
+the power meter in the late 1980s, some researchers have selected a power-duration model that best
+describes the training intensity range of athletes. For example, the two-parameter CP model [1] is
+only suitable for the severe exercise intensity domain. However, much power output falls within the
+high exercise intensity domains. So this model does not provide a fair generalization of the cyclist’s
+power curve. This also shows that diﬀerent examples maybe require diﬀerent modeling approaches.
+
+   With the development of physiology, there has been a growing awareness that a power curve can
+be divided into three diﬀerent exercise intensity domains: Extreme, Severe, and Heavy [2]. And
+it provides a comprehensive approach to studying tolerable exercise limits. Previous research has
+shown that the anaerobic power reserve (APR) can well predict short-term (<3 min) power outputs
+in the extreme exercise intensity domain [3]. In the severe exercise intensity domain, the CP models
+are mainly used. There is also a three-parameter CP model [4]. Currently, a full-power model exists
+for the heavy exercise intensity domain [5].
+
+1.3  Our Work
+
+  We set up two models based on the assumptions and literature, including the three-stage power
+curve and dynamic bicycle models. The power curve model’s three stages are Extreme, Severe,
+and Heavy, characterized by distinct human physiological responses. The dynamic bicycle model is
+based on physics principles and describes the inﬂuence of weather factors on the power output. We
+then tested the model on diﬀerent riders and tracks, with good results. Finally, we designed the team
+time trial formation to make our model more applicable.
+
+
+
+
+
+                             Figure 2: The structure of our paper
+
+=== PDF PAGE 5 ===
+Team # 2207343                                                            Page 4 of 22
+
+
+2  Assumptions and Justiﬁcations
+
+   Through a complete analysis of the problem, in order to simplify our model, we make the
+following reasonable assumptions.
+
+Assumption 1: Assuming that the temperature and humidity of the cyclist’s competition venue
+are suitable, and the ﬂuctuation range is small. Take the temperature range of 67.6 ∼75.6◦F
+and the humidity range of 35.1 ∼45.9%.
+
+    First, considering that most of the major cycling competitions, including the two cycling com-
+petitions given by the problem, are held in July-September. Then check the past weather conditions
+and ﬁnd that the temperature and humidity of the arena are relatively suitable.
+
+Assumption 2: Assuming that cyclists in diﬀerent physical states, ride with the same power for
+the same time, they consume the same amount of energy.
+
+   The principle of physical strength distribution of professional athletes at diﬀerent stages during
+the competition is mostly based on the model of lactic acid accumulation and ATP conversion [6].
+These models have linear properties in explaining human energy expenditure [7].
+
+Assumption 3: Assuming that cyclists lose a constant 5% of their energy during cycling.
+
+   The cyclist is the engine providing the power. Friction in the drive train (chains, gears, bearings,
+etc.) causes a small amount of loss, usually around 5%[8], assuming the bicycle has a clean and
+nicely lubricated drivetrain.
+
+3  Notations
+
+   The key mathematical notations used in this paper are listed in Table 1.
+
+                            Table 1: Notations used in this paper
+            Symbol  Deﬁnitions                                     Units
+          CP     Critical power                        W/kg
+        W ′    Work capacity above critical power            J/kg
+              λE    The cyclist’s remaining energy/the upper energy        /
+                  Pout   The output power of rider                W/kg
+                   tn     Completion time                               s
+                 vwind   Wind speed                          m/s
+
+
+4  Three stage power-duration models
+
+   As a source of parameters for power curve calculations and track-speciﬁc decisions, power proﬁles
+should demonstrate important biological parameters for bike racing of all types of riders. Based
+on this premise, we combine the literature review mentioned above to analyze various parameter
+characteristics of existing models. In the end, we selecte a sprinter and time trial specialist as our
+main subjects. We also calculate the parameters CP,W ′,etc., which can help get the power curve.
+
+   Next, we obtain the maximum power that can be maintained by diﬀerent cyclists when they
+
+=== PDF PAGE 6 ===
+Team # 2207343                                                            Page 5 of 22
+
+
+ride for 5s, 1min, 3min, 5min, 12min, and one has the data source for parameter calcu-lation. We
+also consult the relevant website to obtain the calculation method of the Maximum aerobic power
+MAPTTF and the value of at the end of every stage.
+
+    Finally, we calculated the results and presented the power proﬁle in a tabular format, with a graph
+showing the power curves for both athletes of diﬀerent genders.
+
+4.1  The Establishment of power-duration model
+
+    First, we use CP to represent the critical power of a cyclist.  Critical power means the power
+output that cyclists tend to ride at high intensity, usually lasting 30 to 40 minutes. We then use W ′
+to represent the work (in J/kg) that the cyclist can expend above CP before fully depleting energy.
+
+   Due to the complex metabolism of the human body, and the research on related biomechanics
+and biochemical reactions during exercise is also pending breakthroughs. Therefore, the calculation
+of CP, W ′ is generally obtained from experimental data. It can be seen from the literature [9] that
+the calculation formulas of CP and W ′ are as follows:
+
+                                     12 · P12 −3 · P3
+                      CP =                                                      (1)
+                                           9
+
+                W ′ = 0.24s · (P3 −P12)                                   (2)
+
+where P3 is the average power of a cyclist who rides hard for three minutes divided by his mass,
+while P12 is the same as P3 but for 12 minutes.And we also have the formulas of MAPTTF
+
+                    W ′     W ′
+                   MAPTTF =      +                                          (3)
+                            P −CP   Pmax −CP
+where Pmaxis ultimate power.  According to relevant information[9], we estimate thatPmax ≈
+P5s.Integrating the formulas above, we get the following table:
+
+                    Table 2: The power proﬁle of diﬀerent types of riders I
+
+          Race          Gender      5s      1min     3min     5min    12min
+
+               M       21.03      9.09      6.95      4.81      4.70
+           Sprinter
+                        F       16.40      7.39      6.17      4.17      4.13
+               M       16.89      8.74      7.14      5.53      5.46
+    Time Trial Specialist
+                        F       13.39      7.11      5.85      4.83      4.75
+
+
+                    Table 3: The power proﬁle of diﬀerent types of riders II
+          Race          Gender   FTP    CP    W ′   MAPTTF  CPTTF
+
+               M       3.91      3.94      0.54      1.10      33.79
+           Sprinter
+                        F        3.39      3.45      0.49      0.99      32.60
+               M       4.98      4.90      0.40      0.97      40.29
+    Time Trial Specialist
+                        F        4.38      4.38      0.26      0.92      34.41
+
+=== PDF PAGE 7 ===
+Team # 2207343                                                            Page 6 of 22
+
+
+   According to the diﬀerent exercise time and the characteristics of various athletes in diﬀerent
+stages, we refer to the literature review to solve the power curve in three stages.  Its scope and
+calculation model are shown in the following table:
+
+                         Table 4: Three stage power-duration models
+
+          Stage         Model                  Equation              Range
+
+                      Anaerobic
+        I.Extreme                           P(t) = P3 + (Pmax −P3) · e−kt   t < MAPTTF
+                    power reserve
+
+                                                                                                                                   ′                   t > MAPTTF                   2-parameter critical          W
+         II.Severe                                    P(t) =   t + CP                    power model                                              t < CPTTF
+
+
+                                               W ′                 Omni power        P(t) = Wt ′ ·  1 −et· CP −Pmax
+        III.Heavy                                                                    t > CPTTF
+                       duration model                                            t                          +CP −A · ln                                                        CPT T F
+         ( Combining curve continuity, take k=0.7, A=0.1)
+
+4.2  The Solution of Power-Duration Model
+
+   Then we combine formula (1), formula (2) and the data in Table 2, together with the data in Table
+3, and substitute them into the formula in Table 4. We use Mathematica to calculate and draw the
+curve to get the following power curve in ﬁg .3.
+
+
+
+
+
+Figure 3: The power curve of diﬀerent types of rider. Left: Power curve for 0∼40 min. Middle:
+Power curve for 0∼1 min(Extreme domain).  Right: Power curve for 1∼40 min(Severe&Heavy
+domain)
+
+   Looking at the curves, in the same event, the power curve of male cyclists is always above the
+power curve of female cyclists. This is consistent with the pattern of better physical strength in male
+cyclists. In addition, in terms of short bursts (t < 1s), the power of the sprinter was signiﬁcantly
+higher than that of the time trial specialist. In the middle- and long-distance riding competitions, the
+time trial specialist are better.
+
+5  Piecewise Nonlinear Programming for Time Trial
+
+5.1  The Establishment of Human Energy Expenditure Model
+
+   To apply the power curve model established in Task 1 to the courses, we next derive a human
+energy expenditure model suitable for the problem background.
+
+=== PDF PAGE 8 ===
+Team # 2207343                                                            Page 7 of 22
+
+
+   Let m · Pout be the power output by the cyclist at time t. where m is the weight of cyclist, and
+Pout is the output power per unit mass of cyclist.
+
+
+
+
+
+Figure 4: The illustration of Task 2. Left: The schematic diagram of variable power output. Middle:
+The discrete function of Pout −t. Right: The continuous function of Pout −t.
+
+   According to Assumption 2, we calculate in proportion to the total energy consumed. For the
+power discrete values shown in the middle of Fig. 4, the ratio of the cyclist’s remaining energy to the
+upper energy limit is expressed as follows:
+               X                            ER          ∆ti
+                           λE =   = 1 −                                            (4)
+                          Em          Ti                                                                                             i
+
+where Ti is the longest holding time of the current power when the body is full of energy. In the
+middle of ﬁg. 4, the result of λE is λE = 1 −10s20s −5s10s = 0.
+
+   Change the discrete model to continuous. For the continuity Pout (t) shown in the right of ﬁg. 4,
+cut an approximate rectangle with a width of dt, and the height of the rectangle is T(Pout) . Next,
+replace the summation with the integral to get the formula for λE at time t
+                                   Z  t                                                 dτ
+                          λE (t) = 1 −                                                  (5)
+                                                        0 T (Pout (τ))
+
+where T(P) is the inverse function of the power curve expression P(t), i.e., T (P) = P −1 (P).
+
+     If the cyclist just uses up his energy when he reaches the ﬁnish line, the following constraint
+exists:                             Z  t                                               dτ
+                           1 −λE (t) =         = 1                               (6)
+                                                      0 T (Pout (τ))
+
+   However, when solving practical problems, it is impossible for cyclists to strictly follow a detailed
+plan of the optimization solution. This can lead to cyclists hitting their ﬁtness limits before they
+ﬁnish the race. Therefore, we reduce the 1 on the right side of the equation to 0.95, leaving 5% of
+the remaining stamina to deal with the above situation.
+
+5.2  The Mathematical Relationship Between Power Output And Speed
+
+  We conduct a dynamic analysis on the bicycle, the force diagram is shown in the left of ﬁg. 5,
+and the following formula is established:
+
+                                Ftotal = (Froll + Fslope + Faccel + Fwind) /η                          (7)
+
+where Ftotal is the athlete’s active force, Froll is the rolling friction force, Faccel is the inertial force
+generated by the acceleration, Fwind is the aerodynamic resistance, and Fslope is the slope resistance
+
+=== PDF PAGE 9 ===
+Team # 2207343                                                            Page 8 of 22
+
+
+(negative value when going downhill). According to assumption 3, we set η as the driving eﬃciency,
+which is 95%.
+
+
+
+
+
+                 Figure 5: Left: Analysis of bicycle force. Right: Pout −v plot
+
+   According to the principles of physics, the calculation formulas of various physical quantities are
+as follows:
+
+                 Froll = Cr · Mg (0.0015 < Cr < 0.015, M = m + mbike ≈1.2 · m)             (8)
+
+                                            Fslope = Mg · sin θ                                      (9)
+
+                                               Faccel = a · M                                     (10)
+                                      1
+                                                            wind                                (11)                                  Fwind = 2CWA · ρ v2
+where ρ is the air density. Based on the temperature and humidity values in Assumption 1, we get
+ρ = 1.29 kg/m3  . CW  is the wind resistance coeﬃcient. A is the frontal area, which satisﬁes
+CWA = 0.39 m2 and is only valid for the frontal incident ﬂow.  Under no wind conditions,
+vwind = vbike.
+
+   Combining the above equations, and then by m · Pout = Ftotal · v, we can obtain the conversion
+relationship between Pout and v, as shown in the right of ﬁg. 5.
+
+5.3  The Racing Strategy of Self-designed course
+
+  We ﬁrst design a course that includes basic road conditions such as straights, downhill slopes,
+and sharp turns to obtain the strategies to be adopted in diﬀerent road conditions. This strategy is
+then used to solve complex course problems in two real races.
+
+
+
+
+
+ Figure 6: Left: Self-designed track scene construction. Right: Self-designed 3D map of the track
+
+=== PDF PAGE 10 ===
+Team # 2207343                                                            Page 9 of 22
+
+
+  We use Webots software to build the track scene, and draw the plan and 3D map of the self-
+designed course, as shown in ﬁg. 6. Section AB is a short uphill, section CD is a long uphill and
+section EF is a long downhill.
+
+5.3.1  Analysis of Riding Strategies on Curved Roads
+
+    First, we analyze the corner riding strategy. We expect cyclists to go through the corners at the
+top speed allowed. This not only reduces the time to pass the curve, but also reduces the acceleration
+and deceleration time of the straight road.
+
+  We set the inner diameter of the curve as r, the road width as d, and R as the radius of the optimal
+path arc. According to the centripetal force calculation formula F = mv2r  , the maximum turning rate
+can be achieved by taking the route shown in the ﬁgure below. In this case, the physical quantities
+are related as follows:
+
+
+
+
+
+    Integrating, we get the maximum speed of cornering
+               s
+                               µg · cos α · d + r −r cos θ
+                           vmax =                          θ         2                             (∗)                                         1 −cos                                                                  2
+
+   Since the total length of the curves of the self-designed track is 0.185km,  it can be ignored
+compared with the total length of the straight track of 36.5km.  Therefore, we ﬁrst only consider
+the straight time when calculating the time and ignore the speed change problem in the turn. We
+approximated the rider’s power output before and after the turn as a step change. After this is done,
+we complete the optimal passing scheme for each turn.
+
+5.3.2  Analysis of Straight Riding Strategy
+
+   Next, we analyze the straight riding strategy. We assume that there are ni sections of horizon-
+tal straights (lengthsL1, L2, ..., Lni),nj sections of downhill straights(lengths D1, D2, ...Dnj) and nk
+sections of uphill straights(lengths U1, U2, ..., Unk). The conversion function v −Pout of the hori-
+zontal straight is v(straight) (P), the function for a downhill straight with an inclination angle θj is
+v(downhill)                                      is the function for a uphill straight with an inclination angle θk. The  θj       (P), and v(uphill)θk    (P)
+task then turns into the following planning problem:
+
+      Xni     Xnj     Xnk                            Li              Dj              Uk
+                    t =          +           +
+                                v(straight) (Pi)                       i=1                                          j=1 v(downhill)θj       (Pj)   k=1 v(uphill)θk    (Pk)
+
+                                  find Pout (t) ,                                     (12)
+
+=== PDF PAGE 11 ===
+Team # 2207343                                                           Page 10 of 22
+
+
+                                Z
+                                                           tn     dt∗
+                      min {t}   s.t.          = 0.95
+                                                    0  T (Pout (t∗))
+
+    In this map, ni = 7, nj = 1, nk = 1.The subscript of L, D, U is marked in an increasing manner
+from the start point to the end point.
+                                                                         R                                                                                                              tn     dt∗
+   As for this function, we discretize Pout (t).This makes the numerical calculation of   0   T(Pout(t∗))
+easier to implement. And we can use Pi, Pj, Pk to draw the Pout (x) graph, which is more helpful
+for cyclists to judge the output power according to the track landscape.
+
+
+
+
+
+            Figure 7: Ramp division               Figure 8: Time trial male rider strategy
+
+  We use Mathematica to numerically solve the inverse function and the nonlinear programming
+function Minimize. Then get the results shown in the table below:
+
+                   Table 5: The results of the self-designed time trial course
+              Rider type        Gender    Pout (L)   Pout (U1)  Pout (D1)       t
+
+                  M        6.0        6.3        5.2     47.53min
+                 Sprinter
+                            F         5.8        6.0        5.1     48.58min
+                  M        6.5        6.4        5.1     46.48min
+        Time Trial Specialist
+                            F         6.0        5.9        5.0     48.20min
+
+
+  We next solve for the turn time. We use the formula (*) and the conversion function to solve, and
+get the following results:
+
+                              Table 6: The results of each turn
+                    Curve number  A   B   C   D    E
+                             Pout       2.94   7.27   4.94  3.23  12.13
+                          v        7.34  11.02  9.48  7.98  13.38
+
+
+   Comparing the above two tables, it can be seen that the cyclist must slow down to pass the turn
+due to the large angle of turns A and D. Although the turn at C is 53 degrees, it is on a scope, which
+reduces the upper limit of static friction. So deceleration is also required. Turn B is no need to slow
+down.
+
+=== PDF PAGE 12 ===
+Team # 2207343                                                           Page 11 of 22
+
+
+    In bicycle competition, the acceleration can reach 2m/s2 when accelerating and decelerating.
+The time for this process can be ignored.
+
+   Combining the results of the straights and corners above, the optimal Pout (t) during the rider’s
+competition is shown in ﬁg. 8 (taking a male time trial specialist as an example).
+
+5.4  The Strategy of 2021 UCI World Championship time trial course
+
+
+
+
+
+       Figure 9: 2021 UCI Track Division       Figure 10: The ﬁnish near the city center plaza
+
+   According to the data on UCI’s oﬃcial website, we determined the terrain and route characteristics
+of the area of the course on Google Earth. And we divide the track into 32 parts by analyzing the
+similarities and diﬀerences of the road sections (as shown in ﬁg. 9). Among them, 15 sections are
+curves, 2 sections are horizontal straights, 3 sections are downhill straights, and 12 sections are uphill
+straights.
+
+
+
+
+
+                               Figure 11: Detail of section #25
+
+     It is worth noting that the competition area is located in northwestern Belgium.  It is in the
+High Flanders Plain with small undulations. The maximum slope angle in the uphill section of this
+area is 1.66◦, while in the downhill section is 0.69◦. Besides, there are suﬃciently long straights to
+transition between adjacent turns. The shortest straight is our section numbered 25 (shown in ﬁg.
+11). Section #25 is about 400m long, which is enough for cyclists to maintain the optimum for a long
+
+=== PDF PAGE 13 ===
+Team # 2207343                                                           Page 12 of 22
+
+
+time. Therefore, the rider’s passing time is hardly aﬀected by turning, and the piecewise discrete
+programming model is still applicable.
+
+   Diﬀerent from the Olympic Time Trial course in Tokyo, this competition has relatively low
+requirements on players’ driving skills and cornering skills and focuses on physical distribution and
+endurance.
+
+5.4.1  The Strategy of Straight and Ramp Riding in Belgium course
+
+   Based on the above analysis, we can still use the method of self-designed track. First, we solve
+the straight strategy, as follows:
+
+      Xni     Xnj     Xnk                            Li              Dj              Uk
+                    t =          +           +
+                                v(straight) (Pi)                       i=1                                          j=1 v(downhill)θj       (Pj)   k=1 v(uphill)θk    (Pk)
+
+                                  find Pout (t) ,                                     (13)
+                                Z
+                                                           tn     dt∗
+                      min {t}   s.t.          = 0.95
+                                                    0  T (Pout (t∗))
+
+   where ni = 2, nj = 3, nk = 12.
+
+   Considering that there are many uphill sections and diﬀerent slope angles.  It makes the model
+diﬃcult to converge, which is extremely unfavorable for the computer’s nonlinear programming
+solution. Due to the small undulating terrain in this area, we selected 9 road sections with slope
+angles below 1◦(#1, 3, 5, 7, 11, 17, 29, 30, 32) and group them together. Then we can weight the
+slope angle according to the road length to get the integrated new slope. We next use the new slope
+to solve.
+   Since sin 2θ is approximately linear in the range of small slope angles. When integrating multiple
+ramps, we can use approximately linear properties for weighting. The parameters are determined by
+the following equations:
+           X   X
+                       UC =     Uk, = θC    wk · θk                            (14)
+                                   k∈AU          k∈AU
+              X
+                              wk = Uk/    Uq                                   (15)
+                                              q∈AU
+
+    After processing, the problem is transformed into the following nonlinear programming problem:
+
+    Xni     Xnj      X                    Li              Dj               Uk         UC
+          t =          +           +          +
+                     v(straight) (Pi)              i=1                                  j=1 v(downhill)θj       (Pj)    k/∈AU v(uphill)θk    (Pk)    v(uphill)θC    (PC)
+
+                                  find Pout (t) ,                                     (16)
+                                Z
+                                                           tn     dt∗
+                      min {t}   s.t.          = 0.95
+                                                    0  T (Pout (t∗))
+
+=== PDF PAGE 14 ===
+Team # 2207343                                                           Page 13 of 22
+
+
+
+
+
+Figure 12: The results of 2021 UCI World Championship time trial course. Left: Pout(x) plot for
+sprinters. Middle: Pout(x) plot for time trial specialist. Right: Scatter plot of maximum rate in the
+turn
+
+  We use Mathematica to solve the optimal output power of each section of the road. The athlete
+curves are shown in the left and middle of ﬁg. 12. The four types of riders’ complete time are shown
+in the following table:
+
+            Table 7: The results of 2021 UCI World Championship time trial course
+                                                 Male time    Female time
+          Rider type    Male sprinter  Female sprinter
+                                                                          trial specialist   trial specialist
+
+        Complete time    58.15min      59.62min       53.03min      54.05min
+
+
+5.4.2  The Strategy of Turning in Belgium course
+
+    After that, we use the formula (*) and Pout (v) to solve for the maximum power in the turn. The
+results are shown in the right of ﬁg. 12. The scatter in the ﬁgure is the maximum turning power of
+the curve corresponding to x while the broken line is the Pout (t) of the male time trial specialist. It
+can be seen from the ﬁgure that the power of the cyclists on the straights is less than the maximum
+turning power, except for the #23 and #32 curves that require a slight deceleration.
+
+    In the above calculations, we approximated Pout (x) as a discrete function.We will further analyze
+the actual output of the players in 6.2, as shown in ﬁg. 13. This would justify our approach in this
+matter.
+
+
+
+
+
+         Figure 13: Actual output power            Figure 14: 2021 Olympic track division
+
+5.5  The Strategy of 2021 Olympic Time Trial course
+
+   As can be seen from ﬁg.  14, the Tokyo Circuit is located near the city of Toyama, which is
+surrounded by the treacherous Northern Alps Tateyama Mountains on three sides. The terrain here
+
+=== PDF PAGE 15 ===
+Team # 2207343                                                           Page 14 of 22
+
+
+changes greatly and the turns are sharp, which is signiﬁcantly diﬀerent from the Belgian track. This
+event had high requirements on the slope skills of the cyclists. Besides, male cyclists need to circle
+the track twice while female cyclists only need once.
+
+  We divided the Tokyo circuit into 68 segments and 2 zones (large circle and small circle) based
+on the terrain and ramp characteristics of the area. The division situation is shown in ﬁg. 14. Among
+them, most road sections in the large circle and some sections in the small circle can still be calculated
+by the previous model. For the other two road sections (the #24-27 big climbing curve in ﬁg. 16 and
+the #55-56 sharp curve in ﬁg. 17), we will analyze them separately later.
+
+5.5.1  The Strategy for Regular Road Sections in Japan
+
+   Based on our segmentation of the track, in the remaining 62 regular road segments, ni = 20, nj =
+25, nk = 17. Because 1 −cos 2◦< 7 × 10−4, cos 2◦−cos 4◦< 2 × 10−3, Therefore, we apply the
+weighted simpliﬁcation method in 5.4 to the slopes whose angle satisﬁes θ < 2◦and 2◦< θ < 4◦
+respectively. The set of road segment numbers that meet the conditions is TU2, TD2, TU4, TD4.
+And |TU2| = 8, |TD2| = 9, |TU4| = 9, |TD4| = 11. Ultimately, the problem transforms into the
+following nonlinear programming problem:
+
+  Xni     X     X     X                Li               Dj               Uk                 UTi
+    t =          +           +          +
+               v(straight) (Pi)         i=1                                         j /∈TD v(downhill)θj       (Pj)    k/∈TU v(uphill)θk    (Pk)   TU,TD v(up/down)θT i      (PTi)
+
+                             as  t = Σi + Σj + Σk + ΣT
+
+                                  find Pout (t) ,                                     (17)
+                                Z
+                                                           tn     dt∗
+                      min {t}   s.t.          = 0.95
+                                                    0  T (Pout (t∗))
+where ΣT represents the integration item.
+
+   With the help of Mathematica, we get the curve of Pout (x), and the result is shown in ﬁg. 15.
+Compared with 2021UCI, the Tokyo circuit is more complicated. The diﬃ-culty of players’ physical
+distribution strategy has also increased signiﬁcantly.
+
+
+
+
+
+Figure 15: The result of 2021 Olympic Time Trial course. Left: The Pout (x) plot of male cyclist.
+Right: The Pout (x) plot of female cyclist. (The discontinuous part is a special road section and
+needs to be solved separately)
+
+=== PDF PAGE 16 ===
+Team # 2207343                                                           Page 15 of 22
+
+
+
+
+
+                              Figure 16: Detail of section #24-27
+
+
+5.5.2  The Strategy for Special Road Sections in Japan
+
+   (1)Huge hill turn of section #24-27
+
+   The parameters of these four sections are shown in the table below:
+
+                             Table 8: The data of section #24-27
+                Section  Length  Turning radius  Slope angle  Turning angle
+                #24    0.1km     0m           6.65◦           0◦
+               #25  ≈0km     9m          10.25◦        147◦
+               #26    0.1km     0m           5.99◦           0◦
+               #27  ≈0km      8.5m          4.22◦          79◦
+
+   The straight part here is steep, such as section #63 with a slope angle of 4.4◦.The cyclist speed
+here is 6.83m/s and the output power is 5.5W/kg. We will base our straights strategy around this
+data.
+
+   Next, we analyze the turning strategy. The curve is a sharp turn with continuous climbing. We use
+formula (*) to calculate. The best turning speed of section#25 is 6.0m/s, with P (#25) = 6.32 W/kg.
+And the speed of section#27 is 6.4 m/s, Pmax(#27) = 5.31 W/kg. In this way, the time used for this
+section is 31.2s.
+
+   (2)Sharp turn of section#55-56
+
+   The parameters of these four sections are shown in the table below:
+
+                             Table 9: The data of section #55-56
+                Section  Length  Turning radius  Slope angle  Turning angle
+             #55km   0.2m         0◦        ≈0◦           0◦
+             #56km  ≈0m        12◦       ≈0◦         166.9◦
+
+   As for this turn, it has a small inner diameter and a high turning angle of 166.9◦. By calculation,
+
+=== PDF PAGE 17 ===
+Team # 2207343                                                           Page 16 of 22
+
+
+v(#56)max = 5.806 m/s, P max(#56) = 4.32 W/kg. On the straight #55, Pout = 5.6 W/kg, v = 10.0m/s.
+We plan to start decelerating 20m before the start of section #56. And accelerate back to the original
+speed immediately after passing the turn #56. It take 21.7s.
+
+
+
+
+
+                              Figure 17: Detail of section #55-56
+
+   Combining 5.5.1 and 5.5.2, the results of the four players under the optimization strategy are
+shown in the following table:
+
+                   Table 10: The results of 2021 Olympic Time Trial course
+                                                 Male time    Female time
+          Rider type    Male sprinter  Female sprinter
+                                                                          trial specialist   trial specialist
+
+        Complete time    62.68min      56.03min       40.97min      33.63min
+
+
+     It can be seen that the nontrivial road condition increases the test of the cyclist’s climbing
+ability and endurance. The sprinter’s performance was signiﬁcantly lower than that of the time trial
+specialist. This disparity is larger than that of UCI.
+
+6  Sensitivity Analysis
+
+6.1  Sensitive Analysis of Weather
+
+   Weather conditions include temperature, humidity, wind speed, wind direction, etc.
+
+   According to the theory of blood CK and HB [10], within a certain range, temperature and
+humidity have little eﬀect on the physical ﬁtness of athletes. From Assumption 1, the conclusion can
+be further proved reasonable.
+
+   Secondly, rain has little eﬀect on the rolling friction coeﬃcient of the asphalt track. Rain only
+increases the demands on the driver’s turning skills. The literature [11] indicates that the negative
+impact of rain can be eliminated to a certain extent through training.
+
+    In conclusion, our analysis of the sensitivity to weather factors will focus on wind speed and
+direction.
+
+=== PDF PAGE 18 ===
+Team # 2207343                                                           Page 17 of 22
+
+
+  We divide the sensitivity analysis into two parts:  straight sections and turning sections to
+determine the potential impact of wind directions and wind. The inﬂuence of the road gradient is
+mainly reﬂected in the friction of the bicycle. Therefore, we uniformly assume that the road slope is
+0% in the sensitivity analysis.
+
+    (1)Straight sections
+
+  On the straights, only the eﬀective wind speed will aﬀect the ride. The eﬀective wind speed is in
+the same direction as the cyclist. Therefore, we only analyze the sensitivity of the model to the wind
+speed in this part.
+
+   According to the wind speed requirements of cycling events, as well as the average wind speed
+of Japan and Belgium in July, we selected the wind speed to be around 2m/s for analysis.
+
+  We use Python to draw the maximum output power curve and the wind resistance inﬂuence power
+curve within the range of ±1% deviation of wind speed. The results are shown in ﬁg. 18.
+
+
+
+
+
+       Figure 18: Sensitivity of wind speed        Figure 19: Change of Pout (v) and PW (v)
+
+   Figure 19 shows the changes of and curves (moving from bottom to top) when the wind speed
+changes from 1m/s to 4m/s.
+
+   From the ﬁgure, when the cyclist rides at a constant speed on the straight, the deviation is 10%.
+Therefore, the model is more sensitive to wind speed in straight sections.
+
+   (2)Turning sections
+
+   Next, we analyze the model’s sensitivity to wind speed and direction during turning. We use
+Python to perturb the model within 10% of the deviation from the wind speed and direction. The
+results are shown in ﬁg. 20. where γ is the local wind angle.
+
+   During the turning sections, the eﬀect of wind direction change on the rider’s maximum output
+power is on the order of 0.1%, while the eﬀect of wind speed changes is on the order of 0.01%. Both
+eﬀects are much smaller than the straight sections. Therefore, the model is less sensitive to wind
+speed and direction in the turning sections.
+
+    In conclusion, the change of wind direction and speed within a certain range will not aﬀect the
+turning strategy of the model. On the other hand, the model is more sensitive to headwind.  In
+individual races, the output power when the wind is down can be appropriately reduced, while the
+wind is up it can be increased.
+
+=== PDF PAGE 19 ===
+Team # 2207343                                                           Page 18 of 22
+
+
+
+
+
+Figure 20: Sensitivity of wind speed&direction. Left: The course in Japan, withvwind = 2m/s, γ =
+−45◦. Right:The course in Belguim, withvwind = 2m/s, γ = 180◦.
+
+
+    In addition, this phenomenon provides ideas for the strategy of team time trial, which we will
+focus on in Section VII.
+
+6.2  Sensitive Analysis of Rider Deviations
+
+    In the Pout (x) solution process of 5.3-5.5, we adopt an idealized approximate discrete value
+model, so the power output of the rider on each small segment remains constant.  In practical
+situations, due to the randdomness of the rider’s operation, it is diﬃcult to strictly follow the optimal
+power curve. In this part we will test the sensitivity of the rider deviations from the target power to
+the model.
+
+    First, take the time trial in the 2021 UCI as an example. We perform spline interpolation on each
+segment of the discrete Pout (x) based on its endpoint values. They are then used as a function Pout of
+                                            P4                    gthe actual output of the rider. Then, we add random disturbance term Pout =    i=1 Ai sin (0.1i · t),
+where Ai is determined by a random number and 0 < Ai < 5% · Pout(max) . Then the actual power
+                                            (real)   goutput function of the rider is Pout  = Pout + Pout. We conduct three experiments and get three
+Pout(real) (x) curves. Plot them in the same coordinate system as the ideal Pout (x) curve, as shown in
+the left of ﬁg. 21.
+
+
+
+
+
+Figure 21: The results of the model.  Left: The curve of Pout (x) & Pout(real) (x).  Middle: 1- of
+diﬀerent strategies. Right: The Competition time of diﬀerent strategies
+
+  We put the four curves into the energy constraints, and it turned out that all riders could ﬁnish the
+race. In terms of whether it can ﬁnish the race, the stability of the model is excellent. The speciﬁc
+
+=== PDF PAGE 20 ===
+Team # 2207343                                                           Page 19 of 22
+
+
+results are shown in the middle of ﬁg. 21.
+
+   Next, we calculated the time it took for the rider to reach the ﬁnish line (see the right of ﬁg. 21).
+Rider results are all below the ideal output curve. But the lag time is within 2.5% of the optimal
+time. Therefore, the sensitivity of the race performance to the actual strategy of the rider is low. We
+recommend that riders maintain an ideal power curve at the end of each segment, which helps reduce
+lag time.
+
+    Finally, we compared the calculation results of our model with the results of the actual competition
+winners. The results are as follows:
+
+        Table 11: The comparison between Championship results and our model’s results
+
+                 Rider type       Male cycling time trial  Female cycling time trial
+
+         The results of our model        56.03min              34.63min
+
+           Championship results         55.08min              30.22min
+
+
+   The model’s results are slightly behind the world championship results. This may be related to
+the fact that the experimental data samples we use to determine the power curve are from average
+riders rather than top riders.
+
+   Compared with the championship, the results of our model solution are reasonable.   It also
+shows that our model has the eﬀect of bringing average-qualiﬁed riders close to the performance of
+champion riders, which illustrates the eﬀectiveness of the model.
+
+7  Further Discussion of The Team Time Trial
+
+    In the 6.1, we concluded that the crosswind have little eﬀect on the rider, while the headwind
+have a big eﬀect. We found that this feature can be applied to the optimization of team time trials.
+By reviewing the literature, we came to the following conclusions:
+
+   Due to the existence of drafting yields, within a certain distance (<1m), the wind resistance of
+the second rider on the pace line is reduced to 60-70% of the individual rider. While the drag for the
+third rider dropped to about 50-63%. The drag along the convoy will gradually decrease to about
+47-60%.
+
+    In addition, due to the existence of " subsonic upstream disturbance ". With multiple riders, it’s
+not necessarily that the last rider has the least wind resistance. In fact, the last rider is the only rider
+on the pace line who didn’t beneﬁt from the subsonic upstream disturbance .
+
+  We will mainly analyze the formation strategy of the cycling team to deal with the headwind on
+the straight. We calculated the team and individual results on the 1km straight to verify the rationality
+and eﬀectiveness of the strategy.
+
+   For the 6-person cycling team, we have two formations, the snake and the pyramid.  For the
+4-person sprint cycling team, we designed the shield formation as shown in the left of ﬁg. 22. The
+numbers in the heat map represent the ratio of the wind resistance of the individual in the team
+competition to that in the same state of the individual competitionKf.
+
+=== PDF PAGE 21 ===
+Team # 2207343                                                           Page 20 of 22
+
+
+
+
+
+Figure 22: Left: Schematic diagram of three formations in team time trial. Right: Team strategy in
+the time trial.
+
+
+  We divide the race into three stages to calculate the team race results on the 20km straight:
+Balance, Storage, and Sprint. The lengths are LB, LS, LR and LB + LS + LR = 20 km .
+
+     • Balance: 6 riders take turns riding in 6 positions. In this way, the physical energy consumption
+      caused by wind resistance is balanced. We choose the formation with the lowest average
+      resistance coeﬃcient Kf as the optimal one.  It is calculated that the snake formation Kf =
+      67.17 and the pyramid formation Kf = 64.83, so we choose the pyramid formation.
+
+     • Storage: Since changing the formation will cause the rider to consume excess physical strength;
+      the formation should be maintained as much as possible. Besides, the four riders who cross the
+       line should rotate in the position with the smaller drag coeﬃcient, while the other two riders
+      (called windbreakers) should rotate in the place with the larger drag coeﬃcient. Considering
+      the balance of the sprinters in the long snake formation, we choose the long snake formation
+       after weighing.
+
+     • Sprint: According to the simulation results of literature [12], we choose the shield formation
+      with the smallest drag coeﬃcient.
+
+   Next, take the data of male time trial specialists as an example to calculate. The result is that
+the Balance section accounts for 48%, the Storage section accounts for 27%, and the sprint section
+accounts for 25%, as shown in Figure e2. The 20km straight individual race was 24.8min, and the
+team race was 21.2min. The team competition results are signiﬁcantly better than the individual
+competition. Compared with the average speed of the Tour de France 2018 Stage3 champion BMC
+team of 56.1km/h, the average rate of our model on the straights is 56.6km/h, proving the model’s
+accuracy.
+
+
+
+
+
+Figure 23: Left: Cycling strategy for lateral wind. Right: Slanted line array in Tour of Turkey 2016
+
+    In addition, for the case of crosswind, we take the wind coming from the right front as an example.
+
+=== PDF PAGE 22 ===
+Team # 2207343                                                           Page 21 of 22
+
+
+The formation should be adjusted to the diagonal array, as shown in ﬁg. 23. It is beneﬁcial to reduce
+drag coeﬃcient and reduce crosswind disturbance.
+
+8  Model Evaluation and Further Discussion
+
+8.1  Strengths
+
+     • Eﬃcient solutions We exploit the linearity or near-linearity of the function when solving
+      the optimal policy. The solution speed and convergence speed are greatly improved when
+      performing integration and discrete approximations.
+
+     • Accuracy of results We relied on data and literature for model simpliﬁcation. And we have
+      analyzed the special part of the track separately, which guarantees the accuracy. In addition,
+      the solution results of the model are close to the championship results, which veriﬁes the
+      accuracy of the results.
+
+     • Universality The piecewise nonlinear programming model we adopted is suitable for races
+     where track information and player information are known. In addition to cycling time trials,
+     swimming, running and other competitions can also be applied by modifying the parameters.
+
+     • Stability and high fault tolerance Our model was tested for sensitivity and its stability was
+      veriﬁed. We chose the parameters of the average rider and set the energy utilization to 95%.
+     These steps also improve the fault tolerance of the model.
+
+
+8.2  Weaknesses
+
+     • Lack of adversary factor Our model mainly analyzes unopposed time trials. The modeling
+      process lacks consideration of oﬀense and defense strategies among riders.
+
+     • Diﬃculty in further improving accuracy We used numerical methods and discrete methods
+      in the model. These methods limit the accuracy of the model. So in Sections VI and VII, we
+      discuss the model further to improve this problem.  It turns out that the improved model is
+     more accurate.
+
+
+8.3  Conclusion
+
+   Our paper provides a detailed analysis of the relationship between riding strategy and power
+curve. Before introducing our model, we analyze the characteristics of various types of riders and
+diﬀerent kinds of tracks. Then the three-stage power curve model and dynamic bicycle model are
+proposed.
+
+   Next, in order to use the established mathematical model to optimize the strategy of the bicycle
+time trial, we divide the complex track into several simple segments according to the track charac-
+teristics such as slope and turn. Then, using nonlinear programming to solve the optimal strategy,
+we analyzed the self-made track, the Belgian track, and the Tokyo track. Diﬀerent types and genders
+of players have diﬀerent strategies. For the Belgian track, the deviation of the model solution results
+from the world championship results is about 8%. The model results deviate by about 6% for the
+
+=== PDF PAGE 23 ===
+Team # 2207343                                                           Page 22 of 22
+
+
+Tokyo circuit. After that, we analyzed the model’s sensitivity to weather factors and rider deviations.
+Among the weather factors, wind speed and direction dominate. We conclude that the model is
+more sensitive to headwind. This conclusion is beneﬁcial to the formation analysis of the team time
+trial. We perturbed the model with random disturbance terms when studying the sensitivity to rider
+deviations, resulting in three power curves. The riders ﬁnish the race in this disturbance with little
+diﬀerence in their time, proving our model’s robustness.
+
+References
+
+ [1] Moritani T, Ata AN, Devries HA, Muro M (1981) Critical power as a measure of physical work
+     capacity and anaerobic threshold.Ergon 24(5):339350.
+
+ [2] Burnley M, Jones AM (2007) Oxygen uptake kinetics as a determinant of sports perfor-mance.
+    Eur J Sports Sci 7(2):6379.
+
+ [3] Weyand PG, Lin JE, Bundle MW (2006) Sprint Performance-duration relationships are set by
+     the fractional duration of external force application. Am J Physiol 290(3):5865.
+
+ [4] Morton RH (1996) A 3-parameter critical power model. Ergon 39(4):611619.
+
+ [5] Puchowicz MJ, Baker J, Clarke DC (2020) Development and ﬁeld validation of an omni-domain
+     power-duration model. J Sports Sci 38(7):801813.
+
+ [6] Guan Zhongwei Design and theoretical basis of lactic acid tolerance training for 400m sec-
+     ondary athletes . Journal of Shanghai Institute of Physical Education, 2001(S1):142-144.
+
+ [7] Wang Guiying A study on the main physical ﬁtness indicators and evaluation standards of
+     Chinese men’s 400-meter athletes . Journal of Ezhou University, 2007, 14(2): 69-72.
+
+ [8] Rainer Pivit Drag Force Formulas . Radfahren 2/1990, pp. 44 46
+
+ [9] Tom Bell Could Critical Power be a better alternative to FTP for training?. Published: July
+     15, 2021
+
+[10] Ji Jianmin, Cai Dapeng  Eﬀects of temperature and humidity on the training eﬀect of male
+     canoeists. Journal of Shenyang Institute of Physical Education, 2011, 30(03): 68-71.
+
+[11] Steve Westlake Are You Faster When It Rains.1 MAR 2016
+
+[12] Bert Blocken, Yasin Toparlar, Thijs van Druenen, Thomas AndrianneAerodynamic drag in
+     cycling team time trials. Journal of Wind Engineering & Industrial Aerodynamics 182 (2018)
+    128145
+
+=== PDF PAGE 24 ===
+with our mathematical
+ optimization model
+
+
+Dear Directeur Sportif,
+      It’s our honor to show you the results of model——a system called RIDERMAN to you. RIDERMAN is a
+mathematical optimization system that can give effective strategies in rider’s races. “As a mathematician you’re
+
+used to solving problems on your own, so that’s the way I approach cycling,” said by Anna van der Breggen,
+
+Women’s Individual Time Trial champion at the 2021 Tokyo Olympics. Anna holds a PhD in mathematics from
+Cambridge University and is a mathematician. To some extent, her victory shows the importance of mathematical
+
+optimization in sports competitions.
+
+    Through the steps of dynamic modeling, subsection analysis, nonlinear programming solution and so on, a
+system of optimal power output strategy can be solved according to the information of the track and the players.
+
+We applied it to the Tokyo Olympic track, the Belgian UCI track, and a home-made track, and showed that even
+
+moderately fit athletes could achieve near-world championship times using the power output strategy given by
+our model.
+
+     Next, we will explain RIDERMEN, a system based on track information and player data to a rider, and put
+
+forward some suggestions according to our mathematical optimization model.
+
+
+     Dear rider, l am RIDERMAN—— your little helper on       Now, let us take a look at what Strategies
+       the road. Allow me to ask you one question first.         RIDEMAN have prepared for you to deal with
+                                                                           different road types.    Are you a time trial specialist or a sprinter?
+                         ① For a track with more than 90% of the
+        If you are a time trial specialist or a rouleur,
+                                                                road sections on flat ground:
+            WATCH THIS
+    RIDERMAN has prepared unique strategies for            Trying to distribute the energy evenly during
+      you to take the crown.                                         the ride is the best solution.
+                                              (RIDEMAN have drawn power curve and
+       First of all, for a particular track:                                                           power-speed conversion curve below for you
+       Let us divide the road sections into turns as nodes          to determine the actual and appropriate average
+      and determine the type of road sections according         output power expected to accomplish.)
+       to the following criteria. (U for up, D for down)
+
+                Straight type comparison table
+           Slope          0~2°       2°~4°    4°~6°
+       Road type     Flat ground   U4/D4  U6/D6
+
+        (Tips: Your time trial experience will come in handy for                                                                                          Power-Speed
+        sections beyond the descriptions of the above labels.)               Power Curve                                                                                            Conversion Curve
+
+=== PDF PAGE 25 ===
+②: For multi-ramp tracks:                     (RIDERMAN also draws power curve and
+                                                power-speed conversion curve  based on RIDERMAN has prepared a corresponding
+                                                           sprinters’ average level for you to determine         strategy for each type of ramp:
+                                                             the actual and appropriate average output power
+U4-type Uphill: maintain or slightly increase
+                                                        expected to accomplish.)
+the power passing of the original flat ground,
+you can save physical energy consumption
+under the condition of less speed loss
+U6-type Uphill: the output power can be
+temporarily increased by 8%-10%  of  the
+leveling power, so as to reduce the acceleration
+                                                                                    Power-Speed
+and deceleration time before and after passing               Power Curve
+                                                                                      Conversion Curve
+through the curve.
+                                        ②: For multi-ramp tracks:
+D4-type Downhill: the output power can be
+                                   RIDERMAN  also  prepares  different corresponding
+reduced by about 24%.
+                                                               strategies for each type of ramp (use the charac-
+D6-type Downhill: the output power can be                                                             teristics  of  sprinters   to  accelerate/decelerate
+reduced by about 30%.                                                  quickly and easily connect different states to reduce
+                                                   the loss of climbing.):
+Now it is time for the sprinter to show.
+                                       Ramp               Stratigy
+If you're a sprinter professional but have a heart
+                                                                          increased  the  output power
+for being at the top of the time trial,                    U2/U4-type Uphill                                                                             (about 3%)
+        WATCH THIS                                              increased the output power by
+                                                  U6-type UphillRIDERMAN has specially prepared a different                    5%-8% of the leveling power
+strategy package for you to better adapt to the         UM-type          reduce the speed to about 60%
+race and stand out in the time trial.
+                                              D4/D6/DM-type    decreased the output power by
+ First of all, for a particular track:                      Downhill          about 24%/30%/50%
+
+ Let us divide the road sections like a specialist,
+                                                    Next, considering that the time-trial cornering strategy is
+ but according to a different criteria. (U for up,
+                                                           quite different from sprinting, RIDERMAN prepares an
+D for down)
+                                                       additional  spreadsheet  and  calculation  formula
+        Straight type comparison table
+                                                                       (                                            )for you.  It  is
+    Slope         0~1°           1°~2°
+ Road type    Flat ground      U2/D2
+                                              recommended  that you  fill  in  the  curve  data and
+                                                         calculate the maximum cornering speed.
+         Straight type comparison table
+    Slope      2°~4°      4°~6°       >6°                          Turning Statistics
+                                                                   Inner                   Turning Road type   U4/D4    U6/D6   UM/DM       Number                    Slope(deg)
+                                                               diameter(m)                 angle(deg)
+
+ ①: For a track with more than 85% of the road
+  sections on flat ground：                     RIDERMAN wish you good luck in the time
+ Trying to distribute the energy evenly during the                 trial,don’t forget to flexibility according to the
+  ride is the best solution.                                     actual situation.
+
+
+             Thank you for reading, you can print it or send it to the team members by
+
+                  email. You can also focus on the guidance during training to improve the
+                   efficiency and purpose of training.
+
+               Best of luck to your team in the upcoming time trial.
+
+                                                                   Yours Sincerely，
+                                                        Team #2207343

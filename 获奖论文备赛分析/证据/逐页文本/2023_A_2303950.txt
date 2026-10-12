@@ -1,0 +1,1122 @@
+=== PDF PAGE 1 ===
+      Problem Chosen                 2023            Team Control Number
+                        MCM/ICM
+     A                           2303950                           Summary Sheet
+
+A Methodology to Simulate Drought-Stricken Plant Communities
+
+                       Summary
+    The study of plant communities in arid areas is an indispensable part of environmental
+protection. In these regions, annual plants are important components of vegetation, by virtue
+of their unique characteristics. This paper presents a method of simulation for the growth,
+competition, and facilitation of annual plants, which can be applied to various circumstances.
+    To begin with, we establish the Growth Model of annual plants. At first, we determine
+the relationship between soil water content and the natural growth rate in Logistic Model. Then,
+we build the differential equation of soil water content, based on the stochastic rainfall model.
+Finally, we establish the law of annual plant reproduction. To estimate the statistical parameters
+in the stochastic rainfall model, we use Normal Equation to get the optimal parameters
+according to Least Square Method.
+    Based on the Growth Model, we establish the Competition Model of various plants to
+simulate their root competition. For the competition coefficient in Lotka-Volterra Model, we
+innovatively determine its relationship with root growth and water-utilizing capacity of plants.
+Considering the structure of root system, we estimate the parameters in the model reasonably.
+    Based on the Competition Model, we further establish the Facilitation Model of shrub
+plants to herbaceous plants. Given the water-lifting action of shrub plants, we modify the water
+absorption rate in the Competition Model. So far, our models have been elaborated and the
+parameters have been estimated properly.
+     After that, we use the fourth order Runge-Kutta algorithm to give numerical solutions
+to the differential equations. And the problems in the Requirement have been solved as follows:
+ ⚫  Based on the results from our TOPSIS model, at least eight plant species are required
+       to provide overall benefits for the community. As the number of plant species grows, the
+      scale of the community will decrease, while the community will embrace better stability.
+ ⚫  By improving the water absorption efficiency of herbaceous plants, shrubs can reduce
+      the interspecific competition, make the average biomass of different herbaceous plants
+      close to each other, and improve the stability of biodiversity.
+ ⚫  Under more severe drought conditions provided in Section 5.4, the scale of the
+     community will be decreased by over 67% and the fluctuation of the evolution will be
+      enlarged by over 36%. But these indexes still follow the similar trend in Section 5.2 as
+      the number of species grows regardless of different weather cycles.
+ ⚫  The effects of two typical types of pollutants are compared. The results show that
+       pollutants such as acid rain are more dangerous because it can decrease the scale by 14.6%
+     and increase the fluctuation by 14.4% at the same time. Also, the diminishment of habitat
+     by 50% will cause the system to lose 22.9% of its scale but reduce 8.7% of its fluctuation.
+ ⚫  Based on our model and analysis, our strategies are expressed from two main aspects：
+      the Preservation and Modification of the ecosystem.
+     Finally, the sensitivity and stability of the model are fully analyzed.
+Keywords: Growth Model; Competition model; Facilitation model; 4th Runge-Kutta; TOPSIS
+
+=== PDF PAGE 2 ===
+Team # 2303950                                                      Page 2 of 25
+
+
+                         Content
+
+1 Introduction ...................................................................................................... 3
+  1.1 Background ...................................................................................................................... 3
+  1.2 Restatement of the Problem ............................................................................................. 3
+  1.3 Our Work .......................................................................................................................... 4
+2 Assumptions and Justifications ....................................................................... 4
+3 Notations ........................................................................................................... 5
+4 Model Establishment ....................................................................................... 6
+  4.1 The Growth Model of One Species in Drought Circumstances....................................... 6
+  4.2 The Competition Model of Multiple Species ................................................................... 9
+  4.3 The Facilitation Model of Shrub Plants to Herbaceous Plants ...................................... 12
+  4.4 Reasonable Estimation of Essential Parameters ............................................................ 13
+5 Model Computed and Results Analysis ....................................................... 15
+  5.1 Model Computed Algorithm .......................................................................................... 15
+  5.2 Evaluation of the Benefit for a Multi-Plants Community .............................................. 16
+  5.3 The Effect of Different Types of Species in the Community ......................................... 17
+  5.4 The Effect of Fluctuant Frequency of Drought .............................................................. 18
+  5.5 The Impact of Other Factors on Plant Community ........................................................ 19
+  5.6 Measures Needed for Long-Term Viability ................................................................... 20
+6 Sensitivity Analysis and Stability Analysis .................................................. 21
+  6.1 Sensitivity Analysis ........................................................................................................ 21
+  6.2 Stability Analysis ........................................................................................................... 22
+7 Strengths and Weaknesses ............................................................................. 24
+  7.1 Strengths ........................................................................................................................ 24
+  7.2 Weaknesses .................................................................................................................... 24
+References .......................................................................................................... 25
+
+=== PDF PAGE 3 ===
+Team # 2303950                                          Page  3  of  25
+
+1 Introduction
+
+1.1 Background
+
+    Arid environments are characterized by limited and variable  rainfall  that supplies
+resources in pulses. And grasslands, mostly covered by herbages and shrubs, are quite sensitive
+to the shortage of water. Plenty of observations reveal that the number of different species has
+essential effects on how a plant community adapts to droughts which may take place at
+changeable frequencies and wide range of severity. To be specific, plants are better adapted to
+drought conditions in communities with several species, rather than in those with only one
+species. Therefore, this phenomenon, which is a consequence of localized biodiversity, is of
+great research value.
+
+
+
+
+
+                      Figure 1: A Plant Community in Arid Environment
+
+1.2 Restatement of the Problem
+
+    Considering the background information and limiting conditions identified in the problem
+statement, we are supposed to address the following issues:
+⚫  Build a mathematical model to describe drought adaptability with regard to the number of
+    species in a plant community. Notably, we need to predict what changes will take place
+   when a plant community is exposed to variable weather cycles. And our model should
+    account for interactions between different species in this process.
+⚫  Find out the minimal number of species necessary for a plant community to benefit from
+    localized biodiversity. And forecast what will happen when the number of species
+    increases. What is more, we should analyze the sensitivity of the model by changing the
+    types of species in the plant community.
+
+=== PDF PAGE 4 ===
+Team # 2303950                                          Page  4  of  25
+
+⚫  Discuss whether the number of species have the same impact on the overall population if
+    the occurrence of droughts has fluctuant frequency and greater variation. Meanwhile, we
+    should also take other factors such as pollution and habitat reduction into consideration.
+⚫   Illustrate what measures should be taken to ensure the long-term viability of a plant
+    community. Conclude the impacts of this phenomenon on the larger environment.
+1.3 Our Work
+
+     In this paper, we establish three mathematical models progressively and address six
+problems, which are listed below:
+
+
+
+
+
+                               Figure 2: Models and Problems
+
+2 Assumptions and Justifications
+
+    To simplify the problems, we make the following assumptions, each of which is justified.
+⚫  Assumption 1: The research object of this paper is mainly summer-type annual plants,
+   whose life cycle is from spring to autumn. The biomass of these plants will be converted
+    into the biomass of seed banks in winter.
+    →Justification: According to [1], annual plants have the characteristics of fast growth,
+    strong reproductive ability and short life cycle. These plants are an important part of
+    vegetation in arid areas, with high research value.
+⚫  Assumption 2: Rainfall is completed instantaneously in arid areas, and there is no
+    additional water supply between two rains.
+    →Justification: The duration of each rainfall in arid areas is far shorter than the time-
+    scale in years which we want to study. At the same time, the vast majority of arid areas are
+    short of surface water resources, such as rivers and lakes. So, we can consider that the
+    only way for water supply is rainfall.
+⚫  Assumption 3: Water evaporation is directly proportional to the total water amount in the
+     soil in arid areas.
+
+=== PDF PAGE 5 ===
+Team # 2303950                                          Page  5  of  25
+
+    →Justification: The evaporation effect of water in arid areas is significant throughout the
+     year. In addition, the soil in arid areas is usually loose. Therefore, the water in the soil is
+    exposed to air uniformly, so we can infer that the water evaporation is proportional to the
+     total water amount.
+⚫  Assumption 4: Annual plants have a regular period of flowering and fruiting, and the
+    duration of flowering is short.
+    →Justification: Annual plants have fixed life cycle and regular flowering period. Due to
+    the influence of arid environment, the flowering period of plants is generally short, often
+    within several days. This span is also far shorter than the time-scale in years which we
+    want to study.
+⚫  Assumption 5: The average biomass (or average mass) of plants is directly proportional
+    to the volume of the root system.
+    →Justification: It can be seen that a plant needs more resources if its biomass is larger.
+   And the main limitation of plants is the shortage of water in arid areas. Considering that
+    the root system is the main way for plants to absorb water, it is plausible to assume that
+    the average biomass of plants is directly proportional to the volume covered by roots.
+⚫  Assumption 6: In the experimental area, the plants distribute evenly.
+    →Justification: In order to reduce the competition for resources, the plants tend to
+     distribute evenly all over the area.
+⚫  Assumption 7: In the process of plant growth (between germination and flowering), the
+    death of the whole plant is not considered.
+    →Justification: In our model, environmental restricts and interspecific competitions are
+    considered to have an impact on the average biomass of the plants. We ignore the
+     possibility that the above factors may lead to the death of the whole plant.
+
+3 Notations
+
+    The primary notations used in this paper are listed in Table 1.
+
+                             Table 1: Notations used in this paper
+
+ Symbol                                 Definition                               Unit
+           inherent growth rate
+           the average biomass of species
+           the maximum average biomass of species    within environmental limit
+           resource availability (soil water content)
+           the rate of resource uptake per unit biomass
+           the conversion efficiency from water to biomass increment
+           the loss rate of plants per unit time
+            to what extent water absorption rate changes with resource availability
+           the upper limit of water absorption rage
+           controls the variation trend of the uptake curve
+           the biomass of seed bank of species
+
+=== PDF PAGE 6 ===
+Team # 2303950                                          Page  6  of  25
+
+           the conversion ratio from the total biomass into seeds
+           the water resources consumed by unit biomass of plant     is     times
+           of that of plant     , in which plant     is located
+           the average diameter of root extension of plant
+           the relative water-utilizing capacity
+           the average root coverage of plant
+           the average overlapping area of plant   and other plants
+           the volume of the root system of a plant
+            scale factor of      to
+           the number of plants
+           the upper limit of water absorption rage with competition
+           the water-lift capacity of shrubs per unit biomass
+           the root length in total
+           the average length of a root
+           root coefficient
+           the total weight of the plant species in the     year
+           the average total weight
+           the yearly fluctuation of the total weight (variance of the data)
+
+4 Model Establishment
+
+4.1 The Growth Model of One Species in Drought Circumstances
+
+     This section establishes the growth model of only one species in drought circumstances.
+In this case, there is only one species    in a certain area. We define      as the average
+biomass of species    , which will increase according to Logistic Model. We have
+
+
+                                                                                            (1)
+
+where      is inherent growth rate,       is the maximum average biomass of species    within
+environmental limit.
+     In arid and semi-arid regions, plants have relatively unique growth laws, and the extreme
+climate conditions and water resource constraints have a serious impact on the normal growth
+of plants [2][3]. Therefore, it is necessary to modify formula (1) according to the environmental
+characteristics of arid regions.
+⚫  Natural growth rate against drought conditions
+    According to the research on the growth of plants in arid regions [4], the inherent growth
+rate of plants is related to the characteristics of themselves and soil water content of the local
+land, which can be expressed as follows:
+
+                                                                                            (2)
+
+where      is the inherent growth rate,      is resource availability (soil water content),
+
+=== PDF PAGE 7 ===
+Team # 2303950                                          Page  7  of  25
+
+is the rate of resource uptake per unit biomass as a function of resource availability,
+represents the conversion efficiency of plants to convert absorbed water into biomass increment,
+and       is the loss rate of plants per unit time, which is caused by the metabolism, natural
+death and the destruction from other creatures.
+     In particular,        here can be formulated as
+
+
+                                                                                            (3)
+
+where    denotes to what extent water absorption rate changes with resource availability,
+controls the upper limit of water absorption rage, and     controls the variation trend of the
+uptake curve.
+⚫  The stochastic rainfall model
+    As is mentioned in Assumption 2, the raining in drought areas can be treated as an
+instantaneous impulse of water. Therefore, we need two variables to determine a specific
+rainfall. Specifically,     denotes the relative time of the rainfall within a year, and
+denotes the total volume of the rain.
+     In literature [3], the author provides a model to predict the timing of the rain impulse in a
+year and the amount of rain in drought areas. At first, the timing of the rainfall is a random
+draw from the Beta Distribution with parameters    and     . It can be written as [5]
+
+
+                                                                                            (4)
+
+where      is the Gamma Function, and         is the probability density of the timing in a year.
+    The amount of rain is also treated as a random draw from the log-natural distribution, in
+which parameters    and     are respectively the mean and variance of the natural log of the
+amount of rainfall. Hence,          can be obtained as
+
+                                                                                            (5)
+
+⚫  The law of water content changing in the soil
+    According to Assumption 2, there is no additional water supply between two rains.
+Therefore, the water in the soil continues decreasing, mainly due to the absorption of plants
+and evaporation. In particular, as is mentioned in Assumption 3, water evaporation is directly
+proportional to the total water amount. Setting the scale factor as     , we have
+
+
+                                                                                            (6)
+
+    Meanwhile, we mark the instant of rainfall as      . According to Assumption 2, the water
+stored in the soil changes instantaneously
+
+                                                                                            (7)
+
+=== PDF PAGE 8 ===
+Team # 2303950                                          Page  8  of  25
+
+⚫  The law of plant life and the evolution of seed bank
+    According to Assumption 4, summer-type annual plants have a regular period of
+flowering. In this process, plants complete flowering, mating and fruiting. In general, annual
+plants wither and die after the period of flowering, but their seeds will grow next year at a ratio
+(marked as     ). At the same time, a certain proportion of the total biomass is converted into
+new seeds and added to the seed bank (marked as           ). Assuming the conversion ratio from
+the total biomass into seeds as      , we can infer the seed bank of species   changes as follows:
+
+                                                                                            (8)
+
+    To sum up, we obtain the evolution model of species    in arid environments without
+competition with other species. Specifically, the evolution rules are as follows:
+(i)     In the process of growth, the average biomass     and soil water content     follow
+       the differential equations below
+
+
+
+                                                                                            (9)
+
+
+
+(ii)   When the rain occurs in      , soil water content     will change instantaneously
+
+                                                                                     (10)
+
+(iii)    After the period of flowering, plant population generates seed. So, the total biomass
+          and the seed bank         are described by the following equations
+
+
+                                                                                     (11)
+
+(iv)    After the period of flowering, all summer-type annual plants will die. And in the spring
+       of the next year, some seeds germinate and start to grow at a ratio      , which means
+
+
+                                                                                     (12)
+
+
+
+
+
+                    Figure 3: One Species Changes in One Year and 30 Years
+
+=== PDF PAGE 9 ===
+Team # 2303950                                          Page  9  of  25
+
+4.2 The Competition Model of Multiple Species
+
+    As is mentioned earlier, we established the growth model of one species against irregular
+climate change. In this section, we take the competition among multiple species into account.
+We consider the competition between two species first. Based on Lotka-Volterra Model, we
+introduce the influence factor [6] to express the competition on the basis of formula (9)
+
+
+
+                                                                                     (13)
+
+
+
+where            represent the competition between two populations. Considering that in arid
+environments, the main resource for competition is water, we define           as follows:
+       indicates that the water resources consumed by unit biomass of plant     is     times
+     of that of plant     , in which plant     is located.
+   We deduce the values of     and     from the perspective of root growth [7]. Assuming
+that the average diameter of root extension of plant     is       , we get the average radius as
+         . Thus, the root coverage area is               . If the root coverage between plant 1 and plant
+2 overlaps, we can infer that there is competition for water resources between these two plants.
+
+
+
+
+
+                         Figure 4: The Battlefield between Two Plants
+
+      First, normalize the water-utilizing capacity parameters              , and obtain the relative
+water-utilizing capacity              , which satisfy
+
+                                                                                     (14)
+
+    According to the definition of                 , we can deduce that
+
+
+
+                                                                                     (15)
+
+=== PDF PAGE 10 ===
+Team # 2303950                                             Page 10 of 25
+
+where
+     indicates the average overlapping area of plant 1 and other plants,
+     indicates the average overlapping area of plant 2 and other plants,
+                      , which is the average root coverage of plant 1,
+                      , which is the average root coverage of plant 2.
+
+
+    As for the root coverage    and average overlapping area        , we can estimate them
+based on the number and average biomass of plants in the experimental area.
+    According to Assumption 5, we can figure out the volume of the root system from the
+average biomass of plants by
+
+
+                                                                                     (16)
+
+where      is a scale factor, and      is the volume of the root system of a plant    , which can
+be estimated from the growth data of plants. Specifically, we can collect the data of root length
+and plant biomass during the plant growth and thus determine the scale factor.
+
+
+    From the volume of the root system, we can further obtain the root coverage area by
+
+
+                                                                                     (17)
+
+    As is mentioned in Assumption 7, we assume the number of plants (marked as     )
+remain constant in the process of growth (between germination and flowering). Thus, based on
+Assumption 6, we estimate the average overlapping area of various plants by
+
+
+                                                                                     (18)
+
+
+       It is worth noting that if the result of the average overlapping area is less than 0. We infer
+that there is no competition between this plant and other plants. Then, we sort out the
+differential equations model of two plant populations competing during the growth period in a
+year, which can be described as
+
+
+
+
+                                                                                     (19)
+
+=== PDF PAGE 11 ===
+Team # 2303950                                             Page 11 of 25
+
+    The parameters in formula (19) can be determined by the following rules:
+
+
+
+
+
+                                                                                     (20)
+
+
+
+
+
+     Finally, we get the differential equations model of     plant populations competing with
+each other in the growth period in a year, which can be described as
+
+
+
+                                                                                     (21)
+
+
+
+    The parameters in formula (21) can be determined by the following rules:
+
+
+
+
+
+                                                                                     (22)
+
+
+
+
+
+    Based on the differential equations above, the final model can be obtained by considering
+formula (10~12) comprehensively.
+
+
+
+
+
+                Figure 5: A Plant Community Changes in One Year and 30 Years
+
+=== PDF PAGE 12 ===
+Team # 2303950                                             Page 12 of 25
+
+4.3 The Facilitation Model of Shrub Plants to Herbaceous Plants
+
+     In Sec. 4.2, we established the interspecific competition model of plants during circles of
+drought from the perspective of root competition of water. This model applies to all plants.
+However, against drought stress, shrub plants play a unique role in facilitating the growth of
+herbaceous plants [8]. This facilitation is mainly reflected in the fact that shrub plants can
+improve the survival and growth of herbaceous plants. Considering that the introduction of
+shrub plants cannot boost the soil water content      directly, we infer that shrub plants can
+improve the limiting factor of the water absorption rate (which is marked as          ). According
+to formula (3), we see that           is affected by    and      . Due to the reason that
+denotes to what extent water absorption rate changes with resource availability, it is an inherent
+attribute of a plant. We regard that    would not change with the introduction of shrubs. Thus,
+we speculate that shrubs can affect       by influencing      . Based on the competition model
+in Sec. 4.2, we further modify the parameter     to       .
+    According to the research of Richards team [9] and Prieto team [10], we find that shrub
+roots can lift water from the deep soil onto the shallow soil. This process can improve the
+environment of shallow soil and facilitate other plants to absorb water. Considering the smaller
+    , the higher the water absorption rate of plants, we infer that
+
+
+                                                                                     (23)
+
+
+where
+  is a scale factor, which reflects the water-lift capacity of shrubs per unit biomass,
+
+
+
+
+    The analysis of formula (23) shows that when there are no shrubs around plant      ,
+is equal to      . When shrubs exist, the more biomass of shrubs, the smaller        is. Therefore,
+the water absorption rate         will raise if there are shrubs around plant    .
+    Meanwhile, according to the research of Butterfield team [11], the facilitating effect of
+shrubs on soil moisture will decrease with the increase of drought. Considering that soil water
+content is one of the criteria to measure the degree of drought, we further modify formula (23):
+
+
+                                                                                     (24)
+
+
+where      is resource availability (soil water content). With the increase of the soil water
+content,     decreases monotonically. Thus,         increases, which means the plant absorbs
+water at a higher rate.
+    Because the facilitation mechanism of shrubs on herbaceous plants is complex and
+uncertain, there is no relatively consistent research results at present [8]. Therefore, we
+
+=== PDF PAGE 13 ===
+Team # 2303950                                             Page 13 of 25
+
+establish the model above according to the analysis of specific situations. And we will give our
+own estimation of the parameters in the simulation.
+4.4 Reasonable Estimation of Essential Parameters
+
+     In this section, we make reasonable estimations of the parameters in the previous model.
+⚫   Statistical parameters in the stochastic rainfall model
+    According to the stochastic rainfall model established in Sec. 4.1, the average amount of
+rain in a year can be obtained as                                  . Since                      , we need determine
+the mean    and variation       .
+   We looked up the annual precipitation in areas of different degrees of drought. We find
+the average annual precipitation in severe drought areas is only 32.5mm [12], such as the
+southern edge of the Taklimakan Desert. The average annual precipitation in moderately arid
+areas is about 113.2mm [13], like the primitive desert in the middle of the Hexi Corridor in
+China. And this data is about 360mm for semi-arid areas [14], like the Sandi Cypress Nature
+Reserve in Wushen Banner, Inner Mongolia, China.
+    Considering that our experimental area is 10000 m2, the average annual precipitation mass
+is 325kg, 1132kg and 3600kg against the different drought degrees above. According to the
+     rule in statistics, there is a probability of 95% that                                        . We have
+
+
+                                                                                     (25)
+
+
+    The equations about     and     above are overdetermined. According to normal
+equations, we obtain the optimal parameter values based on Least Square Method
+
+                                                                                     (26)
+
+where A is the coefficient matrix of        in formula (25), B is                                               .
+     Finally, we obtain that                                               .
+⚫  Scale factor    between the volume of the root system and the biomass of plant
+     In arid environments, plant roots cover a wider area as much as possible. According to the
+discussion on the topological structure of root system [13], an ideal model is binary branching.
+
+
+
+
+
+                       Figure 6: Binary Branching Model of Plant Roots
+
+=== PDF PAGE 14 ===
+Team # 2303950                                             Page 14 of 25
+
+    For further discussion, we introduce the concept of root and root connection length, shown
+in Figure 6. Reaumuria soongorica (RS) and Nitraria tangutorum (NT) are two common
+populations in desert areas. According to [12], the average root length in total of RS is
+3185.5cm, with an average root connection length of 29.8cm. While the average root length in
+total of NT is 4802.5cm, and the average root connection length is 49.0cm.
+   By analyzing the characteristic of binary branching, we have
+
+                                                                                     (27)
+
+where          is the root length in total,            is the average length of a root and     is a root
+coefficient, which reflects how many branches are there in the root system.
+     Next, we plug the average root length in total and the average root connection length into
+formula (27). We obtain
+
+                                                                                     (28)
+
+    Then, we consider that plant roots will extend around in spherical shape in order to absorb
+water. So, we estimate the diameter of root system as follows:
+
+
+                                                                                     (29)
+
+   We simplify the root system as half a sphere, so we can also obtain the volume of roots.
+    Taking the mass of a single plant of two populations into account, we determine      and
+     by formula (16). Since these two populations are representative in arid areas, we estimate
+the universal scale factor     according to the average of the two values, which derives
+
+                                                                                     (30)
+
+    Since      is a scale factor between the volume of roots and the biomass of plant, it reflects
+a universal law. Therefore, we regard that this scale factors of different plants are approximately
+equal. In the simulation, we substitute the scale factor of different species    by             .
+⚫  Estimation of other parameters
+     Besides the above two parameters, we also need determine      ,    and       .
+    As is mentioned in the previous description (Sec. 4.1),     represents the conversion
+efficiency of plants to convert absorbed water into biomass increment and    denotes to what
+extent water absorption rate changes with resource availability. According to [4], the reasonable
+range of      is                 , while the range of      is                   . When considering different
+plant species, we take values within the above range to ensure the rationality of the final results.
+    According to the early analysis in Sec. 4.1,       is the maximum average biomass of
+species    within environmental limit. It is obvious that     should be unequal for different
+species. However, as for summer-type annual plants which are studied in our paper,       is
+generally less than 0.5kg [7]. So, it is rational to set the value around         .
+
+=== PDF PAGE 15 ===
+Team # 2303950                                             Page 15 of 25
+
+5 Model Computed and Results Analysis
+
+5.1 Model Computed Algorithm
+
+    Considering the high accuracy and strong stability of the fourth order Runge-Kutta
+algorithm, we apply this method for computing the differential equations listed in formula (21).
+At  first, we  sort  the  differential  equations  into  the  form  of                        ,  where
+                                         . Then, we construct the following differential iteration scheme to
+compute the first order differential equations:
+
+
+
+
+
+                                                                                     (31)
+
+
+
+
+
+where       is the time step of the computing process.
+    The details of computing are shown as follows:
+
+                        Table 2: Illustration of the MATLAB Simulation
+
+         Input:
+     (1) The characteristics of various species, the initial condition of the community
+     (2) The simulation time period
+     (3) The timing of rainfall based on the beta distribution model
+     (4) The amount of water of each rainfall based on the log-normal distribution model
+        While:
+           (1) If: at the beginning of a year
+          A specific proportion of the seed in seedbank will germinate
+          End
+           (2) Calculate the increase of the biomass of respective species    and the
+                total underground water storage     at the moment using R-K method
+           (3) If: the rainfall is encountered
+                 increase the water storage    by the water amount
+          End
+           (4) If: the flowering period in the year has been over
+        ⚫  convert     of the biomass     to the increase of the seed bank
+        ⚫   all annual plants die
+          End
+           (5) record the evolution of the community
+       End
+
+=== PDF PAGE 16 ===
+Team # 2303950                                             Page 16 of 25
+
+5.2 Evaluation of the Benefit for a Multi-Plants Community
+
+    For a community of plants, there are two aspects to evaluate its performance facing the
+irregular weather conditions. One is the weight of all plants, which should be as high as possible.
+Another is that extreme fluctuations should be avoided to ensure the stability of the ecosystem.
+To conclude, an ideal ecosystem is supposed to reach the balance between its scale and stability.
+    The scale of the community in the     year can be modeled as the total weight of the
+plant species (marked as         ), which can be written as：
+
+                                                                                     (32)
+
+where         is the average biomass of plant    in the      year, and      is the total number
+of the plant species in this year. To simplify the analysis of the problem, we limit the time
+within a period of        years.
+    Considering the total weight of plant of each year, we can calculate the average total
+weight in this period (marked as     ), which is:
+
+
+                                                                                     (33)
+
+    The yearly fluctuation of the total weight can be treated as the variance of the data (marked
+as        ), which is expressed as:
+
+
+                                                                                     (34)
+
+      If biodiversity actually brings benefits to the plant community, it can be reflected by higher
+scale or lower fluctuation. To evaluate the balance between these two aspects, we employ the
+method of TOPSIS. TOPSIS (Technique for Order Preference by Similarity to an ideal solution)
+is a commonly used method in multi-objective decision analysis. Hence, we employ this model
+to evaluate the performance of the evolution of a plant community. If the performance of the
+evaluation is better than the case where there is only one plant species, it means the plant
+community has benefited from the biodiversity. Therefore, we are able to determine how many
+species are required to benefit the community. The results are shown as follows:
+
+
+
+
+
+           Figure 7: Evaluation of the Community’s Scale and Stability Using TOPSIS
+
+=== PDF PAGE 17 ===
+Team # 2303950                                             Page 17 of 25
+
+    Meanwhile, this model also helps reveal what will happen as the number of species grows.
+What we need to do is enlarge the species number as the input of the simulation program.
+    The more species there are in the region, the lower the total weight of plants and the
+smaller the fluctuation the community has to experience against irregular weather conditions.
+This phenomenon can be explained intuitively by the differential equation model given in
+formula (21). As the number of species grows, the growth of the plant community will be
+subjected to more friction due to the more intense competition for the limited water resources.
+In this community of severe competition, any type of species is inhibited to grow to an extreme
+large scale within a short time. Therefore, the relative proportion of different species can be
+maintained, which results in higher stability of the plant community.
+    The benefit evaluation index deduced with TOPSIS (Figure 7) shows that when the
+number of species are more than eight, the index will be larger than that of one species.
+Therefore, over eight types of species are required for the community to gain overall benefit
+with respect to both the scale and stability of the community.
+5.3 The Effect of Different Types of Species in the Community
+
+    This section presents the impacts of different types of species on the evolution of the plant
+community. Based on the competition model in Sec.4.2, we find that the greater the difference
+in    between different species in a plant community, the greater the total biomass, but the
+lower its stability. We further consider the contribution of shrub plants to other plants in the
+above environment according to the model in Sec.4.3. Specifically, we simulate two types of
+plant communities and compare their differences.
+     In the first case, there are three types of different herbages and one type of shrub. As is
+mentioned in Sec. 4.3, the shrub is able to facilitate the growth of herbages by improving their
+water absorption rate. Therefore, aside from the competition among species, the cooperation
+also exists. In the second case, the plant community is constituted by three types of herbages
+without the shrubs. In other words, there is only competition among species. These two plant
+communities are put in the same weather circumstances, and the simulation shows their
+evolution results are as follows:
+
+
+
+
+
+               Figure 8: The Effect of Shrubs on the Biomass of Plant Community
+
+=== PDF PAGE 18 ===
+Team # 2303950                                             Page 18 of 25
+
+    According to the analysis of evolution data, the first community (Dotted line in Figure 8)
+shows a relatively lower average total weight    and a much smaller variance       than that
+of the second community (Solid line in Figure 8). This difference indicates that the addition of
+shrub leads to a relatively lower scale of the community, due to the root competition. However,
+the plant community has a much higher stability facing the irregular weather conditions. More
+importantly, as can be seen from the figure above, shrubs can reduce the competition between
+different herbages, which is conducive to the maintenance of biodiversity.
+5.4 The Effect of Fluctuant Frequency of Drought
+
+    The drought weather conditions usually come in the form of less rainfall amount each
+time and lower raining frequency. In order to simulate the impact of various frequency and
+occurrence of droughts on the plant community, it is a good idea to accordingly alter the time
+distribution and water amount of each rainfall. When the drought occurs, the rainfall will have
+less probability to have the same frequency (There is even likely to be no rainfall in the whole
+year!). This requires a new random variable     to control the raining times. Besides, the water
+amount of each rainfall will also be lower and suffer from more fluctuations, indicating a
+smaller    and a higher      . The rainfall against different circumstances is depicted as follows:
+
+     600                                                                          2000
+
+                                                                                  1800
+     500
+                                                                                  1600
+
+  kg 400                                                   kg 1400
+
+                                                                                  1200
+     amount 300                                                                                                                                                        amount 1000
+
+                                                                                   800
+     200      Rainfall                                                                                                                                                                                                                    Rainfall 600
+
+     100                                                                           400
+
+                                                                                   200
+
+       0                                                                         0
+        0           2           4           6           8          10               0           2           4           6           8          10
+                       Simulation Time year                                              Simulation Time year
+
+           Figure 9: The Rainfall Distribution under Severe and Less Frequent Drought
+
+     In our simulations, we suppose that    corresponds to the Poisson Distribution with the
+parameter            . Meanwhile, the    and     are also changed to create more severe drought
+conditions. The simulation results are shown as follows:
+
+               Evolution of The Total Weight of Species in The Community                   Evolution of The Individual Biomass of Species in The Community
+          700                                                                                     0.25
+                                                                               normal                                                                                     normal
+                                                                                   severe                                                                                          severe
+          600
+                                                                                                        0.2
+
+          500                                                       kg
+     kg
+                                                                                                   0.15
+          400                                                                                                                                                                                                                                   Biomass               Weight
+          300                                                                                         0.1
+            Total          200                                                                                                                                                                                                                                                                                    Individual
+
+                                                                                                   0.05
+          100
+
+
+                                                                                       0           0                                                                                           20     25      30      35     40      45      50     55      60            20     25      30      35     40      45      50     55      60
+                            Simulation Time year                                                Simulation Time year
+
+         Figure 10: Evolution of The Plant Community under Normal and Severe Drought
+
+=== PDF PAGE 19 ===
+Team # 2303950                                             Page 19 of 25
+
+     Against severe drought conditions, the overall water resource  availability will be
+furthermore limited. Therefore, it is understandable that the evolution of plant species will
+bring out not only lower scale, but also lower stability. Besides, our model shows that the scale
+and stability of the plant community follow the similar trend (mentioned in the Sec. 5.2) as the
+number of species grows, which is shown in the following table:
+
+         Table 3: The Community’s Scale and Stability Indexes of Less Frequent Drought
+
+   Type Number       4          6          8          10         12         24
+      Average       209.06      184.75      162.48       153.6       147.22       117.14
+      Variance       26346      15428      13606      12569       7277.6      3986.1
+5.5 The Impact of Other Factors on Plant Community
+
+⚫  The impact of different types of pollution
+     Generally speaking, pollutants alter plants’ metabolism and make them vulnerable to
+disease or pest infestation. In this section, we study the impacts of two typical kinds of
+pollutants on the plant community, which are the photochemical smog and the acid rain. Their
+specific damages on the plants are presented as follows [15]:
+  Photochemical smog occurs due to chemical reactions among nitrous oxides from industry
+      activities and VOCs. The resulting products are ground level ozone and peroxyacetyl
+      nitrate. Plants exposed to these contaminants are weaker and have lower chances of
+     survival. Hence, the impact of Photochemical smog can be modeled as in increase of loss
+     rate of plants (marked as      ).
+  Acid rain arises from the chemical reactions among Sulphur and nitrogen dioxide with
+    other materials in the atmosphere. Direct exposure of acid rain makes it harder for plants
+    to photosynthesize. Hence, the impact of Acid rain can be treated as a decrease of the
+    conversion efficiency (marked as     ).
+    To simulate the impact of pollution on the plant community, the loss rate of plants and the
+conversion efficiency should be modified accordingly. The simulation results of the growth of
+the plant community with contaminants are shown as follows:
+            Evolution of The Total Weight of The Community Exposed to Pollution       Evolution of The Total Weight of The Community Exposed to Pollution
+                           Acid Rain(c is diminished by 10%)                                    Photochemical Smog(m is increased by 10%)
+            600                                                                       600
+                                                                                 normal                                                                                 normal
+                                                                                           polluted                                                                                          polluted
+            550
+                                                                                     550
+            500
+      kg                                                     kg
+                                                                                     500
+                   Weight 450            400                                                                                                                                                         Weight
+                Total                                                                                                                                      Total 450
+            350
+
+                                                                                     400
+            300
+
+
+            250
+              60          62          64          66          68          70         35060          62          64          66          68          70
+                              Simulation Time year                                             Simulation Time year
+
+
+
+
+              Figure 11: The Evolution of Community Exposed to Various Pollutants
+
+=== PDF PAGE 20 ===
+Team # 2303950                                             Page 20 of 25
+
+    Compared with the non-polluted cases, the plant community exposed to pollution turn out
+to achieve lower scale. Besides, it is also notable that different types of contaminants influence
+the system’s stability in different ways. For the contaminants which increase the loss rate of
+biomass, such as photochemical smog, it doesn’t impose too much negative influences on the
+stability. However, this is not the same case when the plants are exposed to the acid rain, which
+reduces the conversion efficiency. When exposed to these pollutants, the plants community will
+bring out a much lower stability than that in the non-polluted cases. This phenomenon can be
+illustrated by the significance of water usage in drought regions.
+⚫  The impact of habitat reduction
+     Similarly, our model can also be utilized to explore the impact of habitat reduction on the
+growth of species. And the simulation results are shown as follows:
+
+
+
+
+
+                          Figure 12: The Results of Habitat Reduction
+
+       It shows that the smaller the habitat is, the smaller the scale is. Since there are less space
+for the plant species to grow, there will be more intersections of the roots of different plants.
+5.6 Measures Needed for Long-Term Viability
+
+    Based on the simulation results, we obtain a series of strategies to ensure the long-term
+viability of the plant communities. Our ideas are expressed from two aspects, the Preservation
+and Modification of the ecosystem.
+⚫  Preservation
+
+    The ecosystems of plant communities have survived in arid areas for millions of years,
+indicating its intrinsic robustness facing severe conditions. Therefore, actions should be taken
+to preserve the naturalness of the communities. Specific strategies are as follows:
+(1) Preserve the biodiversity of the plant community. From the simulation of our model in
+    Sec. 4.2 and Sec. 4.3, we found that the competition and facilitation between multiple plant
+    species both guarantee the stability of the system facing severe natural conditions.
+(2) Protect the water resources in drought regions. If water is over exploited, it will add to
+    the shortage of water, reducing the scale and stability of plant communities.
+(3) Prevent and control the pollution. From our analysis in Sec. 5.5, pollutants, especially
+    those like acid rain, have been proved to damage the scale and stability of plant community.
+
+=== PDF PAGE 21 ===
+Team # 2303950                                             Page 21 of 25
+
+(4) Maintain the habitat of plants. A large enough habitat can leave sufficient living space
+    for the individuals, which helps avoid the severe competition between species.
+⚫  Modifications
+
+     Despite all these advantages of natural grass communities, they are still vulnerable to
+severe drought conditions. And modifications can be made to improve the viability of plant
+communities. Specific strategies are as follows:
+(1) Introduce new species. We found that species such as shrub can bring facilitation to other
+    species and add more stability to the ecosystem, which is consistent with the literature.
+    Therefore, some suitable species can be introduced.
+(2) Build irrigation facilities. Some irrigation facilities, such as the Karez in Iran, can gather
+   and preserve the water from the rainfall with less evaporation. So, increasing the soil water
+    availability through artificial facilities is also worth consideration.
+
+
+6 Sensitivity Analysis and Stability Analysis
+
+6.1 Sensitivity Analysis
+
+     In Sec. 4, we established three models, which include many parameters. In Sec. 4.4, we
+make reasonable estimations of most parameters. However, it is still difficult to estimate some
+values through calculation, and the only way for us is to refer to literatures. In this Section, we
+conduct sensitivity analysis for the parameters got from literatures.
+     First of all,       is the maximum average biomass of species     , which reflects the
+restriction of environment on plant growth. Considering that what we study are mostly annual
+plants in arid environments, the maximum average biomass of different species should not
+differ a lot. Therefore, in the previous simulation, we assume that different species have the
+same    .By adjusting the value of       , we get the sensitivity analysis curve (taking the
+competition of three species as an example):
+
+
+
+
+
+                 Total Biomass                          Average Biomass of Species 1
+
+=== PDF PAGE 22 ===
+Team # 2303950                                             Page 22 of 25
+
+
+
+
+
+         Average Biomass of Species 2                   Average Biomass of Species 3
+
+                          Figure 13: Effect of Different Values of
+
+    Then, we analyze the sensitivity of    (which controls the variation trend of the uptake
+curve) and    (which is the conversion ratio from plant biomass into seeds).
+
+
+
+
+
+    Figure 14: Effect of Different Values of          Figure 15: Effect of Different Values of
+
+       It can be seen that our models perform well in sensitivity analysis of various parameters.
+With the reproduction of plants from generation to generation, the fluctuation of parameter
+values has less impact on the results. This shows that our model has good long-term stability.
+6.2 Stability Analysis
+
+⚫  Influence of initial value on the results
+   We choose two initial values of the model (       which is the initial average biomass
+and         which is the initial number). We perturb the two values randomly, with a
+disturbance variable follows uniform distribution.
+   The mean of disturbance variable is     , and the variation is
+
+                                                                                     (35)
+
+=== PDF PAGE 23 ===
+Team # 2303950                                             Page 23 of 25
+
+     Next, we observe the effect of disturbance on long-term results:
+
+
+
+
+
+          Figure 16: Influence of Random Disturbance on Long-Term Stability of Model
+
+     In the figure above, the value of total biomass of plants is the maximum biomass of annual
+plants (before death). It can be seen that the long-term stability of the model is satisfying.
+⚫  Relationship between the parameters and stability of the results
+   When we discuss the stability of the equilibrium point of differential equations, we often
+determine the possible equilibrium point by calculating the partial derivative. Then, we study
+the characteristic equation of the coefficient matrix and analyze the phase trajectory. And finally,
+we determine the conditions for the equation to be stable at a reasonable equilibrium point [6].
+    Based on the competition model established in Sec. 4.2, we consider the competition
+between two species. And now we just consider the growth within a year, that is, we ignore the
+process of flowering, fruiting and death. According to formula (19, 20), we can obtain the
+possible equilibrium point of the two species:
+
+
+                                                                                     (36)
+
+      If the average biomass of two species            are expected to meet at       , we can
+obtain the requirements of the parameter values by the method above:
+
+
+
+                                                                                     (37)
+
+
+
+    According  to  the  definition and formula  (18),  the average  root coverage        is
+significantly larger than the average overlapping area      in general. At the same time, for
+the drought-tolerant annual plants, there is no distinct different in their relative water absorption
+capacity      , which can be described as
+    Therefore, formula (37) is reasonable and easy to meet in our model.
+
+=== PDF PAGE 24 ===
+Team # 2303950                                             Page 24 of 25
+
+7 Strengths and Weaknesses
+
+7.1 Strengths
+
+⚫  With full considerations on the complexity of the evolution of annual plant species, our
+    model takes the form of differential equations on the basis of the Logistic Model.
+    Meanwhile, the instantaneous jumps of the plant communities due to the reproduction and
+    death of the plants are also included. Theoretically, our model is able to predict the state
+    of community at any given time.
+⚫  We consider the impact of water availability on the plant communities in our model using
+    the relationship between the natural growth rate and the soil water content. So, our model
+     is able to simulate the evolution of plant communities against various drought conditions.
+⚫  The facilitation and competition between different species are modeled based on the
+    previous study of Botany and Lotka-Volterra Model. Therefore, our model is able to
+    simulate the evolution of various communities in which the interactions between species
+    are different.
+⚫  Using fourth order Runge-Kutta algorithm to calculate the numerical solutions of the
+     differential equations, our model features computational accuracy and strong stability.
+⚫  TOPSIS is employed to evaluate the evolutions of different plant communities. By virtue
+    of both simplicity and comprehensibility, this method efficiently measures the overall
+    performance of a specific plant community with respect to both the scale and the stability.
+7.2 Weaknesses
+
+⚫  In our model, soil water only comes from  rainfall, and decreases only due to the
+    evaporation and consumptions of species. Whereas the actual development of groundwater
+     is much more complicated than that, as the factors such as underground rivers are not
+     negligible.
+⚫  Various types of droughts are defined with different frequencies and precipitations of
+     rainfall. However, drought varies in many other aspects, such as the local temperature,
+    wind circulation, and so forth. Therefore, more dimensions should be included to better
+    describe the drought.
+⚫  Although the multiple parameters in our model ensure the flexibility of the model, some
+    of which are difficult to calculate precisely, so we give a proper estimation based on our
+    references. However, we have rigorous derivation and analysis of the key parameters in
+    the model.
+
+=== PDF PAGE 25 ===
+Team # 2303950                                             Page 25 of 25
+
+References
+
+[1]  Floristic composition, distribution, and resource types of desert annual plants in Xinjiang
+  DU Jiaqian [J]. Arid Zone Research,2022,39(01): 185-209.
+
+[2] Leopold, A. C. (1964). Plant growth and development. Plant growth and development.
+
+[3] Seleiman, M. F., Al-Suhaibani, N., Ali, N., Akmal, M., Alotaibi, M., Refay, Y.,  ... &
+     Battaglia, M. L. (2021). Drought stress impacts on plants and different approaches to
+     alleviate its adverse effects. Plants, 10(2), 259.
+
+[4] Chesson, P., Gebauer, R. L., Schwinning, S., Huntly, N., Wiegand, K., Ernest, M. S., ... &
+    Weltzin, J. F. (2004). Resource pulses, species interactions, and diversity maintenance in
+     arid and semi-arid environments. Oecologia, 141, 236-253.
+
+[5] Johnson NL, Kotz S, Balakrishnan N (1995) Continuous univariate distributions, vol 2,
+    2nd edn. Wiley, New York
+
+[6] JIANG Qi-yuan (2011). Mathmatical model. Higher Education Press.
+
+[7] Fan, L., & Zizhen, L. (2003). Interspecific competition model and application of plants in
+    sandy area. Acta Botanica Boreali-occidentalia Sinica, 23(1), 138-140.
+
+[8] LUO, G. S. C. T. X., & Zhang, E. L. L. (2022). Advances in the study of shrub facilitation
+    on herbs in arid and semi-arid regions. Chinese Journal of Plant Ecology, 46(11):1321-
+    1333.
+
+[9] Richards JH, Caldwell MM (1987). Hydraulic lift: substantial nocturnal water transport
+    between soil layers by Artemisia tridentata roots. Oecologia, 73, 486-489.
+
+[10] Prieto I, Padilla FM, Armas C, Pugnaire FI (2011). The role of hydraulic lift on seedling
+    establishment under a nurse plant species in a semi-arid environment. Perspectives in Plant
+    Ecology Evolution and Systematics, 13, 181-187.
+
+[11] Butterfield BJ, Bradford JB, Armas C, Prieto  I, Pugnaire FI (2016). Does the stress-
+    gradient hypothesis hold water? Disentangling spatial and temporal variation in plant
+     effects on soil moisture in dryland systems. Functional Ecology, 30, 10-19.
+
+[12] GUO, J. H., ZENG, F. J., LI, C. J., & Zhang, B. (2014). Root architecture and ecological
+    adaptation  strategies  in  three  shelterbelt  plant species  in the southern Taklimakan
+    Desert. Chinese Journal of Plant Ecology, 38(1), 36.
+
+[13] Li-shan, S. H. A. N., Yi, L. I., Wei, R. E. N., Shi-ping, S. U., Qiu-lian, D. O. N. G., &
+    Dong-mei, G. E. N. G. (2013). Root architecture of two desert plants in central Hexi
+    Corridor of Northwest China. Yingyong Shengtai Xuebao, 24(1).
+
+[14] He Weiming. Distribution Characteristic of Root Area of Sabina Vulgaris under Different
+    Habitats. Scientia Silvae Sinicae, 2000, 36(5): 17-21.
+
+[15] "Greentumble."[online].Available: https://greentumble.com/effect-of-pollution-on-plants/

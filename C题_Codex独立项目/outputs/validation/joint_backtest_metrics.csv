@@ -1,0 +1,6 @@
+year,n,prior_budget_total,prior_budget_gold,total_mae,gold_mae,total_coverage95,gold_coverage95,scenario
+2008,201,926,301,1.5601990049751242,0.6720721393034826,0.9751243781094527,0.9552238805970149,preceding edition medal budgets retained; process-only uncertainty
+2012,203,958,302,1.3528817733990148,0.6682216748768472,0.9753694581280788,0.9655172413793104,preceding edition medal budgets retained; process-only uncertainty
+2016,204,960,303,1.3806789215686275,0.6125759803921568,0.9754901960784313,0.9558823529411765,preceding edition medal budgets retained; process-only uncertainty
+2020,207,972,306,1.7143623188405799,0.7871425120772947,0.9516908212560387,0.9371980676328503,preceding edition medal budgets retained; process-only uncertainty
+2024,206,1080,340,1.5202864077669902,0.6856577669902912,0.9611650485436893,0.9611650485436893,preceding edition medal budgets retained; process-only uncertainty

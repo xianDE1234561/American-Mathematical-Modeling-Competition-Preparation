@@ -1,0 +1,16 @@
+{
+  "selection_years": [
+    2008,
+    2012,
+    2016,
+    2020
+  ],
+  "holdout_year": 2024,
+  "selected_model": "anchored_hurdle",
+  "best_point_benchmark": "weighted",
+  "selection_rule": "joint total+gold MAE and first-medal Brier among host-aware first-medal hurdle models; best unconstrained point benchmark retained",
+  "development_disclosure": "Anchored hurdle added after initial benchmark comparison; 2024 benchmark results had already been inspected, so 2024 is retrospective rather than a pristine untouched holdout.",
+  "interval_backtests": "conditional process uncertainty; no bootstrap in backtests",
+  "future_intervals": "edition-cluster parameter bootstrap + process uncertainty",
+  "roster_rule": "preceding edition roster, absent target delegations scored as zero; new entrants are not forecast"
+}
